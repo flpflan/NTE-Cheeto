@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CameraManager.BP_CameraManager_C
-// 0x0000 (0xF220 - 0xF220)
+// 0x0000 (0xF240 - 0xF240)
 class ABP_CameraManager_C final : public AHTPlayerCameraManager
 {
 public:

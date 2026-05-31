@@ -1718,7 +1718,7 @@ public:
 	TArray<struct FGeometryScriptBoneWeight>      BoneWeightsB;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGeometryScriptBoneWeight>      Result;                                            // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptBoneWeight>      result;                                            // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_MeshBoneWeightFunctions_BlendBoneWeights;

@@ -94,14 +94,18 @@ enum class EGeometryCollectionDebugDrawActorHideGeometry : uint8
 	EGeometryCollectionDebugDrawActorHideGeometry_MAX = 5,
 };
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepData
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FGeometryCollectionRepData final
+// ScriptStruct GeometryCollectionEngine.ChaosRemovalEventRequestSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FChaosRemovalEventRequestSettings final
 {
 public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         MaxNumberOfResults;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EChaosRemovalSortMethod                       SortMethod;                                        // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCollectionRepData;
+DUMPER7_ASSERTS_FChaosRemovalEventRequestSettings;
 
 // ScriptStruct GeometryCollectionEngine.ChaosTrailingEventData
 // 0x0050 (0x0050 - 0x0000)
@@ -143,14 +147,14 @@ public:
 };
 DUMPER7_ASSERTS_FChaosCollisionEventData;
 
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepDynamicData
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FGeometryCollectionRepDynamicData final
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepData
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FGeometryCollectionRepData final
 {
 public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCollectionRepDynamicData;
+DUMPER7_ASSERTS_FGeometryCollectionRepData;
 
 // ScriptStruct GeometryCollectionEngine.ChaosRemovalEventData
 // 0x0020 (0x0020 - 0x0000)
@@ -162,6 +166,16 @@ public:
 	int32                                         ParticleIndex;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChaosRemovalEventData;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionProxyMeshData
+// 0x0020 (0x0020 - 0x0000)
+struct FGeometryCollectionProxyMeshData final
+{
+public:
+	TArray<class UStaticMesh*>                    ProxyMeshes;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<struct FTransform3f>                   MeshTransforms;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGeometryCollectionProxyMeshData;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionDamagePropagationData
 // 0x000C (0x000C - 0x0000)
@@ -175,6 +189,15 @@ public:
 };
 DUMPER7_ASSERTS_FGeometryCollectionDamagePropagationData;
 
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionRepDynamicData
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FGeometryCollectionRepDynamicData final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGeometryCollectionRepDynamicData;
+
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionRepStateData
 // 0x0040 (0x0040 - 0x0000)
 struct alignas(0x08) FGeometryCollectionRepStateData final
@@ -183,19 +206,6 @@ public:
 	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGeometryCollectionRepStateData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionAutoInstanceMesh
-// 0x0030 (0x0030 - 0x0000)
-struct FGeometryCollectionAutoInstanceMesh final
-{
-public:
-	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<class UMaterialInterface*>             Materials;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	int32                                         NumInstances;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 CustomData;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionAutoInstanceMesh;
 
 // ScriptStruct GeometryCollectionEngine.GeomComponentCacheParameters
 // 0x0050 (0x0050 - 0x0000)
@@ -262,19 +272,6 @@ public:
 };
 DUMPER7_ASSERTS_FChaosCollisionEventRequestSettings;
 
-// ScriptStruct GeometryCollectionEngine.ChaosRemovalEventRequestSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FChaosRemovalEventRequestSettings final
-{
-public:
-	int32                                         MaxNumberOfResults;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EChaosRemovalSortMethod                       SortMethod;                                        // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChaosRemovalEventRequestSettings;
-
 // ScriptStruct GeometryCollectionEngine.ChaosTrailingEventRequestSettings
 // 0x0018 (0x0018 - 0x0000)
 struct FChaosTrailingEventRequestSettings final
@@ -326,6 +323,19 @@ public:
 	uint8                                         Pad_A3[0xD];                                       // 0x00A3(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGeometryCollectionSource;
+
+// ScriptStruct GeometryCollectionEngine.GeometryCollectionAutoInstanceMesh
+// 0x0030 (0x0030 - 0x0000)
+struct FGeometryCollectionAutoInstanceMesh final
+{
+public:
+	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UMaterialInterface*>             Materials;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	int32                                         NumInstances;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 CustomData;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGeometryCollectionAutoInstanceMesh;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionEmbeddedExemplar
 // 0x0030 (0x0030 - 0x0000)
@@ -389,16 +399,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGeometryCollectionSizeSpecificData;
-
-// ScriptStruct GeometryCollectionEngine.GeometryCollectionProxyMeshData
-// 0x0020 (0x0020 - 0x0000)
-struct FGeometryCollectionProxyMeshData final
-{
-public:
-	TArray<class UStaticMesh*>                    ProxyMeshes;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<struct FTransform3f>                   MeshTransforms;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeometryCollectionProxyMeshData;
 
 // ScriptStruct GeometryCollectionEngine.GeometryCollectionRenderResourceSizeInfo
 // 0x0010 (0x0010 - 0x0000)

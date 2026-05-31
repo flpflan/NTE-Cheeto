@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "FieldInteraction_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -87,8 +87,9 @@ DUMPER7_ASSERTS_UAddForceFieldNotifyState;
 class UFieldInteractionComponent : public UActorComponent
 {
 public:
-	bool                                          bIsActiveField;                                    // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bHiddenInGame;                                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsActiveField;                                    // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void RegisterField();
@@ -202,47 +203,53 @@ public:
 DUMPER7_ASSERTS_UFieldInteractionBase;
 
 // Class FieldInteraction.FieldInteractionManager
-// 0x01E8 (0x04B0 - 0x02C8)
+// 0x0228 (0x04F0 - 0x02C8)
 class AFieldInteractionManager final : public AActor
 {
 public:
 	class UNiagaraComponent*                      SolverComponent;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UNiagaraComponent*                      FoliageSolverComponent;                            // 0x02D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APawn*                                  FollowTarget;                                      // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CurrentFollowLocation;                             // 0x02E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialParameterCollection*           FieldInteractionCollection;                        // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SimulationSizeWS;                                  // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindGridResolution;                                // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 InputRenderTarget;                                 // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 WindRenderTarget;                                  // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFieldInteractionWindProfile*           WindFieldProfileAsset;                             // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialParameterCollection*           FoliageFieldInteractionCollection;                 // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FoliageSimulationSizeWS;                           // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FoliageGridResolution;                             // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 FoliageInputRenderTarget;                          // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextureRenderTarget2D*                 FoliageVelocityRenderTarget;                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFieldInteractionWindProfile*           FoliageFieldProfileAsset;                          // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UFieldInteractionBase*>          FieldObjects;                                      // 0x0348(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UFieldInteractionComponent*>     FieldComponents;                                   // 0x0358(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FFieldInteractionImpulse>       WindImpulses;                                      // 0x0368(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UFoliageInteractionBubble*>      InteractionBubbles;                                // 0x0378(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         DeactivationDelay;                                 // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InteractionCapsuleUpdateInterval;                  // 0x038C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_390[0x8];                                      // 0x0390(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector4>                       ForceCapsuleStartLocationAndRadius;                // 0x0398(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4>                       ForceCapsuleEndLocationAndRadius;                  // 0x03A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4>                       ForceCapsuleStartVelocityAndStrength;              // 0x03B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4>                       ForceCapsuleEndVelocityAndStrength;                // 0x03C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<float>                                 ForceCapsuleUpLiftStrength;                        // 0x03D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4>                       InteractionBubbleLocationAndRadius;                // 0x03E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FVector4>                       InteractionBubbleVelocityAndStrength;              // 0x03F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<bool>                                  EnableImpactForce;                                 // 0x0408(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<bool>                                  EnableWindForce;                                   // 0x0418(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<int32>                                 ForceDirection;                                    // 0x0428(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<float>                                 FoliageIntensityScale;                             // 0x0438(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_448[0x48];                                     // 0x0448(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<double>                                RollingDeltaMedianArray;                           // 0x0490(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A0[0x10];                                     // 0x04A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                CurrentFollowLocation;                             // 0x02E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateFollowLocation;                             // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           FieldInteractionCollection;                        // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SimulationSizeWS;                                  // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindGridResolution;                                // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 InputRenderTarget;                                 // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 WindRenderTarget;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 PredictedCollisionRenderTarget;                    // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldInteractionWindProfile*           WindFieldProfileAsset;                             // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialParameterCollection*           FoliageFieldInteractionCollection;                 // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FoliageSimulationSizeWS;                           // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FoliageGridResolution;                             // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 FoliageInputRenderTarget;                          // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 FoliageVelocityRenderTarget;                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFieldInteractionWindProfile*           FoliageFieldProfileAsset;                          // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UFieldInteractionBase*>          FieldObjects;                                      // 0x0358(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UFieldInteractionComponent*>     FieldComponents;                                   // 0x0368(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FFieldInteractionImpulse>       WindImpulses;                                      // 0x0378(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UFoliageInteractionBubble*>      InteractionBubbles;                                // 0x0388(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         DeactivationDelay;                                 // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InteractionCapsuleUpdateInterval;                  // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A0[0x8];                                      // 0x03A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector4>                       ForceCapsuleStartLocationAndRadius;                // 0x03A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       ForceCapsuleEndLocationAndRadius;                  // 0x03B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       ForceCapsuleStartVelocityAndStrength;              // 0x03C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       ForceCapsuleEndVelocityAndStrength;                // 0x03D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<float>                                 ForceCapsuleUpLiftStrength;                        // 0x03E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       InteractionBubbleLocationAndRadius;                // 0x03F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       InteractionBubbleVelocityAndStrength;              // 0x0408(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<bool>                                  EnableImpactForce;                                 // 0x0418(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<bool>                                  EnableWindForce;                                   // 0x0428(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<int32>                                 ForceDirection;                                    // 0x0438(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<float>                                 FoliageIntensityScale;                             // 0x0448(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       PredictedCollisionStartXYBottomZAndRadius;         // 0x0458(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       PredictedCollisionEndXYTopZAndRadius;              // 0x0468(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FVector4>                       PredictedCollisionVelocity;                        // 0x0478(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_488[0x48];                                     // 0x0488(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<double>                                RollingDeltaMedianArray;                           // 0x04D0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4E0[0x10];                                     // 0x04E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddForceFieldImpulse(const struct FFieldInteractionImpulse& InInteractionBody);
@@ -258,6 +265,7 @@ public:
 	void UpdateInputGridPosition();
 	void UpdateInteractionBubbleData();
 	void UpdateTargetLocation();
+	void UpdateVehicleCollisionData(float DeltaTime);
 	void UpdateWindGridPosition();
 
 public:
@@ -545,7 +553,7 @@ public:
 DUMPER7_ASSERTS_USocketForceFieldComponent;
 
 // Class FieldInteraction.VehicleForceFieldComponent
-// 0x0090 (0x0158 - 0x00C8)
+// 0x0100 (0x01C8 - 0x00C8)
 class UVehicleForceFieldComponent final : public UFieldInteractionComponent
 {
 public:
@@ -568,11 +576,19 @@ public:
 	int32                                         TotalFieldRanges;                                  // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVehicleForceFieldRange>        VehicleForceFieldRanges;                           // 0x0110(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	class USkeletalMeshComponent*                 TargetMeshComponent;                               // 0x0120(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector                                PrevFramePositions;                                // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_140[0x18];                                     // 0x0140(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bAutoComputeCollisionFromBounds;                   // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AutoComputeCollisionTopHeightPadding;              // 0x0124(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AutoComputeCollisionBottomHeightPadding;           // 0x0128(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AutoComputeCollisionRadiusPadding;                 // 0x012C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FForceFieldCollision                   VehicleForceFieldCollision;                        // 0x0130(0x0040)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	class USkeletalMeshComponent*                 TargetMeshComponent;                               // 0x0170(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                PrevFramePositions;                                // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                PrevPredictedCollisionFramePosition;               // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1A8[0x20];                                     // 0x01A8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	struct FFieldInteractionPredictedFrameCollision GetPredictedFrameCollision(float DeltaTime);
 	void SetPlayerDriving(bool IsPlayerDriving);
 	void SetTargetMeshComponent(const class USkeletalMeshComponent* InMeshComponent);
 

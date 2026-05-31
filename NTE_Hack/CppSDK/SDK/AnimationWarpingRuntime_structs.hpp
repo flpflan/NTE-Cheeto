@@ -177,62 +177,6 @@ public:
 };
 DUMPER7_ASSERTS_FFootPlacemenLegDefinition;
 
-// ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootDefinition
-// 0x0028 (0x0028 - 0x0000)
-struct FSlopeWarpingFootDefinition final
-{
-public:
-	struct FBoneReference                         IKFootBone;                                        // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         FKFootBone;                                        // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         NumBonesInLimb;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FootSize;                                          // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSlopeWarpingFootDefinition;
-
-// ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootData
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x10) FSlopeWarpingFootData final
-{
-public:
-	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSlopeWarpingFootData;
-
-// ScriptStruct AnimationWarpingRuntime.AnimNode_SlopeWarping
-// 0x0218 (0x02E0 - 0x00C8)
-struct FAnimNode_SlopeWarping final : public FAnimNode_SkeletalControlBase
-{
-public:
-	uint8                                         Pad_C8[0x18];                                      // 0x00C8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         IKFootRootBone;                                    // 0x00E0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         PelvisBone;                                        // 0x00F0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FSlopeWarpingFootDefinition>    FeetDefinitions;                                   // 0x0100(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSlopeWarpingFootData>          FeetData;                                          // 0x0110(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	struct FVectorRK4SpringInterpolator           PelvisOffsetInterpolator;                          // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_128[0x58];                                     // 0x0128(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                GravityDir;                                        // 0x0180(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CustomFloorOffset;                                 // 0x0198(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CachedDeltaTime;                                   // 0x01B0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TargetFloorNormalWorldSpace;                       // 0x01B8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVectorRK4SpringInterpolator           FloorNormalInterpolator;                           // 0x01D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D8[0x58];                                     // 0x01D8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TargetFloorOffsetLocalSpace;                       // 0x0230(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVectorRK4SpringInterpolator           FloorOffsetInterpolator;                           // 0x0248(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_250[0x58];                                     // 0x0250(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxStepHeight;                                     // 0x02A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bKeepMeshInsideOfCapsule : 1;                      // 0x02AC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bPullPelvisDown : 1;                               // 0x02AC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseCustomFloorOffset : 1;                         // 0x02AC(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bWasOnGround : 1;                                  // 0x02AC(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bShowDebug : 1;                                    // 0x02AC(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bFloorSmoothingInitialized : 1;                    // 0x02AC(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2AD[0x3];                                      // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ActorLocation;                                     // 0x02B0(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                GravityDirCompSpace;                               // 0x02C8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FAnimNode_SlopeWarping;
-
 // ScriptStruct AnimationWarpingRuntime.FootPlacementPlantSettings
 // 0x0034 (0x0034 - 0x0000)
 struct FFootPlacementPlantSettings final
@@ -334,6 +278,62 @@ public:
 	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_OverrideRootMotion;
+
+// ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootDefinition
+// 0x0028 (0x0028 - 0x0000)
+struct FSlopeWarpingFootDefinition final
+{
+public:
+	struct FBoneReference                         IKFootBone;                                        // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         FKFootBone;                                        // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         NumBonesInLimb;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FootSize;                                          // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSlopeWarpingFootDefinition;
+
+// ScriptStruct AnimationWarpingRuntime.SlopeWarpingFootData
+// 0x00B0 (0x00B0 - 0x0000)
+struct alignas(0x10) FSlopeWarpingFootData final
+{
+public:
+	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSlopeWarpingFootData;
+
+// ScriptStruct AnimationWarpingRuntime.AnimNode_SlopeWarping
+// 0x0218 (0x02E0 - 0x00C8)
+struct FAnimNode_SlopeWarping final : public FAnimNode_SkeletalControlBase
+{
+public:
+	uint8                                         Pad_C8[0x18];                                      // 0x00C8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         IKFootRootBone;                                    // 0x00E0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         PelvisBone;                                        // 0x00F0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FSlopeWarpingFootDefinition>    FeetDefinitions;                                   // 0x0100(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSlopeWarpingFootData>          FeetData;                                          // 0x0110(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	struct FVectorRK4SpringInterpolator           PelvisOffsetInterpolator;                          // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_128[0x58];                                     // 0x0128(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                GravityDir;                                        // 0x0180(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CustomFloorOffset;                                 // 0x0198(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CachedDeltaTime;                                   // 0x01B0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TargetFloorNormalWorldSpace;                       // 0x01B8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorRK4SpringInterpolator           FloorNormalInterpolator;                           // 0x01D0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D8[0x58];                                     // 0x01D8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TargetFloorOffsetLocalSpace;                       // 0x0230(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorRK4SpringInterpolator           FloorOffsetInterpolator;                           // 0x0248(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_250[0x58];                                     // 0x0250(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxStepHeight;                                     // 0x02A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bKeepMeshInsideOfCapsule : 1;                      // 0x02AC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bPullPelvisDown : 1;                               // 0x02AC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseCustomFloorOffset : 1;                         // 0x02AC(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bWasOnGround : 1;                                  // 0x02AC(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bShowDebug : 1;                                    // 0x02AC(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bFloorSmoothingInitialized : 1;                    // 0x02AC(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2AD[0x3];                                      // 0x02AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ActorLocation;                                     // 0x02B0(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                GravityDirCompSpace;                               // 0x02C8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FAnimNode_SlopeWarping;
 
 // ScriptStruct AnimationWarpingRuntime.AnimNode_Steering
 // 0x00E8 (0x01B0 - 0x00C8)

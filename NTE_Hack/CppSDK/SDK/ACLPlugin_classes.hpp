@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "ACLPlugin_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -31,7 +31,7 @@ public:
 
 public:
 	static EACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);
-	static void SetVisualFidelity(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, EACLVisualFidelityChangeResult* Result, EACLVisualFidelity VisualFidelity);
+	static void SetVisualFidelity(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, EACLVisualFidelityChangeResult* result, EACLVisualFidelity VisualFidelity);
 
 public:
 	static class UClass* StaticClass()

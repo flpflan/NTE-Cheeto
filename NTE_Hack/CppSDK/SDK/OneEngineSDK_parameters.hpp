@@ -336,7 +336,7 @@ DUMPER7_ASSERTS_OneEngineSDKPSSubsystem_GetBlockingUsers;
 struct OneEngineSDKPSSubsystem_GetCommunicationRestrictionStatus final
 {
 public:
-	TDelegate<void(int32 Result)>                 OnRestrictionStatusResult;                         // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 result)>                 OnRestrictionStatusResult;                         // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OneEngineSDKPSSubsystem_GetCommunicationRestrictionStatus;
 
@@ -396,7 +396,7 @@ DUMPER7_ASSERTS_OneEngineSDKPSSubsystem_HideStoreIcon;
 struct OneEngineSDKPSSubsystem_OpenCommerceDialogPremiumMode final
 {
 public:
-	TDelegate<void(int32 Result)>                 OnOpenDialogResult;                                // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 result)>                 OnOpenDialogResult;                                // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OneEngineSDKPSSubsystem_OpenCommerceDialogPremiumMode;
 
@@ -612,13 +612,14 @@ public:
 DUMPER7_ASSERTS_PSOneUIManager_ShowToast;
 
 // Function OneEngineSDK.PSOneUIManager.ShowUserAgreement
-// 0x0008 (0x0008 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct PSOneUIManager_ShowUserAgreement final
 {
 public:
 	bool                                          bHasAgreed;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LoginOption;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LoginOptionString;                                 // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PSOneUIManager_ShowUserAgreement;
 
@@ -720,7 +721,7 @@ struct OneEngineSDKSubsystem_CallCommonFunction final
 public:
 	class FString                                 FuncName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Params_0;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const class FString& FunctionName, int32 Result, const class FString& Msg)> CommonFunctionDelegate; // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& FunctionName, int32 result, const class FString& Msg)> CommonFunctionDelegate; // 0x0020(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OneEngineSDKSubsystem_CallCommonFunction;
 
@@ -1471,7 +1472,7 @@ struct OneEngineSDKSubsystem_Translate final
 {
 public:
 	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(bool bSucceed, const class FString& Result, const class FString& ErrorMsg)> Callback; // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(bool bSucceed, const class FString& result, const class FString& ErrorMsg)> Callback; // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_OneEngineSDKSubsystem_Translate;
 

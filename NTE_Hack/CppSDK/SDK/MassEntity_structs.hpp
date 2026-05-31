@@ -108,6 +108,15 @@ enum class EMassFragmentPresence : uint8
 	MAX                                      = 4,
 };
 
+// ScriptStruct MassEntity.MassFragmentRequirements
+// 0x0278 (0x0278 - 0x0000)
+struct alignas(0x08) FMassFragmentRequirements
+{
+public:
+	uint8                                         Pad_0[0x278];                                      // 0x0000(0x0278)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassFragmentRequirements;
+
 // ScriptStruct MassEntity.MassEntityHandle
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FMassEntityHandle final
@@ -117,15 +126,6 @@ public:
 	int32                                         SerialNumber;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMassEntityHandle;
-
-// ScriptStruct MassEntity.MassTag
-// 0x0001 (0x0001 - 0x0000)
-struct FMassTag
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassTag;
 
 // ScriptStruct MassEntity.MassGenericDebugEvent
 // 0x0001 (0x0001 - 0x0000)
@@ -154,6 +154,15 @@ public:
 };
 DUMPER7_ASSERTS_FMassDebugLogFragment;
 
+// ScriptStruct MassEntity.MassTag
+// 0x0001 (0x0001 - 0x0000)
+struct FMassTag
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTag;
+
 // ScriptStruct MassEntity.MassChunkFragment
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -180,15 +189,6 @@ struct SDK_ALIGN(0x01) FMassConstSharedFragment
 };
 #pragma pack(pop)
 DUMPER7_ASSERTS_FMassConstSharedFragment;
-
-// ScriptStruct MassEntity.MassFragmentRequirements
-// 0x0278 (0x0278 - 0x0000)
-struct alignas(0x08) FMassFragmentRequirements
-{
-public:
-	uint8                                         Pad_0[0x278];                                      // 0x0000(0x0278)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassFragmentRequirements;
 
 // ScriptStruct MassEntity.MassEntityQuery
 // 0x00D8 (0x0350 - 0x0278)

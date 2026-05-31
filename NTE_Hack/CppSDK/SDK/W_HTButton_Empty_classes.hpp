@@ -16,12 +16,12 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass W_HTButton_Empty.W_HTButton_Empty_C
-// 0x0010 (0x1B30 - 0x1B20)
+// 0x0010 (0x1B40 - 0x1B30)
 class UW_HTButton_Empty_C final : public UHTUI_Button
 {
 public:
-	uint8                                         Pad_1B18[0x8];                                     // 0x1B18(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNamedSlot*                             NamedSlot_31;                                      // 0x1B20(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	uint8                                         Pad_1B28[0x8];                                     // 0x1B28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNamedSlot*                             NamedSlot_31;                                      // 0x1B30(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "RenderCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
@@ -17,18 +18,17 @@
 #include "AudioExtensions_structs.hpp"
 #include "AudioExtensions_classes.hpp"
 #include "InputCore_structs.hpp"
-#include "RenderCore_structs.hpp"
 #include "PacketHandler_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "PhysicsCore_classes.hpp"
-#include "FieldNotification_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "AudioPlatformConfiguration_structs.hpp"
+#include "FieldNotification_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "Chaos_structs.hpp"
 #include "IrisCore_classes.hpp"
 #include "MeshDescription_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "NetCore_structs.hpp"
 #include "NetCore_classes.hpp"
 
@@ -7823,17 +7823,17 @@ public:
 	static void Set_AddItems(const TSet<int32>& TargetSet, const TArray<int32>& NewItems);
 	static void Set_Clear(const TSet<int32>& TargetSet);
 	static bool Set_Contains(const TSet<int32>& TargetSet, const int32& ItemToFind);
-	static void Set_Difference(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* Result);
+	static void Set_Difference(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* result);
 	static void Set_GetItemByIndex(const TSet<int32>& TargetSet, int32 Index_0, int32* Item);
 	static int32 Set_GetLastIndex(const TSet<int32>& TargetSet);
-	static void Set_Intersection(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* Result);
+	static void Set_Intersection(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* result);
 	static bool Set_IsEmpty(const TSet<int32>& TargetSet);
 	static bool Set_IsNotEmpty(const TSet<int32>& TargetSet);
 	static int32 Set_Length(const TSet<int32>& TargetSet);
 	static bool Set_Remove(const TSet<int32>& TargetSet, const int32& Item);
 	static void Set_RemoveItems(const TSet<int32>& TargetSet, const TArray<int32>& Items);
-	static void Set_ToArray(const TSet<int32>& A, TArray<int32>* Result);
-	static void Set_Union(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* Result);
+	static void Set_ToArray(const TSet<int32>& A, TArray<int32>* result);
+	static void Set_Union(const TSet<int32>& A, const TSet<int32>& B, TSet<int32>* result);
 	static void SetSetPropertyByName(class UObject* Object, class FName PropertyName, const TSet<int32>& Value);
 
 public:
@@ -8808,9 +8808,7 @@ DUMPER7_ASSERTS_UAutoRTFMTestChildActorComponent;
 class ULevel : public UObject
 {
 public:
-	uint8                                         Pad_28[0x78];                                      // 0x0028(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	class TArray<class AActor*>                   Actors;                                            // 0x00A0(0x0010)(THIS IS THE ARRAY YOU'RE LOOKING FOR! [NOT AUTO-GENERATED PROPERTY])
-	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x98];                                      // 0x0028(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWorld*                                 OwningWorld;                                       // 0x00C0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class UModel*                                 Model;                                             // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class UModelComponent*>                ModelComponents;                                   // 0x00D0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
@@ -25915,7 +25913,7 @@ class UPhysicsObjectBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static void ApplyRadialImpulse(class UPrimitiveComponent* Component, const struct FVector& Origin, float Radius, float strength, ERadialImpulseFalloff Falloff, bool bApplyStrain, float Strain, bool bVelChange, float MinValue, float MaxValue);
-	static bool ExtractClosestPhysicsObjectResults(const struct FClosestPhysicsObjectResult& Result, class FName* OutName);
+	static bool ExtractClosestPhysicsObjectResults(const struct FClosestPhysicsObjectResult& result, class FName* OutName);
 	static struct FClosestPhysicsObjectResult GetClosestPhysicsObjectFromWorldLocation(class UPrimitiveComponent* Component, const struct FVector& WorldLocation);
 	static struct FTransform GetPhysicsObjectWorldTransform(class UPrimitiveComponent* Component, class FName BoneName);
 
@@ -26208,8 +26206,8 @@ public:
 	class UCameraShakeBase* StartCameraShakeFromSource(TSubclassOf<class UCameraShakeBase> ShakeClass, class UCameraShakeSourceComponent* SourceComponent, float Scale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRot);
 	void StopAllCameraShakes(bool bImmediately);
 	void StopAllCameraShakesFromSource(class UCameraShakeSourceComponent* SourceComponent, bool bImmediately);
-	void StopAllInstancesOfCameraShake(TSubclassOf<class UCameraShakeBase> Shake, bool bImmediately);
-	void StopAllInstancesOfCameraShakeFromSource(TSubclassOf<class UCameraShakeBase> Shake, class UCameraShakeSourceComponent* SourceComponent, bool bImmediately);
+	void StopAllInstancesOfCameraShake(TSubclassOf<class UCameraShakeBase> shake, bool bImmediately);
+	void StopAllInstancesOfCameraShakeFromSource(TSubclassOf<class UCameraShakeBase> shake, class UCameraShakeSourceComponent* SourceComponent, bool bImmediately);
 	void StopCameraFade();
 	void StopCameraShake(class UCameraShakeBase* ShakeInstance, bool bImmediately);
 	void SwapPendingViewTargetWhenUsingClientSideCameraUpdates();
@@ -30263,9 +30261,9 @@ class UCameraLensEffectInterfaceClassSupportLibrary final : public UBlueprintFun
 {
 public:
 	static TSubclassOf<class AActor> GetInterfaceClass(const struct FCameraLensInterfaceClassSupport& CameraLens);
-	static void IsInterfaceClassValid(const struct FCameraLensInterfaceClassSupport& CameraLens, EInterfaceValidResult* Result);
-	static void IsInterfaceValid(const TScriptInterface<class ICameraLensEffectInterface>& CameraLens, EInterfaceValidResult* Result);
-	static void SetInterfaceClass(TSubclassOf<class AActor> Class_0, struct FCameraLensInterfaceClassSupport& Var, EInterfaceValidResult* Result);
+	static void IsInterfaceClassValid(const struct FCameraLensInterfaceClassSupport& CameraLens, EInterfaceValidResult* result);
+	static void IsInterfaceValid(const TScriptInterface<class ICameraLensEffectInterface>& CameraLens, EInterfaceValidResult* result);
+	static void SetInterfaceClass(TSubclassOf<class AActor> Class_0, struct FCameraLensInterfaceClassSupport& Var, EInterfaceValidResult* result);
 
 public:
 	static class UClass* StaticClass()
@@ -30664,10 +30662,10 @@ public:
 	void ClientSetViewTarget(class AActor* A, const struct FViewTargetTransitionParams& TransitionParams);
 	void ClientSpawnCameraLensEffect(TSubclassOf<class AEmitterCameraLensEffectBase> LensEffectEmitterClass);
 	void ClientSpawnGenericCameraLensEffect(TSubclassOf<class AActor> LensEffectEmitterClass);
-	void ClientStartCameraShake(TSubclassOf<class UCameraShakeBase> Shake, float Scale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRot);
-	void ClientStartCameraShakeFromSource(TSubclassOf<class UCameraShakeBase> Shake, class UCameraShakeSourceComponent* SourceComponent);
+	void ClientStartCameraShake(TSubclassOf<class UCameraShakeBase> shake, float Scale, ECameraShakePlaySpace PlaySpace, const struct FRotator& UserPlaySpaceRot);
+	void ClientStartCameraShakeFromSource(TSubclassOf<class UCameraShakeBase> shake, class UCameraShakeSourceComponent* SourceComponent);
 	void ClientStartOnlineSession();
-	void ClientStopCameraShake(TSubclassOf<class UCameraShakeBase> Shake, bool bImmediately);
+	void ClientStopCameraShake(TSubclassOf<class UCameraShakeBase> shake, bool bImmediately);
 	void ClientStopCameraShakesFromSource(class UCameraShakeSourceComponent* SourceComponent, bool bImmediately);
 	void ClientStopForceFeedback(class UForceFeedbackEffect* ForceFeedbackEffect, class FName Tag);
 	void ClientTeamMessage(class APlayerState* SenderPlayerState, const class FString& S, class FName Type, float MsgLifeTime);
@@ -35436,7 +35434,7 @@ public:
 	static void PlayDialogueAtLocation(const class UObject* WorldContextObject, class UDialogueWave* Dialogue, const struct FDialogueContext& Context, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings);
 	static void PlaySound2D(const class UObject* WorldContextObject, class USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundConcurrency* ConcurrencySettings, const class AActor* OwningActor, bool bIsUISound);
 	static void PlaySoundAtLocation(const class UObject* WorldContextObject, class USoundBase* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, const class AActor* OwningActor, const class UInitialActiveSoundParams* InitialParams);
-	static void PlayWorldCameraShake(const class UObject* WorldContextObject, TSubclassOf<class UCameraShakeBase> Shake, const struct FVector& Epicenter, float InnerRadius, float OuterRadius, float Falloff, bool bOrientShakeTowardsEpicenter);
+	static void PlayWorldCameraShake(const class UObject* WorldContextObject, TSubclassOf<class UCameraShakeBase> shake, const struct FVector& Epicenter, float InnerRadius, float OuterRadius, float Falloff, bool bOrientShakeTowardsEpicenter);
 	static void PopSoundMixModifier(const class UObject* WorldContextObject, class USoundMix* InSoundMixModifier);
 	static void PrimeAllSoundsInSoundClass(class USoundClass* InSoundClass);
 	static void PrimeSound(class USoundBase* InSound);
@@ -36006,8 +36004,8 @@ public:
 	static struct FVector CreateVectorFromYawPitch(float Yaw, float Pitch, float Length);
 	static struct FVector Cross_VectorVector(const struct FVector& A, const struct FVector& B);
 	static double CrossProduct2D(const struct FVector2D& A, const struct FVector2D& B);
-	static bool DateTimeFromIsoString(const class FString& IsoString, struct FDateTime* Result);
-	static bool DateTimeFromString(const class FString& DateTimeString, struct FDateTime* Result);
+	static bool DateTimeFromIsoString(const class FString& IsoString, struct FDateTime* result);
+	static bool DateTimeFromString(const class FString& DateTimeString, struct FDateTime* result);
 	static struct FDateTime DateTimeMaxValue();
 	static struct FDateTime DateTimeMinValue();
 	static int32 DaysInMonth(int32 Year, int32 Month);
@@ -36510,7 +36508,7 @@ public:
 	static struct FVector Subtract_VectorVector(const struct FVector& A, const struct FVector& B);
 	static double tan(double A);
 	static struct FTransform TEase(const struct FTransform& A, const struct FTransform& B, float Alpha, EEasingFunc EasingFunc, float BlendExp, int32 Steps);
-	static bool TimespanFromString(const class FString& TimespanString, struct FTimespan* Result);
+	static bool TimespanFromString(const class FString& TimespanString, struct FTimespan* result);
 	static struct FTimespan TimespanMaxValue();
 	static struct FTimespan TimespanMinValue();
 	static float TimespanRatio(const struct FTimespan& A, const struct FTimespan& B);

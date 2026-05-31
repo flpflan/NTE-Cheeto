@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "KawaiiPhysics_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KawaiiPhysics_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -134,8 +134,8 @@ public:
 	static bool AddExternalForce(const struct FKawaiiPhysicsReference& KawaiiPhysics, struct FInstancedStruct* ExternalForce, class UObject* Owner, bool bIsOneShot);
 	static bool AddExternalForcesToComponent(class USkeletalMeshComponent* MeshComp, TArray<struct FInstancedStruct>& ExternalForces, class UObject* Owner, struct FGameplayTagContainer& FilterTags, bool bFilterExactMatch, bool bIsOneShot);
 	static struct FKawaiiPhysicsReference AddExternalForceWithExecResult(EKawaiiPhysicsAccessExternalForceResult* ExecResult, const struct FKawaiiPhysicsReference& KawaiiPhysics, struct FInstancedStruct* ExternalForce, class UObject* Owner);
-	static struct FKawaiiPhysicsReference ConvertToKawaiiPhysics(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToKawaiiPhysicsPure(const struct FAnimNodeReference& Node, struct FKawaiiPhysicsReference* KawaiiPhysics, bool* Result);
+	static struct FKawaiiPhysicsReference ConvertToKawaiiPhysics(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToKawaiiPhysicsPure(const struct FAnimNodeReference& Node, struct FKawaiiPhysicsReference* KawaiiPhysics, bool* result);
 	static bool GetAllowWorldCollision(const struct FKawaiiPhysicsReference& KawaiiPhysics);
 	static float GetDummyBoneLength(const struct FKawaiiPhysicsReference& KawaiiPhysics);
 	static bool GetEnableWind(const struct FKawaiiPhysicsReference& KawaiiPhysics);

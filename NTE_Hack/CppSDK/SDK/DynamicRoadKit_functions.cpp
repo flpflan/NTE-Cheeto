@@ -368,6 +368,84 @@ void URoadNodeComponent::GetAttachedSegmentInfos(TArray<struct FRoadSegmentAttac
 }
 
 
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetNumSlots
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 ARoadPrefabNodeActor::GetNumSlots() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RoadPrefabNodeActor", "GetNumSlots");
+
+	Params::RoadPrefabNodeActor_GetNumSlots Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetRoadPrefabNodeDefinition
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class URoadPrefabNodeDataAsset*   ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class URoadPrefabNodeDataAsset* ARoadPrefabNodeActor::GetRoadPrefabNodeDefinition() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RoadPrefabNodeActor", "GetRoadPrefabNodeDefinition");
+
+	Params::RoadPrefabNodeActor_GetRoadPrefabNodeDefinition Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetSlotWorldTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   SlotIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform ARoadPrefabNodeActor::GetSlotWorldTransform(int32 SlotIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RoadPrefabNodeActor", "GetSlotWorldTransform");
+
+	Params::RoadPrefabNodeActor_GetSlotWorldTransform Parms{};
+
+	Parms.SlotIndex = SlotIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DynamicRoadKit.RoadSegmentComponent.SetEndNode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

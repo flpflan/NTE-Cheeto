@@ -113,6 +113,7 @@ public:
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EHTPlatformType                               CallFunc_SwitchPlatform_OutPlatformType_2;         // 0x0102(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0103(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsCloudGame_ReturnValue;                  // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPUI_Login_C_ExecuteUbergraph_BPUI_Login;
 

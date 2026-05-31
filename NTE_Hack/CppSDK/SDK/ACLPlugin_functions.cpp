@@ -50,10 +50,10 @@ EACLVisualFidelity UAnimationCompressionLibraryDatabase::GetVisualFidelity(class
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FLatentActionInfo&         LatentInfo                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimationCompressionLibraryDatabase*DatabaseAsset                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EACLVisualFidelityChangeResult*         Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EACLVisualFidelityChangeResult*         result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EACLVisualFidelity                      VisualFidelity                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAnimationCompressionLibraryDatabase::SetVisualFidelity(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, EACLVisualFidelityChangeResult* Result, EACLVisualFidelity VisualFidelity)
+void UAnimationCompressionLibraryDatabase::SetVisualFidelity(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UAnimationCompressionLibraryDatabase* DatabaseAsset, EACLVisualFidelityChangeResult* result, EACLVisualFidelity VisualFidelity)
 {
 	static class UFunction* Func = nullptr;
 
@@ -74,8 +74,8 @@ void UAnimationCompressionLibraryDatabase::SetVisualFidelity(class UObject* Worl
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 }
 
 

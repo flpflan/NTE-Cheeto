@@ -85,13 +85,13 @@ public:
 	void FilterProfanity(const class FString& Text, const class FString& Language, TDelegate<void(int32 Code, const class FString& Text)> OnFilterProfanityResult);
 	int32 FilterProfanitySync(const class FString& Text, const class FString& Language, class FString* OutResult);
 	void GetBlockingUsers(int32 Offset, int32 Limit, TDelegate<void(const struct FOnePSUserProfileResponse& ProfileList)> OnGetBlockingUsersResult);
-	void GetCommunicationRestrictionStatus(TDelegate<void(int32 Result)> OnRestrictionStatusResult);
+	void GetCommunicationRestrictionStatus(TDelegate<void(int32 result)> OnRestrictionStatusResult);
 	class FString GetCountryCode();
 	class FString GetCountryRegion(const class FString& CountryCode);
 	void GetFriends(int32 Offset, int32 Limit, TDelegate<void(const struct FOnePSUserProfileResponse& ProfileList)> OnGetFriendsResult);
 	void GetProductInfoListPS(int32 ServiceLabel, const class FString& CategoryLabel, const TDelegate<void(bool bSucceed, const struct FOnePSProductCategory& Category, int32 Code, const class FString& Msg)>& Callback);
 	int32 HideStoreIcon();
-	void OpenCommerceDialogPremiumMode(TDelegate<void(int32 Result)> OnOpenDialogResult);
+	void OpenCommerceDialogPremiumMode(TDelegate<void(int32 result)> OnOpenDialogResult);
 	void SetFontPath(const class FString& Path);
 	int32 ShowStoreIcon(EOnePSStoreIconPos Pos);
 	int32 StartNotifyPremiumFeature(int32 Interval, int32 Mark);
@@ -877,7 +877,7 @@ public:
 	void ShowLoginSuccessHint(const class FText& Text);
 	void ShowRealName();
 	void ShowToast(const class FText& Text, float duration, bool HandleFocusWidget);
-	void ShowUserAgreement(bool bHasAgreed, int32 LoginOption);
+	void ShowUserAgreement(bool bHasAgreed, int32 LoginOption, const class FString& LoginOptionString);
 	void ShowUserCenter();
 	void SwitchToPreparePage();
 
@@ -898,7 +898,7 @@ public:
 DUMPER7_ASSERTS_UPSOneUIManager;
 
 // Class OneEngineSDK.PSOneUserAgreementPrompt
-// 0x0250 (0x0590 - 0x0340)
+// 0x0270 (0x05B0 - 0x0340)
 class alignas(0x10) UPSOneUserAgreementPrompt final : public UPSOneFocusUserWidget
 {
 public:
@@ -918,17 +918,20 @@ public:
 	class UImage*                                 TriangleImage;                                     // 0x03A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTextBlock*                             TitleBlock_2;                                      // 0x03B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTextBlock*                             DescBlock_2;                                       // 0x03B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPSOneButtonBase*                       BindAccountButton;                                 // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPSOneButtonBase*                       CreateAccountButton;                               // 0x03C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPSOneButtonBase*                       LoginWithPwrdButton;                               // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidgetSwitcher*                        Switcher;                                          // 0x03D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHorizontalBox*                         ChildProtectionBox;                                // 0x03E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsMainland;                                       // 0x03E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3E9[0x3];                                      // 0x03E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StartIndex;                                        // 0x03EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LoginOption;                                       // 0x03F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowBgImage;                                      // 0x03F4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F5[0x19B];                                    // 0x03F5(0x019B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVerticalBox*                           ActionButtonsBox;                                  // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPSOneButtonBase*                       BindAccountButton;                                 // 0x03C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPSOneButtonBase*                       CreateAccountButton;                               // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPSOneButtonBase*                       LoginWithPwrdButton;                               // 0x03D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidgetSwitcher*                        Switcher;                                          // 0x03E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHorizontalBox*                         ChildProtectionBox;                                // 0x03E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsMainland;                                       // 0x03F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StartIndex;                                        // 0x03F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LoginOption;                                       // 0x03F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LoginOptionString;                                 // 0x0400(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowBgImage;                                      // 0x0410(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_411[0x19F];                                    // 0x0411(0x019F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1015,7 +1018,8 @@ public:
 	class UPSOneUserCenterRightCellSubtitle*      EmailCell;                                         // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPSOneUserCenterRightCellSubtitle*      CancellationCell;                                  // 0x0368(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPSOneUserCenterRightCellSubtitle*      ChangePasswordCell;                                // 0x0370(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_378[0x88];                                     // 0x0378(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UPSOneUserCenterRightCellSubtitle*      UnbindPSNCell;                                     // 0x0378(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_380[0x80];                                     // 0x0380(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1392,7 +1396,7 @@ public:
 	bool ACELogout();
 	void ActivateDevice(const class FString& ServerId, TDelegate<void(bool bSucceed, bool bNeedActCode, const class FString& ActCodePrompt, int32 Code, const class FString& ErrorMsg)> OneActivateDeviceResultDelegate);
 	void Bind(TDelegate<void(bool bSuccess, int32 Code, const class FString& Msg, EOneEngineThirdType BindType, const struct FOneUserInfo& UserInfo)> BindDelegate, EOneEngineThirdType BindType);
-	void CallCommonFunction(const class FString& FuncName, const class FString& Params_0, TDelegate<void(const class FString& FunctionName, int32 Result, const class FString& Msg)> CommonFunctionDelegate);
+	void CallCommonFunction(const class FString& FuncName, const class FString& Params_0, TDelegate<void(const class FString& FunctionName, int32 result, const class FString& Msg)> CommonFunctionDelegate);
 	bool CheckSelfPermission(EOnePermissionType Type);
 	void CloseClipboardPermission();
 	void DisplayCDKeyDialog(TDelegate<void(bool bSuccess, int32 Code, const class FString& Msg)> OnCDKeyActivateResult, const class FString& ServerId);
@@ -1482,7 +1486,7 @@ public:
 	void TrackEventRoleLoginError(const struct FOneRoleInfo& RoleInfo, const class FString& Ip, const class FString& Port, const class FString& Code, const class FString& Msg);
 	void TrackEventRoleLoginSucceed(const struct FOneRoleInfo& RoleInfo, const class FString& Ip, const class FString& Port);
 	void TrackEventRoleLogout(const struct FOneRoleInfo& RoleInfo);
-	void Translate(const class FString& Text, TDelegate<void(bool bSucceed, const class FString& Result, const class FString& ErrorMsg)> Callback);
+	void Translate(const class FString& Text, TDelegate<void(bool bSucceed, const class FString& result, const class FString& ErrorMsg)> Callback);
 	void UnlockSafeLockUsingDynamicCode(const class FString& DynamicCode, const class FString& RoleName, const class FString& ServerName, TDelegate<void(EOneUnlockSafeLockResult UnlockResult, const class FString& UnlockToken, int32 Code, const class FString& ErrorMsg, EOneUnlockSafeLockType UnlockType)> OnUnlockSafeLockResultDelegate);
 	void UnlockSafeLockUsingPushNotification(const class FString& RoleName, const class FString& ServerName, TDelegate<void(EOneUnlockSafeLockResult UnlockResult, const class FString& UnlockToken, int32 Code, const class FString& ErrorMsg, EOneUnlockSafeLockType UnlockType)> OnUnlockSafeLockResultDelegate);
 	void UnSetPushUserInfo(TDelegate<void(bool bSuccess, int32 Code, const class FString& Msg)> Callback);

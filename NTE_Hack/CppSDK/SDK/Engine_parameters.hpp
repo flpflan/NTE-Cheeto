@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "AudioExtensions_structs.hpp"
 #include "ImageCore_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "AudioExtensions_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "FieldNotification_structs.hpp"
 #include "UniversalObjectLocator_structs.hpp"
@@ -9946,7 +9946,7 @@ struct BlueprintSetLibrary_Set_Difference final
 public:
 	TSet<int32>                                   A;                                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TSet<int32>                                   B;                                                 // 0x0050(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSet<int32>                                   Result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TSet<int32>                                   result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintSetLibrary_Set_Difference;
 
@@ -9979,7 +9979,7 @@ struct BlueprintSetLibrary_Set_Intersection final
 public:
 	TSet<int32>                                   A;                                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TSet<int32>                                   B;                                                 // 0x0050(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSet<int32>                                   Result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TSet<int32>                                   result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintSetLibrary_Set_Intersection;
 
@@ -10044,7 +10044,7 @@ struct BlueprintSetLibrary_Set_ToArray final
 {
 public:
 	TSet<int32>                                   A;                                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Result;                                            // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 result;                                            // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintSetLibrary_Set_ToArray;
 
@@ -10055,7 +10055,7 @@ struct BlueprintSetLibrary_Set_Union final
 public:
 	TSet<int32>                                   A;                                                 // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TSet<int32>                                   B;                                                 // 0x0050(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSet<int32>                                   Result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	TSet<int32>                                   result;                                            // 0x00A0(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BlueprintSetLibrary_Set_Union;
 
@@ -16818,7 +16818,7 @@ DUMPER7_ASSERTS_PhysicsObjectBlueprintLibrary_ApplyRadialImpulse;
 struct PhysicsObjectBlueprintLibrary_ExtractClosestPhysicsObjectResults final
 {
 public:
-	struct FClosestPhysicsObjectResult            Result;                                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FClosestPhysicsObjectResult            result;                                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   OutName;                                           // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -17061,7 +17061,7 @@ DUMPER7_ASSERTS_PlayerCameraManager_StopAllCameraShakesFromSource;
 struct PlayerCameraManager_StopAllInstancesOfCameraShake final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -17072,7 +17072,7 @@ DUMPER7_ASSERTS_PlayerCameraManager_StopAllInstancesOfCameraShake;
 struct PlayerCameraManager_StopAllInstancesOfCameraShakeFromSource final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraShakeSourceComponent*            SourceComponent;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediately;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -20186,7 +20186,7 @@ struct CameraLensEffectInterfaceClassSupportLibrary_IsInterfaceClassValid final
 {
 public:
 	struct FCameraLensInterfaceClassSupport       CameraLens;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EInterfaceValidResult                         Result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterfaceValidResult                         result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_CameraLensEffectInterfaceClassSupportLibrary_IsInterfaceClassValid;
@@ -20197,7 +20197,7 @@ struct CameraLensEffectInterfaceClassSupportLibrary_IsInterfaceValid final
 {
 public:
 	TScriptInterface<class ICameraLensEffectInterface> CameraLens;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInterfaceValidResult                         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterfaceValidResult                         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_CameraLensEffectInterfaceClassSupportLibrary_IsInterfaceValid;
@@ -20209,7 +20209,7 @@ struct CameraLensEffectInterfaceClassSupportLibrary_SetInterfaceClass final
 public:
 	TSubclassOf<class AActor>                     Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraLensInterfaceClassSupport       Var;                                               // 0x0008(0x0008)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EInterfaceValidResult                         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInterfaceValidResult                         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_CameraLensEffectInterfaceClassSupportLibrary_SetInterfaceClass;
@@ -20906,7 +20906,7 @@ DUMPER7_ASSERTS_PlayerController_ClientSpawnGenericCameraLensEffect;
 struct PlayerController_ClientStartCameraShake final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Scale;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraShakePlaySpace                         PlaySpace;                                         // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -20919,7 +20919,7 @@ DUMPER7_ASSERTS_PlayerController_ClientStartCameraShake;
 struct PlayerController_ClientStartCameraShakeFromSource final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraShakeSourceComponent*            SourceComponent;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PlayerController_ClientStartCameraShakeFromSource;
@@ -20929,7 +20929,7 @@ DUMPER7_ASSERTS_PlayerController_ClientStartCameraShakeFromSource;
 struct PlayerController_ClientStopCameraShake final
 {
 public:
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediately;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -30043,7 +30043,7 @@ struct GameplayStatics_PlayWorldCameraShake final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UCameraShakeBase>           Shake;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraShakeBase>           shake;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Epicenter;                                         // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InnerRadius;                                       // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OuterRadius;                                       // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -32372,7 +32372,7 @@ struct KismetMathLibrary_DateTimeFromIsoString final
 {
 public:
 	class FString                                 IsoString;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              Result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -32384,7 +32384,7 @@ struct KismetMathLibrary_DateTimeFromString final
 {
 public:
 	class FString                                 DateTimeString;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              Result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -38105,7 +38105,7 @@ struct KismetMathLibrary_TimespanFromString final
 {
 public:
 	class FString                                 TimespanString;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimespan                              Result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimespan                              result;                                            // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };

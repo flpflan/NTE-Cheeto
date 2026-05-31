@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass UDS_Weather_Settings.UDS_Weather_Settings_C
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x0110 - 0x0110)
 class UUDS_Weather_Settings_C final : public UHottaPrimaryDataAsset
 {
 public:

@@ -154,10 +154,10 @@ public:
 	static bool AddOrRemoveMultipleSmartObjects(const TArray<class AActor*>& SmartObjectActors, const bool bAdd);
 	static bool AddOrRemoveSmartObject(class AActor* SmartObject, const bool bEnabled);
 	static bool AddSmartObject(class AActor* SmartObjectActor);
-	static class FString Conv_SmartObjectClaimHandleToString(const struct FSmartObjectClaimHandle& Result);
+	static class FString Conv_SmartObjectClaimHandleToString(const struct FSmartObjectClaimHandle& result);
 	static class FString Conv_SmartObjectDefinitionToString(const class USmartObjectDefinition* Definition);
 	static class FString Conv_SmartObjectHandleToString(const struct FSmartObjectHandle& Handle);
-	static class FString Conv_SmartObjectRequestResultToString(const struct FSmartObjectRequestResult& Result);
+	static class FString Conv_SmartObjectRequestResultToString(const struct FSmartObjectRequestResult& result);
 	static class FString Conv_SmartObjectSlotHandleToString(const struct FSmartObjectSlotHandle& Handle);
 	static bool Equal_SmartObjectHandleSmartObjectHandle(const struct FSmartObjectHandle& A, const struct FSmartObjectHandle& B);
 	static bool Equal_SmartObjectSlotHandleSmartObjectSlotHandle(const struct FSmartObjectSlotHandle& A, const struct FSmartObjectSlotHandle& B);
@@ -531,7 +531,7 @@ public:
 	bool GetSlotTransform(const struct FSmartObjectClaimHandle& ClaimHandle, struct FTransform* OutSlotTransform) const;
 	bool GetSlotTransformFromRequestResult(const struct FSmartObjectRequestResult& RequestResult, struct FTransform* OutSlotTransform) const;
 	class USmartObjectComponent* GetSmartObjectComponent(const struct FSmartObjectClaimHandle& ClaimHandle, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const;
-	class USmartObjectComponent* GetSmartObjectComponentByRequestResult(const struct FSmartObjectRequestResult& Result, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const;
+	class USmartObjectComponent* GetSmartObjectComponentByRequestResult(const struct FSmartObjectRequestResult& result, ETrySpawnActorIfDehydrated TrySpawnActorIfDehydrated) const;
 	bool IsEnabled(const struct FSmartObjectHandle& Handle) const;
 	bool IsEnabledForReason(const struct FSmartObjectHandle& Handle, const struct FGameplayTag& ReasonTag) const;
 

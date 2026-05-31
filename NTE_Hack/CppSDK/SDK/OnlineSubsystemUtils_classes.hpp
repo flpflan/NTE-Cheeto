@@ -255,10 +255,10 @@ public:
 
 public:
 	static class UFindSessionsCallbackProxy* FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int32 MaxResults, bool bUseLAN, bool bUseLobbies);
-	static int32 GetCurrentPlayers(const struct FBlueprintSessionResult& Result);
-	static int32 GetMaxPlayers(const struct FBlueprintSessionResult& Result);
-	static int32 GetPingInMs(const struct FBlueprintSessionResult& Result);
-	static class FString GetServerName(const struct FBlueprintSessionResult& Result);
+	static int32 GetCurrentPlayers(const struct FBlueprintSessionResult& result);
+	static int32 GetMaxPlayers(const struct FBlueprintSessionResult& result);
+	static int32 GetPingInMs(const struct FBlueprintSessionResult& result);
+	static class FString GetServerName(const struct FBlueprintSessionResult& result);
 
 public:
 	static class UClass* StaticClass()

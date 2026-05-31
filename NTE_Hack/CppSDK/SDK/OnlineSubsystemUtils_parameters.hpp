@@ -186,7 +186,7 @@ DUMPER7_ASSERTS_FindSessionsCallbackProxy_FindSessions;
 struct FindSessionsCallbackProxy_GetCurrentPlayers final
 {
 public:
-	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintSessionResult                result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -197,7 +197,7 @@ DUMPER7_ASSERTS_FindSessionsCallbackProxy_GetCurrentPlayers;
 struct FindSessionsCallbackProxy_GetMaxPlayers final
 {
 public:
-	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintSessionResult                result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -208,7 +208,7 @@ DUMPER7_ASSERTS_FindSessionsCallbackProxy_GetMaxPlayers;
 struct FindSessionsCallbackProxy_GetPingInMs final
 {
 public:
-	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintSessionResult                result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -219,7 +219,7 @@ DUMPER7_ASSERTS_FindSessionsCallbackProxy_GetPingInMs;
 struct FindSessionsCallbackProxy_GetServerName final
 {
 public:
-	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBlueprintSessionResult                result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0120(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FindSessionsCallbackProxy_GetServerName;

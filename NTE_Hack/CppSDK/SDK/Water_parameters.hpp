@@ -17,6 +17,108 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
+// 0x0068 (0x0068 - 0x0000)
+struct BuoyancyComponent_GetLastWaterSurfaceInfo final
+{
+public:
+	struct FVector                                OutWaterPlaneLocation;                             // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterPlaneNormal;                               // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterSurfacePosition;                           // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutWaterDepth;                                     // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutWaterBodyIdx;                                   // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterVelocity;                                  // 0x0050(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_GetLastWaterSurfaceInfo;
+
+// Function Water.BuoyancyComponent.OnPontoonEnteredWater
+// 0x02D0 (0x02D0 - 0x0000)
+struct BuoyancyComponent_OnPontoonEnteredWater final
+{
+public:
+	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x02D0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonEnteredWater;
+
+// Function Water.BuoyancyComponent.OnPontoonExitedWater
+// 0x02D0 (0x02D0 - 0x0000)
+struct BuoyancyComponent_OnPontoonExitedWater final
+{
+public:
+	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x02D0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonExitedWater;
+
+// Function Water.BuoyancyComponent.GetCurrentWaterBodyComponents
+// 0x0010 (0x0010 - 0x0000)
+struct BuoyancyComponent_GetCurrentWaterBodyComponents final
+{
+public:
+	TArray<class UWaterBodyComponent*>            ReturnValue;                                       // 0x0000(0x0010)(ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_GetCurrentWaterBodyComponents;
+
+// Function Water.BuoyancyComponent.IsInWaterBody
+// 0x0001 (0x0001 - 0x0000)
+struct BuoyancyComponent_IsInWaterBody final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_IsInWaterBody;
+
+// Function Water.BuoyancyComponent.IsOverlappingWaterBody
+// 0x0001 (0x0001 - 0x0000)
+struct BuoyancyComponent_IsOverlappingWaterBody final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BuoyancyComponent_IsOverlappingWaterBody;
+
+// Function Water.BuoyancyManager.GetBuoyancyComponentManager
+// 0x0018 (0x0018 - 0x0000)
+struct BuoyancyManager_GetBuoyancyComponentManager final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ABuoyancyManager*                       Manager;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BuoyancyManager_GetBuoyancyComponentManager;
+
+// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
+// 0x0010 (0x0010 - 0x0000)
+struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final
+{
+public:
+	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves;
+
+// Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
+// 0x0020 (0x0020 - 0x0000)
+struct NiagaraWaterFunctionLibrary_SetWaterBody final
+{
+public:
+	class UNiagaraComponent*                      NiagaraSystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OverrideName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AWaterBody*                             WaterBody;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NiagaraWaterFunctionLibrary_SetWaterBody;
+
+// Function Water.NiagaraWaterFunctionLibrary.SetWaterBodyComponent
+// 0x0020 (0x0020 - 0x0000)
+struct NiagaraWaterFunctionLibrary_SetWaterBodyComponent final
+{
+public:
+	class UNiagaraComponent*                      NiagaraSystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OverrideName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NiagaraWaterFunctionLibrary_SetWaterBodyComponent;
+
 // Function Water.WaterBody.GetRiverToLakeTransitionMaterialInstance
 // 0x0008 (0x0008 - 0x0000)
 struct WaterBody_GetRiverToLakeTransitionMaterialInstance final
@@ -147,108 +249,6 @@ public:
 	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_WaterBody_GetWaterVelocityVectorAtSplineInputKey;
-
-// Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
-// 0x0068 (0x0068 - 0x0000)
-struct BuoyancyComponent_GetLastWaterSurfaceInfo final
-{
-public:
-	struct FVector                                OutWaterPlaneLocation;                             // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterPlaneNormal;                               // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterSurfacePosition;                           // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutWaterDepth;                                     // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutWaterBodyIdx;                                   // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterVelocity;                                  // 0x0050(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_GetLastWaterSurfaceInfo;
-
-// Function Water.BuoyancyComponent.OnPontoonEnteredWater
-// 0x02D0 (0x02D0 - 0x0000)
-struct BuoyancyComponent_OnPontoonEnteredWater final
-{
-public:
-	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x02D0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonEnteredWater;
-
-// Function Water.BuoyancyComponent.OnPontoonExitedWater
-// 0x02D0 (0x02D0 - 0x0000)
-struct BuoyancyComponent_OnPontoonExitedWater final
-{
-public:
-	struct FSphericalPontoon                      Pontoon;                                           // 0x0000(0x02D0)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_OnPontoonExitedWater;
-
-// Function Water.BuoyancyComponent.GetCurrentWaterBodyComponents
-// 0x0010 (0x0010 - 0x0000)
-struct BuoyancyComponent_GetCurrentWaterBodyComponents final
-{
-public:
-	TArray<class UWaterBodyComponent*>            ReturnValue;                                       // 0x0000(0x0010)(ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_GetCurrentWaterBodyComponents;
-
-// Function Water.BuoyancyComponent.IsInWaterBody
-// 0x0001 (0x0001 - 0x0000)
-struct BuoyancyComponent_IsInWaterBody final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_IsInWaterBody;
-
-// Function Water.BuoyancyComponent.IsOverlappingWaterBody
-// 0x0001 (0x0001 - 0x0000)
-struct BuoyancyComponent_IsOverlappingWaterBody final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BuoyancyComponent_IsOverlappingWaterBody;
-
-// Function Water.BuoyancyManager.GetBuoyancyComponentManager
-// 0x0018 (0x0018 - 0x0000)
-struct BuoyancyManager_GetBuoyancyComponentManager final
-{
-public:
-	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ABuoyancyManager*                       Manager;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BuoyancyManager_GetBuoyancyComponentManager;
-
-// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
-// 0x0010 (0x0010 - 0x0000)
-struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final
-{
-public:
-	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves;
-
-// Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
-// 0x0020 (0x0020 - 0x0000)
-struct NiagaraWaterFunctionLibrary_SetWaterBody final
-{
-public:
-	class UNiagaraComponent*                      NiagaraSystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OverrideName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AWaterBody*                             WaterBody;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NiagaraWaterFunctionLibrary_SetWaterBody;
-
-// Function Water.NiagaraWaterFunctionLibrary.SetWaterBodyComponent
-// 0x0020 (0x0020 - 0x0000)
-struct NiagaraWaterFunctionLibrary_SetWaterBodyComponent final
-{
-public:
-	class UNiagaraComponent*                      NiagaraSystem;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OverrideName;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_NiagaraWaterFunctionLibrary_SetWaterBodyComponent;
 
 // Function Water.WaterBodyComponent.GetRiverToLakeTransitionMaterialInstance
 // 0x0008 (0x0008 - 0x0000)

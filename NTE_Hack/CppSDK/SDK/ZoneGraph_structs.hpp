@@ -132,16 +132,6 @@ public:
 };
 DUMPER7_ASSERTS_FZoneGraphBuilderRegisteredComponent;
 
-// ScriptStruct ZoneGraph.RegisteredZoneGraphData
-// 0x0010 (0x0010 - 0x0000)
-struct FRegisteredZoneGraphData final
-{
-public:
-	class AZoneGraphData*                         ZoneGraphData;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FRegisteredZoneGraphData;
-
 // ScriptStruct ZoneGraph.ZoneGraphDataHandle
 // 0x0004 (0x0004 - 0x0000)
 struct FZoneGraphDataHandle final
@@ -221,6 +211,16 @@ public:
 	TArray<struct FZoneGraphBVNode>               Nodes;                                             // 0x0020(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FZoneGraphBVTree;
+
+// ScriptStruct ZoneGraph.RegisteredZoneGraphData
+// 0x0010 (0x0010 - 0x0000)
+struct FRegisteredZoneGraphData final
+{
+public:
+	class AZoneGraphData*                         ZoneGraphData;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FRegisteredZoneGraphData;
 
 // ScriptStruct ZoneGraph.ZoneHandle
 // 0x0004 (0x0004 - 0x0000)

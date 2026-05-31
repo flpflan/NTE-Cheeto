@@ -68,60 +68,6 @@ public:
 #pragma pack(pop)
 DUMPER7_ASSERTS_UWaterBodyMeshComponent;
 
-// Class Water.WaterBody
-// 0x0070 (0x0338 - 0x02C8)
-class AWaterBody : public AActor
-{
-public:
-	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaterSplineComponent*                  SplineComp;                                        // 0x02D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	int32                                         WaterBodyIndex;                                    // 0x02E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EWaterBodyType                                WaterBodyType;                                     // 0x02EC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaterWavesBase*                        WaterWaves;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	class UWaterBodyInfoMeshComponent*            WaterInfoMeshComponent;                            // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	class UWaterBodyInfoMeshComponent*            DilatedWaterInfoMeshComponent;                     // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	TArray<class UWaterBodyStaticMeshComponent*>  WaterBodyStaticMeshComponents;                     // 0x0308(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
-	TSubclassOf<class UWaterBodyRiverComponent>   WaterBodyRiverComponentClass;                      // 0x0318(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UWaterBodyLakeComponent>    WaterBodyLakeComponentClass;                       // 0x0320(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UWaterBodyOceanComponent>   WaterBodyOceanComponentClass;                      // 0x0328(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UWaterBodyCustomComponent>  WaterBodyCustomComponentClass;                     // 0x0330(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	class UMaterialInstanceDynamic* GetRiverToLakeTransitionMaterialInstance();
-	class UMaterialInstanceDynamic* GetRiverToOceanTransitionMaterialInstance();
-	class UMaterialInstanceDynamic* GetWaterMaterialInstance();
-	void OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged);
-	void SetWaterMaterial(class UMaterialInterface* InMaterial);
-	void SetWaterWaves(class UWaterWavesBase* InWaterWaves);
-
-	float GetAudioIntensityAtSplineInputKey(float InKey) const;
-	TArray<class AWaterBodyExclusionVolume*> GetExclusionVolumes() const;
-	TArray<class AWaterBodyIsland*> GetIslands() const;
-	class UWaterBodyComponent* GetWaterBodyComponent() const;
-	EWaterBodyType GetWaterBodyType() const;
-	class UWaterSplineComponent* GetWaterSpline() const;
-	float GetWaterVelocityAtSplineInputKey(float InKey) const;
-	struct FVector GetWaterVelocityVectorAtSplineInputKey(float InKey) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBody")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBody")
-	}
-	static class AWaterBody* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AWaterBody>();
-	}
-};
-DUMPER7_ASSERTS_AWaterBody;
-
 // Class Water.WaterBodyStaticMeshComponent
 // 0x0000 (0x0640 - 0x0640)
 class UWaterBodyStaticMeshComponent final : public UWaterBodyMeshComponent
@@ -231,26 +177,6 @@ public:
 };
 DUMPER7_ASSERTS_ABuoyancyManager;
 
-// Class Water.WaterBodyCustom
-// 0x0000 (0x0338 - 0x0338)
-class AWaterBodyCustom final : public AWaterBody
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBodyCustom")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBodyCustom")
-	}
-	static class AWaterBodyCustom* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AWaterBodyCustom>();
-	}
-};
-DUMPER7_ASSERTS_AWaterBodyCustom;
-
 // Class Water.EnvQueryTest_InsideWaterBody
 // 0x0008 (0x0200 - 0x01F8)
 class UEnvQueryTest_InsideWaterBody final : public UEnvQueryTest
@@ -336,26 +262,6 @@ public:
 };
 DUMPER7_ASSERTS_UGerstnerWaterWaveGeneratorSimple;
 
-// Class Water.WaterBodyGenerator
-// 0x0000 (0x0028 - 0x0028)
-class UWaterBodyGenerator : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBodyGenerator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBodyGenerator")
-	}
-	static class UWaterBodyGenerator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWaterBodyGenerator>();
-	}
-};
-DUMPER7_ASSERTS_UWaterBodyGenerator;
-
 // Class Water.GerstnerWaterWaveGeneratorSpectrum
 // 0x0018 (0x0040 - 0x0028)
 class UGerstnerWaterWaveGeneratorSpectrum final : public UGerstnerWaterWaveGeneratorBase
@@ -380,31 +286,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGerstnerWaterWaveGeneratorSpectrum;
-
-// Class Water.WaterBodyInfoMeshComponent
-// 0x0000 (0x0640 - 0x0640)
-class UWaterBodyInfoMeshComponent final : public UWaterBodyMeshComponent
-{
-public:
-	bool                                          bIsDilatedMesh;                                    // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsConservativeRasterCompatible;                   // 0x0639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_63A[0x6];                                      // 0x063A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBodyInfoMeshComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBodyInfoMeshComponent")
-	}
-	static class UWaterBodyInfoMeshComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWaterBodyInfoMeshComponent>();
-	}
-};
-DUMPER7_ASSERTS_UWaterBodyInfoMeshComponent;
 
 // Class Water.WaterWavesBase
 // 0x0000 (0x0028 - 0x0028)
@@ -616,6 +497,80 @@ public:
 };
 DUMPER7_ASSERTS_UOceanBoxCollisionComponent;
 
+// Class Water.WaterBody
+// 0x0070 (0x0338 - 0x02C8)
+class AWaterBody : public AActor
+{
+public:
+	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaterSplineComponent*                  SplineComp;                                        // 0x02D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	int32                                         WaterBodyIndex;                                    // 0x02E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EWaterBodyType                                WaterBodyType;                                     // 0x02EC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaterWavesBase*                        WaterWaves;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWaterBodyInfoMeshComponent*            WaterInfoMeshComponent;                            // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	class UWaterBodyInfoMeshComponent*            DilatedWaterInfoMeshComponent;                     // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	TArray<class UWaterBodyStaticMeshComponent*>  WaterBodyStaticMeshComponents;                     // 0x0308(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	TSubclassOf<class UWaterBodyRiverComponent>   WaterBodyRiverComponentClass;                      // 0x0318(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyLakeComponent>    WaterBodyLakeComponentClass;                       // 0x0320(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyOceanComponent>   WaterBodyOceanComponentClass;                      // 0x0328(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyCustomComponent>  WaterBodyCustomComponentClass;                     // 0x0330(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	class UMaterialInstanceDynamic* GetRiverToLakeTransitionMaterialInstance();
+	class UMaterialInstanceDynamic* GetRiverToOceanTransitionMaterialInstance();
+	class UMaterialInstanceDynamic* GetWaterMaterialInstance();
+	void OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged);
+	void SetWaterMaterial(class UMaterialInterface* InMaterial);
+	void SetWaterWaves(class UWaterWavesBase* InWaterWaves);
+
+	float GetAudioIntensityAtSplineInputKey(float InKey) const;
+	TArray<class AWaterBodyExclusionVolume*> GetExclusionVolumes() const;
+	TArray<class AWaterBodyIsland*> GetIslands() const;
+	class UWaterBodyComponent* GetWaterBodyComponent() const;
+	EWaterBodyType GetWaterBodyType() const;
+	class UWaterSplineComponent* GetWaterSpline() const;
+	float GetWaterVelocityAtSplineInputKey(float InKey) const;
+	struct FVector GetWaterVelocityVectorAtSplineInputKey(float InKey) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBody")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBody")
+	}
+	static class AWaterBody* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AWaterBody>();
+	}
+};
+DUMPER7_ASSERTS_AWaterBody;
+
+// Class Water.WaterBodyGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UWaterBodyGenerator : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBodyGenerator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBodyGenerator")
+	}
+	static class UWaterBodyGenerator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWaterBodyGenerator>();
+	}
+};
+DUMPER7_ASSERTS_UWaterBodyGenerator;
+
 // Class Water.WaterBodyComponent
 // 0x17D0 (0x1D20 - 0x0550)
 class UWaterBodyComponent : public UPrimitiveComponent
@@ -733,6 +688,55 @@ public:
 };
 DUMPER7_ASSERTS_UCustomMeshGenerator;
 
+// Class Water.WaterBrushActorInterface
+// 0x0000 (0x0000 - 0x0000)
+class IWaterBrushActorInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBrushActorInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBrushActorInterface")
+	}
+	static class IWaterBrushActorInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IWaterBrushActorInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IWaterBrushActorInterface;
+
+// Class Water.WaterBodyCustom
+// 0x0000 (0x0338 - 0x0338)
+class AWaterBodyCustom final : public AWaterBody
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBodyCustom")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBodyCustom")
+	}
+	static class AWaterBodyCustom* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AWaterBodyCustom>();
+	}
+};
+DUMPER7_ASSERTS_AWaterBodyCustom;
+
 // Class Water.WaterBodyCustomComponent
 // 0x0010 (0x1D30 - 0x1D20)
 class UWaterBodyCustomComponent final : public UWaterBodyComponent
@@ -756,6 +760,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWaterBodyCustomComponent;
+
+// Class Water.OceanGenerator
+// 0x0020 (0x0048 - 0x0028)
+class UOceanGenerator final : public UWaterBodyGenerator
+{
+public:
+	TArray<class UOceanBoxCollisionComponent*>    CollisionBoxes;                                    // 0x0028(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UOceanCollisionComponent*>       CollisionHullSets;                                 // 0x0038(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("OceanGenerator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OceanGenerator")
+	}
+	static class UOceanGenerator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOceanGenerator>();
+	}
+};
+DUMPER7_ASSERTS_UOceanGenerator;
 
 // Class Water.WaterBodyExclusionVolume
 // 0x0018 (0x0328 - 0x0310)
@@ -802,6 +830,31 @@ public:
 };
 DUMPER7_ASSERTS_UWaterBodyHLODBuilder;
 
+// Class Water.WaterBodyInfoMeshComponent
+// 0x0000 (0x0640 - 0x0640)
+class UWaterBodyInfoMeshComponent final : public UWaterBodyMeshComponent
+{
+public:
+	bool                                          bIsDilatedMesh;                                    // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsConservativeRasterCompatible;                   // 0x0639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_63A[0x6];                                      // 0x063A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBodyInfoMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBodyInfoMeshComponent")
+	}
+	static class UWaterBodyInfoMeshComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWaterBodyInfoMeshComponent>();
+	}
+};
+DUMPER7_ASSERTS_UWaterBodyInfoMeshComponent;
+
 // Class Water.WaterBodyIsland
 // 0x0120 (0x03E8 - 0x02C8)
 class AWaterBodyIsland final : public AActor
@@ -831,6 +884,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AWaterBodyIsland;
+
+// Class Water.WaterBodyRiver
+// 0x0000 (0x0338 - 0x0338)
+class AWaterBodyRiver final : public AWaterBody
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("WaterBodyRiver")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WaterBodyRiver")
+	}
+	static class AWaterBodyRiver* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AWaterBodyRiver>();
+	}
+};
+DUMPER7_ASSERTS_AWaterBodyRiver;
 
 // Class Water.LakeGenerator
 // 0x0018 (0x0040 - 0x0028)
@@ -900,30 +973,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWaterBodyLakeComponent;
-
-// Class Water.OceanGenerator
-// 0x0020 (0x0048 - 0x0028)
-class UOceanGenerator final : public UWaterBodyGenerator
-{
-public:
-	TArray<class UOceanBoxCollisionComponent*>    CollisionBoxes;                                    // 0x0028(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<class UOceanCollisionComponent*>       CollisionHullSets;                                 // 0x0038(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("OceanGenerator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"OceanGenerator")
-	}
-	static class UOceanGenerator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOceanGenerator>();
-	}
-};
-DUMPER7_ASSERTS_UOceanGenerator;
 
 // Class Water.WaterBodyOcean
 // 0x0000 (0x0338 - 0x0338)
@@ -998,26 +1047,6 @@ public:
 };
 DUMPER7_ASSERTS_URiverGenerator;
 
-// Class Water.WaterBodyRiver
-// 0x0000 (0x0338 - 0x0338)
-class AWaterBodyRiver final : public AWaterBody
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBodyRiver")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBodyRiver")
-	}
-	static class AWaterBodyRiver* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AWaterBodyRiver>();
-	}
-};
-DUMPER7_ASSERTS_AWaterBodyRiver;
-
 // Class Water.WaterBodyRiverComponent
 // 0x0030 (0x1D50 - 0x1D20)
 class UWaterBodyRiverComponent final : public UWaterBodyComponent
@@ -1054,35 +1083,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UWaterBodyRiverComponent;
-
-// Class Water.WaterBrushActorInterface
-// 0x0000 (0x0000 - 0x0000)
-class IWaterBrushActorInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("WaterBrushActorInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"WaterBrushActorInterface")
-	}
-	static class IWaterBrushActorInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IWaterBrushActorInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IWaterBrushActorInterface;
 
 // Class Water.WaterMeshComponent
 // 0x0220 (0x07B0 - 0x0590)

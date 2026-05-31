@@ -886,9 +886,9 @@ void UOneEngineSDKPSSubsystem::GetBlockingUsers(int32 Offset, int32 Limit, TDele
 // Function OneEngineSDK.OneEngineSDKPSSubsystem.GetCommunicationRestrictionStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(int32 Result)>           OnRestrictionStatusResult                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(int32 result)>           OnRestrictionStatusResult                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOneEngineSDKPSSubsystem::GetCommunicationRestrictionStatus(TDelegate<void(int32 Result)> OnRestrictionStatusResult)
+void UOneEngineSDKPSSubsystem::GetCommunicationRestrictionStatus(TDelegate<void(int32 result)> OnRestrictionStatusResult)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1047,9 +1047,9 @@ int32 UOneEngineSDKPSSubsystem::HideStoreIcon()
 // Function OneEngineSDK.OneEngineSDKPSSubsystem.OpenCommerceDialogPremiumMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(int32 Result)>           OnOpenDialogResult                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(int32 result)>           OnOpenDialogResult                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOneEngineSDKPSSubsystem::OpenCommerceDialogPremiumMode(TDelegate<void(int32 Result)> OnOpenDialogResult)
+void UOneEngineSDKPSSubsystem::OpenCommerceDialogPremiumMode(TDelegate<void(int32 result)> OnOpenDialogResult)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1891,8 +1891,9 @@ void UPSOneUIManager::ShowToast(const class FText& Text, float duration, bool Ha
 // Parameters:
 // bool                                    bHasAgreed                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   LoginOption                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    LoginOptionString                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPSOneUIManager::ShowUserAgreement(bool bHasAgreed, int32 LoginOption)
+void UPSOneUIManager::ShowUserAgreement(bool bHasAgreed, int32 LoginOption, const class FString& LoginOptionString)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1903,6 +1904,7 @@ void UPSOneUIManager::ShowUserAgreement(bool bHasAgreed, int32 LoginOption)
 
 	Parms.bHasAgreed = bHasAgreed;
 	Parms.LoginOption = LoginOption;
+	Parms.LoginOptionString = std::move(LoginOptionString);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2216,9 +2218,9 @@ void UOneEngineSDKSubsystem::Bind(TDelegate<void(bool bSuccess, int32 Code, cons
 // Parameters:
 // const class FString&                    FuncName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Params_0                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(const class FString& FunctionName, int32 Result, const class FString& Msg)>CommonFunctionDelegate                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& FunctionName, int32 result, const class FString& Msg)>CommonFunctionDelegate                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOneEngineSDKSubsystem::CallCommonFunction(const class FString& FuncName, const class FString& Params_0, TDelegate<void(const class FString& FunctionName, int32 Result, const class FString& Msg)> CommonFunctionDelegate)
+void UOneEngineSDKSubsystem::CallCommonFunction(const class FString& FuncName, const class FString& Params_0, TDelegate<void(const class FString& FunctionName, int32 result, const class FString& Msg)> CommonFunctionDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4504,9 +4506,9 @@ void UOneEngineSDKSubsystem::TrackEventRoleLogout(const struct FOneRoleInfo& Rol
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    Text                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(bool bSucceed, const class FString& Result, const class FString& ErrorMsg)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(bool bSucceed, const class FString& result, const class FString& ErrorMsg)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOneEngineSDKSubsystem::Translate(const class FString& Text, TDelegate<void(bool bSucceed, const class FString& Result, const class FString& ErrorMsg)> Callback)
+void UOneEngineSDKSubsystem::Translate(const class FString& Text, TDelegate<void(bool bSucceed, const class FString& result, const class FString& ErrorMsg)> Callback)
 {
 	static class UFunction* Func = nullptr;
 

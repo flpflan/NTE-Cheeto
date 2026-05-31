@@ -6443,10 +6443,10 @@ TArray<struct FRigElementKey> URigHierarchy::SortKeys(const TArray<struct FRigEl
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult*     result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FControlRigReference             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FControlRigReference UAnimNodeControlRigLibrary::ConvertToControlRig(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+struct FControlRigReference UAnimNodeControlRigLibrary::ConvertToControlRig(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6464,8 +6464,8 @@ struct FControlRigReference UAnimNodeControlRigLibrary::ConvertToControlRig(cons
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 
 	return Parms.ReturnValue;
 }
@@ -6476,9 +6476,9 @@ struct FControlRigReference UAnimNodeControlRigLibrary::ConvertToControlRig(cons
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FControlRigReference*            ControlRig                                             (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAnimNodeControlRigLibrary::ConvertToControlRigPure(const struct FAnimNodeReference& Node, struct FControlRigReference* ControlRig, bool* Result)
+void UAnimNodeControlRigLibrary::ConvertToControlRigPure(const struct FAnimNodeReference& Node, struct FControlRigReference* ControlRig, bool* result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6499,8 +6499,8 @@ void UAnimNodeControlRigLibrary::ConvertToControlRigPure(const struct FAnimNodeR
 	if (ControlRig != nullptr)
 		*ControlRig = std::move(Parms.ControlRig);
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 }
 
 

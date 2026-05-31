@@ -227,16 +227,6 @@ public:
 };
 DUMPER7_ASSERTS_FPatcherSDKPathInfo;
 
-// ScriptStruct PatcherSDK.PatcherTagCheckResourceCallback
-// 0x0020 (0x0020 - 0x0000)
-struct FPatcherTagCheckResourceCallback final
-{
-public:
-	TDelegate<void(int32 Code, const class FString& Desc, const TArray<struct FPatcherResourceInfo>& ResourceInfoArray)> CheckCallback; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(int32 CheckedTagCount, int32 RemainTagCount, int64 TotalBytes, int64 CheckedBytes, const class FString& CurrentTag, int64 CurrentTagTotalBytes, int64 CurretTagHasChekedBytes)> CheckProgressCallback; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPatcherTagCheckResourceCallback;
-
 // ScriptStruct PatcherSDK.PreReleaseRequestCallback
 // 0x0030 (0x0030 - 0x0000)
 struct FPreReleaseRequestCallback final
@@ -258,6 +248,16 @@ public:
 };
 DUMPER7_ASSERTS_FPatcherRequestDownloadFileCallback;
 
+// ScriptStruct PatcherSDK.PatcherTagCheckResourceCallback
+// 0x0020 (0x0020 - 0x0000)
+struct FPatcherTagCheckResourceCallback final
+{
+public:
+	TDelegate<void(int32 Code, const class FString& Desc, const TArray<struct FPatcherResourceInfo>& ResourceInfoArray)> CheckCallback; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 CheckedTagCount, int32 RemainTagCount, int64 TotalBytes, int64 CheckedBytes, const class FString& CurrentTag, int64 CurrentTagTotalBytes, int64 CurretTagHasChekedBytes)> CheckProgressCallback; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPatcherTagCheckResourceCallback;
+
 // ScriptStruct PatcherSDK.PatcherTagResourceUpdateCallback
 // 0x0050 (0x0050 - 0x0000)
 struct FPatcherTagResourceUpdateCallback final
@@ -267,7 +267,7 @@ public:
 	TDelegate<void(int64 Task, int64 Total, int64 UpdateNeedSpaceBytes, int64 FreeDiskspaceBytes)> PreDownloadCallback; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int64 Task, int64 TotalSize, float Progress, int64 Speed)> DownloadCallback;      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int64 Task, int32 TotalFileCount, int32 remainFileCount, int64 TotalBytes, int64 FixedBytes, const class FString& Filename, int64 CurrentFileTotalBytes, int64 CurretFileFixedBytes)> FixCallback; // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(int64 Task, EPatcherErr Result)> FinishCallback;                                  // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int64 Task, EPatcherErr result)> FinishCallback;                                  // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPatcherTagResourceUpdateCallback;
 

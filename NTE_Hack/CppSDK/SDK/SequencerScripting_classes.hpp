@@ -19,6 +19,68 @@
 
 SDK_NAMESPACE_START
 
+// Class SequencerScripting.MovieSceneScriptingChannel
+// 0x0008 (0x0030 - 0x0028)
+class UMovieSceneScriptingChannel : public UObject
+{
+public:
+	class FName                                   ChannelName;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingChannel")
+	}
+	static class UMovieSceneScriptingChannel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingChannel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingChannel;
+
+// Class SequencerScripting.MovieSceneScriptingIntegerChannel
+// 0x0030 (0x0060 - 0x0030)
+class UMovieSceneScriptingIntegerChannel final : public UMovieSceneScriptingChannel
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMovieSceneScriptingIntegerKey* AddKey(const struct FFrameNumber& InTime, int32 NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void RemoveDefault();
+	void RemoveKey(class UMovieSceneScriptingKey* Key);
+	void SetDefault(int32 InDefaultValue);
+	void SetInterpolateLinearKeys(bool bInInterpolateLinearKeys);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
+
+	TArray<int32> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
+	int32 GetDefault() const;
+	bool GetInterpolateLinearKeys() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
+	int32 GetNumKeys() const;
+	bool HasDefault() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingIntegerChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingIntegerChannel")
+	}
+	static class UMovieSceneScriptingIntegerChannel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingIntegerChannel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingIntegerChannel;
+
 // Class SequencerScripting.MovieSceneScriptingKey
 // 0x0018 (0x0040 - 0x0028)
 class UMovieSceneScriptingKey : public UObject
@@ -72,28 +134,69 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceKey;
 
-// Class SequencerScripting.MovieSceneScriptingChannel
-// 0x0008 (0x0030 - 0x0028)
-class UMovieSceneScriptingChannel : public UObject
+// Class SequencerScripting.MovieSceneScriptingFloatKey
+// 0x0000 (0x0040 - 0x0040)
+class UMovieSceneScriptingFloatKey : public UMovieSceneScriptingKey
 {
 public:
-	class FName                                   ChannelName;                                       // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	void SetArriveTangent(float InNewValue);
+	void SetArriveTangentWeight(float InNewValue);
+	void SetInterpolationMode(ERichCurveInterpMode InNewValue);
+	void SetLeaveTangent(float InNewValue);
+	void SetLeaveTangentWeight(float InNewValue);
+	void SetTangentMode(ERichCurveTangentMode InNewValue);
+	void SetTangentWeightMode(ERichCurveTangentWeightMode InNewValue);
+	void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void SetValue(float InNewValue);
+
+	float GetArriveTangent() const;
+	float GetArriveTangentWeight() const;
+	ERichCurveInterpMode GetInterpolationMode() const;
+	float GetLeaveTangent() const;
+	float GetLeaveTangentWeight() const;
+	ERichCurveTangentMode GetTangentMode() const;
+	ERichCurveTangentWeightMode GetTangentWeightMode() const;
+	struct FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit) const;
+	float GetValue() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingChannel")
+		STATIC_CLASS_IMPL("MovieSceneScriptingFloatKey")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingChannel")
+		STATIC_NAME_IMPL(L"MovieSceneScriptingFloatKey")
 	}
-	static class UMovieSceneScriptingChannel* GetDefaultObj()
+	static class UMovieSceneScriptingFloatKey* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieSceneScriptingChannel>();
+		return GetDefaultObjImpl<UMovieSceneScriptingFloatKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingChannel;
+DUMPER7_ASSERTS_UMovieSceneScriptingFloatKey;
+
+// Class SequencerScripting.MovieSceneScriptingDoubleAsFloatKey
+// 0x0020 (0x0060 - 0x0040)
+class UMovieSceneScriptingDoubleAsFloatKey final : public UMovieSceneScriptingFloatKey
+{
+public:
+	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingDoubleAsFloatKey")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingDoubleAsFloatKey")
+	}
+	static class UMovieSceneScriptingDoubleAsFloatKey* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingDoubleAsFloatKey>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingDoubleAsFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingActorReferenceChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -129,6 +232,44 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceChannel;
+
+// Class SequencerScripting.MovieSceneScriptingParticleChannel
+// 0x0030 (0x0060 - 0x0030)
+class UMovieSceneScriptingParticleChannel final : public UMovieSceneScriptingChannel
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMovieSceneScriptingParticleKey* AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void RemoveDefault();
+	void RemoveKey(class UMovieSceneScriptingKey* Key);
+	void SetDefault(EParticleKey InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
+
+	struct FSequencerScriptingRange ComputeEffectiveRange() const;
+	TArray<EParticleKey> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
+	EParticleKey GetDefault() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
+	int32 GetNumKeys() const;
+	bool HasDefault() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingParticleChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleChannel")
+	}
+	static class UMovieSceneScriptingParticleChannel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingParticleChannel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingParticleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingBoolKey
 // 0x0020 (0x0060 - 0x0040)
@@ -410,47 +551,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingEventChannel;
 
-// Class SequencerScripting.MovieSceneScriptingFloatKey
-// 0x0000 (0x0040 - 0x0040)
-class UMovieSceneScriptingFloatKey : public UMovieSceneScriptingKey
-{
-public:
-	void SetArriveTangent(float InNewValue);
-	void SetArriveTangentWeight(float InNewValue);
-	void SetInterpolationMode(ERichCurveInterpMode InNewValue);
-	void SetLeaveTangent(float InNewValue);
-	void SetLeaveTangentWeight(float InNewValue);
-	void SetTangentMode(ERichCurveTangentMode InNewValue);
-	void SetTangentWeightMode(ERichCurveTangentWeightMode InNewValue);
-	void SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit);
-	void SetValue(float InNewValue);
-
-	float GetArriveTangent() const;
-	float GetArriveTangentWeight() const;
-	ERichCurveInterpMode GetInterpolationMode() const;
-	float GetLeaveTangent() const;
-	float GetLeaveTangentWeight() const;
-	ERichCurveTangentMode GetTangentMode() const;
-	ERichCurveTangentWeightMode GetTangentWeightMode() const;
-	struct FFrameTime GetTime(EMovieSceneTimeUnit TimeUnit) const;
-	float GetValue() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingFloatKey")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingFloatKey")
-	}
-	static class UMovieSceneScriptingFloatKey* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneScriptingFloatKey>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneScriptingFloatKey;
-
 // Class SequencerScripting.MovieSceneScriptingActualFloatKey
 // 0x0020 (0x0060 - 0x0040)
 class UMovieSceneScriptingActualFloatKey final : public UMovieSceneScriptingFloatKey
@@ -473,29 +573,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingActualFloatKey;
-
-// Class SequencerScripting.MovieSceneScriptingDoubleAsFloatKey
-// 0x0020 (0x0060 - 0x0040)
-class UMovieSceneScriptingDoubleAsFloatKey final : public UMovieSceneScriptingFloatKey
-{
-public:
-	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingDoubleAsFloatKey")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingDoubleAsFloatKey")
-	}
-	static class UMovieSceneScriptingDoubleAsFloatKey* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneScriptingDoubleAsFloatKey>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneScriptingDoubleAsFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingFloatChannel
 // 0x0050 (0x0080 - 0x0030)
@@ -568,45 +645,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingIntegerKey;
-
-// Class SequencerScripting.MovieSceneScriptingIntegerChannel
-// 0x0030 (0x0060 - 0x0030)
-class UMovieSceneScriptingIntegerChannel final : public UMovieSceneScriptingChannel
-{
-public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UMovieSceneScriptingIntegerKey* AddKey(const struct FFrameNumber& InTime, int32 NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
-	void RemoveDefault();
-	void RemoveKey(class UMovieSceneScriptingKey* Key);
-	void SetDefault(int32 InDefaultValue);
-	void SetInterpolateLinearKeys(bool bInInterpolateLinearKeys);
-	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
-
-	TArray<int32> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
-	int32 GetDefault() const;
-	bool GetInterpolateLinearKeys() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
-	int32 GetNumKeys() const;
-	bool HasDefault() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingIntegerChannel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingIntegerChannel")
-	}
-	static class UMovieSceneScriptingIntegerChannel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneScriptingIntegerChannel>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneScriptingIntegerChannel;
 
 // Class SequencerScripting.MovieSceneScriptingObjectPathKey
 // 0x0020 (0x0060 - 0x0040)
@@ -702,44 +740,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingParticleKey;
-
-// Class SequencerScripting.MovieSceneScriptingParticleChannel
-// 0x0030 (0x0060 - 0x0030)
-class UMovieSceneScriptingParticleChannel final : public UMovieSceneScriptingChannel
-{
-public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UMovieSceneScriptingParticleKey* AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
-	void RemoveDefault();
-	void RemoveKey(class UMovieSceneScriptingKey* Key);
-	void SetDefault(EParticleKey InDefaultValue);
-	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
-
-	struct FSequencerScriptingRange ComputeEffectiveRange() const;
-	TArray<EParticleKey> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
-	EParticleKey GetDefault() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
-	int32 GetNumKeys() const;
-	bool HasDefault() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingParticleChannel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleChannel")
-	}
-	static class UMovieSceneScriptingParticleChannel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneScriptingParticleChannel>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneScriptingParticleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingStringKey
 // 0x0020 (0x0060 - 0x0040)

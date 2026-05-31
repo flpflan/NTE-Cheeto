@@ -41,34 +41,6 @@ public:
 };
 DUMPER7_ASSERTS_UAutoBlendUserData;
 
-// Class MeshBlend.MeshBlendBPLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMeshBlendBPLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static void ClearBlendOptionFromActor(class AActor* Actor);
-	static void ClearBlendUserDataFromMesh(class UStaticMesh* Mesh);
-	static void DisableBlendOnActor(class AActor* Actor);
-	static void RefreshBlendOnActor(class AActor* Actor, bool bSoftReset);
-	static void SetBlendOptionOnActor(class AActor* Actor, EAutoBlendOption NewBlendOption);
-	static void SetBlendUserDataOnMesh(class UStaticMesh* Mesh, EAutoBlendOption NewBlendOption);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MeshBlendBPLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MeshBlendBPLibrary")
-	}
-	static class UMeshBlendBPLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshBlendBPLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UMeshBlendBPLibrary;
-
 // Class MeshBlend.MeshBlendActivator
 // 0x0110 (0x03D8 - 0x02C8)
 class AMeshBlendActivator final : public AActor
@@ -101,6 +73,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AMeshBlendActivator;
+
+// Class MeshBlend.MeshBlendBPLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMeshBlendBPLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void ClearBlendOptionFromActor(class AActor* Actor);
+	static void ClearBlendUserDataFromMesh(class UStaticMesh* Mesh);
+	static void DisableBlendOnActor(class AActor* Actor);
+	static void RefreshBlendOnActor(class AActor* Actor, bool bSoftReset);
+	static void SetBlendOptionOnActor(class AActor* Actor, EAutoBlendOption NewBlendOption);
+	static void SetBlendUserDataOnMesh(class UStaticMesh* Mesh, EAutoBlendOption NewBlendOption);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MeshBlendBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshBlendBPLibrary")
+	}
+	static class UMeshBlendBPLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshBlendBPLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UMeshBlendBPLibrary;
 
 // Class MeshBlend.MeshBlendProcessor
 // 0x0068 (0x0090 - 0x0028)

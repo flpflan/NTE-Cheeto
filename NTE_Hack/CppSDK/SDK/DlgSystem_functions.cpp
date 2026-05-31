@@ -1711,6 +1711,31 @@ const struct FDlgSequence UDlgContext::GetSequenceConfig() const
 }
 
 
+// Function DlgSystem.DlgContext.GetSkipDesc
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+class FText UDlgContext::GetSkipDesc() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DlgContext", "GetSkipDesc");
+
+	Params::DlgContext_GetSkipDesc Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DlgSystem.DlgContext.GetVisitedNodeGUIDs
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2052,6 +2077,31 @@ bool UDlgContext::IsNeedFaceToTarget() const
 		Func = Class->GetFunction("DlgContext", "IsNeedFaceToTarget");
 
 	Params::DlgContext_IsNeedFaceToTarget Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function DlgSystem.DlgContext.IsNeedShowFashion
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UDlgContext::IsNeedShowFashion() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DlgContext", "IsNeedShowFashion");
+
+	Params::DlgContext_IsNeedShowFashion Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -391,9 +391,9 @@ public:
 	void OpenImageEdit(const struct FWMImageEditConfig& Config, TDelegate<void(bool bSucceed, const TArray<uint8>& ImageData, int32 Code, const class FString& Msg)> Callback);
 	bool OpenLiveShow(const class FString& URL, const int32 ScreenPercent);
 	bool OpenPortraitLiveShow(const class FString& URL);
-	bool OpenSurvey(const class FString& URL, TDelegate<void(const class FString& Result)> Callback);
-	bool OpenSurveyWithConfig(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, TDelegate<void(const class FString& Result)> Callback);
-	bool OpenSurveyWithSignature(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, const class FString& Signature, TDelegate<void(const class FString& Result)> Callback);
+	bool OpenSurvey(const class FString& URL, TDelegate<void(const class FString& result)> Callback);
+	bool OpenSurveyWithConfig(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, TDelegate<void(const class FString& result)> Callback);
+	bool OpenSurveyWithSignature(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, const class FString& Signature, TDelegate<void(const class FString& result)> Callback);
 	bool OpenUrl(const class FString& URL);
 	bool OpenURLConfigWithComplete(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, TDelegate<void()> Callback);
 	bool OpenUrlWithComplete(const class FString& URL, TDelegate<void()> Callback);
@@ -413,7 +413,7 @@ public:
 	void RemoveAudioBlackList(const class FString& RoleId, TDelegate<void(bool bSucceed, int32 Code, const class FString& Msg)> ResultCallback);
 	void RenderHtmlTemplate(const class FString& ConfigJson, TDelegate<void(bool bSucceed, const TArray<uint8>& ImageData, const class FString& FilePath, int32 Code, const class FString& Msg)> Callback);
 	void RequestPermission(EWMWebPermissionType PermissionType, TDelegate<void(EWMWebPermissionType PermissionType, int32 PermissionStatus)> Callback);
-	void RespondToCustomJSEvent(const class FString& Result, int64 Handle);
+	void RespondToCustomJSEvent(const class FString& result, int64 Handle);
 	void Resume();
 	void ResumeAudio();
 	void ResumeLiveShowAudio();
@@ -456,7 +456,7 @@ public:
 	bool ShowActivityListWithExtend(const TArray<class FString>& Types, const TMap<class FString, class FString>& Extend, TDelegate<void(bool bSucceed, int32 Code, const class FString& Msg)> Callback);
 	void StartRecording(bool bTranslate, TDelegate<void(int32 Volume)> RecordMicVolumeCallback, TDelegate<void(const class FString& FilePath, const class FString& Text)> ProgressCallback, TDelegate<void(bool bSucceed, const class FString& FilePath, int32 duration, int32 Code, const class FString& Msg)> ResultCallback);
 	void StartRecordVoice(int32 duration, TDelegate<void(bool bSucceed, const class FString& FilePath, int32 duration, int32 Code, const class FString& Msg)> Callback);
-	void StartScreenRecording(const struct FWMScreenRecordingConfig& Config, TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& Result, int32 Code, const class FString& Msg)> Callback, TDelegate<void()> StartDelegate);
+	void StartScreenRecording(const struct FWMScreenRecordingConfig& Config, TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& result, int32 Code, const class FString& Msg)> Callback, TDelegate<void()> StartDelegate);
 	void StopAudio();
 	void StopPlayingAudioFile();
 	void StopPlayRecordVoice();

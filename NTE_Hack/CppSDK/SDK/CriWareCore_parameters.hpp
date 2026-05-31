@@ -5670,7 +5670,7 @@ struct AtomRackBase_AddPerformanceMonitorDelegate final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)> OnAtomRackPerformanceMonitorResultBP; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAtomPerformanceMonitorResult& result)> OnAtomRackPerformanceMonitorResultBP; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AtomRackBase_AddPerformanceMonitorDelegate;
 
@@ -5720,7 +5720,7 @@ struct AtomRackBase_RemovePerformanceMonitorDelegate final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)> OnAtomRackPerformanceMonitorResultBP; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FAtomPerformanceMonitorResult& result)> OnAtomRackPerformanceMonitorResultBP; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AtomRackBase_RemovePerformanceMonitorDelegate;
 
@@ -5829,7 +5829,7 @@ DUMPER7_ASSERTS_AtomRackBase_StopTruePeakMeterMeasuring;
 struct AtomRack_BP_SetSnapshot final
 {
 public:
-	class FString                                 InSnapshot;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InSnapShot;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FadeTime;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -5867,7 +5867,7 @@ DUMPER7_ASSERTS_AtomRack_SetDspBusSettingName;
 struct AtomRack_SetSnapshot final
 {
 public:
-	class FString                                 InSnapshot;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InSnapShot;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AtomRack_SetSnapshot;
 

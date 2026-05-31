@@ -12,22 +12,22 @@
 
 #include "UDS_SkyMode_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UDS_SkyLightMode_structs.hpp"
-#include "UDS_LensFlareType_structs.hpp"
+#include "UDS_FeatureToggle_structs.hpp"
+#include "UDS_Project_Mode_structs.hpp"
+#include "HTGame_structs.hpp"
+#include "HTGame_classes.hpp"
 #include "UDS_ColorMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UDS_FeatureToggle_structs.hpp"
+#include "UDS_SkyLightMode_structs.hpp"
+#include "UDS_FogColorMode_structs.hpp"
+#include "UDS_LensFlareType_structs.hpp"
 #include "UDS_NoiseType_structs.hpp"
-#include "UDS_Project_Mode_structs.hpp"
 #include "UDS_VolRT_Mode_structs.hpp"
 #include "UDS_CityPresets_structs.hpp"
 #include "UDS_PropertyType_structs.hpp"
-#include "UDS_FogColorMode_structs.hpp"
-#include "UDS_Post_Process_Stage_structs.hpp"
 #include "UDS_Occlusion_Mode_structs.hpp"
+#include "UDS_Post_Process_Stage_structs.hpp"
 #include "UDS_Space_Planet_structs.hpp"
-#include "HTGame_structs.hpp"
-#include "HTGame_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -115,7 +115,7 @@ public:
 	double                                        Cloud_Tiling_Layer_1;                              // 0x1528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Cloud_Tiling_Layer_2;                              // 0x1530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Soften_Horizon;                                    // 0x1538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          One_cloud_layer;                                   // 0x1540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          One_Cloud_Layer;                                   // 0x1540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1541[0x7];                                     // 0x1541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Cloud_Height_Layer_1;                              // 0x1548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Cloud_Height_Layer_2;                              // 0x1550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

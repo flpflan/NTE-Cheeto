@@ -153,6 +153,29 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeResultMeshError_Generic;
 
+// Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
+// 0x0010 (0x00A0 - 0x0090)
+class UInterchangeResultTextureDisplay_TextureFileDoNotExist final : public UInterchangeResultTextureDisplay
+{
+public:
+	class FString                                 MaterialName;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay_TextureFileDoNotExist")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay_TextureFileDoNotExist")
+	}
+	static class UInterchangeResultTextureDisplay_TextureFileDoNotExist* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
+
 // Class InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
 // 0x0008 (0x0088 - 0x0080)
 class UInterchangeResultMeshWarning_TooManyUVs final : public UInterchangeResultMeshWarning
@@ -176,28 +199,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeResultMeshWarning_TooManyUVs;
-
-// Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
-// 0x0010 (0x00A0 - 0x0090)
-class UInterchangeResultTextureDisplay_TextureFileDoNotExist final : public UInterchangeResultTextureDisplay
-{
-public:
-	class FString                                 MaterialName;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay_TextureFileDoNotExist")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay_TextureFileDoNotExist")
-	}
-	static class UInterchangeResultTextureDisplay_TextureFileDoNotExist* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
 
 SDK_NAMESPACE_END

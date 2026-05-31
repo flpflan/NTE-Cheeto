@@ -230,19 +230,17 @@ enum class EPSLoginAuthMethod : uint8
 	EPSLoginAuthMethod_MAX                   = 2,
 };
 
-// ScriptStruct OneEngineSDK.OneProductInfo
-// 0x0060 (0x0060 - 0x0000)
-struct FOneProductInfo final
+// ScriptStruct OneEngineSDK.OnePermissionInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FOnePermissionInfo final
 {
 public:
-	class FString                                 ProductId;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Price;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Currency;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SymbolPrice;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Title;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Desc;                                              // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOnePermissionType                            PermissionType;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Title;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Desc;                                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOneProductInfo;
+DUMPER7_ASSERTS_FOnePermissionInfo;
 
 // ScriptStruct OneEngineSDK.OnePSUserProfile
 // 0x0078 (0x0078 - 0x0000)
@@ -274,6 +272,31 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FOnePSUserProfileResponse;
+
+// ScriptStruct OneEngineSDK.PSOneUserCenterModel
+// 0x00E0 (0x00E0 - 0x0000)
+struct FPSOneUserCenterModel final
+{
+public:
+	class FString                                 UserName;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Nickname;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CellPhone;                                         // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ShowCellPhone;                                     // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ShowEmail;                                         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 HeadImg;                                           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RealName;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 IDNumber;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Email;                                             // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserId;                                            // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OneID;                                             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Token;                                             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NewUser;                                           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 UserIP;                                            // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          HavePwd;                                           // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPSOneUserCenterModel;
 
 // ScriptStruct OneEngineSDK.OnePSProductSku
 // 0x00B0 (0x00B0 - 0x0000)
@@ -358,31 +381,34 @@ public:
 };
 DUMPER7_ASSERTS_FOnePSProductCategory;
 
-// ScriptStruct OneEngineSDK.OnePushMessage
-// 0x0048 (0x0048 - 0x0000)
-struct FOnePushMessage final
+// ScriptStruct OneEngineSDK.OnePushStatus
+// 0x0002 (0x0002 - 0x0000)
+struct FOnePushStatus final
 {
 public:
-	class FString                                 Title;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Content;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MessageId;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Ext;                                               // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsActive;                                         // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsSysOpen;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsAppOpen;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOnePushMessage;
+DUMPER7_ASSERTS_FOnePushStatus;
 
-// ScriptStruct OneEngineSDK.PSOneAreaCode
-// 0x0028 (0x0028 - 0x0000)
-struct FPSOneAreaCode final
+// ScriptStruct OneEngineSDK.OnePaymentInfo
+// 0x00B0 (0x00B0 - 0x0000)
+struct FOnePaymentInfo final
 {
 public:
-	int32                                         ID;                                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Code;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Area;                                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OrderId;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Price;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductName;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GameServerId;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ServerName;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RoleId;                                            // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RoleName;                                          // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductId;                                         // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductCount;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ExtInfo;                                           // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PaySuccessUrl;                                     // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPSOneAreaCode;
+DUMPER7_ASSERTS_FOnePaymentInfo;
 
 // ScriptStruct OneEngineSDK.OneUserThirdInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -425,6 +451,36 @@ public:
 };
 DUMPER7_ASSERTS_FOneUserInfo;
 
+// ScriptStruct OneEngineSDK.OneShareWeiboSuperData
+// 0x0070 (0x0070 - 0x0000)
+struct FOneShareWeiboSuperData final
+{
+public:
+	class FString                                 SuperGroup;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Section;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            ExtraInfo;                                         // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOneShareWeiboSuperData;
+
+// ScriptStruct OneEngineSDK.OneShareData
+// 0x0100 (0x0100 - 0x0000)
+struct FOneShareData final
+{
+public:
+	class FString                                 WebPageUrl;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Title;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Content;                                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Thumbnail;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Image;                                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NetImageUrl;                                       // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LocalImagePath;                                    // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TopicId;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TapGroupLabelId;                                   // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TapHashIds;                                        // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOneShareWeiboSuperData                SinaSuperGroup;                                    // 0x0090(0x0070)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOneShareData;
+
 // ScriptStruct OneEngineSDK.OneAntiAddictionInfo
 // 0x0080 (0x0080 - 0x0000)
 struct FOneAntiAddictionInfo final
@@ -449,6 +505,20 @@ public:
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FOneAntiAddictionInfo;
+
+// ScriptStruct OneEngineSDK.PSOneAccountInfoStruct
+// 0x0048 (0x0048 - 0x0000)
+struct FPSOneAccountInfoStruct final
+{
+public:
+	class FString                                 ImageURL;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Nick;                                              // 0x0010(0x0010)(NativeAccessSpecifierPublic)
+	class FText                                   Mobile;                                            // 0x0020(0x0010)(NativeAccessSpecifierPublic)
+	class FText                                   Email;                                             // 0x0030(0x0010)(NativeAccessSpecifierPublic)
+	bool                                          bHasPwd;                                           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPSOneAccountInfoStruct;
 
 // ScriptStruct OneEngineSDK.OneURCRoleInfo
 // 0x0090 (0x0090 - 0x0000)
@@ -492,31 +562,19 @@ public:
 };
 DUMPER7_ASSERTS_FUserIpInfo;
 
-// ScriptStruct OneEngineSDK.OnePermissionInfo
-// 0x0028 (0x0028 - 0x0000)
-struct FOnePermissionInfo final
+// ScriptStruct OneEngineSDK.OneProductInfo
+// 0x0060 (0x0060 - 0x0000)
+struct FOneProductInfo final
 {
 public:
-	EOnePermissionType                            PermissionType;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Title;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Desc;                                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductId;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Price;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Currency;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SymbolPrice;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Title;                                             // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Desc;                                              // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOnePermissionInfo;
-
-// ScriptStruct OneEngineSDK.PSLoginViewState
-// 0x0006 (0x0006 - 0x0000)
-struct FPSLoginViewState final
-{
-public:
-	EPSLoginRegion                                Region;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPSLoginCredentialType                        CredentialType;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPSLoginAuthMethod                            AuthMethod;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bQrCodeEnabled;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanSwitchCredentialType;                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportsSwitchPasswordCodeLogin;                  // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPSLoginViewState;
+DUMPER7_ASSERTS_FOneProductInfo;
 
 // ScriptStruct OneEngineSDK.OnePushNotDisturbInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -529,26 +587,6 @@ public:
 	class FString                                 NotDisturbEndTime;                                 // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOnePushNotDisturbInfo;
-
-// ScriptStruct OneEngineSDK.OnePushStatus
-// 0x0002 (0x0002 - 0x0000)
-struct FOnePushStatus final
-{
-public:
-	bool                                          bIsSysOpen;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsAppOpen;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOnePushStatus;
-
-// ScriptStruct OneEngineSDK.PSOneIDInfoStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FPSOneIDInfoStruct final
-{
-public:
-	class FText                                   Name;                                              // 0x0000(0x0010)(NativeAccessSpecifierPublic)
-	class FText                                   ID;                                                // 0x0010(0x0010)(NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPSOneIDInfoStruct;
 
 // ScriptStruct OneEngineSDK.OnePushTypeInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -576,6 +614,43 @@ public:
 };
 DUMPER7_ASSERTS_FOneUserLocationInfo;
 
+// ScriptStruct OneEngineSDK.PSLoginViewState
+// 0x0006 (0x0006 - 0x0000)
+struct FPSLoginViewState final
+{
+public:
+	EPSLoginRegion                                Region;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPSLoginCredentialType                        CredentialType;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPSLoginAuthMethod                            AuthMethod;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bQrCodeEnabled;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanSwitchCredentialType;                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportsSwitchPasswordCodeLogin;                  // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPSLoginViewState;
+
+// ScriptStruct OneEngineSDK.OnePushMessage
+// 0x0048 (0x0048 - 0x0000)
+struct FOnePushMessage final
+{
+public:
+	class FString                                 Title;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Content;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MessageId;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Ext;                                               // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsActive;                                         // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOnePushMessage;
+
+// ScriptStruct OneEngineSDK.PSOneBindItem
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FPSOneBindItem final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPSOneBindItem;
+
 // ScriptStruct OneEngineSDK.OneActiveQualificationInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FOneActiveQualificationInfo final
@@ -587,64 +662,6 @@ public:
 	int32                                         DeviceLogged;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FOneActiveQualificationInfo;
-
-// ScriptStruct OneEngineSDK.OnePaymentInfo
-// 0x00B0 (0x00B0 - 0x0000)
-struct FOnePaymentInfo final
-{
-public:
-	class FString                                 OrderId;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Price;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProductName;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GameServerId;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ServerName;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RoleId;                                            // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RoleName;                                          // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProductId;                                         // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProductCount;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ExtInfo;                                           // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PaySuccessUrl;                                     // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOnePaymentInfo;
-
-// ScriptStruct OneEngineSDK.OneShareWeiboSuperData
-// 0x0070 (0x0070 - 0x0000)
-struct FOneShareWeiboSuperData final
-{
-public:
-	class FString                                 SuperGroup;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Section;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            ExtraInfo;                                         // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOneShareWeiboSuperData;
-
-// ScriptStruct OneEngineSDK.OneShareData
-// 0x0100 (0x0100 - 0x0000)
-struct FOneShareData final
-{
-public:
-	class FString                                 WebPageUrl;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Title;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Content;                                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Thumbnail;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Image;                                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NetImageUrl;                                       // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LocalImagePath;                                    // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TopicId;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TapGroupLabelId;                                   // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TapHashIds;                                        // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOneShareWeiboSuperData                SinaSuperGroup;                                    // 0x0090(0x0070)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOneShareData;
-
-// ScriptStruct OneEngineSDK.OneOnlineDevice
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FOneOnlineDevice final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOneOnlineDevice;
 
 // ScriptStruct OneEngineSDK.OneRoleInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -698,52 +715,35 @@ public:
 };
 DUMPER7_ASSERTS_FOnePSPurchaseForm;
 
-// ScriptStruct OneEngineSDK.PSOneUserCenterModel
-// 0x00E0 (0x00E0 - 0x0000)
-struct FPSOneUserCenterModel final
+// ScriptStruct OneEngineSDK.PSOneAreaCode
+// 0x0028 (0x0028 - 0x0000)
+struct FPSOneAreaCode final
 {
 public:
-	class FString                                 UserName;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Nickname;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CellPhone;                                         // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ShowCellPhone;                                     // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ShowEmail;                                         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 HeadImg;                                           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RealName;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 IDNumber;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Email;                                             // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserId;                                            // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OneID;                                             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Token;                                             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          NewUser;                                           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 UserIP;                                            // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          HavePwd;                                           // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ID;                                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Code;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Area;                                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPSOneUserCenterModel;
+DUMPER7_ASSERTS_FPSOneAreaCode;
 
-// ScriptStruct OneEngineSDK.PSOneAccountInfoStruct
-// 0x0048 (0x0048 - 0x0000)
-struct FPSOneAccountInfoStruct final
+// ScriptStruct OneEngineSDK.OneOnlineDevice
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FOneOnlineDevice final
 {
 public:
-	class FString                                 ImageURL;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Nick;                                              // 0x0010(0x0010)(NativeAccessSpecifierPublic)
-	class FText                                   Mobile;                                            // 0x0020(0x0010)(NativeAccessSpecifierPublic)
-	class FText                                   Email;                                             // 0x0030(0x0010)(NativeAccessSpecifierPublic)
-	bool                                          bHasPwd;                                           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPSOneAccountInfoStruct;
+DUMPER7_ASSERTS_FOneOnlineDevice;
 
-// ScriptStruct OneEngineSDK.PSOneBindItem
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FPSOneBindItem final
+// ScriptStruct OneEngineSDK.PSOneIDInfoStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FPSOneIDInfoStruct final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Name;                                              // 0x0000(0x0010)(NativeAccessSpecifierPublic)
+	class FText                                   ID;                                                // 0x0010(0x0010)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPSOneBindItem;
+DUMPER7_ASSERTS_FPSOneIDInfoStruct;
 
 SDK_NAMESPACE_END

@@ -104,7 +104,7 @@ struct FDatacenterQosInstance final
 {
 public:
 	struct FQosDatacenterInfo                     Definition;                                        // 0x0000(0x0038)(Transient, NativeAccessSpecifierPublic)
-	EQosDatacenterResult                          Result;                                            // 0x0038(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EQosDatacenterResult                          result;                                            // 0x0038(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AvgPingMs;                                         // 0x003C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 PingResults;                                       // 0x0040(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)

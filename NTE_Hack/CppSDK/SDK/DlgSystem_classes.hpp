@@ -161,6 +161,7 @@ public:
 	const TMap<class FName, class UObject*> GetParticipantsMap() const;
 	const TArray<struct FDlgSequenceActorConfig> GetSequenceActorConfigs() const;
 	const struct FDlgSequence GetSequenceConfig() const;
+	class FText GetSkipDesc() const;
 	const TSet<struct FGuid> GetVisitedNodeGUIDs() const;
 	const TSet<int32> GetVisitedNodeIndices() const;
 	bool HasDialogueEnded() const;
@@ -175,6 +176,7 @@ public:
 	bool IsHideName() const;
 	bool IsHideUI() const;
 	bool IsNeedFaceToTarget() const;
+	bool IsNeedShowFashion() const;
 	bool IsNextNodeEnd() const;
 	bool IsNodeVisited(int32 NodeIndex, const struct FGuid& NodeGuid, bool bLocalHistory) const;
 	bool IsOptionConnectedToEndNode(int32 Index_0, bool bIndexSkipsUnsatisfiedEdges) const;
@@ -579,7 +581,7 @@ public:
 DUMPER7_ASSERTS_UDlgManager;
 
 // Class DlgSystem.DlgNode
-// 0x0198 (0x01C0 - 0x0028)
+// 0x01A8 (0x01D0 - 0x0028)
 class UDlgNode : public UObject
 {
 public:
@@ -596,41 +598,42 @@ public:
 	class FText                                   OverrideSelfName;                                  // 0x0058(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
 	class FText                                   OverrideSpeakerName;                               // 0x0068(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
 	class FText                                   Nickname;                                          // 0x0078(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          bForceMainAvatar;                                  // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bForceNotChangeAvatar;                             // 0x0089(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bFaceToTarget;                                     // 0x008A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8B[0x1];                                       // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FaceToTargetDelay;                                 // 0x008C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FDlgAutoPlayConfig                     AutoPlayConfig;                                    // 0x0090(0x0008)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          BlackFade;                                         // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FadeStayTime;                                      // 0x009C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       SequenceInfo;                                      // 0x00A0(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          bForceWalk;                                        // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedStruct                       HideNPCVolumeConfig;                               // 0x00B8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<class FName>                           ForbidInDialogueNpcArray;                          // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FDlgSequenceActorConfig>        SequenceActorConfigs;                              // 0x00D8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       CameraInfo;                                        // 0x00E8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       CameraFade;                                        // 0x00F8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          HideUI;                                            // 0x0108(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          HideName;                                          // 0x0109(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ETextJustify                                  OverrideJustify;                                   // 0x010A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_10B[0x5];                                      // 0x010B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedStruct                       CartoonInfo;                                       // 0x0110(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       UIConfig;                                          // 0x0120(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FDlgEndTransform>               EndTransforms;                                     // 0x0130(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       ChapterConfig;                                     // 0x0140(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       BGMConfig;                                         // 0x0150(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FInstancedStruct                       IntroductionConfig;                                // 0x0160(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	bool                                          bCheckChildrenOnEvaluation;                        // 0x0170(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDlgCondition>                  EnterConditions;                                   // 0x0178(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	EDlgEntryRestriction                          EnterRestriction;                                  // 0x0188(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDlgEvent>                      EnterEvents;                                       // 0x0190(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	struct FGuid                                  NodeGuid;                                          // 0x01A0(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FDlgEdge>                       Children;                                          // 0x01B0(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, ContainsInstancedReference, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
+	class FText                                   SkipDesc;                                          // 0x0088(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	bool                                          bForceMainAvatar;                                  // 0x0098(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bForceNotChangeAvatar;                             // 0x0099(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bNeedShowFashion;                                  // 0x009A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFaceToTarget;                                     // 0x009B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         FaceToTargetDelay;                                 // 0x009C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDlgAutoPlayConfig                     AutoPlayConfig;                                    // 0x00A0(0x0008)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          BlackFade;                                         // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FadeStayTime;                                      // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       SequenceInfo;                                      // 0x00B0(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	bool                                          bForceWalk;                                        // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       HideNPCVolumeConfig;                               // 0x00C8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<class FName>                           ForbidInDialogueNpcArray;                          // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FDlgSequenceActorConfig>        SequenceActorConfigs;                              // 0x00E8(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       CameraInfo;                                        // 0x00F8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       CameraFade;                                        // 0x0108(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	bool                                          HideUI;                                            // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          HideName;                                          // 0x0119(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ETextJustify                                  OverrideJustify;                                   // 0x011A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       CartoonInfo;                                       // 0x0120(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       UIConfig;                                          // 0x0130(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FDlgEndTransform>               EndTransforms;                                     // 0x0140(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       ChapterConfig;                                     // 0x0150(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       BGMConfig;                                         // 0x0160(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FInstancedStruct                       IntroductionConfig;                                // 0x0170(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	bool                                          bCheckChildrenOnEvaluation;                        // 0x0180(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FDlgCondition>                  EnterConditions;                                   // 0x0188(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	EDlgEntryRestriction                          EnterRestriction;                                  // 0x0198(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FDlgEvent>                      EnterEvents;                                       // 0x01A0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                  NodeGuid;                                          // 0x01B0(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FDlgEdge>                       Children;                                          // 0x01C0(0x0010)(Edit, EditFixedSize, ZeroConstructor, EditConst, ContainsInstancedReference, AdvancedDisplay, Protected, NativeAccessSpecifierProtected)
 
 public:
 	bool GetCheckChildrenOnEvaluation() const;
@@ -711,7 +714,7 @@ public:
 DUMPER7_ASSERTS_UDlgNodeDataHideCategories;
 
 // Class DlgSystem.DlgNode_Custom
-// 0x0000 (0x01C0 - 0x01C0)
+// 0x0000 (0x01D0 - 0x01D0)
 class UDlgNode_Custom final : public UDlgNode
 {
 public:
@@ -731,7 +734,7 @@ public:
 DUMPER7_ASSERTS_UDlgNode_Custom;
 
 // Class DlgSystem.DlgNode_End
-// 0x0000 (0x01C0 - 0x01C0)
+// 0x0000 (0x01D0 - 0x01D0)
 class UDlgNode_End final : public UDlgNode
 {
 public:
@@ -751,12 +754,12 @@ public:
 DUMPER7_ASSERTS_UDlgNode_End;
 
 // Class DlgSystem.DlgNode_Proxy
-// 0x0008 (0x01C8 - 0x01C0)
+// 0x0008 (0x01D8 - 0x01D0)
 class UDlgNode_Proxy final : public UDlgNode
 {
 public:
-	int32                                         NodeIndex;                                         // 0x01C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NodeIndex;                                         // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -775,15 +778,15 @@ public:
 DUMPER7_ASSERTS_UDlgNode_Proxy;
 
 // Class DlgSystem.DlgNode_Selector
-// 0x0018 (0x01D8 - 0x01C0)
+// 0x0018 (0x01E8 - 0x01D0)
 class UDlgNode_Selector final : public UDlgNode
 {
 public:
-	EDlgNodeSelectorType                          SelectorType;                                      // 0x01C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAvoidPickingSameOptionTwiceInARow;                // 0x01C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCycleThroughSatisfiedOptionsWithoutRepetition;    // 0x01C2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1C3[0x5];                                      // 0x01C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   DynamicDisplayText;                                // 0x01C8(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
+	EDlgNodeSelectorType                          SelectorType;                                      // 0x01D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAvoidPickingSameOptionTwiceInARow;                // 0x01D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCycleThroughSatisfiedOptionsWithoutRepetition;    // 0x01D2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1D3[0x5];                                      // 0x01D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   DynamicDisplayText;                                // 0x01D8(0x0010)(Transient, Protected, NativeAccessSpecifierProtected)
 
 public:
 	EDlgNodeSelectorType GetSelectorType() const;
@@ -805,23 +808,23 @@ public:
 DUMPER7_ASSERTS_UDlgNode_Selector;
 
 // Class DlgSystem.DlgNode_Speech
-// 0x0068 (0x0228 - 0x01C0)
+// 0x0068 (0x0238 - 0x01D0)
 class UDlgNode_Speech final : public UDlgNode
 {
 public:
-	bool                                          bIsVirtualParent;                                  // 0x01C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bVirtualParentFireDirectChildEnterEvents;          // 0x01C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1C2[0x6];                                      // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text;                                              // 0x01C8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FDlgTextArgument>               TextArguments;                                     // 0x01D8(0x0010)(Edit, EditFixedSize, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class FName                                   SpeakerState;                                      // 0x01E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDlgNodeData*                           NodeData;                                          // 0x01F0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USoundBase*                             VoiceSoundWave;                                    // 0x01F8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDialogueWave*                          VoiceDialogueWave;                                 // 0x0200(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                GenericData;                                       // 0x0208(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_210[0x14];                                     // 0x0210(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsSelfTalk;                                       // 0x0224(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_225[0x3];                                      // 0x0225(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsVirtualParent;                                  // 0x01D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bVirtualParentFireDirectChildEnterEvents;          // 0x01D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x01D8(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FDlgTextArgument>               TextArguments;                                     // 0x01E8(0x0010)(Edit, EditFixedSize, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class FName                                   SpeakerState;                                      // 0x01F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDlgNodeData*                           NodeData;                                          // 0x0200(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USoundBase*                             VoiceSoundWave;                                    // 0x0208(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDialogueWave*                          VoiceDialogueWave;                                 // 0x0210(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                GenericData;                                       // 0x0218(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_220[0x14];                                     // 0x0220(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsSelfTalk;                                       // 0x0234(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsVirtualParent() const;
@@ -843,13 +846,13 @@ public:
 DUMPER7_ASSERTS_UDlgNode_Speech;
 
 // Class DlgSystem.DlgNode_SpeechSequence
-// 0x0028 (0x01E8 - 0x01C0)
+// 0x0028 (0x01F8 - 0x01D0)
 class UDlgNode_SpeechSequence final : public UDlgNode
 {
 public:
-	TArray<struct FDlgSpeechSequenceEntry>        SpeechSequence;                                    // 0x01C0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FDlgEdge>                       InnerEdges;                                        // 0x01D0(0x0010)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1E0[0x8];                                      // 0x01E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FDlgSpeechSequenceEntry>        SpeechSequence;                                    // 0x01D0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FDlgEdge>                       InnerEdges;                                        // 0x01E0(0x0010)(ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1F0[0x8];                                      // 0x01F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	const TArray<struct FDlgSpeechSequenceEntry> GetNodeSpeechSequence() const;
@@ -872,7 +875,7 @@ public:
 DUMPER7_ASSERTS_UDlgNode_SpeechSequence;
 
 // Class DlgSystem.DlgNode_Start
-// 0x0000 (0x01C0 - 0x01C0)
+// 0x0000 (0x01D0 - 0x01D0)
 class UDlgNode_Start final : public UDlgNode
 {
 public:

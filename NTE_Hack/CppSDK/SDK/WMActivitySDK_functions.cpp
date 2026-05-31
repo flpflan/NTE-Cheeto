@@ -2161,10 +2161,10 @@ bool UWMActivitySDKSubsystem::OpenPortraitLiveShow(const class FString& URL)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(const class FString& Result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UWMActivitySDKSubsystem::OpenSurvey(const class FString& URL, TDelegate<void(const class FString& Result)> Callback)
+bool UWMActivitySDKSubsystem::OpenSurvey(const class FString& URL, TDelegate<void(const class FString& result)> Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2192,10 +2192,10 @@ bool UWMActivitySDKSubsystem::OpenSurvey(const class FString& URL, TDelegate<voi
 // Parameters:
 // const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FWMActivityWebViewConfiguration&Config                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TDelegate<void(const class FString& Result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UWMActivitySDKSubsystem::OpenSurveyWithConfig(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, TDelegate<void(const class FString& Result)> Callback)
+bool UWMActivitySDKSubsystem::OpenSurveyWithConfig(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, TDelegate<void(const class FString& result)> Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2225,10 +2225,10 @@ bool UWMActivitySDKSubsystem::OpenSurveyWithConfig(const class FString& URL, con
 // const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FWMActivityWebViewConfiguration&Config                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // const class FString&                    Signature                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(const class FString& Result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& result)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UWMActivitySDKSubsystem::OpenSurveyWithSignature(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, const class FString& Signature, TDelegate<void(const class FString& Result)> Callback)
+bool UWMActivitySDKSubsystem::OpenSurveyWithSignature(const class FString& URL, const struct FWMActivityWebViewConfiguration& Config, const class FString& Signature, TDelegate<void(const class FString& result)> Callback)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2773,10 +2773,10 @@ void UWMActivitySDKSubsystem::RequestPermission(EWMWebPermissionType PermissionT
 // Function WMActivitySDK.WMActivitySDKSubsystem.RespondToCustomJSEvent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    Result                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    result                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   Handle                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWMActivitySDKSubsystem::RespondToCustomJSEvent(const class FString& Result, int64 Handle)
+void UWMActivitySDKSubsystem::RespondToCustomJSEvent(const class FString& result, int64 Handle)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2785,7 +2785,7 @@ void UWMActivitySDKSubsystem::RespondToCustomJSEvent(const class FString& Result
 
 	Params::WMActivitySDKSubsystem_RespondToCustomJSEvent Parms{};
 
-	Parms.Result = std::move(Result);
+	Parms.result = std::move(result);
 	Parms.Handle = Handle;
 
 	auto Flgs = Func->FunctionFlags;
@@ -3890,10 +3890,10 @@ void UWMActivitySDKSubsystem::StartRecordVoice(int32 duration, TDelegate<void(bo
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FWMScreenRecordingConfig&  Config                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& Result, int32 Code, const class FString& Msg)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& result, int32 Code, const class FString& Msg)>Callback                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TDelegate<void()>                       StartDelegate                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWMActivitySDKSubsystem::StartScreenRecording(const struct FWMScreenRecordingConfig& Config, TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& Result, int32 Code, const class FString& Msg)> Callback, TDelegate<void()> StartDelegate)
+void UWMActivitySDKSubsystem::StartScreenRecording(const struct FWMScreenRecordingConfig& Config, TDelegate<void(bool bSucceed, const struct FWMScreenRecordingResult& result, int32 Code, const class FString& Msg)> Callback, TDelegate<void()> StartDelegate)
 {
 	static class UFunction* Func = nullptr;
 

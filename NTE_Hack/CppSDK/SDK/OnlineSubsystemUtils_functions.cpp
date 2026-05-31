@@ -441,10 +441,10 @@ class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintSessionResult&   result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
+int32 UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -453,7 +453,7 @@ int32 UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessi
 
 	Params::FindSessionsCallbackProxy_GetCurrentPlayers Parms{};
 
-	Parms.Result = std::move(Result);
+	Parms.result = std::move(result);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -469,10 +469,10 @@ int32 UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessi
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintSessionResult&   result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& Result)
+int32 UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -481,7 +481,7 @@ int32 UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionRe
 
 	Params::FindSessionsCallbackProxy_GetMaxPlayers Parms{};
 
-	Parms.Result = std::move(Result);
+	Parms.result = std::move(result);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -497,10 +497,10 @@ int32 UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionRe
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintSessionResult&   result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& Result)
+int32 UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -509,7 +509,7 @@ int32 UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResu
 
 	Params::FindSessionsCallbackProxy_GetPingInMs Parms{};
 
-	Parms.Result = std::move(Result);
+	Parms.result = std::move(result);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -525,10 +525,10 @@ int32 UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResu
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FBlueprintSessionResult&   Result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FBlueprintSessionResult&   result                                                 (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& Result)
+class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -537,7 +537,7 @@ class FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintS
 
 	Params::FindSessionsCallbackProxy_GetServerName Parms{};
 
-	Parms.Result = std::move(Result);
+	Parms.result = std::move(result);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

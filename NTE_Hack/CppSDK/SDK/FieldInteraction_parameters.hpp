@@ -81,6 +81,15 @@ public:
 };
 DUMPER7_ASSERTS_FieldInteractionManager_ProcessWindImpulses;
 
+// Function FieldInteraction.FieldInteractionManager.UpdateVehicleCollisionData
+// 0x0004 (0x0004 - 0x0000)
+struct FieldInteractionManager_UpdateVehicleCollisionData final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FieldInteractionManager_UpdateVehicleCollisionData;
+
 // Function FieldInteraction.FieldManagerSubsystem.GetManager
 // 0x0008 (0x0008 - 0x0000)
 struct FieldManagerSubsystem_GetManager final
@@ -108,6 +117,17 @@ public:
 	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FoliageInteractionBubble_SetActiveField;
+
+// Function FieldInteraction.VehicleForceFieldComponent.GetPredictedFrameCollision
+// 0x0070 (0x0070 - 0x0000)
+struct VehicleForceFieldComponent_GetPredictedFrameCollision final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFieldInteractionPredictedFrameCollision ReturnValue;                                     // 0x0010(0x0060)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_VehicleForceFieldComponent_GetPredictedFrameCollision;
 
 // Function FieldInteraction.VehicleForceFieldComponent.SetPlayerDriving
 // 0x0001 (0x0001 - 0x0000)

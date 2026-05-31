@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass NewBlueprint_headache.NewBlueprint_headache_C
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0370 - 0x0370)
 class UNewBlueprint_headache_C final : public UHTAIIdleStateBase
 {
 public:

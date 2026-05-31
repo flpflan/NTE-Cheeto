@@ -3286,2390 +3286,6 @@ bool UInterchangeSkeletonFactoryNode::GetCustomUseTimeZeroForBindPose(bool* Attr
 }
 
 
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddLodDataUniqueId
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    LodDataUniqueId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddLodDataUniqueId(const class FString& LodDataUniqueId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddLodDataUniqueId");
-
-	Params::InterchangeMeshFactoryNode_AddLodDataUniqueId Parms{};
-
-	Parms.LodDataUniqueId = std::move(LodDataUniqueId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyBooleanAttribute
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyBooleanAttribute");
-
-	Params::InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyDoubleAttribute
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyDoubleAttribute");
-
-	Params::InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyFloatAttribute
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyFloatAttribute");
-
-	Params::InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyInt32Attribute
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyInt32Attribute");
-
-	Params::InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyStringAttribute
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::AddPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, const class FString& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyStringAttribute");
-
-	Params::InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyBooleanAttribute
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool*                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyBooleanAttribute");
-
-	Params::InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyDoubleAttribute
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double*                                 Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyDoubleAttribute");
-
-	Params::InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyFloatAttribute
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float*                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyFloatAttribute");
-
-	Params::InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyInt32Attribute
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32*                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyInt32Attribute");
-
-	Params::InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyStringAttribute
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString*                          Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, class FString* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyStringAttribute");
-
-	Params::InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute Parms{};
-
-	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = std::move(Parms.Value);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveLodDataUniqueId
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    LodDataUniqueId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::RemoveLodDataUniqueId(const class FString& LodDataUniqueId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "RemoveLodDataUniqueId");
-
-	Params::InterchangeMeshFactoryNode_RemoveLodDataUniqueId Parms{};
-
-	Parms.LodDataUniqueId = std::move(LodDataUniqueId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveSlotMaterialDependencyUid
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::RemoveSlotMaterialDependencyUid(const class FString& SlotName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "RemoveSlotMaterialDependencyUid");
-
-	Params::InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid Parms{};
-
-	Parms.SlotName = std::move(SlotName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.ResetSlotMaterialDependencies
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::ResetSlotMaterialDependencies()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "ResetSlotMaterialDependencies");
-
-	Params::InterchangeMeshFactoryNode_ResetSlotMaterialDependencies Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomComputeWeightedNormals
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomComputeWeightedNormals");
-
-	Params::InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomImportSockets
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomImportSockets(const bool& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomImportSockets");
-
-	Params::InterchangeMeshFactoryNode_SetCustomImportSockets Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomKeepSectionsSeparate
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomKeepSectionsSeparate(const bool& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomKeepSectionsSeparate");
-
-	Params::InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomLODGroup
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomLODGroup");
-
-	Params::InterchangeMeshFactoryNode_SetCustomLODGroup Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeNormals
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRecomputeNormals");
-
-	Params::InterchangeMeshFactoryNode_SetCustomRecomputeNormals Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeTangents
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRecomputeTangents");
-
-	Params::InterchangeMeshFactoryNode_SetCustomRecomputeTangents Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRemoveDegenerates
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRemoveDegenerates");
-
-	Params::InterchangeMeshFactoryNode_SetCustomRemoveDegenerates Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseBackwardsCompatibleF16TruncUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseBackwardsCompatibleF16TruncUVs");
-
-	Params::InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseFullPrecisionUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseFullPrecisionUVs");
-
-	Params::InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseHighPrecisionTangentBasis
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseHighPrecisionTangentBasis");
-
-	Params::InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseMikkTSpace
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseMikkTSpace");
-
-	Params::InterchangeMeshFactoryNode_SetCustomUseMikkTSpace Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorIgnore
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomVertexColorIgnore(const bool& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorIgnore");
-
-	Params::InterchangeMeshFactoryNode_SetCustomVertexColorIgnore Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorOverride
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FColor&                    AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomVertexColorOverride(const struct FColor& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorOverride");
-
-	Params::InterchangeMeshFactoryNode_SetCustomVertexColorOverride Parms{};
-
-	Parms.AttributeValue = std::move(AttributeValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorReplace
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetCustomVertexColorReplace(const bool& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorReplace");
-
-	Params::InterchangeMeshFactoryNode_SetCustomVertexColorReplace Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetSlotMaterialDependencyUid
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    MaterialDependencyUid                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetSlotMaterialDependencyUid");
-
-	Params::InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid Parms{};
-
-	Parms.SlotName = std::move(SlotName);
-	Parms.MaterialDependencyUid = std::move(MaterialDependencyUid);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomComputeWeightedNormals
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomComputeWeightedNormals(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomComputeWeightedNormals");
-
-	Params::InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomImportSockets
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomImportSockets(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomImportSockets");
-
-	Params::InterchangeMeshFactoryNode_GetCustomImportSockets Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomKeepSectionsSeparate
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomKeepSectionsSeparate(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomKeepSectionsSeparate");
-
-	Params::InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomLODGroup
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName*                            AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomLODGroup(class FName* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomLODGroup");
-
-	Params::InterchangeMeshFactoryNode_GetCustomLODGroup Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeNormals
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomRecomputeNormals(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRecomputeNormals");
-
-	Params::InterchangeMeshFactoryNode_GetCustomRecomputeNormals Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeTangents
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomRecomputeTangents(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRecomputeTangents");
-
-	Params::InterchangeMeshFactoryNode_GetCustomRecomputeTangents Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRemoveDegenerates
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomRemoveDegenerates(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRemoveDegenerates");
-
-	Params::InterchangeMeshFactoryNode_GetCustomRemoveDegenerates Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseBackwardsCompatibleF16TruncUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseBackwardsCompatibleF16TruncUVs");
-
-	Params::InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseFullPrecisionUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomUseFullPrecisionUVs(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseFullPrecisionUVs");
-
-	Params::InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseHighPrecisionTangentBasis
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseHighPrecisionTangentBasis");
-
-	Params::InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseMikkTSpace
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomUseMikkTSpace(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseMikkTSpace");
-
-	Params::InterchangeMeshFactoryNode_GetCustomUseMikkTSpace Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorIgnore
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomVertexColorIgnore(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorIgnore");
-
-	Params::InterchangeMeshFactoryNode_GetCustomVertexColorIgnore Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorOverride
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FColor*                          AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomVertexColorOverride(struct FColor* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorOverride");
-
-	Params::InterchangeMeshFactoryNode_GetCustomVertexColorOverride Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = std::move(Parms.AttributeValue);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorReplace
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetCustomVertexColorReplace(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorReplace");
-
-	Params::InterchangeMeshFactoryNode_GetCustomVertexColorReplace Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataCount
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UInterchangeMeshFactoryNode::GetLodDataCount() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetLodDataCount");
-
-	Params::InterchangeMeshFactoryNode_GetLodDataCount Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataUniqueIds
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FString>*                  OutLodDataUniqueIds                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UInterchangeMeshFactoryNode::GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetLodDataUniqueIds");
-
-	Params::InterchangeMeshFactoryNode_GetLodDataUniqueIds Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutLodDataUniqueIds != nullptr)
-		*OutLodDataUniqueIds = std::move(Parms.OutLodDataUniqueIds);
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencies
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TMap<class FString, class FString>*     OutMaterialDependencies                                (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UInterchangeMeshFactoryNode::GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetSlotMaterialDependencies");
-
-	Params::InterchangeMeshFactoryNode_GetSlotMaterialDependencies Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMaterialDependencies != nullptr)
-		*OutMaterialDependencies = std::move(Parms.OutMaterialDependencies);
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencyUid
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString*                          OutMaterialDependency                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeMeshFactoryNode::GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetSlotMaterialDependencyUid");
-
-	Params::InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid Parms{};
-
-	Parms.SlotName = std::move(SlotName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMaterialDependency != nullptr)
-		*OutMaterialDependency = std::move(Parms.OutMaterialDependency);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUid
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    SocketUid                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::AddSocketUid(const class FString& SocketUid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "AddSocketUid");
-
-	Params::InterchangeStaticMeshFactoryNode_AddSocketUid Parms{};
-
-	Parms.SocketUid = std::move(SocketUid);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUids
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<class FString>&            InSocketUids                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::AddSocketUids(const TArray<class FString>& InSocketUids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "AddSocketUids");
-
-	Params::InterchangeStaticMeshFactoryNode_AddSocketUids Parms{};
-
-	Parms.InSocketUids = std::move(InSocketUids);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.InitializeStaticMeshNode
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    UniqueID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    DisplayLabel                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    InAssetClass                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UInterchangeBaseNodeContainer*    NodeContainer                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UInterchangeStaticMeshFactoryNode::InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "InitializeStaticMeshNode");
-
-	Params::InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode Parms{};
-
-	Parms.UniqueID = std::move(UniqueID);
-	Parms.DisplayLabel = std::move(DisplayLabel);
-	Parms.InAssetClass = std::move(InAssetClass);
-	Parms.NodeContainer = NodeContainer;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.RemoveSocketUd
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    SocketUid                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::RemoveSocketUd(const class FString& SocketUid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "RemoveSocketUd");
-
-	Params::InterchangeStaticMeshFactoryNode_RemoveSocketUd Parms{};
-
-	Parms.SocketUid = std::move(SocketUid);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomAutoComputeLODScreenSizes
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomAutoComputeLODScreenSizes(const bool& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomAutoComputeLODScreenSizes");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildNanite
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomBuildNanite(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildNanite");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildNanite Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildReversedIndexBuffer
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomBuildReversedIndexBuffer(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildReversedIndexBuffer");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildScale3D
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomBuildScale3D(const struct FVector& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildScale3D");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D Parms{};
-
-	Parms.AttributeValue = std::move(AttributeValue);
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldReplacementMesh
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FSoftObjectPath&           AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomDistanceFieldReplacementMesh(const struct FSoftObjectPath& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDistanceFieldReplacementMesh");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh Parms{};
-
-	Parms.AttributeValue = std::move(AttributeValue);
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldResolutionScale
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const float&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomDistanceFieldResolutionScale(const float& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDistanceFieldResolutionScale");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDstLightmapIndex
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomDstLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDstLightmapIndex");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateDistanceFieldAsIfTwoSided
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomGenerateDistanceFieldAsIfTwoSided(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomGenerateDistanceFieldAsIfTwoSided");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateLightmapUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomGenerateLightmapUVs(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomGenerateLightmapUVs");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMaxLumenMeshCards
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomMaxLumenMeshCards(const int32& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomMaxLumenMeshCards");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMinLightmapResolution
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomMinLightmapResolution(const int32& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomMinLightmapResolution");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSrcLightmapIndex
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomSrcLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomSrcLightmapIndex");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSupportFaceRemap
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetCustomSupportFaceRemap(const bool& AttributeValue, bool bAddApplyDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomSupportFaceRemap");
-
-	Params::InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap Parms{};
-
-	Parms.AttributeValue = AttributeValue;
-	Parms.bAddApplyDelegate = bAddApplyDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetLODScreenSizes
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<float>&                    InLODScreenSizes                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::SetLODScreenSizes(const TArray<float>& InLODScreenSizes)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetLODScreenSizes");
-
-	Params::InterchangeStaticMeshFactoryNode_SetLODScreenSizes Parms{};
-
-	Parms.InLODScreenSizes = std::move(InLODScreenSizes);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomAutoComputeLODScreenSizes
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomAutoComputeLODScreenSizes(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomAutoComputeLODScreenSizes");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildNanite
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomBuildNanite(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildNanite");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildNanite Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildReversedIndexBuffer
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomBuildReversedIndexBuffer(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildReversedIndexBuffer");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildScale3D
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector*                         AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomBuildScale3D(struct FVector* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildScale3D");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = std::move(Parms.AttributeValue);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldReplacementMesh
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSoftObjectPath*                 AttributeValue                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomDistanceFieldReplacementMesh(struct FSoftObjectPath* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDistanceFieldReplacementMesh");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = std::move(Parms.AttributeValue);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldResolutionScale
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomDistanceFieldResolutionScale(float* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDistanceFieldResolutionScale");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDstLightmapIndex
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomDstLightmapIndex(int32* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDstLightmapIndex");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateDistanceFieldAsIfTwoSided
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomGenerateDistanceFieldAsIfTwoSided(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomGenerateDistanceFieldAsIfTwoSided");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateLightmapUVs
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomGenerateLightmapUVs(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomGenerateLightmapUVs");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMaxLumenMeshCards
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomMaxLumenMeshCards(int32* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomMaxLumenMeshCards");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMinLightmapResolution
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomMinLightmapResolution(int32* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomMinLightmapResolution");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSrcLightmapIndex
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomSrcLightmapIndex(int32* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomSrcLightmapIndex");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSupportFaceRemap
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeStaticMeshFactoryNode::GetCustomSupportFaceRemap(bool* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomSupportFaceRemap");
-
-	Params::InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = Parms.AttributeValue;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizeCount
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UInterchangeStaticMeshFactoryNode::GetLODScreenSizeCount() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetLODScreenSizeCount");
-
-	Params::InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizes
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<float>*                          OutLODScreenSizes                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UInterchangeStaticMeshFactoryNode::GetLODScreenSizes(TArray<float>* OutLODScreenSizes) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetLODScreenSizes");
-
-	Params::InterchangeStaticMeshFactoryNode_GetLODScreenSizes Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutLODScreenSizes != nullptr)
-		*OutLODScreenSizes = std::move(Parms.OutLODScreenSizes);
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUidCount
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UInterchangeStaticMeshFactoryNode::GetSocketUidCount() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetSocketUidCount");
-
-	Params::InterchangeStaticMeshFactoryNode_GetSocketUidCount Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUids
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FString>*                  OutSocketUids                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UInterchangeStaticMeshFactoryNode::GetSocketUids(TArray<class FString>* OutSocketUids) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetSocketUids");
-
-	Params::InterchangeStaticMeshFactoryNode_GetSocketUids Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutSocketUids != nullptr)
-		*OutSocketUids = std::move(Parms.OutSocketUids);
-}
-
-
 // Function InterchangeFactoryNodes.InterchangeTextureFactoryNode.InitializeTextureNode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -10035,22 +7651,22 @@ bool UInterchangeCommonPipelineDataFactoryNode::GetCustomGlobalOffsetTransform(s
 }
 
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomFormat
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddLodDataUniqueId
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// ESpecularProfileFormat                  Format                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    LodDataUniqueId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeSpecularProfileFactoryNode::SetCustomFormat(ESpecularProfileFormat Format)
+bool UInterchangeMeshFactoryNode::AddLodDataUniqueId(const class FString& LodDataUniqueId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "SetCustomFormat");
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddLodDataUniqueId");
 
-	Params::InterchangeSpecularProfileFactoryNode_SetCustomFormat Parms{};
+	Params::InterchangeMeshFactoryNode_AddLodDataUniqueId Parms{};
 
-	Parms.Format = Format;
+	Parms.LodDataUniqueId = std::move(LodDataUniqueId);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10063,22 +7679,24 @@ bool UInterchangeSpecularProfileFactoryNode::SetCustomFormat(ESpecularProfileFor
 }
 
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomTexture
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyBooleanAttribute
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    TextureUid                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeSpecularProfileFactoryNode::SetCustomTexture(const class FString& TextureUid)
+bool UInterchangeMeshFactoryNode::AddPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "SetCustomTexture");
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyBooleanAttribute");
 
-	Params::InterchangeSpecularProfileFactoryNode_SetCustomTexture Parms{};
+	Params::InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute Parms{};
 
-	Parms.TextureUid = std::move(TextureUid);
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10091,20 +7709,24 @@ bool UInterchangeSpecularProfileFactoryNode::SetCustomTexture(const class FStrin
 }
 
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomFormat
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyDoubleAttribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// ESpecularProfileFormat*                 Format                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeSpecularProfileFactoryNode::GetCustomFormat(ESpecularProfileFormat* Format) const
+bool UInterchangeMeshFactoryNode::AddPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "GetCustomFormat");
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyDoubleAttribute");
 
-	Params::InterchangeSpecularProfileFactoryNode_GetCustomFormat Parms{};
+	Params::InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10112,28 +7734,29 @@ bool UInterchangeSpecularProfileFactoryNode::GetCustomFormat(ESpecularProfileFor
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	if (Format != nullptr)
-		*Format = Parms.Format;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomTexture
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyFloatAttribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString*                          TextureUid                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeSpecularProfileFactoryNode::GetCustomTexture(class FString* TextureUid) const
+bool UInterchangeMeshFactoryNode::AddPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "GetCustomTexture");
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyFloatAttribute");
 
-	Params::InterchangeSpecularProfileFactoryNode_GetCustomTexture Parms{};
+	Params::InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10142,8 +7765,1261 @@ bool UInterchangeSpecularProfileFactoryNode::GetCustomTexture(class FString* Tex
 
 	Func->FunctionFlags = Flgs;
 
-	if (TextureUid != nullptr)
-		*TextureUid = std::move(Parms.TextureUid);
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyInt32Attribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::AddPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyInt32Attribute");
+
+	Params::InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyStringAttribute
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::AddPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, const class FString& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "AddPayloadKeyStringAttribute");
+
+	Params::InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyBooleanAttribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyBooleanAttribute");
+
+	Params::InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyDoubleAttribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double*                                 Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyDoubleAttribute");
+
+	Params::InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyFloatAttribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyFloatAttribute");
+
+	Params::InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyInt32Attribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyInt32Attribute");
+
+	Params::InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyStringAttribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    PayloadAttributeKey                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Value                                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, class FString* Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetPayloadKeyStringAttribute");
+
+	Params::InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute Parms{};
+
+	Parms.PayloadAttributeKey = std::move(PayloadAttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Value != nullptr)
+		*Value = std::move(Parms.Value);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveLodDataUniqueId
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    LodDataUniqueId                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::RemoveLodDataUniqueId(const class FString& LodDataUniqueId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "RemoveLodDataUniqueId");
+
+	Params::InterchangeMeshFactoryNode_RemoveLodDataUniqueId Parms{};
+
+	Parms.LodDataUniqueId = std::move(LodDataUniqueId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveSlotMaterialDependencyUid
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::RemoveSlotMaterialDependencyUid(const class FString& SlotName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "RemoveSlotMaterialDependencyUid");
+
+	Params::InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid Parms{};
+
+	Parms.SlotName = std::move(SlotName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.ResetSlotMaterialDependencies
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::ResetSlotMaterialDependencies()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "ResetSlotMaterialDependencies");
+
+	Params::InterchangeMeshFactoryNode_ResetSlotMaterialDependencies Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomComputeWeightedNormals
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomComputeWeightedNormals");
+
+	Params::InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomImportSockets
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomImportSockets(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomImportSockets");
+
+	Params::InterchangeMeshFactoryNode_SetCustomImportSockets Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomKeepSectionsSeparate
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomKeepSectionsSeparate(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomKeepSectionsSeparate");
+
+	Params::InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomLODGroup
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomLODGroup");
+
+	Params::InterchangeMeshFactoryNode_SetCustomLODGroup Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeNormals
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRecomputeNormals");
+
+	Params::InterchangeMeshFactoryNode_SetCustomRecomputeNormals Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeTangents
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRecomputeTangents");
+
+	Params::InterchangeMeshFactoryNode_SetCustomRecomputeTangents Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRemoveDegenerates
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomRemoveDegenerates");
+
+	Params::InterchangeMeshFactoryNode_SetCustomRemoveDegenerates Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseBackwardsCompatibleF16TruncUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseBackwardsCompatibleF16TruncUVs");
+
+	Params::InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseFullPrecisionUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseFullPrecisionUVs");
+
+	Params::InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseHighPrecisionTangentBasis
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseHighPrecisionTangentBasis");
+
+	Params::InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseMikkTSpace
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomUseMikkTSpace");
+
+	Params::InterchangeMeshFactoryNode_SetCustomUseMikkTSpace Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorIgnore
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomVertexColorIgnore(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorIgnore");
+
+	Params::InterchangeMeshFactoryNode_SetCustomVertexColorIgnore Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorOverride
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FColor&                    AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomVertexColorOverride(const struct FColor& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorOverride");
+
+	Params::InterchangeMeshFactoryNode_SetCustomVertexColorOverride Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorReplace
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetCustomVertexColorReplace(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetCustomVertexColorReplace");
+
+	Params::InterchangeMeshFactoryNode_SetCustomVertexColorReplace Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetSlotMaterialDependencyUid
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    MaterialDependencyUid                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "SetSlotMaterialDependencyUid");
+
+	Params::InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid Parms{};
+
+	Parms.SlotName = std::move(SlotName);
+	Parms.MaterialDependencyUid = std::move(MaterialDependencyUid);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomComputeWeightedNormals
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomComputeWeightedNormals(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomComputeWeightedNormals");
+
+	Params::InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomImportSockets
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomImportSockets(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomImportSockets");
+
+	Params::InterchangeMeshFactoryNode_GetCustomImportSockets Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomKeepSectionsSeparate
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomKeepSectionsSeparate(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomKeepSectionsSeparate");
+
+	Params::InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomLODGroup
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName*                            AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomLODGroup(class FName* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomLODGroup");
+
+	Params::InterchangeMeshFactoryNode_GetCustomLODGroup Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeNormals
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomRecomputeNormals(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRecomputeNormals");
+
+	Params::InterchangeMeshFactoryNode_GetCustomRecomputeNormals Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeTangents
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomRecomputeTangents(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRecomputeTangents");
+
+	Params::InterchangeMeshFactoryNode_GetCustomRecomputeTangents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRemoveDegenerates
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomRemoveDegenerates(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomRemoveDegenerates");
+
+	Params::InterchangeMeshFactoryNode_GetCustomRemoveDegenerates Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseBackwardsCompatibleF16TruncUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseBackwardsCompatibleF16TruncUVs");
+
+	Params::InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseFullPrecisionUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomUseFullPrecisionUVs(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseFullPrecisionUVs");
+
+	Params::InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseHighPrecisionTangentBasis
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseHighPrecisionTangentBasis");
+
+	Params::InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseMikkTSpace
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomUseMikkTSpace(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomUseMikkTSpace");
+
+	Params::InterchangeMeshFactoryNode_GetCustomUseMikkTSpace Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorIgnore
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomVertexColorIgnore(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorIgnore");
+
+	Params::InterchangeMeshFactoryNode_GetCustomVertexColorIgnore Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorOverride
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FColor*                          AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomVertexColorOverride(struct FColor* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorOverride");
+
+	Params::InterchangeMeshFactoryNode_GetCustomVertexColorOverride Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorReplace
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetCustomVertexColorReplace(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetCustomVertexColorReplace");
+
+	Params::InterchangeMeshFactoryNode_GetCustomVertexColorReplace Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataCount
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UInterchangeMeshFactoryNode::GetLodDataCount() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetLodDataCount");
+
+	Params::InterchangeMeshFactoryNode_GetLodDataCount Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataUniqueIds
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>*                  OutLodDataUniqueIds                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UInterchangeMeshFactoryNode::GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetLodDataUniqueIds");
+
+	Params::InterchangeMeshFactoryNode_GetLodDataUniqueIds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutLodDataUniqueIds != nullptr)
+		*OutLodDataUniqueIds = std::move(Parms.OutLodDataUniqueIds);
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencies
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TMap<class FString, class FString>*     OutMaterialDependencies                                (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UInterchangeMeshFactoryNode::GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetSlotMaterialDependencies");
+
+	Params::InterchangeMeshFactoryNode_GetSlotMaterialDependencies Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMaterialDependencies != nullptr)
+		*OutMaterialDependencies = std::move(Parms.OutMaterialDependencies);
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencyUid
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FString&                    SlotName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          OutMaterialDependency                                  (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeMeshFactoryNode::GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeMeshFactoryNode", "GetSlotMaterialDependencyUid");
+
+	Params::InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid Parms{};
+
+	Parms.SlotName = std::move(SlotName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMaterialDependency != nullptr)
+		*OutMaterialDependency = std::move(Parms.OutMaterialDependency);
 
 	return Parms.ReturnValue;
 }
@@ -15186,6 +14062,1130 @@ bool UInterchangeSparseVolumeTextureFactoryNode::GetCustomAttributesBFormat(EInt
 		*Format = Parms.Format;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomFormat
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// ESpecularProfileFormat                  Format                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSpecularProfileFactoryNode::SetCustomFormat(ESpecularProfileFormat Format)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "SetCustomFormat");
+
+	Params::InterchangeSpecularProfileFactoryNode_SetCustomFormat Parms{};
+
+	Parms.Format = Format;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomTexture
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    TextureUid                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSpecularProfileFactoryNode::SetCustomTexture(const class FString& TextureUid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "SetCustomTexture");
+
+	Params::InterchangeSpecularProfileFactoryNode_SetCustomTexture Parms{};
+
+	Parms.TextureUid = std::move(TextureUid);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomFormat
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ESpecularProfileFormat*                 Format                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSpecularProfileFactoryNode::GetCustomFormat(ESpecularProfileFormat* Format) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "GetCustomFormat");
+
+	Params::InterchangeSpecularProfileFactoryNode_GetCustomFormat Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Format != nullptr)
+		*Format = Parms.Format;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomTexture
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString*                          TextureUid                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeSpecularProfileFactoryNode::GetCustomTexture(class FString* TextureUid) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeSpecularProfileFactoryNode", "GetCustomTexture");
+
+	Params::InterchangeSpecularProfileFactoryNode_GetCustomTexture Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (TextureUid != nullptr)
+		*TextureUid = std::move(Parms.TextureUid);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUid
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    SocketUid                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::AddSocketUid(const class FString& SocketUid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "AddSocketUid");
+
+	Params::InterchangeStaticMeshFactoryNode_AddSocketUid Parms{};
+
+	Parms.SocketUid = std::move(SocketUid);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUids
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            InSocketUids                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::AddSocketUids(const TArray<class FString>& InSocketUids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "AddSocketUids");
+
+	Params::InterchangeStaticMeshFactoryNode_AddSocketUids Parms{};
+
+	Parms.InSocketUids = std::move(InSocketUids);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.InitializeStaticMeshNode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    UniqueID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DisplayLabel                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InAssetClass                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeBaseNodeContainer*    NodeContainer                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeStaticMeshFactoryNode::InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "InitializeStaticMeshNode");
+
+	Params::InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode Parms{};
+
+	Parms.UniqueID = std::move(UniqueID);
+	Parms.DisplayLabel = std::move(DisplayLabel);
+	Parms.InAssetClass = std::move(InAssetClass);
+	Parms.NodeContainer = NodeContainer;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.RemoveSocketUd
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    SocketUid                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::RemoveSocketUd(const class FString& SocketUid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "RemoveSocketUd");
+
+	Params::InterchangeStaticMeshFactoryNode_RemoveSocketUd Parms{};
+
+	Parms.SocketUid = std::move(SocketUid);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomAutoComputeLODScreenSizes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomAutoComputeLODScreenSizes(const bool& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomAutoComputeLODScreenSizes");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildNanite
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomBuildNanite(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildNanite");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildNanite Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildReversedIndexBuffer
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomBuildReversedIndexBuffer(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildReversedIndexBuffer");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildScale3D
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomBuildScale3D(const struct FVector& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomBuildScale3D");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldReplacementMesh
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FSoftObjectPath&           AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomDistanceFieldReplacementMesh(const struct FSoftObjectPath& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDistanceFieldReplacementMesh");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldResolutionScale
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const float&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomDistanceFieldResolutionScale(const float& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDistanceFieldResolutionScale");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDstLightmapIndex
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomDstLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomDstLightmapIndex");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateDistanceFieldAsIfTwoSided
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomGenerateDistanceFieldAsIfTwoSided(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomGenerateDistanceFieldAsIfTwoSided");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateLightmapUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomGenerateLightmapUVs(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomGenerateLightmapUVs");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMaxLumenMeshCards
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomMaxLumenMeshCards(const int32& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomMaxLumenMeshCards");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMinLightmapResolution
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomMinLightmapResolution(const int32& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomMinLightmapResolution");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSrcLightmapIndex
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const int32&                            AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomSrcLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomSrcLightmapIndex");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSupportFaceRemap
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const bool&                             AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetCustomSupportFaceRemap(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetCustomSupportFaceRemap");
+
+	Params::InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetLODScreenSizes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<float>&                    InLODScreenSizes                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::SetLODScreenSizes(const TArray<float>& InLODScreenSizes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "SetLODScreenSizes");
+
+	Params::InterchangeStaticMeshFactoryNode_SetLODScreenSizes Parms{};
+
+	Parms.InLODScreenSizes = std::move(InLODScreenSizes);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomAutoComputeLODScreenSizes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomAutoComputeLODScreenSizes(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomAutoComputeLODScreenSizes");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildNanite
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomBuildNanite(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildNanite");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildNanite Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildReversedIndexBuffer
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomBuildReversedIndexBuffer(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildReversedIndexBuffer");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildScale3D
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector*                         AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomBuildScale3D(struct FVector* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomBuildScale3D");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldReplacementMesh
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSoftObjectPath*                 AttributeValue                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomDistanceFieldReplacementMesh(struct FSoftObjectPath* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDistanceFieldReplacementMesh");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldResolutionScale
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomDistanceFieldResolutionScale(float* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDistanceFieldResolutionScale");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDstLightmapIndex
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomDstLightmapIndex(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomDstLightmapIndex");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateDistanceFieldAsIfTwoSided
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomGenerateDistanceFieldAsIfTwoSided(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomGenerateDistanceFieldAsIfTwoSided");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateLightmapUVs
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomGenerateLightmapUVs(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomGenerateLightmapUVs");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMaxLumenMeshCards
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomMaxLumenMeshCards(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomMaxLumenMeshCards");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMinLightmapResolution
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomMinLightmapResolution(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomMinLightmapResolution");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSrcLightmapIndex
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32*                                  AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomSrcLightmapIndex(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomSrcLightmapIndex");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSupportFaceRemap
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool*                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeStaticMeshFactoryNode::GetCustomSupportFaceRemap(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetCustomSupportFaceRemap");
+
+	Params::InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizeCount
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UInterchangeStaticMeshFactoryNode::GetLODScreenSizeCount() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetLODScreenSizeCount");
+
+	Params::InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizes
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<float>*                          OutLODScreenSizes                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UInterchangeStaticMeshFactoryNode::GetLODScreenSizes(TArray<float>* OutLODScreenSizes) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetLODScreenSizes");
+
+	Params::InterchangeStaticMeshFactoryNode_GetLODScreenSizes Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutLODScreenSizes != nullptr)
+		*OutLODScreenSizes = std::move(Parms.OutLODScreenSizes);
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUidCount
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UInterchangeStaticMeshFactoryNode::GetSocketUidCount() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetSocketUidCount");
+
+	Params::InterchangeStaticMeshFactoryNode_GetSocketUidCount Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUids
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FString>*                  OutSocketUids                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UInterchangeStaticMeshFactoryNode::GetSocketUids(TArray<class FString>* OutSocketUids) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeStaticMeshFactoryNode", "GetSocketUids");
+
+	Params::InterchangeStaticMeshFactoryNode_GetSocketUids Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSocketUids != nullptr)
+		*OutSocketUids = std::move(Parms.OutSocketUids);
 }
 
 

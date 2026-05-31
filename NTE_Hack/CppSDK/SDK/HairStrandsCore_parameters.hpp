@@ -237,7 +237,7 @@ DUMPER7_ASSERTS_GroomAsset_GetRiggedSkeletalMesh;
 struct GroomBindingAsset_Build final
 {
 public:
-	TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)> CompletionDelegate; // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult result)> CompletionDelegate; // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GroomBindingAsset_Build;
 

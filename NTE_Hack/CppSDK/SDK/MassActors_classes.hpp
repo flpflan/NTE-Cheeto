@@ -14,9 +14,9 @@
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 #include "MassEntity_classes.hpp"
+#include "MassCommon_structs.hpp"
 #include "MassSpawner_structs.hpp"
 #include "MassSpawner_classes.hpp"
-#include "MassCommon_structs.hpp"
 #include "MassActors_structs.hpp"
 
 
@@ -110,7 +110,9 @@ DUMPER7_ASSERTS_UMassActorSubsystem;
 class UMassAgentComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_C0[0xA8];                                      // 0x00C0(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x1];                                       // 0x00C0(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bNoRegisterForComponentHit;                        // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C2[0xA6];                                      // 0x00C2(0x00A6)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMassEntityConfig                      EntityConfig;                                      // 0x0168(0x0030)(Edit, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_198[0x2C];                                     // 0x0198(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMassNetworkID                         NetID;                                             // 0x01C4(0x0004)(Net, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)

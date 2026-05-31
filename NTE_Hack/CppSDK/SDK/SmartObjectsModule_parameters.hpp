@@ -71,7 +71,7 @@ DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_AddSmartObject;
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectClaimHandleToString final
 {
 public:
-	struct FSmartObjectClaimHandle                Result;                                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectClaimHandle                result;                                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectClaimHandleToString;
@@ -101,7 +101,7 @@ DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectHandleToStri
 struct SmartObjectBlueprintFunctionLibrary_Conv_SmartObjectRequestResultToString final
 {
 public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectRequestResult              result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -836,7 +836,7 @@ DUMPER7_ASSERTS_SmartObjectSubsystem_GetSmartObjectComponent;
 struct SmartObjectSubsystem_GetSmartObjectComponentByRequestResult final
 {
 public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectRequestResult              result;                                            // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	ETrySpawnActorIfDehydrated                    TrySpawnActorIfDehydrated;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class USmartObjectComponent*                  ReturnValue;                                       // 0x0028(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

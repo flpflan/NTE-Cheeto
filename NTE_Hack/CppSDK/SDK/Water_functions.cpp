@@ -16,6 +16,293 @@
 
 SDK_NAMESPACE_START
 
+// Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector*                         OutWaterPlaneLocation                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutWaterPlaneNormal                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutWaterSurfacePosition                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutWaterDepth                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutWaterBodyIdx                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         OutWaterVelocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBuoyancyComponent::GetLastWaterSurfaceInfo(struct FVector* OutWaterPlaneLocation, struct FVector* OutWaterPlaneNormal, struct FVector* OutWaterSurfacePosition, float* OutWaterDepth, int32* OutWaterBodyIdx, struct FVector* OutWaterVelocity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "GetLastWaterSurfaceInfo");
+
+	Params::BuoyancyComponent_GetLastWaterSurfaceInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutWaterPlaneLocation != nullptr)
+		*OutWaterPlaneLocation = std::move(Parms.OutWaterPlaneLocation);
+
+	if (OutWaterPlaneNormal != nullptr)
+		*OutWaterPlaneNormal = std::move(Parms.OutWaterPlaneNormal);
+
+	if (OutWaterSurfacePosition != nullptr)
+		*OutWaterSurfacePosition = std::move(Parms.OutWaterSurfacePosition);
+
+	if (OutWaterDepth != nullptr)
+		*OutWaterDepth = Parms.OutWaterDepth;
+
+	if (OutWaterBodyIdx != nullptr)
+		*OutWaterBodyIdx = Parms.OutWaterBodyIdx;
+
+	if (OutWaterVelocity != nullptr)
+		*OutWaterVelocity = std::move(Parms.OutWaterVelocity);
+}
+
+
+// Function Water.BuoyancyComponent.OnPontoonEnteredWater
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSphericalPontoon&         Pontoon                                                (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UBuoyancyComponent::OnPontoonEnteredWater(const struct FSphericalPontoon& Pontoon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "OnPontoonEnteredWater");
+
+	Params::BuoyancyComponent_OnPontoonEnteredWater Parms{};
+
+	Parms.Pontoon = std::move(Pontoon);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.BuoyancyComponent.OnPontoonExitedWater
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSphericalPontoon&         Pontoon                                                (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UBuoyancyComponent::OnPontoonExitedWater(const struct FSphericalPontoon& Pontoon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "OnPontoonExitedWater");
+
+	Params::BuoyancyComponent_OnPontoonExitedWater Parms{};
+
+	Parms.Pontoon = std::move(Pontoon);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.BuoyancyComponent.GetCurrentWaterBodyComponents
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class UWaterBodyComponent*>ReturnValue                                            (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+const TArray<class UWaterBodyComponent*> UBuoyancyComponent::GetCurrentWaterBodyComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "GetCurrentWaterBodyComponents");
+
+	Params::BuoyancyComponent_GetCurrentWaterBodyComponents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.BuoyancyComponent.IsInWaterBody
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBuoyancyComponent::IsInWaterBody() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "IsInWaterBody");
+
+	Params::BuoyancyComponent_IsInWaterBody Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.BuoyancyComponent.IsOverlappingWaterBody
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBuoyancyComponent::IsOverlappingWaterBody() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BuoyancyComponent", "IsOverlappingWaterBody");
+
+	Params::BuoyancyComponent_IsOverlappingWaterBody Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.BuoyancyManager.GetBuoyancyComponentManager
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ABuoyancyManager**                Manager                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ABuoyancyManager::GetBuoyancyComponentManager(const class UObject* WorldContextObject, class ABuoyancyManager** Manager)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BuoyancyManager", "GetBuoyancyComponentManager");
+
+	Params::BuoyancyManager_GetBuoyancyComponentManager Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Manager != nullptr)
+		*Manager = Parms.Manager;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
+// (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// TArray<struct FGerstnerWave>*           OutWaves                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGerstnerWaterWaveGeneratorBase::GenerateGerstnerWaves(TArray<struct FGerstnerWave>* OutWaves) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GerstnerWaterWaveGeneratorBase", "GenerateGerstnerWaves");
+
+	Params::GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutWaves != nullptr)
+		*OutWaves = std::move(Parms.OutWaves);
+}
+
+
+// Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AWaterBody*                       WaterBody                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraWaterFunctionLibrary::SetWaterBody(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class AWaterBody* WaterBody)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraWaterFunctionLibrary", "SetWaterBody");
+
+	Params::NiagaraWaterFunctionLibrary_SetWaterBody Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.WaterBody = WaterBody;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.NiagaraWaterFunctionLibrary.SetWaterBodyComponent
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UWaterBodyComponent*              WaterBodyComponent                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraWaterFunctionLibrary::SetWaterBodyComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UWaterBodyComponent* WaterBodyComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraWaterFunctionLibrary", "SetWaterBodyComponent");
+
+	Params::NiagaraWaterFunctionLibrary_SetWaterBodyComponent Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.WaterBodyComponent = WaterBodyComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Water.WaterBody.GetRiverToLakeTransitionMaterialInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -374,293 +661,6 @@ struct FVector AWaterBody::GetWaterVelocityVectorAtSplineInputKey(float InKey) c
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector*                         OutWaterPlaneLocation                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         OutWaterPlaneNormal                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         OutWaterSurfacePosition                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float*                                  OutWaterDepth                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32*                                  OutWaterBodyIdx                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         OutWaterVelocity                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBuoyancyComponent::GetLastWaterSurfaceInfo(struct FVector* OutWaterPlaneLocation, struct FVector* OutWaterPlaneNormal, struct FVector* OutWaterSurfacePosition, float* OutWaterDepth, int32* OutWaterBodyIdx, struct FVector* OutWaterVelocity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "GetLastWaterSurfaceInfo");
-
-	Params::BuoyancyComponent_GetLastWaterSurfaceInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutWaterPlaneLocation != nullptr)
-		*OutWaterPlaneLocation = std::move(Parms.OutWaterPlaneLocation);
-
-	if (OutWaterPlaneNormal != nullptr)
-		*OutWaterPlaneNormal = std::move(Parms.OutWaterPlaneNormal);
-
-	if (OutWaterSurfacePosition != nullptr)
-		*OutWaterSurfacePosition = std::move(Parms.OutWaterSurfacePosition);
-
-	if (OutWaterDepth != nullptr)
-		*OutWaterDepth = Parms.OutWaterDepth;
-
-	if (OutWaterBodyIdx != nullptr)
-		*OutWaterBodyIdx = Parms.OutWaterBodyIdx;
-
-	if (OutWaterVelocity != nullptr)
-		*OutWaterVelocity = std::move(Parms.OutWaterVelocity);
-}
-
-
-// Function Water.BuoyancyComponent.OnPontoonEnteredWater
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSphericalPontoon&         Pontoon                                                (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UBuoyancyComponent::OnPontoonEnteredWater(const struct FSphericalPontoon& Pontoon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "OnPontoonEnteredWater");
-
-	Params::BuoyancyComponent_OnPontoonEnteredWater Parms{};
-
-	Parms.Pontoon = std::move(Pontoon);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Water.BuoyancyComponent.OnPontoonExitedWater
-// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSphericalPontoon&         Pontoon                                                (ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UBuoyancyComponent::OnPontoonExitedWater(const struct FSphericalPontoon& Pontoon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "OnPontoonExitedWater");
-
-	Params::BuoyancyComponent_OnPontoonExitedWater Parms{};
-
-	Parms.Pontoon = std::move(Pontoon);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Water.BuoyancyComponent.GetCurrentWaterBodyComponents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<class UWaterBodyComponent*>ReturnValue                                            (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-const TArray<class UWaterBodyComponent*> UBuoyancyComponent::GetCurrentWaterBodyComponents() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "GetCurrentWaterBodyComponents");
-
-	Params::BuoyancyComponent_GetCurrentWaterBodyComponents Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Water.BuoyancyComponent.IsInWaterBody
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBuoyancyComponent::IsInWaterBody() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "IsInWaterBody");
-
-	Params::BuoyancyComponent_IsInWaterBody Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Water.BuoyancyComponent.IsOverlappingWaterBody
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBuoyancyComponent::IsOverlappingWaterBody() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuoyancyComponent", "IsOverlappingWaterBody");
-
-	Params::BuoyancyComponent_IsOverlappingWaterBody Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Water.BuoyancyManager.GetBuoyancyComponentManager
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ABuoyancyManager**                Manager                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool ABuoyancyManager::GetBuoyancyComponentManager(const class UObject* WorldContextObject, class ABuoyancyManager** Manager)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BuoyancyManager", "GetBuoyancyComponentManager");
-
-	Params::BuoyancyManager_GetBuoyancyComponentManager Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Manager != nullptr)
-		*Manager = Parms.Manager;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
-// (Native, Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// TArray<struct FGerstnerWave>*           OutWaves                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UGerstnerWaterWaveGeneratorBase::GenerateGerstnerWaves(TArray<struct FGerstnerWave>* OutWaves) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GerstnerWaterWaveGeneratorBase", "GenerateGerstnerWaves");
-
-	Params::GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutWaves != nullptr)
-		*OutWaves = std::move(Parms.OutWaves);
-}
-
-
-// Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
-// (Final, Native, Static, Private, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AWaterBody*                       WaterBody                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraWaterFunctionLibrary::SetWaterBody(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class AWaterBody* WaterBody)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraWaterFunctionLibrary", "SetWaterBody");
-
-	Params::NiagaraWaterFunctionLibrary_SetWaterBody Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.WaterBody = WaterBody;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Water.NiagaraWaterFunctionLibrary.SetWaterBodyComponent
-// (Final, Native, Static, Private, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UWaterBodyComponent*              WaterBodyComponent                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraWaterFunctionLibrary::SetWaterBodyComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UWaterBodyComponent* WaterBodyComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraWaterFunctionLibrary", "SetWaterBodyComponent");
-
-	Params::NiagaraWaterFunctionLibrary_SetWaterBodyComponent Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.WaterBodyComponent = WaterBodyComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 

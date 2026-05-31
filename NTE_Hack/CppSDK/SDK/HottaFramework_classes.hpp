@@ -176,12 +176,12 @@ public:
 DUMPER7_ASSERTS_UHottaDPICustomScalingRule;
 
 // Class HottaFramework.HottaGameMode
-// 0x0010 (0x03B8 - 0x03A8)
+// 0x0018 (0x03C0 - 0x03A8)
 class AHottaGameMode : public AModularGameMode
 {
 public:
 	EGameModeType                                 GameModeType;                                      // 0x03A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A9[0xF];                                      // 0x03A9(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A9[0x17];                                     // 0x03A9(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -269,28 +269,28 @@ public:
 DUMPER7_ASSERTS_AHottaPlayerController;
 
 // Class HottaFramework.HottaPlayerState
-// 0x0FC8 (0x1348 - 0x0380)
+// 0x0FF0 (0x1370 - 0x0380)
 class AHottaPlayerState : public AModularPlayerState
 {
 public:
-	uint8                                         Pad_380[0x48];                                     // 0x0380(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, int64>                            ExecedGMCommandMap;                                // 0x03C8(0x0050)(SaveGame, NativeAccessSpecifierPrivate)
-	int64                                         CreateRoleUtcTime;                                 // 0x0418(0x0008)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int64                                         LoginTime;                                         // 0x0420(0x0008)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         TotalLoginDays;                                    // 0x0428(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastUpdateOnlineSecondUtcTime;                     // 0x0430(0x0008)(ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void()>              OnPlayerRoleNameChanged;                           // 0x0438(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class FString                                 m_strRoleName;                                     // 0x0448(0x0010)(Edit, Net, ZeroConstructor, SaveGame, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         m_nAccType;                                        // 0x0458(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint64                                        m_nRoleId;                                         // 0x0460(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         m_nSaveCount;                                      // 0x0468(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 m_strPSAccountId;                                  // 0x0470(0x0010)(Net, ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 m_strPSOnlineId;                                   // 0x0480(0x0010)(Net, ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          m_bPSPlayerInterface;                              // 0x0490(0x0001)(Net, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_491[0xEB7];                                    // 0x0491(0x0EB7)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_380[0x60];                                     // 0x0380(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, int64>                            ExecedGMCommandMap;                                // 0x03E0(0x0050)(SaveGame, NativeAccessSpecifierPrivate)
+	int64                                         CreateRoleUtcTime;                                 // 0x0430(0x0008)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int64                                         LoginTime;                                         // 0x0438(0x0008)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         TotalLoginDays;                                    // 0x0440(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastUpdateOnlineSecondUtcTime;                     // 0x0448(0x0008)(ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void()>              OnPlayerRoleNameChanged;                           // 0x0450(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FString                                 m_strRoleName;                                     // 0x0460(0x0010)(Edit, Net, ZeroConstructor, SaveGame, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         m_nAccType;                                        // 0x0470(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_474[0x4];                                      // 0x0474(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint64                                        m_nRoleId;                                         // 0x0478(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         m_nSaveCount;                                      // 0x0480(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 m_strPSAccountId;                                  // 0x0488(0x0010)(Net, ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 m_strPSOnlineId;                                   // 0x0498(0x0010)(Net, ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          m_bPSPlayerInterface;                              // 0x04A8(0x0001)(Net, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_4A9[0xEC7];                                    // 0x04A9(0x0EC7)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetPSAccountId();

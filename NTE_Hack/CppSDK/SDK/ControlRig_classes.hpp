@@ -439,8 +439,8 @@ DUMPER7_ASSERTS_IRigHierarchyProvider;
 class UAnimNodeControlRigLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FControlRigReference ConvertToControlRig(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToControlRigPure(const struct FAnimNodeReference& Node, struct FControlRigReference* ControlRig, bool* Result);
+	static struct FControlRigReference ConvertToControlRig(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToControlRigPure(const struct FAnimNodeReference& Node, struct FControlRigReference* ControlRig, bool* result);
 	static struct FControlRigReference SetControlRigClass(const struct FControlRigReference& Node, TSubclassOf<class UControlRig> ControlRigClass);
 
 public:

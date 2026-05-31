@@ -132,7 +132,7 @@
       <PreprocessorDefinitions>NDEBUG;NTEHACK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>D:\Project\VS\NTE_Hack\NTE_Hack\MinHook\include;D:\Project\VS\NTE_Hack\NTE_Hack\CppSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -149,10 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppSDK\SDK\Basic.cpp" />
+    <ClCompile Include="CppSDK\SDK\ChaosVehicles_functions.cpp" />
     <ClCompile Include="CppSDK\SDK\CoreUObject_functions.cpp" />
-    <ClCompile Include="CppSDK\SDK\EngineCameras_functions.cpp" />
-    <ClCompile Include="CppSDK\SDK\EngineSettings_functions.cpp" />
     <ClCompile Include="CppSDK\SDK\Engine_functions.cpp" />
+    <ClCompile Include="CppSDK\SDK\GameplayAbilities_functions.cpp" />
+    <ClCompile Include="CppSDK\SDK\HTGame_functions.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

@@ -24,7 +24,7 @@ struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -37,7 +37,7 @@ struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FRigidBodyAnimNodeReference            RigidBodyAnimNode;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure;
@@ -59,7 +59,7 @@ struct BlendSpaceLibrary_ConvertToBlendSpace final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpaceReference                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -72,7 +72,7 @@ struct BlendSpaceLibrary_ConvertToBlendSpacePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BlendSpaceLibrary_ConvertToBlendSpacePure;
@@ -132,7 +132,7 @@ struct AnimationStateMachineLibrary_ConvertToAnimationStateMachine final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateMachineReference        AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateMachine;
@@ -144,7 +144,7 @@ struct AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateMachineReference        AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure;
@@ -156,7 +156,7 @@ struct AnimationStateMachineLibrary_ConvertToAnimationStateResult final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateResult;
@@ -168,7 +168,7 @@ struct AnimationStateMachineLibrary_ConvertToAnimationStateResultPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AnimationStateMachineLibrary_ConvertToAnimationStateResultPure;
@@ -256,7 +256,7 @@ struct AnimExecutionContextLibrary_ConvertToComponentSpacePoseContext final
 {
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimExecutionContextConversionResult         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimComponentSpacePoseContext         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -268,7 +268,7 @@ struct AnimExecutionContextLibrary_ConvertToInitializationContext final
 {
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimExecutionContextConversionResult         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimInitializationContext             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -280,7 +280,7 @@ struct AnimExecutionContextLibrary_ConvertToPoseContext final
 {
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimExecutionContextConversionResult         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimPoseContext                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -292,7 +292,7 @@ struct AnimExecutionContextLibrary_ConvertToUpdateContext final
 {
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimExecutionContextConversionResult         result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimUpdateContext                     ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -359,7 +359,7 @@ struct BlendListBaseLibrary_ConvertToBlendListBase final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendListBaseReference                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -380,7 +380,7 @@ struct BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -393,7 +393,7 @@ struct BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure;
@@ -708,7 +708,7 @@ struct LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLayeredBoneBlendReference             LayeredBoneBlend;                                  // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure;
@@ -719,7 +719,7 @@ struct LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLayeredBoneBlendReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -756,7 +756,7 @@ struct LinkedAnimGraphLibrary_ConvertToLinkedAnimGraph final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinkedAnimGraphReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -769,7 +769,7 @@ struct LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLinkedAnimGraphReference              LinkedAnimGraph;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure;
@@ -801,7 +801,7 @@ struct MirrorAnimLibrary_ConvertToMirrorNode final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -814,7 +814,7 @@ struct MirrorAnimLibrary_ConvertToMirrorNodePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_MirrorAnimLibrary_ConvertToMirrorNodePure;
@@ -881,7 +881,7 @@ struct ModifyCurveAnimLibrary_ConvertToModifyCurveNode final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -894,7 +894,7 @@ struct ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure;
@@ -1033,7 +1033,7 @@ struct SequenceEvaluatorLibrary_ConvertToSequenceEvaluator final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -1046,7 +1046,7 @@ struct SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure;
@@ -1138,7 +1138,7 @@ struct SequencePlayerLibrary_ConvertToSequencePlayer final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -1151,7 +1151,7 @@ struct SequencePlayerLibrary_ConvertToSequencePlayerPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_SequencePlayerLibrary_ConvertToSequencePlayerPure;
@@ -1288,7 +1288,7 @@ struct SkeletalControlLibrary_ConvertToSkeletalControl final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkeletalControlReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -1301,7 +1301,7 @@ struct SkeletalControlLibrary_ConvertToSkeletalControlPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSkeletalControlReference              SkeletalControl;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_SkeletalControlLibrary_ConvertToSkeletalControlPure;

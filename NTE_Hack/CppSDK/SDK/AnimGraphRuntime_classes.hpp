@@ -46,8 +46,8 @@ DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
 class UAnimNodeRigidBodyLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FRigidBodyAnimNodeReference ConvertToRigidBodyAnimNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToRigidBodyAnimNodePure(const struct FAnimNodeReference& Node, struct FRigidBodyAnimNodeReference* RigidBodyAnimNode, bool* Result);
+	static struct FRigidBodyAnimNodeReference ConvertToRigidBodyAnimNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToRigidBodyAnimNodePure(const struct FAnimNodeReference& Node, struct FRigidBodyAnimNodeReference* RigidBodyAnimNode, bool* result);
 	static struct FRigidBodyAnimNodeReference SetOverridePhysicsAsset(const struct FRigidBodyAnimNodeReference& Node, class UPhysicsAsset* PhysicsAsset);
 
 public:
@@ -71,8 +71,8 @@ DUMPER7_ASSERTS_UAnimNodeRigidBodyLibrary;
 class UBlendSpaceLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FBlendSpaceReference ConvertToBlendSpace(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendSpacePure(const struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* Result);
+	static struct FBlendSpaceReference ConvertToBlendSpace(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToBlendSpacePure(const struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* result);
 	static struct FVector GetFilteredPosition(const struct FBlendSpaceReference& BlendSpace);
 	static struct FVector GetPosition(const struct FBlendSpaceReference& BlendSpace);
 	static void SnapToPosition(const struct FBlendSpaceReference& BlendSpace, const struct FVector& NewPosition);
@@ -131,10 +131,10 @@ DUMPER7_ASSERTS_ISequencerAnimationOverride;
 class UAnimationStateMachineLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void ConvertToAnimationStateMachine(const struct FAnimNodeReference& Node, struct FAnimationStateMachineReference* AnimationState, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToAnimationStateMachinePure(const struct FAnimNodeReference& Node, struct FAnimationStateMachineReference* AnimationState, bool* Result);
-	static void ConvertToAnimationStateResult(const struct FAnimNodeReference& Node, struct FAnimationStateResultReference* AnimationState, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToAnimationStateResultPure(const struct FAnimNodeReference& Node, struct FAnimationStateResultReference* AnimationState, bool* Result);
+	static void ConvertToAnimationStateMachine(const struct FAnimNodeReference& Node, struct FAnimationStateMachineReference* AnimationState, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToAnimationStateMachinePure(const struct FAnimNodeReference& Node, struct FAnimationStateMachineReference* AnimationState, bool* result);
+	static void ConvertToAnimationStateResult(const struct FAnimNodeReference& Node, struct FAnimationStateResultReference* AnimationState, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToAnimationStateResultPure(const struct FAnimNodeReference& Node, struct FAnimationStateResultReference* AnimationState, bool* result);
 	static float GetRelevantAnimTimeRemaining(const struct FAnimUpdateContext& UpdateContext, const struct FAnimationStateResultReference& Node);
 	static float GetRelevantAnimTimeRemainingFraction(const struct FAnimUpdateContext& UpdateContext, const struct FAnimationStateResultReference& Node);
 	static class FName GetState(const struct FAnimUpdateContext& UpdateContext, const struct FAnimationStateMachineReference& Node);
@@ -183,10 +183,10 @@ DUMPER7_ASSERTS_UAnimSequencerInstance;
 class UAnimExecutionContextLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FAnimComponentSpacePoseContext ConvertToComponentSpacePoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimInitializationContext ConvertToInitializationContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimPoseContext ConvertToPoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
-	static struct FAnimUpdateContext ConvertToUpdateContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* Result);
+	static struct FAnimComponentSpacePoseContext ConvertToComponentSpacePoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* result);
+	static struct FAnimInitializationContext ConvertToInitializationContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* result);
+	static struct FAnimPoseContext ConvertToPoseContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* result);
+	static struct FAnimUpdateContext ConvertToUpdateContext(const struct FAnimExecutionContext& Context, EAnimExecutionContextConversionResult* result);
 	static class UAnimInstance* GetAnimInstance(const struct FAnimExecutionContext& Context);
 	static struct FAnimNodeReference GetAnimNodeReference(class UAnimInstance* Instance, int32 Index_0);
 	static float GetCurrentWeight(const struct FAnimUpdateContext& Context);
@@ -237,7 +237,7 @@ DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
 class UBlendListBaseLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FBlendListBaseReference ConvertToBlendListBase(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static struct FBlendListBaseReference ConvertToBlendListBase(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
 	static void ResetNode(const struct FBlendListBaseReference& BlendListBase);
 
 public:
@@ -261,8 +261,8 @@ DUMPER7_ASSERTS_UBlendListBaseLibrary;
 class UBlendSpacePlayerLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FBlendSpacePlayerReference ConvertToBlendSpacePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendSpacePlayerPure(const struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result);
+	static struct FBlendSpacePlayerReference ConvertToBlendSpacePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToBlendSpacePlayerPure(const struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* result);
 	static class UBlendSpace* GetBlendSpace(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static bool GetLoop(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
 	static float GetPlayRate(const struct FBlendSpacePlayerReference& BlendSpacePlayer);
@@ -330,8 +330,8 @@ DUMPER7_ASSERTS_UKismetAnimationLibrary;
 class ULayeredBoneBlendLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void ConvertToLayeredBlendPerBonePure(const struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* Result);
-	static struct FLayeredBoneBlendReference ConvertToLayeredBoneBlend(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToLayeredBlendPerBonePure(const struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* result);
+	static struct FLayeredBoneBlendReference ConvertToLayeredBoneBlend(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
 	static int32 GetNumPoses(const struct FLayeredBoneBlendReference& LayeredBoneBlend);
 	static struct FLayeredBoneBlendReference SetBlendMask(const struct FAnimUpdateContext& UpdateContext, const struct FLayeredBoneBlendReference& LayeredBoneBlend, int32 PoseIndex, class FName BlendMaskName);
 
@@ -356,8 +356,8 @@ DUMPER7_ASSERTS_ULayeredBoneBlendLibrary;
 class ULinkedAnimGraphLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FLinkedAnimGraphReference ConvertToLinkedAnimGraph(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToLinkedAnimGraphPure(const struct FAnimNodeReference& Node, struct FLinkedAnimGraphReference* LinkedAnimGraph, bool* Result);
+	static struct FLinkedAnimGraphReference ConvertToLinkedAnimGraph(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToLinkedAnimGraphPure(const struct FAnimNodeReference& Node, struct FLinkedAnimGraphReference* LinkedAnimGraph, bool* result);
 	static class UAnimInstance* GetLinkedAnimInstance(const struct FLinkedAnimGraphReference& Node);
 	static bool HasLinkedAnimInstance(const struct FLinkedAnimGraphReference& Node);
 
@@ -382,8 +382,8 @@ DUMPER7_ASSERTS_ULinkedAnimGraphLibrary;
 class UMirrorAnimLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FMirrorAnimNodeReference ConvertToMirrorNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToMirrorNodePure(const struct FAnimNodeReference& Node, struct FMirrorAnimNodeReference* MirrorNode, bool* Result);
+	static struct FMirrorAnimNodeReference ConvertToMirrorNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToMirrorNodePure(const struct FAnimNodeReference& Node, struct FMirrorAnimNodeReference* MirrorNode, bool* result);
 	static bool GetMirror(const struct FMirrorAnimNodeReference& MirrorNode);
 	static class UMirrorDataTable* GetMirrorDataTable(const struct FMirrorAnimNodeReference& MirrorNode);
 	static float GetMirrorTransitionBlendTime(const struct FMirrorAnimNodeReference& MirrorNode);
@@ -411,8 +411,8 @@ DUMPER7_ASSERTS_UMirrorAnimLibrary;
 class UModifyCurveAnimLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FModifyCurveAnimNodeReference ConvertToModifyCurveNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToModifyCurveNodePure(const struct FAnimNodeReference& Node, struct FModifyCurveAnimNodeReference* ModifyCurveNode, bool* Result);
+	static struct FModifyCurveAnimNodeReference ConvertToModifyCurveNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToModifyCurveNodePure(const struct FAnimNodeReference& Node, struct FModifyCurveAnimNodeReference* ModifyCurveNode, bool* result);
 	static float GetAlpha(const struct FModifyCurveAnimNodeReference& ModifyCurveNode);
 	static EModifyCurveApplyMode GetApplyMode(const struct FModifyCurveAnimNodeReference& ModifyCurveNode);
 	static struct FModifyCurveAnimNodeReference SetAlpha(const struct FModifyCurveAnimNodeReference& ModifyCurveNode, float InAlpha);
@@ -477,8 +477,8 @@ class USequenceEvaluatorLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static struct FSequenceEvaluatorReference AdvanceTime(const struct FAnimUpdateContext& UpdateContext, const struct FSequenceEvaluatorReference& SequenceEvaluator, float PlayRate);
-	static struct FSequenceEvaluatorReference ConvertToSequenceEvaluator(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSequenceEvaluatorPure(const struct FAnimNodeReference& Node, struct FSequenceEvaluatorReference* SequenceEvaluator, bool* Result);
+	static struct FSequenceEvaluatorReference ConvertToSequenceEvaluator(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToSequenceEvaluatorPure(const struct FAnimNodeReference& Node, struct FSequenceEvaluatorReference* SequenceEvaluator, bool* result);
 	static float GetAccumulatedTime(const struct FSequenceEvaluatorReference& SequenceEvaluator);
 	static class UAnimSequenceBase* GetSequence(const struct FSequenceEvaluatorReference& SequenceEvaluator);
 	static struct FSequenceEvaluatorReference SetExplicitFrame(const struct FSequenceEvaluatorReference& SequenceEvaluator, int32 Frame);
@@ -508,8 +508,8 @@ class USequencePlayerLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static float ComputePlayRateFromDuration(const struct FSequencePlayerReference& SequencePlayer, float duration);
-	static struct FSequencePlayerReference ConvertToSequencePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSequencePlayerPure(const struct FAnimNodeReference& Node, struct FSequencePlayerReference* SequencePlayer, bool* Result);
+	static struct FSequencePlayerReference ConvertToSequencePlayer(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToSequencePlayerPure(const struct FAnimNodeReference& Node, struct FSequencePlayerReference* SequencePlayer, bool* result);
 	static float GetAccumulatedTime(const struct FSequencePlayerReference& SequencePlayer);
 	static bool GetLoopAnimation(const struct FSequencePlayerReference& SequencePlayer);
 	static float GetPlayRate(const struct FSequencePlayerReference& SequencePlayer);
@@ -572,8 +572,8 @@ DUMPER7_ASSERTS_ISequencerAnimationSupport;
 class USkeletalControlLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FSkeletalControlReference ConvertToSkeletalControl(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToSkeletalControlPure(const struct FAnimNodeReference& Node, struct FSkeletalControlReference* SkeletalControl, bool* Result);
+	static struct FSkeletalControlReference ConvertToSkeletalControl(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToSkeletalControlPure(const struct FAnimNodeReference& Node, struct FSkeletalControlReference* SkeletalControl, bool* result);
 	static float GetAlpha(const struct FSkeletalControlReference& SkeletalControl);
 	static struct FSkeletalControlReference SetAlpha(const struct FSkeletalControlReference& SkeletalControl, float Alpha);
 

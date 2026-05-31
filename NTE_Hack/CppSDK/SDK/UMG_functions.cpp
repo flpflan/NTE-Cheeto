@@ -5987,7 +5987,7 @@ float UWidgetAnimation::GetStartTime() const
 // Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UUMGSequencePlayer**              Result                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UUMGSequencePlayer**              result                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UUserWidget*                      Widget                                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimation*                 InAnimation                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartAtTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5996,7 +5996,7 @@ float UWidgetAnimation::GetStartTime() const
 // float                                   PlaybackSpeed                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimationPlayCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationProxyObject(class UUMGSequencePlayer** result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6019,8 +6019,8 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 
 	return Parms.ReturnValue;
 }
@@ -6029,7 +6029,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 // Function UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationTimeRangeProxyObject
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UUMGSequencePlayer**              Result                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UUMGSequencePlayer**              result                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UUserWidget*                      Widget                                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimation*                 InAnimation                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartAtTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6039,7 +6039,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 // float                                   PlaybackSpeed                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimationPlayCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::CreatePlayAnimationTimeRangeProxyObject(class UUMGSequencePlayer** result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6063,8 +6063,8 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 
 	return Parms.ReturnValue;
 }
@@ -6073,7 +6073,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 // Function UMG.WidgetAnimationPlayCallbackProxy.NewPlayAnimationProxyObject
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FWidgetAnimationHandle*          Result                                                 (Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FWidgetAnimationHandle*          result                                                 (Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UUserWidget*                      Widget                                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimation*                 InAnimation                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartAtTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6082,7 +6082,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::Crea
 // float                                   PlaybackSpeed                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimationPlayCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewPlayAnimationProxyObject(struct FWidgetAnimationHandle* Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewPlayAnimationProxyObject(struct FWidgetAnimationHandle* result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6105,8 +6105,8 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewP
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
+	if (result != nullptr)
+		*result = std::move(Parms.result);
 
 	return Parms.ReturnValue;
 }
@@ -6115,7 +6115,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewP
 // Function UMG.WidgetAnimationPlayCallbackProxy.NewPlayAnimationTimeRangeProxyObject
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FWidgetAnimationHandle*          Result                                                 (Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FWidgetAnimationHandle*          result                                                 (Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UUserWidget*                      Widget                                                 (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimation*                 InAnimation                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   StartAtTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6125,7 +6125,7 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewP
 // float                                   PlaybackSpeed                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidgetAnimationPlayCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewPlayAnimationTimeRangeProxyObject(struct FWidgetAnimationHandle* Result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
+class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewPlayAnimationTimeRangeProxyObject(struct FWidgetAnimationHandle* result, class UUserWidget* Widget, class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32 NumLoopsToPlay, EUMGSequencePlayMode PlayMode, float PlaybackSpeed)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6149,8 +6149,8 @@ class UWidgetAnimationPlayCallbackProxy* UWidgetAnimationPlayCallbackProxy::NewP
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
+	if (result != nullptr)
+		*result = std::move(Parms.result);
 
 	return Parms.ReturnValue;
 }

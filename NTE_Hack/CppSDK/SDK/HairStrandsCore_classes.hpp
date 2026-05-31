@@ -256,7 +256,7 @@ public:
 	uint8                                         Pad_90[0x60];                                      // 0x0090(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void Build(TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)> CompletionDelegate);
+	void Build(TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult result)> CompletionDelegate);
 	void SetGroom(class UGroomAsset* InGroom);
 	void SetGroomBindingType(EGroomBindingMeshType InGroomBindingType);
 	void SetGroupInfos(const TArray<struct FGoomBindingGroupInfo>& InGroupInfos);

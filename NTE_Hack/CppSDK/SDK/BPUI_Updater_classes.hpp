@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "HTGame_structs.hpp"
 #include "HTGame_classes.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -72,7 +72,9 @@ public:
 public:
 	void AdjustMediaSize();
 	void BndEvt__BPUI_Updater_Button_Cancel_1_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
+	void BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__BPUI_Updater_Button_restart_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__UI_PatcherMainForm_AppPreviousNotice_K2Node_ComponentBoundEvent_16_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);
 	void BndEvt__UI_PatcherMainForm_Button_restart_1_K2Node_ComponentBoundEvent_18_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button);

@@ -16,6 +16,350 @@
 
 SDK_NAMESPACE_START
 
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.AddKey
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FFrameNumber&              InTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieSceneScriptingIntegerKey*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneScriptingIntegerKey* UMovieSceneScriptingIntegerChannel::AddKey(const struct FFrameNumber& InTime, int32 NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "AddKey");
+
+	Params::MovieSceneScriptingIntegerChannel_AddKey Parms{};
+
+	Parms.InTime = std::move(InTime);
+	Parms.NewValue = NewValue;
+	Parms.SubFrame = SubFrame;
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveDefault
+// (Final, Native, Public, BlueprintCallable)
+
+void UMovieSceneScriptingIntegerChannel::RemoveDefault()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "RemoveDefault");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveKey
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieSceneScriptingKey*          Key                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingIntegerChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "RemoveKey");
+
+	Params::MovieSceneScriptingIntegerChannel_RemoveKey Parms{};
+
+	Parms.Key = Key;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.SetDefault
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InDefaultValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingIntegerChannel::SetDefault(int32 InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "SetDefault");
+
+	Params::MovieSceneScriptingIntegerChannel_SetDefault Parms{};
+
+	Parms.InDefaultValue = InDefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.SetInterpolateLinearKeys
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInInterpolateLinearKeys                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingIntegerChannel::SetInterpolateLinearKeys(bool bInInterpolateLinearKeys)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "SetInterpolateLinearKeys");
+
+	Params::MovieSceneScriptingIntegerChannel_SetInterpolateLinearKeys Parms{};
+
+	Parms.bInInterpolateLinearKeys = bInInterpolateLinearKeys;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.Transform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FFrameNumber&              OffsetFrame                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFrameNumber&              PivotFrame                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSequencerScriptingRange&  ScriptingRange                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingIntegerChannel::Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "Transform");
+
+	Params::MovieSceneScriptingIntegerChannel_Transform Parms{};
+
+	Parms.OffsetFrame = std::move(OffsetFrame);
+	Parms.Scale = Scale;
+	Parms.PivotFrame = std::move(PivotFrame);
+	Parms.ScriptingRange = std::move(ScriptingRange);
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.EvaluateKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSequencerScriptingRange&  Range                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FFrameRate&                FrameRate                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UMovieSceneScriptingIntegerChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "EvaluateKeys");
+
+	Params::MovieSceneScriptingIntegerChannel_EvaluateKeys Parms{};
+
+	Parms.Range = std::move(Range);
+	Parms.FrameRate = std::move(FrameRate);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetDefault
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMovieSceneScriptingIntegerChannel::GetDefault() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetDefault");
+
+	Params::MovieSceneScriptingIntegerChannel_GetDefault Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetInterpolateLinearKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneScriptingIntegerChannel::GetInterpolateLinearKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetInterpolateLinearKeys");
+
+	Params::MovieSceneScriptingIntegerChannel_GetInterpolateLinearKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeys
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingIntegerChannel::GetKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetKeys");
+
+	Params::MovieSceneScriptingIntegerChannel_GetKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeysByIndex
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<int32>&                    Indices                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingIntegerChannel::GetKeysByIndex(const TArray<int32>& Indices) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetKeysByIndex");
+
+	Params::MovieSceneScriptingIntegerChannel_GetKeysByIndex Parms{};
+
+	Parms.Indices = std::move(Indices);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetNumKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMovieSceneScriptingIntegerChannel::GetNumKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetNumKeys");
+
+	Params::MovieSceneScriptingIntegerChannel_GetNumKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.HasDefault
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneScriptingIntegerChannel::HasDefault() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "HasDefault");
+
+	Params::MovieSceneScriptingIntegerChannel_HasDefault Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SequencerScripting.MovieSceneScriptingActorReferenceKey.SetTime
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -111,6 +455,463 @@ struct FMovieSceneObjectBindingID UMovieSceneScriptingActorReferenceKey::GetValu
 		Func = Class->GetFunction("MovieSceneScriptingActorReferenceKey", "GetValue");
 
 	Params::MovieSceneScriptingActorReferenceKey_GetValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetArriveTangent(float InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetArriveTangent");
+
+	Params::MovieSceneScriptingFloatKey_SetArriveTangent Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangentWeight
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetArriveTangentWeight(float InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetArriveTangentWeight");
+
+	Params::MovieSceneScriptingFloatKey_SetArriveTangentWeight Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetInterpolationMode
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// ERichCurveInterpMode                    InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetInterpolationMode(ERichCurveInterpMode InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetInterpolationMode");
+
+	Params::MovieSceneScriptingFloatKey_SetInterpolationMode Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangent
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetLeaveTangent(float InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetLeaveTangent");
+
+	Params::MovieSceneScriptingFloatKey_SetLeaveTangent Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangentWeight
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetLeaveTangentWeight(float InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetLeaveTangentWeight");
+
+	Params::MovieSceneScriptingFloatKey_SetLeaveTangentWeight Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTangentMode
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// ERichCurveTangentMode                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetTangentMode(ERichCurveTangentMode InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTangentMode");
+
+	Params::MovieSceneScriptingFloatKey_SetTangentMode Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTangentWeightMode
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// ERichCurveTangentWeightMode             InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetTangentWeightMode(ERichCurveTangentWeightMode InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTangentWeightMode");
+
+	Params::MovieSceneScriptingFloatKey_SetTangentWeightMode Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTime
+// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FFrameNumber&              NewFrameNumber                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTime");
+
+	Params::MovieSceneScriptingFloatKey_SetTime Parms{};
+
+	Parms.NewFrameNumber = std::move(NewFrameNumber);
+	Parms.SubFrame = SubFrame;
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.SetValue
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingFloatKey::SetValue(float InNewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetValue");
+
+	Params::MovieSceneScriptingFloatKey_SetValue Parms{};
+
+	Parms.InNewValue = InNewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangent
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneScriptingFloatKey::GetArriveTangent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetArriveTangent");
+
+	Params::MovieSceneScriptingFloatKey_GetArriveTangent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangentWeight
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneScriptingFloatKey::GetArriveTangentWeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetArriveTangentWeight");
+
+	Params::MovieSceneScriptingFloatKey_GetArriveTangentWeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetInterpolationMode
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ERichCurveInterpMode                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ERichCurveInterpMode UMovieSceneScriptingFloatKey::GetInterpolationMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetInterpolationMode");
+
+	Params::MovieSceneScriptingFloatKey_GetInterpolationMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangent
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneScriptingFloatKey::GetLeaveTangent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetLeaveTangent");
+
+	Params::MovieSceneScriptingFloatKey_GetLeaveTangent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangentWeight
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneScriptingFloatKey::GetLeaveTangentWeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetLeaveTangentWeight");
+
+	Params::MovieSceneScriptingFloatKey_GetLeaveTangentWeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTangentMode
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ERichCurveTangentMode                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ERichCurveTangentMode UMovieSceneScriptingFloatKey::GetTangentMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTangentMode");
+
+	Params::MovieSceneScriptingFloatKey_GetTangentMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTangentWeightMode
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ERichCurveTangentWeightMode             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ERichCurveTangentWeightMode UMovieSceneScriptingFloatKey::GetTangentWeightMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTangentWeightMode");
+
+	Params::MovieSceneScriptingFloatKey_GetTangentWeightMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTime
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FFrameTime                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FFrameTime UMovieSceneScriptingFloatKey::GetTime(EMovieSceneTimeUnit TimeUnit) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTime");
+
+	Params::MovieSceneScriptingFloatKey_GetTime Parms{};
+
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingFloatKey.GetValue
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMovieSceneScriptingFloatKey::GetValue() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetValue");
+
+	Params::MovieSceneScriptingFloatKey_GetValue Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -350,6 +1151,325 @@ bool UMovieSceneScriptingActorReferenceChannel::HasDefault() const
 		Func = Class->GetFunction("MovieSceneScriptingActorReferenceChannel", "HasDefault");
 
 	Params::MovieSceneScriptingActorReferenceChannel_HasDefault Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.AddKey
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FFrameNumber&              InTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EParticleKey                            NewParticleValue                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieSceneScriptingParticleKey*  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneScriptingParticleKey* UMovieSceneScriptingParticleChannel::AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "AddKey");
+
+	Params::MovieSceneScriptingParticleChannel_AddKey Parms{};
+
+	Parms.InTime = std::move(InTime);
+	Parms.NewParticleValue = NewParticleValue;
+	Parms.SubFrame = SubFrame;
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveDefault
+// (Final, Native, Public, BlueprintCallable)
+
+void UMovieSceneScriptingParticleChannel::RemoveDefault()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "RemoveDefault");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveKey
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieSceneScriptingKey*          Key                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingParticleChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "RemoveKey");
+
+	Params::MovieSceneScriptingParticleChannel_RemoveKey Parms{};
+
+	Parms.Key = Key;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.SetDefault
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EParticleKey                            InDefaultValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingParticleChannel::SetDefault(EParticleKey InDefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "SetDefault");
+
+	Params::MovieSceneScriptingParticleChannel_SetDefault Parms{};
+
+	Parms.InDefaultValue = InDefaultValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.Transform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FFrameNumber&              OffsetFrame                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFrameNumber&              PivotFrame                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FSequencerScriptingRange&  ScriptingRange                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneScriptingParticleChannel::Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "Transform");
+
+	Params::MovieSceneScriptingParticleChannel_Transform Parms{};
+
+	Parms.OffsetFrame = std::move(OffsetFrame);
+	Parms.Scale = Scale;
+	Parms.PivotFrame = std::move(PivotFrame);
+	Parms.ScriptingRange = std::move(ScriptingRange);
+	Parms.TimeUnit = TimeUnit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.ComputeEffectiveRange
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSequencerScriptingRange         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FSequencerScriptingRange UMovieSceneScriptingParticleChannel::ComputeEffectiveRange() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "ComputeEffectiveRange");
+
+	Params::MovieSceneScriptingParticleChannel_ComputeEffectiveRange Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.EvaluateKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FSequencerScriptingRange&  Range                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FFrameRate&                FrameRate                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<EParticleKey>                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<EParticleKey> UMovieSceneScriptingParticleChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "EvaluateKeys");
+
+	Params::MovieSceneScriptingParticleChannel_EvaluateKeys Parms{};
+
+	Parms.Range = std::move(Range);
+	Parms.FrameRate = std::move(FrameRate);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetDefault
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EParticleKey                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EParticleKey UMovieSceneScriptingParticleChannel::GetDefault() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetDefault");
+
+	Params::MovieSceneScriptingParticleChannel_GetDefault Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeys
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingParticleChannel::GetKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetKeys");
+
+	Params::MovieSceneScriptingParticleChannel_GetKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeysByIndex
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<int32>&                    Indices                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingParticleChannel::GetKeysByIndex(const TArray<int32>& Indices) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetKeysByIndex");
+
+	Params::MovieSceneScriptingParticleChannel_GetKeysByIndex Parms{};
+
+	Parms.Indices = std::move(Indices);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetNumKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMovieSceneScriptingParticleChannel::GetNumKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetNumKeys");
+
+	Params::MovieSceneScriptingParticleChannel_GetNumKeys Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequencerScripting.MovieSceneScriptingParticleChannel.HasDefault
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneScriptingParticleChannel::HasDefault() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "HasDefault");
+
+	Params::MovieSceneScriptingParticleChannel_HasDefault Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2266,463 +3386,6 @@ TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingEventChannel::GetKeys
 }
 
 
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetArriveTangent(float InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetArriveTangent");
-
-	Params::MovieSceneScriptingFloatKey_SetArriveTangent Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangentWeight
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetArriveTangentWeight(float InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetArriveTangentWeight");
-
-	Params::MovieSceneScriptingFloatKey_SetArriveTangentWeight Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetInterpolationMode
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// ERichCurveInterpMode                    InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetInterpolationMode(ERichCurveInterpMode InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetInterpolationMode");
-
-	Params::MovieSceneScriptingFloatKey_SetInterpolationMode Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangent
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetLeaveTangent(float InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetLeaveTangent");
-
-	Params::MovieSceneScriptingFloatKey_SetLeaveTangent Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetLeaveTangentWeight
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetLeaveTangentWeight(float InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetLeaveTangentWeight");
-
-	Params::MovieSceneScriptingFloatKey_SetLeaveTangentWeight Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTangentMode
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// ERichCurveTangentMode                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetTangentMode(ERichCurveTangentMode InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTangentMode");
-
-	Params::MovieSceneScriptingFloatKey_SetTangentMode Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTangentWeightMode
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// ERichCurveTangentWeightMode             InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetTangentWeightMode(ERichCurveTangentWeightMode InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTangentWeightMode");
-
-	Params::MovieSceneScriptingFloatKey_SetTangentWeightMode Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetTime
-// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FFrameNumber&              NewFrameNumber                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetTime(const struct FFrameNumber& NewFrameNumber, float SubFrame, EMovieSceneTimeUnit TimeUnit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetTime");
-
-	Params::MovieSceneScriptingFloatKey_SetTime Parms{};
-
-	Parms.NewFrameNumber = std::move(NewFrameNumber);
-	Parms.SubFrame = SubFrame;
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.SetValue
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InNewValue                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingFloatKey::SetValue(float InNewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "SetValue");
-
-	Params::MovieSceneScriptingFloatKey_SetValue Parms{};
-
-	Parms.InNewValue = InNewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangent
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMovieSceneScriptingFloatKey::GetArriveTangent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetArriveTangent");
-
-	Params::MovieSceneScriptingFloatKey_GetArriveTangent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetArriveTangentWeight
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMovieSceneScriptingFloatKey::GetArriveTangentWeight() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetArriveTangentWeight");
-
-	Params::MovieSceneScriptingFloatKey_GetArriveTangentWeight Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetInterpolationMode
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ERichCurveInterpMode                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ERichCurveInterpMode UMovieSceneScriptingFloatKey::GetInterpolationMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetInterpolationMode");
-
-	Params::MovieSceneScriptingFloatKey_GetInterpolationMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangent
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMovieSceneScriptingFloatKey::GetLeaveTangent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetLeaveTangent");
-
-	Params::MovieSceneScriptingFloatKey_GetLeaveTangent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetLeaveTangentWeight
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMovieSceneScriptingFloatKey::GetLeaveTangentWeight() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetLeaveTangentWeight");
-
-	Params::MovieSceneScriptingFloatKey_GetLeaveTangentWeight Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTangentMode
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ERichCurveTangentMode                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ERichCurveTangentMode UMovieSceneScriptingFloatKey::GetTangentMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTangentMode");
-
-	Params::MovieSceneScriptingFloatKey_GetTangentMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTangentWeightMode
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ERichCurveTangentWeightMode             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ERichCurveTangentWeightMode UMovieSceneScriptingFloatKey::GetTangentWeightMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTangentWeightMode");
-
-	Params::MovieSceneScriptingFloatKey_GetTangentWeightMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetTime
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FFrameTime                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FFrameTime UMovieSceneScriptingFloatKey::GetTime(EMovieSceneTimeUnit TimeUnit) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetTime");
-
-	Params::MovieSceneScriptingFloatKey_GetTime Parms{};
-
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingFloatKey.GetValue
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMovieSceneScriptingFloatKey::GetValue() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingFloatKey", "GetValue");
-
-	Params::MovieSceneScriptingFloatKey_GetValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function SequencerScripting.MovieSceneScriptingFloatChannel.AddKey
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -3251,350 +3914,6 @@ int32 UMovieSceneScriptingIntegerKey::GetValue() const
 }
 
 
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.AddKey
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FFrameNumber&              InTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieSceneScriptingIntegerKey*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieSceneScriptingIntegerKey* UMovieSceneScriptingIntegerChannel::AddKey(const struct FFrameNumber& InTime, int32 NewValue, float SubFrame, EMovieSceneTimeUnit TimeUnit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "AddKey");
-
-	Params::MovieSceneScriptingIntegerChannel_AddKey Parms{};
-
-	Parms.InTime = std::move(InTime);
-	Parms.NewValue = NewValue;
-	Parms.SubFrame = SubFrame;
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveDefault
-// (Final, Native, Public, BlueprintCallable)
-
-void UMovieSceneScriptingIntegerChannel::RemoveDefault()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "RemoveDefault");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.RemoveKey
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieSceneScriptingKey*          Key                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingIntegerChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "RemoveKey");
-
-	Params::MovieSceneScriptingIntegerChannel_RemoveKey Parms{};
-
-	Parms.Key = Key;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.SetDefault
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   InDefaultValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingIntegerChannel::SetDefault(int32 InDefaultValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "SetDefault");
-
-	Params::MovieSceneScriptingIntegerChannel_SetDefault Parms{};
-
-	Parms.InDefaultValue = InDefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.SetInterpolateLinearKeys
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInInterpolateLinearKeys                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingIntegerChannel::SetInterpolateLinearKeys(bool bInInterpolateLinearKeys)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "SetInterpolateLinearKeys");
-
-	Params::MovieSceneScriptingIntegerChannel_SetInterpolateLinearKeys Parms{};
-
-	Parms.bInInterpolateLinearKeys = bInInterpolateLinearKeys;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.Transform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FFrameNumber&              OffsetFrame                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FFrameNumber&              PivotFrame                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FSequencerScriptingRange&  ScriptingRange                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingIntegerChannel::Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "Transform");
-
-	Params::MovieSceneScriptingIntegerChannel_Transform Parms{};
-
-	Parms.OffsetFrame = std::move(OffsetFrame);
-	Parms.Scale = Scale;
-	Parms.PivotFrame = std::move(PivotFrame);
-	Parms.ScriptingRange = std::move(ScriptingRange);
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.EvaluateKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSequencerScriptingRange&  Range                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FFrameRate&                FrameRate                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<int32> UMovieSceneScriptingIntegerChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "EvaluateKeys");
-
-	Params::MovieSceneScriptingIntegerChannel_EvaluateKeys Parms{};
-
-	Parms.Range = std::move(Range);
-	Parms.FrameRate = std::move(FrameRate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetDefault
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMovieSceneScriptingIntegerChannel::GetDefault() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetDefault");
-
-	Params::MovieSceneScriptingIntegerChannel_GetDefault Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetInterpolateLinearKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieSceneScriptingIntegerChannel::GetInterpolateLinearKeys() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetInterpolateLinearKeys");
-
-	Params::MovieSceneScriptingIntegerChannel_GetInterpolateLinearKeys Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeys
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingIntegerChannel::GetKeys() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetKeys");
-
-	Params::MovieSceneScriptingIntegerChannel_GetKeys Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeysByIndex
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<int32>&                    Indices                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingIntegerChannel::GetKeysByIndex(const TArray<int32>& Indices) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetKeysByIndex");
-
-	Params::MovieSceneScriptingIntegerChannel_GetKeysByIndex Parms{};
-
-	Parms.Indices = std::move(Indices);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetNumKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMovieSceneScriptingIntegerChannel::GetNumKeys() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "GetNumKeys");
-
-	Params::MovieSceneScriptingIntegerChannel_GetNumKeys Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingIntegerChannel.HasDefault
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieSceneScriptingIntegerChannel::HasDefault() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingIntegerChannel", "HasDefault");
-
-	Params::MovieSceneScriptingIntegerChannel_HasDefault Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function SequencerScripting.MovieSceneScriptingObjectPathKey.SetTime
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -4036,325 +4355,6 @@ EParticleKey UMovieSceneScriptingParticleKey::GetValue() const
 		Func = Class->GetFunction("MovieSceneScriptingParticleKey", "GetValue");
 
 	Params::MovieSceneScriptingParticleKey_GetValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.AddKey
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FFrameNumber&              InTime                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EParticleKey                            NewParticleValue                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   SubFrame                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMovieSceneScriptingParticleKey*  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMovieSceneScriptingParticleKey* UMovieSceneScriptingParticleChannel::AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "AddKey");
-
-	Params::MovieSceneScriptingParticleChannel_AddKey Parms{};
-
-	Parms.InTime = std::move(InTime);
-	Parms.NewParticleValue = NewParticleValue;
-	Parms.SubFrame = SubFrame;
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveDefault
-// (Final, Native, Public, BlueprintCallable)
-
-void UMovieSceneScriptingParticleChannel::RemoveDefault()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "RemoveDefault");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.RemoveKey
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UMovieSceneScriptingKey*          Key                                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingParticleChannel::RemoveKey(class UMovieSceneScriptingKey* Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "RemoveKey");
-
-	Params::MovieSceneScriptingParticleChannel_RemoveKey Parms{};
-
-	Parms.Key = Key;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.SetDefault
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EParticleKey                            InDefaultValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingParticleChannel::SetDefault(EParticleKey InDefaultValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "SetDefault");
-
-	Params::MovieSceneScriptingParticleChannel_SetDefault Parms{};
-
-	Parms.InDefaultValue = InDefaultValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.Transform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FFrameNumber&              OffsetFrame                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FFrameNumber&              PivotFrame                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FSequencerScriptingRange&  ScriptingRange                                         (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// EMovieSceneTimeUnit                     TimeUnit                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneScriptingParticleChannel::Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "Transform");
-
-	Params::MovieSceneScriptingParticleChannel_Transform Parms{};
-
-	Parms.OffsetFrame = std::move(OffsetFrame);
-	Parms.Scale = Scale;
-	Parms.PivotFrame = std::move(PivotFrame);
-	Parms.ScriptingRange = std::move(ScriptingRange);
-	Parms.TimeUnit = TimeUnit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.ComputeEffectiveRange
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSequencerScriptingRange         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FSequencerScriptingRange UMovieSceneScriptingParticleChannel::ComputeEffectiveRange() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "ComputeEffectiveRange");
-
-	Params::MovieSceneScriptingParticleChannel_ComputeEffectiveRange Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.EvaluateKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FSequencerScriptingRange&  Range                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FFrameRate&                FrameRate                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<EParticleKey>                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<EParticleKey> UMovieSceneScriptingParticleChannel::EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "EvaluateKeys");
-
-	Params::MovieSceneScriptingParticleChannel_EvaluateKeys Parms{};
-
-	Parms.Range = std::move(Range);
-	Parms.FrameRate = std::move(FrameRate);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetDefault
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EParticleKey                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EParticleKey UMovieSceneScriptingParticleChannel::GetDefault() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetDefault");
-
-	Params::MovieSceneScriptingParticleChannel_GetDefault Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeys
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingParticleChannel::GetKeys() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetKeys");
-
-	Params::MovieSceneScriptingParticleChannel_GetKeys Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetKeysByIndex
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<int32>&                    Indices                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UMovieSceneScriptingKey*>  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UMovieSceneScriptingKey*> UMovieSceneScriptingParticleChannel::GetKeysByIndex(const TArray<int32>& Indices) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetKeysByIndex");
-
-	Params::MovieSceneScriptingParticleChannel_GetKeysByIndex Parms{};
-
-	Parms.Indices = std::move(Indices);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.GetNumKeys
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMovieSceneScriptingParticleChannel::GetNumKeys() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "GetNumKeys");
-
-	Params::MovieSceneScriptingParticleChannel_GetNumKeys Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SequencerScripting.MovieSceneScriptingParticleChannel.HasDefault
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieSceneScriptingParticleChannel::HasDefault() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneScriptingParticleChannel", "HasDefault");
-
-	Params::MovieSceneScriptingParticleChannel_HasDefault Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

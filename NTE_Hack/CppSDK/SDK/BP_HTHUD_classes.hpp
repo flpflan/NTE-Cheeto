@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_HTHUD.BP_HTHUD_C
-// 0x0008 (0x0C00 - 0x0BF8)
+// 0x0008 (0x0CD0 - 0x0CC8)
 class ABP_HTHUD_C final : public AHTHUD
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0BF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

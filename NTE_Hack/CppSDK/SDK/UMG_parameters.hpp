@@ -2123,7 +2123,7 @@ DUMPER7_ASSERTS_WidgetAnimation_GetStartTime;
 struct WidgetAnimationPlayCallbackProxy_CreatePlayAnimationProxyObject final
 {
 public:
-	class UUMGSequencePlayer*                     Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUMGSequencePlayer*                     result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidgetAnimation*                       InAnimation;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartAtTime;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2140,7 +2140,7 @@ DUMPER7_ASSERTS_WidgetAnimationPlayCallbackProxy_CreatePlayAnimationProxyObject;
 struct WidgetAnimationPlayCallbackProxy_CreatePlayAnimationTimeRangeProxyObject final
 {
 public:
-	class UUMGSequencePlayer*                     Result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUMGSequencePlayer*                     result;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UUserWidget*                            Widget;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidgetAnimation*                       InAnimation;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartAtTime;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2159,7 +2159,7 @@ DUMPER7_ASSERTS_WidgetAnimationPlayCallbackProxy_CreatePlayAnimationTimeRangePro
 struct WidgetAnimationPlayCallbackProxy_NewPlayAnimationProxyObject final
 {
 public:
-	struct FWidgetAnimationHandle                 Result;                                            // 0x0000(0x0010)(Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWidgetAnimationHandle                 result;                                            // 0x0000(0x0010)(Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UUserWidget*                            Widget;                                            // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidgetAnimation*                       InAnimation;                                       // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartAtTime;                                       // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2176,7 +2176,7 @@ DUMPER7_ASSERTS_WidgetAnimationPlayCallbackProxy_NewPlayAnimationProxyObject;
 struct WidgetAnimationPlayCallbackProxy_NewPlayAnimationTimeRangeProxyObject final
 {
 public:
-	struct FWidgetAnimationHandle                 Result;                                            // 0x0000(0x0010)(Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWidgetAnimationHandle                 result;                                            // 0x0000(0x0010)(Parm, OutParm, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UUserWidget*                            Widget;                                            // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidgetAnimation*                       InAnimation;                                       // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartAtTime;                                       // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

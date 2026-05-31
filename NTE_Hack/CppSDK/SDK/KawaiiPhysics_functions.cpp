@@ -222,10 +222,10 @@ struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::AddExternalForceWithExecRe
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult*     result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FKawaiiPhysicsReference          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::ConvertToKawaiiPhysics(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::ConvertToKawaiiPhysics(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -243,8 +243,8 @@ struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::ConvertToKawaiiPhysics(con
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 
 	return Parms.ReturnValue;
 }
@@ -255,9 +255,9 @@ struct FKawaiiPhysicsReference UKawaiiPhysicsLibrary::ConvertToKawaiiPhysics(con
 // Parameters:
 // const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FKawaiiPhysicsReference*         KawaiiPhysics                                          (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKawaiiPhysicsLibrary::ConvertToKawaiiPhysicsPure(const struct FAnimNodeReference& Node, struct FKawaiiPhysicsReference* KawaiiPhysics, bool* Result)
+void UKawaiiPhysicsLibrary::ConvertToKawaiiPhysicsPure(const struct FAnimNodeReference& Node, struct FKawaiiPhysicsReference* KawaiiPhysics, bool* result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -278,8 +278,8 @@ void UKawaiiPhysicsLibrary::ConvertToKawaiiPhysicsPure(const struct FAnimNodeRef
 	if (KawaiiPhysics != nullptr)
 		*KawaiiPhysics = std::move(Parms.KawaiiPhysics);
 
-	if (Result != nullptr)
-		*Result = Parms.Result;
+	if (result != nullptr)
+		*result = Parms.result;
 }
 
 

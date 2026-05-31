@@ -426,7 +426,7 @@ public:
 	struct FDataflowAnyType                       TrueValue;                                         // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FDataflowAnyType                       FalseValue;                                        // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bCondition;                                        // 0x0282(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataflowAnyType                       Result;                                            // 0x0283(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       result;                                            // 0x0283(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataflowBranchNode;
@@ -438,7 +438,7 @@ struct FDataflowSelectNode final : public FDataflowNode
 public:
 	TArray<struct FDataflowAnyType>               Inputs;                                            // 0x0280(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         SelectedIndex;                                     // 0x0290(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataflowAnyType                       Result;                                            // 0x0294(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowAnyType                       result;                                            // 0x0294(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_295[0x3];                                      // 0x0295(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataflowSelectNode;
@@ -527,7 +527,7 @@ struct FDataflowMathOneInputOperatorNode : public FDataflowNode
 {
 public:
 	struct FDataflowNumericTypes                  A;                                                 // 0x0280(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowNumericTypes                  Result;                                            // 0x0288(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  result;                                            // 0x0288(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDataflowMathOneInputOperatorNode;
 
@@ -538,7 +538,7 @@ struct FDataflowMathTwoInputsOperatorNode : public FDataflowNode
 public:
 	struct FDataflowNumericTypes                  A;                                                 // 0x0280(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FDataflowNumericTypes                  B;                                                 // 0x0288(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataflowNumericTypes                  Result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDataflowMathTwoInputsOperatorNode;
 
@@ -585,7 +585,7 @@ struct FDataflowMathMinimumNode_v2 final : public FDataflowNode
 {
 public:
 	TArray<struct FDataflowNumericTypes>          Inputs;                                            // 0x0280(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FDataflowMathMinimumNode_v2;
 
@@ -602,7 +602,7 @@ struct FDataflowMathMaximumNode_v2 final : public FDataflowNode
 {
 public:
 	TArray<struct FDataflowNumericTypes>          Inputs;                                            // 0x0280(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	struct FDataflowNumericTypes                  Result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
+	struct FDataflowNumericTypes                  result;                                            // 0x0290(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FDataflowMathMaximumNode_v2;
 
@@ -745,7 +745,7 @@ struct FDataflowMathConstantNode final : public FDataflowNode
 public:
 	EDataflowMathConstantsEnum                    Constant;                                          // 0x0280(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataflowNumericTypes                  Result;                                            // 0x0288(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataflowNumericTypes                  result;                                            // 0x0288(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDataflowMathConstantNode;
 

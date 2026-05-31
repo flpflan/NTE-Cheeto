@@ -382,7 +382,7 @@ public:
 	struct FFloatCameraParameter                  EaseInTime;                                        // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFloatCameraParameter                  EaseOutTime;                                       // 0x0048(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFloatCameraParameter                  TotalTime;                                         // 0x0058(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UShakeCameraNode*                       Shake;                                             // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UShakeCameraNode*                       shake;                                             // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()

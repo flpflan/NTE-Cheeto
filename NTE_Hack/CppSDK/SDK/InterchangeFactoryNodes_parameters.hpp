@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "InterchangeCommon_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CinematicCamera_structs.hpp"
 #include "Engine_structs.hpp"
 #include "InterchangeNodes_structs.hpp"
 #include "InterchangeFactoryNodes_structs.hpp"
-#include "InterchangeCommon_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -1259,890 +1259,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InterchangeSkeletonFactoryNode_GetCustomUseTimeZeroForBindPose;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddLodDataUniqueId
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_AddLodDataUniqueId final
-{
-public:
-	class FString                                 LodDataUniqueId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddLodDataUniqueId;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyBooleanAttribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Value;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyDoubleAttribute
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Value;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyFloatAttribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyInt32Attribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyStringAttribute
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyBooleanAttribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Value;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyDoubleAttribute
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Value;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyFloatAttribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyInt32Attribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyStringAttribute
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute final
-{
-public:
-	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveLodDataUniqueId
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_RemoveLodDataUniqueId final
-{
-public:
-	class FString                                 LodDataUniqueId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_RemoveLodDataUniqueId;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveSlotMaterialDependencyUid
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid final
-{
-public:
-	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.ResetSlotMaterialDependencies
-// 0x0001 (0x0001 - 0x0000)
-struct InterchangeMeshFactoryNode_ResetSlotMaterialDependencies final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_ResetSlotMaterialDependencies;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomComputeWeightedNormals
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomImportSockets
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomImportSockets final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomImportSockets;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomKeepSectionsSeparate
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomLODGroup
-// 0x000C (0x000C - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomLODGroup final
-{
-public:
-	class FName                                   AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomLODGroup;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeNormals
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomRecomputeNormals final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRecomputeNormals;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeTangents
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomRecomputeTangents final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRecomputeTangents;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRemoveDegenerates
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomRemoveDegenerates final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRemoveDegenerates;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseBackwardsCompatibleF16TruncUVs
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseFullPrecisionUVs
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseHighPrecisionTangentBasis
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseMikkTSpace
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomUseMikkTSpace final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseMikkTSpace;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorIgnore
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomVertexColorIgnore final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorIgnore;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorOverride
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomVertexColorOverride final
-{
-public:
-	struct FColor                                 AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorOverride;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorReplace
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_SetCustomVertexColorReplace final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorReplace;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetSlotMaterialDependencyUid
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid final
-{
-public:
-	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MaterialDependencyUid;                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomComputeWeightedNormals
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomImportSockets
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomImportSockets final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomImportSockets;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomKeepSectionsSeparate
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomLODGroup
-// 0x000C (0x000C - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomLODGroup final
-{
-public:
-	class FName                                   AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomLODGroup;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeNormals
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomRecomputeNormals final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRecomputeNormals;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeTangents
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomRecomputeTangents final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRecomputeTangents;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRemoveDegenerates
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomRemoveDegenerates final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRemoveDegenerates;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseBackwardsCompatibleF16TruncUVs
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseFullPrecisionUVs
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseHighPrecisionTangentBasis
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseMikkTSpace
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomUseMikkTSpace final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseMikkTSpace;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorIgnore
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomVertexColorIgnore final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorIgnore;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorOverride
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomVertexColorOverride final
-{
-public:
-	struct FColor                                 AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorOverride;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorReplace
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeMeshFactoryNode_GetCustomVertexColorReplace final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorReplace;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataCount
-// 0x0004 (0x0004 - 0x0000)
-struct InterchangeMeshFactoryNode_GetLodDataCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetLodDataCount;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataUniqueIds
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeMeshFactoryNode_GetLodDataUniqueIds final
-{
-public:
-	TArray<class FString>                         OutLodDataUniqueIds;                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetLodDataUniqueIds;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencies
-// 0x0050 (0x0050 - 0x0000)
-struct InterchangeMeshFactoryNode_GetSlotMaterialDependencies final
-{
-public:
-	TMap<class FString, class FString>            OutMaterialDependencies;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetSlotMaterialDependencies;
-
-// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencyUid
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid final
-{
-public:
-	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutMaterialDependency;                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUid
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_AddSocketUid final
-{
-public:
-	class FString                                 SocketUid;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_AddSocketUid;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUids
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_AddSocketUids final
-{
-public:
-	TArray<class FString>                         InSocketUids;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_AddSocketUids;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.InitializeStaticMeshNode
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode final
-{
-public:
-	class FString                                 UniqueID;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayLabel;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InAssetClass;                                      // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNodeContainer*          NodeContainer;                                     // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.RemoveSocketUd
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_RemoveSocketUd final
-{
-public:
-	class FString                                 SocketUid;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_RemoveSocketUd;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomAutoComputeLODScreenSizes
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildNanite
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomBuildNanite final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildNanite;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildReversedIndexBuffer
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildScale3D
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D final
-{
-public:
-	struct FVector                                AttributeValue;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldReplacementMesh
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh final
-{
-public:
-	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldResolutionScale
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale final
-{
-public:
-	float                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDstLightmapIndex
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateDistanceFieldAsIfTwoSided
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateLightmapUVs
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMaxLumenMeshCards
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMinLightmapResolution
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSrcLightmapIndex
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSupportFaceRemap
-// 0x0003 (0x0003 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetLODScreenSizes
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_SetLODScreenSizes final
-{
-public:
-	TArray<float>                                 InLODScreenSizes;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetLODScreenSizes;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomAutoComputeLODScreenSizes
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildNanite
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomBuildNanite final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildNanite;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildReversedIndexBuffer
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildScale3D
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D final
-{
-public:
-	struct FVector                                AttributeValue;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldReplacementMesh
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh final
-{
-public:
-	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldResolutionScale
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale final
-{
-public:
-	float                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDstLightmapIndex
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateDistanceFieldAsIfTwoSided
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateLightmapUVs
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMaxLumenMeshCards
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMinLightmapResolution
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSrcLightmapIndex
-// 0x0008 (0x0008 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex final
-{
-public:
-	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSupportFaceRemap
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap final
-{
-public:
-	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizeCount
-// 0x0004 (0x0004 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizes
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetLODScreenSizes final
-{
-public:
-	TArray<float>                                 OutLODScreenSizes;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetLODScreenSizes;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUidCount
-// 0x0004 (0x0004 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetSocketUidCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetSocketUidCount;
-
-// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUids
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeStaticMeshFactoryNode_GetSocketUids final
-{
-public:
-	TArray<class FString>                         OutSocketUids;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetSocketUids;
 
 // Function InterchangeFactoryNodes.InterchangeTextureFactoryNode.InitializeTextureNode
 // 0x0038 (0x0038 - 0x0000)
@@ -3757,47 +2873,511 @@ public:
 };
 DUMPER7_ASSERTS_InterchangeCommonPipelineDataFactoryNode_GetCustomGlobalOffsetTransform;
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomFormat
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeSpecularProfileFactoryNode_SetCustomFormat final
-{
-public:
-	ESpecularProfileFormat                        Format;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_SetCustomFormat;
-
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomTexture
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddLodDataUniqueId
 // 0x0018 (0x0018 - 0x0000)
-struct InterchangeSpecularProfileFactoryNode_SetCustomTexture final
+struct InterchangeMeshFactoryNode_AddLodDataUniqueId final
 {
 public:
-	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LodDataUniqueId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_SetCustomTexture;
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddLodDataUniqueId;
 
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomFormat
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangeSpecularProfileFactoryNode_GetCustomFormat final
-{
-public:
-	ESpecularProfileFormat                        Format;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_GetCustomFormat;
-
-// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomTexture
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyBooleanAttribute
 // 0x0018 (0x0018 - 0x0000)
-struct InterchangeSpecularProfileFactoryNode_GetCustomTexture final
+struct InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute final
 {
 public:
-	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyBooleanAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyDoubleAttribute
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyDoubleAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyFloatAttribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyFloatAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyInt32Attribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyInt32Attribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.AddPayloadKeyStringAttribute
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_AddPayloadKeyStringAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyBooleanAttribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyBooleanAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyDoubleAttribute
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyDoubleAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyFloatAttribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyFloatAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyInt32Attribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyInt32Attribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetPayloadKeyStringAttribute
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute final
+{
+public:
+	class FString                                 PayloadAttributeKey;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetPayloadKeyStringAttribute;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveLodDataUniqueId
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_RemoveLodDataUniqueId final
+{
+public:
+	class FString                                 LodDataUniqueId;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_GetCustomTexture;
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_RemoveLodDataUniqueId;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.RemoveSlotMaterialDependencyUid
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid final
+{
+public:
+	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_RemoveSlotMaterialDependencyUid;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.ResetSlotMaterialDependencies
+// 0x0001 (0x0001 - 0x0000)
+struct InterchangeMeshFactoryNode_ResetSlotMaterialDependencies final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_ResetSlotMaterialDependencies;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomComputeWeightedNormals
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomComputeWeightedNormals;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomImportSockets
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomImportSockets final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomImportSockets;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomKeepSectionsSeparate
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomKeepSectionsSeparate;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomLODGroup
+// 0x000C (0x000C - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomLODGroup final
+{
+public:
+	class FName                                   AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomLODGroup;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeNormals
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomRecomputeNormals final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRecomputeNormals;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRecomputeTangents
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomRecomputeTangents final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRecomputeTangents;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomRemoveDegenerates
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomRemoveDegenerates final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomRemoveDegenerates;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseBackwardsCompatibleF16TruncUVs
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseBackwardsCompatibleF16TruncUVs;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseFullPrecisionUVs
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseFullPrecisionUVs;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseHighPrecisionTangentBasis
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseHighPrecisionTangentBasis;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomUseMikkTSpace
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomUseMikkTSpace final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomUseMikkTSpace;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorIgnore
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomVertexColorIgnore final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorIgnore;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorOverride
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomVertexColorOverride final
+{
+public:
+	struct FColor                                 AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorOverride;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetCustomVertexColorReplace
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_SetCustomVertexColorReplace final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetCustomVertexColorReplace;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.SetSlotMaterialDependencyUid
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid final
+{
+public:
+	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MaterialDependencyUid;                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_SetSlotMaterialDependencyUid;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomComputeWeightedNormals
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomComputeWeightedNormals;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomImportSockets
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomImportSockets final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomImportSockets;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomKeepSectionsSeparate
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomKeepSectionsSeparate;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomLODGroup
+// 0x000C (0x000C - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomLODGroup final
+{
+public:
+	class FName                                   AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomLODGroup;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeNormals
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomRecomputeNormals final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRecomputeNormals;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRecomputeTangents
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomRecomputeTangents final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRecomputeTangents;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomRemoveDegenerates
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomRemoveDegenerates final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomRemoveDegenerates;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseBackwardsCompatibleF16TruncUVs
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseBackwardsCompatibleF16TruncUVs;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseFullPrecisionUVs
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseFullPrecisionUVs;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseHighPrecisionTangentBasis
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseHighPrecisionTangentBasis;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomUseMikkTSpace
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomUseMikkTSpace final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomUseMikkTSpace;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorIgnore
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomVertexColorIgnore final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorIgnore;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorOverride
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomVertexColorOverride final
+{
+public:
+	struct FColor                                 AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorOverride;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetCustomVertexColorReplace
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeMeshFactoryNode_GetCustomVertexColorReplace final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetCustomVertexColorReplace;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataCount
+// 0x0004 (0x0004 - 0x0000)
+struct InterchangeMeshFactoryNode_GetLodDataCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetLodDataCount;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetLodDataUniqueIds
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeMeshFactoryNode_GetLodDataUniqueIds final
+{
+public:
+	TArray<class FString>                         OutLodDataUniqueIds;                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetLodDataUniqueIds;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencies
+// 0x0050 (0x0050 - 0x0000)
+struct InterchangeMeshFactoryNode_GetSlotMaterialDependencies final
+{
+public:
+	TMap<class FString, class FString>            OutMaterialDependencies;                           // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetSlotMaterialDependencies;
+
+// Function InterchangeFactoryNodes.InterchangeMeshFactoryNode.GetSlotMaterialDependencyUid
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid final
+{
+public:
+	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutMaterialDependency;                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeMeshFactoryNode_GetSlotMaterialDependencyUid;
 
 // Function InterchangeFactoryNodes.InterchangeGeometryCacheFactoryNode.InitializeGeometryCacheNode
 // 0x0038 (0x0038 - 0x0000)
@@ -5700,6 +5280,426 @@ public:
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InterchangeSparseVolumeTextureFactoryNode_GetCustomAttributesBFormat;
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomFormat
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSpecularProfileFactoryNode_SetCustomFormat final
+{
+public:
+	ESpecularProfileFormat                        Format;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_SetCustomFormat;
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.SetCustomTexture
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSpecularProfileFactoryNode_SetCustomTexture final
+{
+public:
+	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_SetCustomTexture;
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomFormat
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeSpecularProfileFactoryNode_GetCustomFormat final
+{
+public:
+	ESpecularProfileFormat                        Format;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_GetCustomFormat;
+
+// Function InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode.GetCustomTexture
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSpecularProfileFactoryNode_GetCustomTexture final
+{
+public:
+	class FString                                 TextureUid;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSpecularProfileFactoryNode_GetCustomTexture;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUid
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_AddSocketUid final
+{
+public:
+	class FString                                 SocketUid;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_AddSocketUid;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.AddSocketUids
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_AddSocketUids final
+{
+public:
+	TArray<class FString>                         InSocketUids;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_AddSocketUids;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.InitializeStaticMeshNode
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode final
+{
+public:
+	class FString                                 UniqueID;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayLabel;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InAssetClass;                                      // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNodeContainer*          NodeContainer;                                     // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_InitializeStaticMeshNode;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.RemoveSocketUd
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_RemoveSocketUd final
+{
+public:
+	class FString                                 SocketUid;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_RemoveSocketUd;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomAutoComputeLODScreenSizes
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomAutoComputeLODScreenSizes;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildNanite
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomBuildNanite final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildNanite;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildReversedIndexBuffer
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildReversedIndexBuffer;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomBuildScale3D
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D final
+{
+public:
+	struct FVector                                AttributeValue;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomBuildScale3D;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldReplacementMesh
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh final
+{
+public:
+	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldReplacementMesh;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDistanceFieldResolutionScale
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale final
+{
+public:
+	float                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDistanceFieldResolutionScale;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomDstLightmapIndex
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomDstLightmapIndex;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateDistanceFieldAsIfTwoSided
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomGenerateDistanceFieldAsIfTwoSided;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomGenerateLightmapUVs
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomGenerateLightmapUVs;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMaxLumenMeshCards
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomMaxLumenMeshCards;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomMinLightmapResolution
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomMinLightmapResolution;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSrcLightmapIndex
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomSrcLightmapIndex;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetCustomSupportFaceRemap
+// 0x0003 (0x0003 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddApplyDelegate;                                 // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetCustomSupportFaceRemap;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.SetLODScreenSizes
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_SetLODScreenSizes final
+{
+public:
+	TArray<float>                                 InLODScreenSizes;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_SetLODScreenSizes;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomAutoComputeLODScreenSizes
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomAutoComputeLODScreenSizes;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildNanite
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomBuildNanite final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildNanite;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildReversedIndexBuffer
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildReversedIndexBuffer;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomBuildScale3D
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D final
+{
+public:
+	struct FVector                                AttributeValue;                                    // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomBuildScale3D;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldReplacementMesh
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh final
+{
+public:
+	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldReplacementMesh;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDistanceFieldResolutionScale
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale final
+{
+public:
+	float                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDistanceFieldResolutionScale;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomDstLightmapIndex
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomDstLightmapIndex;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateDistanceFieldAsIfTwoSided
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomGenerateDistanceFieldAsIfTwoSided;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomGenerateLightmapUVs
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomGenerateLightmapUVs;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMaxLumenMeshCards
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomMaxLumenMeshCards;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomMinLightmapResolution
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomMinLightmapResolution;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSrcLightmapIndex
+// 0x0008 (0x0008 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex final
+{
+public:
+	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomSrcLightmapIndex;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetCustomSupportFaceRemap
+// 0x0002 (0x0002 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap final
+{
+public:
+	bool                                          AttributeValue;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetCustomSupportFaceRemap;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizeCount
+// 0x0004 (0x0004 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetLODScreenSizeCount;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetLODScreenSizes
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetLODScreenSizes final
+{
+public:
+	TArray<float>                                 OutLODScreenSizes;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetLODScreenSizes;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUidCount
+// 0x0004 (0x0004 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetSocketUidCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetSocketUidCount;
+
+// Function InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode.GetSocketUids
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeStaticMeshFactoryNode_GetSocketUids final
+{
+public:
+	TArray<class FString>                         OutSocketUids;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeStaticMeshFactoryNode_GetSocketUids;
 
 // Function InterchangeFactoryNodes.InterchangeStaticMeshLodDataNode.AddBoxCollisionMeshUid
 // 0x0018 (0x0018 - 0x0000)

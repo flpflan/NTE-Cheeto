@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_NavigationPathActor.BP_NavigationPathActor_C
-// 0x0000 (0x0700 - 0x0700)
+// 0x0000 (0x0708 - 0x0708)
 class ABP_NavigationPathActor_C final : public ANavigationPathEffectActor
 {
 public:

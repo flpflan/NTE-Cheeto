@@ -4355,10 +4355,10 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshBasicEditFunctions::SetVertexPosi
 // const TArray<struct FGeometryScriptBoneWeight>&BoneWeightsA                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const TArray<struct FGeometryScriptBoneWeight>&BoneWeightsB                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // float                                   Alpha                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FGeometryScriptBoneWeight>*Result                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FGeometryScriptBoneWeight>*result                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_MeshBoneWeightFunctions::BlendBoneWeights(const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsA, const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsB, float Alpha, TArray<struct FGeometryScriptBoneWeight>* Result, class UGeometryScriptDebug* Debug)
+void UGeometryScriptLibrary_MeshBoneWeightFunctions::BlendBoneWeights(const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsA, const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsB, float Alpha, TArray<struct FGeometryScriptBoneWeight>* result, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4379,8 +4379,8 @@ void UGeometryScriptLibrary_MeshBoneWeightFunctions::BlendBoneWeights(const TArr
 
 	Func->FunctionFlags = Flgs;
 
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
+	if (result != nullptr)
+		*result = std::move(Parms.result);
 }
 
 

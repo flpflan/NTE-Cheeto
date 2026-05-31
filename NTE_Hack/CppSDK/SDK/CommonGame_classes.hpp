@@ -85,7 +85,7 @@ DUMPER7_ASSERTS_UAsyncAction_PushContentToLayerForPlayer;
 class UAsyncAction_ShowConfirmation final : public UBlueprintAsyncActionBase
 {
 public:
-	TMulticastInlineDelegate<void(ECommonMessagingResult Result)> OnResult;                          // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(ECommonMessagingResult result)> OnResult;                          // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UObject*                                WorldContextObject;                                // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	class ULocalPlayer*                           TargetLocalPlayer;                                 // 0x0048(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)
 	class UCommonGameDialogDescriptor*            Descriptor;                                        // 0x0050(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, TObjectPtr)

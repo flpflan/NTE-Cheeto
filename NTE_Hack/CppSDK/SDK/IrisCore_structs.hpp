@@ -101,13 +101,6 @@ public:
 };
 DUMPER7_ASSERTS_FEnumInt32NetSerializerConfig;
 
-// ScriptStruct IrisCore.Rotator3dNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FRotator3dNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FRotator3dNetSerializerConfig;
-
 // ScriptStruct IrisCore.EnumInt64NetSerializerConfig
 // 0x0020 (0x0030 - 0x0010)
 struct FEnumInt64NetSerializerConfig final : public FNetSerializerConfig
@@ -174,13 +167,6 @@ struct FFloatNetSerializerConfig final : public FNetSerializerConfig
 {
 };
 DUMPER7_ASSERTS_FFloatNetSerializerConfig;
-
-// ScriptStruct IrisCore.RotatorAsShortNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FRotatorAsShortNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FRotatorAsShortNetSerializerConfig;
 
 // ScriptStruct IrisCore.DoubleNetSerializerConfig
 // 0x0000 (0x0010 - 0x0010)
@@ -592,13 +578,6 @@ struct FUnitQuat4fNetSerializerConfig final : public FNetSerializerConfig
 };
 DUMPER7_ASSERTS_FUnitQuat4fNetSerializerConfig;
 
-// ScriptStruct IrisCore.Rotator3fNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FRotator3fNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-DUMPER7_ASSERTS_FRotator3fNetSerializerConfig;
-
 // ScriptStruct IrisCore.UnitQuat4dNetSerializerConfig
 // 0x0000 (0x0010 - 0x0010)
 struct FUnitQuat4dNetSerializerConfig final : public FNetSerializerConfig
@@ -649,6 +628,27 @@ struct FRotatorAsByteNetSerializerConfig final : public FNetSerializerConfig
 {
 };
 DUMPER7_ASSERTS_FRotatorAsByteNetSerializerConfig;
+
+// ScriptStruct IrisCore.RotatorAsShortNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FRotatorAsShortNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+DUMPER7_ASSERTS_FRotatorAsShortNetSerializerConfig;
+
+// ScriptStruct IrisCore.Rotator3fNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FRotator3fNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+DUMPER7_ASSERTS_FRotator3fNetSerializerConfig;
+
+// ScriptStruct IrisCore.Rotator3dNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FRotator3dNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+DUMPER7_ASSERTS_FRotator3dNetSerializerConfig;
 
 // ScriptStruct IrisCore.SoftObjectNetSerializerConfig
 // 0x0000 (0x0010 - 0x0010)

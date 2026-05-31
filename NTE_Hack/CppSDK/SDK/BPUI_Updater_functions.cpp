@@ -50,6 +50,26 @@ void UBPUI_Updater_C::BndEvt__BPUI_Updater_Button_Cancel_1_K2Node_ComponentBound
 }
 
 
+// Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPUI_Updater_C::BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPUI_Updater_C", "BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -63,6 +83,26 @@ void UBPUI_Updater_C::BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEven
 		Func = Class->GetFunction("BPUI_Updater_C", "BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature");
 
 	Params::BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButtonBase*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPUI_Updater_C::BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(class UCommonButtonBase* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPUI_Updater_C", "BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature");
+
+	Params::BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 

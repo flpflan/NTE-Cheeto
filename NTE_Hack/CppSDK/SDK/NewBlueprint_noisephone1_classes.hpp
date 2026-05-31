@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass NewBlueprint_noisephone1.NewBlueprint_noisephone1_C
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0370 - 0x0370)
 class UNewBlueprint_noisephone1_C final : public UHTAIIdleStateBase
 {
 public:

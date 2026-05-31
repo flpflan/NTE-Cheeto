@@ -25,10 +25,10 @@ SDK_NAMESPACE_START
 class UMotionMatchingAnimNodeLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FMotionMatchingAnimNodeReference ConvertToMotionMatchingNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToMotionMatchingNodePure(const struct FAnimNodeReference& Node, struct FMotionMatchingAnimNodeReference* MotionMatchingNode, bool* Result);
+	static struct FMotionMatchingAnimNodeReference ConvertToMotionMatchingNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToMotionMatchingNodePure(const struct FAnimNodeReference& Node, struct FMotionMatchingAnimNodeReference* MotionMatchingNode, bool* result);
 	static void GetMotionMatchingBlendSettings(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, struct FMotionMatchingBlueprintBlendSettings* BlendSettings, bool* bIsResultValid);
-	static void GetMotionMatchingSearchResult(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, struct FPoseSearchBlueprintResult* Result, bool* bIsResultValid);
+	static void GetMotionMatchingSearchResult(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, struct FPoseSearchBlueprintResult* result, bool* bIsResultValid);
 	static void OverrideMotionMatchingBlendSettings(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, const struct FMotionMatchingBlueprintBlendSettings& BlendSettings, bool* bIsResultValid);
 	static void ResetDatabasesToSearch(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, EPoseSearchInterruptMode InterruptMode);
 	static void SetDatabasesToSearch(const struct FMotionMatchingAnimNodeReference& MotionMatchingNode, const TArray<class UPoseSearchDatabase*>& Databases, EPoseSearchInterruptMode InterruptMode);
@@ -56,8 +56,8 @@ DUMPER7_ASSERTS_UMotionMatchingAnimNodeLibrary;
 class UMotionMatchingInteractionAnimNodeLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FMotionMatchingInteractionAnimNodeReference ConvertToMotionMatchingInteractionNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToMotionMatchingInteractionNodePure(const struct FAnimNodeReference& Node, struct FMotionMatchingInteractionAnimNodeReference* MotionMatchingInteractionNode, bool* Result);
+	static struct FMotionMatchingInteractionAnimNodeReference ConvertToMotionMatchingInteractionNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToMotionMatchingInteractionNodePure(const struct FAnimNodeReference& Node, struct FMotionMatchingInteractionAnimNodeReference* MotionMatchingInteractionNode, bool* result);
 	static bool IsInteracting(const struct FMotionMatchingInteractionAnimNodeReference& MotionMatchingInteractionNode);
 	static void SetAvailabilities(const struct FMotionMatchingInteractionAnimNodeReference& MotionMatchingInteractionNode, const TArray<struct FPoseSearchInteractionAvailability>& Availabilities);
 
@@ -674,8 +674,8 @@ DUMPER7_ASSERTS_UPoseSearchFeatureChannel_Velocity;
 class UPoseSearchHistoryCollectorAnimNodeLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FPoseSearchHistoryCollectorAnimNodeReference ConvertToPoseHistoryNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToPoseHistoryNodePure(const struct FAnimNodeReference& Node, struct FPoseSearchHistoryCollectorAnimNodeReference* PoseSearchHistoryCollectorNode, bool* Result);
+	static struct FPoseSearchHistoryCollectorAnimNodeReference ConvertToPoseHistoryNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToPoseHistoryNodePure(const struct FAnimNodeReference& Node, struct FPoseSearchHistoryCollectorAnimNodeReference* PoseSearchHistoryCollectorNode, bool* result);
 	static void GetPoseHistoryNodeTransformTrajectory(const struct FPoseSearchHistoryCollectorAnimNodeReference& PoseSearchHistoryCollectorNode, struct FTransformTrajectory* Trajectory);
 	static void SetPoseHistoryNodeTransformTrajectory(const struct FPoseSearchHistoryCollectorAnimNodeReference& PoseSearchHistoryCollectorNode, const struct FTransformTrajectory& Trajectory);
 
@@ -1136,7 +1136,7 @@ class UPoseSearchLibrary final : public UBlueprintFunctionLibrary
 public:
 	static void GetDatabaseTags(const class UPoseSearchDatabase* Database, TArray<class FName>* Tags);
 	static void IsAnimationAssetLooping(const class UObject* Asset, bool* bIsAssetLooping);
-	static void MotionMatch(class UAnimInstance* AnimInstance, const TArray<class UObject*>& AssetsToSearch, const class FName PoseHistoryName, const struct FPoseSearchContinuingProperties& ContinuingProperties, const struct FPoseSearchFutureProperties& Future, struct FPoseSearchBlueprintResult* Result);
+	static void MotionMatch(class UAnimInstance* AnimInstance, const TArray<class UObject*>& AssetsToSearch, const class FName PoseHistoryName, const struct FPoseSearchContinuingProperties& ContinuingProperties, const struct FPoseSearchFutureProperties& Future, struct FPoseSearchBlueprintResult* result);
 
 public:
 	static class UClass* StaticClass()

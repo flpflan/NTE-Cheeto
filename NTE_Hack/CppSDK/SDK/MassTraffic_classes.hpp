@@ -1405,7 +1405,7 @@ public:
 DUMPER7_ASSERTS_UMassTrafficReplicator;
 
 // Class MassTraffic.MassTrafficSettings
-// 0x03B8 (0x03E0 - 0x0028)
+// 0x03D0 (0x03F8 - 0x0028)
 class UMassTrafficSettings final : public UMassModuleSettings
 {
 public:
@@ -1500,10 +1500,11 @@ public:
 	struct FZoneGraphTagFilter                    CloseUTurnLaneFilter;                              // 0x0388(0x0018)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FZoneGraphTagFilter                    SeparatedPedestrianLaneFilter;                     // 0x03A0(0x0018)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FZoneGraphTagFilter                    CloseVirtualLinkToLaneFilter;                      // 0x03B8(0x0018)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MaxDriverBubbleNumLimit;                           // 0x03D0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MassPhysicsPositionIterations;                     // 0x03D4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ConstraintForceMultiplier;                         // 0x03D8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SimplePhysicsImpulsePosDeviationTolerance;         // 0x03DC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FZoneGraphTagFilter                    CanAutoDrivingLaneFilter;                          // 0x03D0(0x0018)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MaxDriverBubbleNumLimit;                           // 0x03E8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MassPhysicsPositionIterations;                     // 0x03EC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ConstraintForceMultiplier;                         // 0x03F0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SimplePhysicsImpulsePosDeviationTolerance;         // 0x03F4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1522,17 +1523,17 @@ public:
 DUMPER7_ASSERTS_UMassTrafficSettings;
 
 // Class MassTraffic.MassTrafficSubsystem
-// 0x1190 (0x11D0 - 0x0040)
+// 0x11E0 (0x1220 - 0x0040)
 class alignas(0x10) UMassTrafficSubsystem final : public UTickableWorldSubsystem
 {
 public:
-	uint8                                         Pad_40[0x388];                                     // 0x0040(0x0388)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMassTrafficSettings*                   MassTrafficSettings;                               // 0x03C8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	TArray<class UMassTrafficFieldComponent*>     Fields;                                            // 0x03D0(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
-	class UZoneGraphSubsystem*                    ZoneGraphSubsystem;                                // 0x03E0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	uint8                                         Pad_3E8[0xDC8];                                    // 0x03E8(0x0DC8)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMassTrafficRecycleVehiclesOverlappingPlayersProcessor* RemoveVehiclesOverlappingPlayersProcessor; // 0x11B0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
-	uint8                                         Pad_11B8[0x18];                                    // 0x11B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x3D8];                                     // 0x0040(0x03D8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMassTrafficSettings*                   MassTrafficSettings;                               // 0x0418(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	TArray<class UMassTrafficFieldComponent*>     Fields;                                            // 0x0420(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, TObjectPtr)
+	class UZoneGraphSubsystem*                    ZoneGraphSubsystem;                                // 0x0430(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_438[0xDC8];                                    // 0x0438(0x0DC8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMassTrafficRecycleVehiclesOverlappingPlayersProcessor* RemoveVehiclesOverlappingPlayersProcessor; // 0x1200(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
+	uint8                                         Pad_1208[0x18];                                    // 0x1208(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearAllTrafficLanes();

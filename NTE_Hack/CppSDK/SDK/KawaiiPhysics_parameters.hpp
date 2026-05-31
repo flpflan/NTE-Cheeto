@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "KawaiiPhysics_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -102,7 +102,7 @@ struct KawaiiPhysicsLibrary_ConvertToKawaiiPhysics final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKawaiiPhysicsReference                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -115,7 +115,7 @@ struct KawaiiPhysicsLibrary_ConvertToKawaiiPhysicsPure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FKawaiiPhysicsReference                KawaiiPhysics;                                     // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_KawaiiPhysicsLibrary_ConvertToKawaiiPhysicsPure;

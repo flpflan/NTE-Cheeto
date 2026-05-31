@@ -15793,9 +15793,9 @@ void UAtomRackBase::AddLoudnessMeterDelegate(const class UObject* WorldContextOb
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>&OnAtomRackPerformanceMonitorResultBP                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>&OnAtomRackPerformanceMonitorResultBP                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAtomRackBase::AddPerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>& OnAtomRackPerformanceMonitorResultBP)
+void UAtomRackBase::AddPerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>& OnAtomRackPerformanceMonitorResultBP)
 {
 	static class UFunction* Func = nullptr;
 
@@ -15928,9 +15928,9 @@ void UAtomRackBase::RemoveLoudnessMeterDelegate(const class UObject* WorldContex
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>&OnAtomRackPerformanceMonitorResultBP                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>&OnAtomRackPerformanceMonitorResultBP                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAtomRackBase::RemovePerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>& OnAtomRackPerformanceMonitorResultBP)
+void UAtomRackBase::RemovePerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>& OnAtomRackPerformanceMonitorResultBP)
 {
 	static class UFunction* Func = nullptr;
 
@@ -16222,10 +16222,10 @@ void UAtomRackBase::StopTruePeakMeterMeasuring(const class UObject* WorldContext
 // Function CriWareCore.AtomRack.BP_SetSnapshot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    InSnapshot                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InSnapShot                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   FadeTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAtomRack::BP_SetSnapshot(const class FString& InSnapshot, float FadeTime)
+void UAtomRack::BP_SetSnapshot(const class FString& InSnapShot, float FadeTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -16234,7 +16234,7 @@ void UAtomRack::BP_SetSnapshot(const class FString& InSnapshot, float FadeTime)
 
 	Params::AtomRack_BP_SetSnapshot Parms{};
 
-	Parms.InSnapshot = std::move(InSnapshot);
+	Parms.InSnapShot = std::move(InSnapShot);
 	Parms.FadeTime = FadeTime;
 
 	auto Flgs = Func->FunctionFlags;
@@ -16324,9 +16324,9 @@ void UAtomRack::SetDspBusSettingName(const class FString& InDspBusSettingName)
 // Function CriWareCore.AtomRack.SetSnapshot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    InSnapshot                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InSnapShot                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAtomRack::SetSnapshot(const class FString& InSnapshot)
+void UAtomRack::SetSnapshot(const class FString& InSnapShot)
 {
 	static class UFunction* Func = nullptr;
 
@@ -16335,7 +16335,7 @@ void UAtomRack::SetSnapshot(const class FString& InSnapshot)
 
 	Params::AtomRack_SetSnapshot Parms{};
 
-	Parms.InSnapshot = std::move(InSnapshot);
+	Parms.InSnapShot = std::move(InSnapShot);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

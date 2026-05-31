@@ -621,140 +621,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeSkeletonFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
-// 0x0190 (0x0350 - 0x01C0)
-class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
-{
-public:
-	uint8                                         Pad_1C0[0x190];                                    // 0x01C0(0x0190)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool AddPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool Value);
-	bool AddPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double Value);
-	bool AddPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float Value);
-	bool AddPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32 Value);
-	bool AddPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, const class FString& Value);
-	bool GetPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool* Value);
-	bool GetPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double* Value);
-	bool GetPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float* Value);
-	bool GetPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32* Value);
-	bool GetPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, class FString* Value);
-	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
-	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
-	bool ResetSlotMaterialDependencies();
-	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomImportSockets(const bool& AttributeValue);
-	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
-	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
-	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
-	bool SetCustomVertexColorReplace(const bool& AttributeValue);
-	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
-
-	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
-	bool GetCustomImportSockets(bool* AttributeValue) const;
-	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
-	bool GetCustomLODGroup(class FName* AttributeValue) const;
-	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
-	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
-	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
-	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
-	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
-	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
-	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
-	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
-	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
-	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
-	int32 GetLodDataCount() const;
-	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
-	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
-	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
-	}
-	static class UInterchangeMeshFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeMeshFactoryNode;
-
-// Class InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode
-// 0x0118 (0x0468 - 0x0350)
-class UInterchangeStaticMeshFactoryNode final : public UInterchangeMeshFactoryNode
-{
-public:
-	uint8                                         Pad_350[0x118];                                    // 0x0350(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddSocketUid(const class FString& SocketUid);
-	bool AddSocketUids(const TArray<class FString>& InSocketUids);
-	void InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
-	bool RemoveSocketUd(const class FString& SocketUid);
-	bool SetCustomAutoComputeLODScreenSizes(const bool& AttributeValue);
-	bool SetCustomBuildNanite(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomBuildReversedIndexBuffer(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomBuildScale3D(const struct FVector& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDistanceFieldReplacementMesh(const struct FSoftObjectPath& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDistanceFieldResolutionScale(const float& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomDstLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomGenerateDistanceFieldAsIfTwoSided(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomGenerateLightmapUVs(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomMaxLumenMeshCards(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomMinLightmapResolution(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomSrcLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate);
-	bool SetCustomSupportFaceRemap(const bool& AttributeValue, bool bAddApplyDelegate);
-	bool SetLODScreenSizes(const TArray<float>& InLODScreenSizes);
-
-	bool GetCustomAutoComputeLODScreenSizes(bool* AttributeValue) const;
-	bool GetCustomBuildNanite(bool* AttributeValue) const;
-	bool GetCustomBuildReversedIndexBuffer(bool* AttributeValue) const;
-	bool GetCustomBuildScale3D(struct FVector* AttributeValue) const;
-	bool GetCustomDistanceFieldReplacementMesh(struct FSoftObjectPath* AttributeValue) const;
-	bool GetCustomDistanceFieldResolutionScale(float* AttributeValue) const;
-	bool GetCustomDstLightmapIndex(int32* AttributeValue) const;
-	bool GetCustomGenerateDistanceFieldAsIfTwoSided(bool* AttributeValue) const;
-	bool GetCustomGenerateLightmapUVs(bool* AttributeValue) const;
-	bool GetCustomMaxLumenMeshCards(int32* AttributeValue) const;
-	bool GetCustomMinLightmapResolution(int32* AttributeValue) const;
-	bool GetCustomSrcLightmapIndex(int32* AttributeValue) const;
-	bool GetCustomSupportFaceRemap(bool* AttributeValue) const;
-	int32 GetLODScreenSizeCount() const;
-	void GetLODScreenSizes(TArray<float>* OutLODScreenSizes) const;
-	int32 GetSocketUidCount() const;
-	void GetSocketUids(TArray<class FString>* OutSocketUids) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeStaticMeshFactoryNode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeStaticMeshFactoryNode")
-	}
-	static class UInterchangeStaticMeshFactoryNode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeStaticMeshFactoryNode>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeStaticMeshFactoryNode;
-
 // Class InterchangeFactoryNodes.InterchangeTextureFactoryNode
 // 0x02A0 (0x0460 - 0x01C0)
 class UInterchangeTextureFactoryNode : public UInterchangeFactoryBaseNode
@@ -1122,35 +988,78 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeCommonPipelineDataFactoryNode;
 
-// Class InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode
-// 0x0020 (0x01E0 - 0x01C0)
-class UInterchangeSpecularProfileFactoryNode final : public UInterchangeFactoryBaseNode
+// Class InterchangeFactoryNodes.InterchangeMeshFactoryNode
+// 0x0190 (0x0350 - 0x01C0)
+class UInterchangeMeshFactoryNode : public UInterchangeFactoryBaseNode
 {
 public:
-	uint8                                         Pad_1C0[0x20];                                     // 0x01C0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C0[0x190];                                    // 0x01C0(0x0190)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool SetCustomFormat(ESpecularProfileFormat Format);
-	bool SetCustomTexture(const class FString& TextureUid);
+	bool AddLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool AddPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool Value);
+	bool AddPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double Value);
+	bool AddPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float Value);
+	bool AddPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32 Value);
+	bool AddPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, const class FString& Value);
+	bool GetPayloadKeyBooleanAttribute(const class FString& PayloadAttributeKey, bool* Value);
+	bool GetPayloadKeyDoubleAttribute(const class FString& PayloadAttributeKey, double* Value);
+	bool GetPayloadKeyFloatAttribute(const class FString& PayloadAttributeKey, float* Value);
+	bool GetPayloadKeyInt32Attribute(const class FString& PayloadAttributeKey, int32* Value);
+	bool GetPayloadKeyStringAttribute(const class FString& PayloadAttributeKey, class FString* Value);
+	bool RemoveLodDataUniqueId(const class FString& LodDataUniqueId);
+	bool RemoveSlotMaterialDependencyUid(const class FString& SlotName);
+	bool ResetSlotMaterialDependencies();
+	bool SetCustomComputeWeightedNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomImportSockets(const bool& AttributeValue);
+	bool SetCustomKeepSectionsSeparate(const bool& AttributeValue);
+	bool SetCustomLODGroup(const class FName& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeNormals(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRecomputeTangents(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomRemoveDegenerates(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseBackwardsCompatibleF16TruncUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseFullPrecisionUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseHighPrecisionTangentBasis(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomUseMikkTSpace(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomVertexColorIgnore(const bool& AttributeValue);
+	bool SetCustomVertexColorOverride(const struct FColor& AttributeValue);
+	bool SetCustomVertexColorReplace(const bool& AttributeValue);
+	bool SetSlotMaterialDependencyUid(const class FString& SlotName, const class FString& MaterialDependencyUid);
 
-	bool GetCustomFormat(ESpecularProfileFormat* Format) const;
-	bool GetCustomTexture(class FString* TextureUid) const;
+	bool GetCustomComputeWeightedNormals(bool* AttributeValue) const;
+	bool GetCustomImportSockets(bool* AttributeValue) const;
+	bool GetCustomKeepSectionsSeparate(bool* AttributeValue) const;
+	bool GetCustomLODGroup(class FName* AttributeValue) const;
+	bool GetCustomRecomputeNormals(bool* AttributeValue) const;
+	bool GetCustomRecomputeTangents(bool* AttributeValue) const;
+	bool GetCustomRemoveDegenerates(bool* AttributeValue) const;
+	bool GetCustomUseBackwardsCompatibleF16TruncUVs(bool* AttributeValue) const;
+	bool GetCustomUseFullPrecisionUVs(bool* AttributeValue) const;
+	bool GetCustomUseHighPrecisionTangentBasis(bool* AttributeValue) const;
+	bool GetCustomUseMikkTSpace(bool* AttributeValue) const;
+	bool GetCustomVertexColorIgnore(bool* AttributeValue) const;
+	bool GetCustomVertexColorOverride(struct FColor* AttributeValue) const;
+	bool GetCustomVertexColorReplace(bool* AttributeValue) const;
+	int32 GetLodDataCount() const;
+	void GetLodDataUniqueIds(TArray<class FString>* OutLodDataUniqueIds) const;
+	void GetSlotMaterialDependencies(TMap<class FString, class FString>* OutMaterialDependencies) const;
+	bool GetSlotMaterialDependencyUid(const class FString& SlotName, class FString* OutMaterialDependency) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("InterchangeSpecularProfileFactoryNode")
+		STATIC_CLASS_IMPL("InterchangeMeshFactoryNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"InterchangeSpecularProfileFactoryNode")
+		STATIC_NAME_IMPL(L"InterchangeMeshFactoryNode")
 	}
-	static class UInterchangeSpecularProfileFactoryNode* GetDefaultObj()
+	static class UInterchangeMeshFactoryNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UInterchangeSpecularProfileFactoryNode>();
+		return GetDefaultObjImpl<UInterchangeMeshFactoryNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSpecularProfileFactoryNode;
+DUMPER7_ASSERTS_UInterchangeMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeGeometryCacheFactoryNode
 // 0x00A8 (0x03F8 - 0x0350)
@@ -1619,6 +1528,97 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeSparseVolumeTextureFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeSpecularProfileFactoryNode
+// 0x0020 (0x01E0 - 0x01C0)
+class UInterchangeSpecularProfileFactoryNode final : public UInterchangeFactoryBaseNode
+{
+public:
+	uint8                                         Pad_1C0[0x20];                                     // 0x01C0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool SetCustomFormat(ESpecularProfileFormat Format);
+	bool SetCustomTexture(const class FString& TextureUid);
+
+	bool GetCustomFormat(ESpecularProfileFormat* Format) const;
+	bool GetCustomTexture(class FString* TextureUid) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeSpecularProfileFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeSpecularProfileFactoryNode")
+	}
+	static class UInterchangeSpecularProfileFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeSpecularProfileFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeSpecularProfileFactoryNode;
+
+// Class InterchangeFactoryNodes.InterchangeStaticMeshFactoryNode
+// 0x0118 (0x0468 - 0x0350)
+class UInterchangeStaticMeshFactoryNode final : public UInterchangeMeshFactoryNode
+{
+public:
+	uint8                                         Pad_350[0x118];                                    // 0x0350(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddSocketUid(const class FString& SocketUid);
+	bool AddSocketUids(const TArray<class FString>& InSocketUids);
+	void InitializeStaticMeshNode(const class FString& UniqueID, const class FString& DisplayLabel, const class FString& InAssetClass, class UInterchangeBaseNodeContainer* NodeContainer);
+	bool RemoveSocketUd(const class FString& SocketUid);
+	bool SetCustomAutoComputeLODScreenSizes(const bool& AttributeValue);
+	bool SetCustomBuildNanite(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomBuildReversedIndexBuffer(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomBuildScale3D(const struct FVector& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDistanceFieldReplacementMesh(const struct FSoftObjectPath& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDistanceFieldResolutionScale(const float& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomDstLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomGenerateDistanceFieldAsIfTwoSided(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomGenerateLightmapUVs(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomMaxLumenMeshCards(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomMinLightmapResolution(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSrcLightmapIndex(const int32& AttributeValue, bool bAddApplyDelegate);
+	bool SetCustomSupportFaceRemap(const bool& AttributeValue, bool bAddApplyDelegate);
+	bool SetLODScreenSizes(const TArray<float>& InLODScreenSizes);
+
+	bool GetCustomAutoComputeLODScreenSizes(bool* AttributeValue) const;
+	bool GetCustomBuildNanite(bool* AttributeValue) const;
+	bool GetCustomBuildReversedIndexBuffer(bool* AttributeValue) const;
+	bool GetCustomBuildScale3D(struct FVector* AttributeValue) const;
+	bool GetCustomDistanceFieldReplacementMesh(struct FSoftObjectPath* AttributeValue) const;
+	bool GetCustomDistanceFieldResolutionScale(float* AttributeValue) const;
+	bool GetCustomDstLightmapIndex(int32* AttributeValue) const;
+	bool GetCustomGenerateDistanceFieldAsIfTwoSided(bool* AttributeValue) const;
+	bool GetCustomGenerateLightmapUVs(bool* AttributeValue) const;
+	bool GetCustomMaxLumenMeshCards(int32* AttributeValue) const;
+	bool GetCustomMinLightmapResolution(int32* AttributeValue) const;
+	bool GetCustomSrcLightmapIndex(int32* AttributeValue) const;
+	bool GetCustomSupportFaceRemap(bool* AttributeValue) const;
+	int32 GetLODScreenSizeCount() const;
+	void GetLODScreenSizes(TArray<float>* OutLODScreenSizes) const;
+	int32 GetSocketUidCount() const;
+	void GetSocketUids(TArray<class FString>* OutSocketUids) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeStaticMeshFactoryNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeStaticMeshFactoryNode")
+	}
+	static class UInterchangeStaticMeshFactoryNode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeStaticMeshFactoryNode>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeStaticMeshFactoryNode;
 
 // Class InterchangeFactoryNodes.InterchangeStaticMeshLodDataNode
 // 0x0240 (0x0400 - 0x01C0)

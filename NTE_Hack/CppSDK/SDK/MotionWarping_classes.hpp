@@ -477,7 +477,7 @@ public:
 	struct FTransform                             CachedMeshTransform;                               // 0x0350(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FTransform                             CachedMeshRelativeTransform;                       // 0x03B0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FTransform                             CachedRootMotion;                                  // 0x0410(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FAnimSequenceTrackContainer            Result;                                            // 0x0470(0x0020)(Protected, NativeAccessSpecifierProtected)
+	struct FAnimSequenceTrackContainer            result;                                            // 0x0470(0x0020)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()

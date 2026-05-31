@@ -14,9 +14,9 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "DynamicRoadKit_structs.hpp"
 #include "ZoneGraph_structs.hpp"
 #include "ZoneGraph_classes.hpp"
-#include "DynamicRoadKit_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -193,8 +193,51 @@ public:
 };
 DUMPER7_ASSERTS_URoadConfigDataAsset;
 
+// Class DynamicRoadKit.RoadIntersectionDecorationConfig
+// 0x0120 (0x0150 - 0x0030)
+class URoadIntersectionDecorationConfig final : public UPrimaryDataAsset
+{
+public:
+	TArray<struct FRoadIntersectionDecorationLaneRow> Lanes;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         TurnThresholdAngleDeg;                             // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExitDistanceCm;                                    // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EntryDistanceCm;                                   // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            StraightArrowMesh;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                StraightArrowLocalOffset;                          // 0x0058(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            LeftArrowMesh;                                     // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                LeftArrowLocalOffset;                              // 0x0078(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            RightArrowMesh;                                    // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                RightArrowLocalOffset;                             // 0x0098(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            UTurnArrowMesh;                                    // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                UTurnArrowLocalOffset;                             // 0x00B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            StraightLeftArrowMesh;                             // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                StraightLeftArrowLocalOffset;                      // 0x00D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            StraightRightArrowMesh;                            // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                StraightRightArrowLocalOffset;                     // 0x00F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            LeftRightArrowMesh;                                // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                LeftRightArrowLocalOffset;                         // 0x0118(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            StraightLeftRightArrowMesh;                        // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FVector                                StraightLeftRightArrowLocalOffset;                 // 0x0138(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RoadIntersectionDecorationConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadIntersectionDecorationConfig")
+	}
+	static class URoadIntersectionDecorationConfig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URoadIntersectionDecorationConfig>();
+	}
+};
+DUMPER7_ASSERTS_URoadIntersectionDecorationConfig;
+
 // Class DynamicRoadKit.TrunkRoadDataAsset
-// 0x0110 (0x0140 - 0x0030)
+// 0x0118 (0x0148 - 0x0030)
 class UTrunkRoadDataAsset final : public UPrimaryDataAsset
 {
 public:
@@ -214,6 +257,7 @@ public:
 	struct FIntersectionMesh                      IntersectionMesh;                                  // 0x0110(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FRoadDecoration>                IntersectionEdgePathDecorations;                   // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FZoneGraphTagMask                      IntersectionLaneTags;                              // 0x0138(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URoadIntersectionDecorationConfig*      IntersectionDecorationConfig;                      // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 
 public:
 	static class UClass* StaticClass()
@@ -232,7 +276,7 @@ public:
 DUMPER7_ASSERTS_UTrunkRoadDataAsset;
 
 // Class DynamicRoadKit.SideRoadMeshDataAsset
-// 0x00C8 (0x00F8 - 0x0030)
+// 0x01E0 (0x0210 - 0x0030)
 class USideRoadMeshDataAsset final : public UPrimaryDataAsset
 {
 public:
@@ -241,16 +285,16 @@ public:
 	double                                        LaneMeshTotalWidth;                                // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LaneProfileOffset;                                 // 0x0058(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FRoadMesh>                      LaneMeshs;                                         // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadPathDeformationMesh>       BlindPaths;                                        // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadDecoration>                RoadPathDecoration;                                // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bAffectLandscape;                                  // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FIntersectionConnectedSector>   SidewalkSectorMesh;                                // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadPathDeformationMesh>       SidewalkPathDeformationMesh;                       // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadDecoration>                SidewalkPathDecoration;                            // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadDecoration>                CrossWalkPathDecoration;                           // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FZoneGraphTagMask                      CrosswalkLaneTags;                                 // 0x00E8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FZoneGraphTagMask                      IntersectionLaneTags;                              // 0x00F0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlindPathConfig                       BlindPathConfig;                                   // 0x0080(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadDecoration>                RoadPathDecoration;                                // 0x01A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bAffectLandscape;                                  // 0x01B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FIntersectionConnectedSector>   SidewalkSectorMesh;                                // 0x01C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadPathDeformationMesh>       SidewalkPathDeformationMesh;                       // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadDecoration>                SidewalkPathDecoration;                            // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadDecoration>                CrossWalkPathDecoration;                           // 0x01F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FZoneGraphTagMask                      CrosswalkLaneTags;                                 // 0x0200(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FZoneGraphTagMask                      IntersectionLaneTags;                              // 0x0208(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -343,6 +387,30 @@ public:
 };
 DUMPER7_ASSERTS_URoadReplaceSection;
 
+// Class DynamicRoadKit.RoadEditComponent
+// 0x0008 (0x00C8 - 0x00C0)
+class URoadEditComponent final : public UActorComponent
+{
+public:
+	bool                                          bEnableRoadEdit;                                   // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RoadEditComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadEditComponent")
+	}
+	static class URoadEditComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URoadEditComponent>();
+	}
+};
+DUMPER7_ASSERTS_URoadEditComponent;
+
 // Class DynamicRoadKit.RoadGraphElementInterface
 // 0x0000 (0x0000 - 0x0000)
 class IRoadGraphElementInterface final
@@ -373,13 +441,14 @@ public:
 DUMPER7_ASSERTS_IRoadGraphElementInterface;
 
 // Class DynamicRoadKit.RoadGraphSubsystem
-// 0x0028 (0x0058 - 0x0030)
+// 0x0038 (0x0068 - 0x0030)
 class URoadGraphSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TWeakObjectPtr<class URoadSegmentComponent>> ShapeComponents;                             // 0x0038(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TWeakObjectPtr<class URoadNodeComponent>> RoadNodeComponents;                             // 0x0048(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TWeakObjectPtr<class URoadSegmentComponent>> ShapeComponents;                             // 0x0038(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TWeakObjectPtr<class URoadNodeComponent>> RoadNodeComponents;                             // 0x0048(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<TWeakObjectPtr<class ARoadSegmentActor>> PrefabSlotLockedRoads;                           // 0x0058(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -445,24 +514,25 @@ public:
 DUMPER7_ASSERTS_URoadMeshGeneratorComponent;
 
 // Class DynamicRoadKit.RoadNodeActor
-// 0x0128 (0x0400 - 0x02D8)
+// 0x0118 (0x03F0 - 0x02D8)
 class ARoadNodeActor final : public ARoadBaseActor
 {
 public:
 	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URoadMeshGeneratorComponent*            RoadMeshGeneratorComponent;                        // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class URoadNodeComponent*                     RoadNodeComponent;                                 // 0x02E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULandscapeSplinesComponent*             LandscapeSplinesComponent;                         // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         VertexSampleInterval;                              // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RoadReduceHeight;                                  // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 InnerTurnRadii;                                    // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGuid                                  LandscapeGuid;                                     // 0x0310(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntersectionInfo                      IntersectionInfo;                                  // 0x0320(0x0090)(NativeAccessSpecifierPrivate)
-	TArray<struct FSideRoadExtraInfo>             SideRoadExtraInfos;                                // 0x03B0(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TArray<struct FIntersectionSideInfo>          IntersectionSideInfos;                             // 0x03C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FZoneShapeNetwork>              Networks;                                          // 0x03D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<struct FRoadTrafficLightInfo>          TrafficLightInfos;                                 // 0x03E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3F0[0x10];                                     // 0x03F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class URoadEditComponent*                     RoadEditComponent;                                 // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULandscapeSplinesComponent*             LandscapeSplinesComponent;                         // 0x02F8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexSampleInterval;                              // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RoadReduceHeight;                                  // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FIntersectionRoadConfig>        IntersectionRoadConfigs;                           // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_318[0x4];                                      // 0x0318(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  LandscapeGuid;                                     // 0x031C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIntersectionInfo                      IntersectionInfo;                                  // 0x0330(0x0090)(NativeAccessSpecifierPrivate)
+	TArray<struct FSideRoadExtraInfo>             SideRoadExtraInfos;                                // 0x03C0(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TArray<struct FIntersectionSideInfo>          IntersectionSideInfos;                             // 0x03D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FZoneShapeNetwork>              Networks;                                          // 0x03E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void ApplyRoadSplineToLandscape();
@@ -524,31 +594,117 @@ public:
 };
 DUMPER7_ASSERTS_URoadNodeComponent;
 
+// Class DynamicRoadKit.RoadPrefabNodeActor
+// 0x0090 (0x0368 - 0x02D8)
+class ARoadPrefabNodeActor final : public ARoadBaseActor
+{
+public:
+	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class URoadPrefabNodeDataAsset*               RoadPrefabNodeDefinition;                          // 0x02E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class URoadPrefabNodeComponent*               RoadPrefabNodeComponent;                           // 0x02E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UStaticMeshComponent*                   IntersectionMeshComponent;                         // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class URoadEditComponent*                     RoadEditComponent;                                 // 0x02F8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class ULandscapeSplinesComponent*             LandscapeSplinesComponent;                         // 0x0300(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class ALandscape>              LandscapeActor;                                    // 0x0308(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideAffectLandscapeConfig;                    // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_331[0x3];                                      // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRoadLandscapeConfig                   LandscapeConfig;                                   // 0x0334(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGuid                                  LandscapeGuid;                                     // 0x0354(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 GetNumSlots() const;
+	const class URoadPrefabNodeDataAsset* GetRoadPrefabNodeDefinition() const;
+	struct FTransform GetSlotWorldTransform(int32 SlotIndex) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RoadPrefabNodeActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadPrefabNodeActor")
+	}
+	static class ARoadPrefabNodeActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ARoadPrefabNodeActor>();
+	}
+};
+DUMPER7_ASSERTS_ARoadPrefabNodeActor;
+
+// Class DynamicRoadKit.RoadPrefabNodeComponent
+// 0x0000 (0x0250 - 0x0250)
+class URoadPrefabNodeComponent final : public USceneComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RoadPrefabNodeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadPrefabNodeComponent")
+	}
+	static class URoadPrefabNodeComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URoadPrefabNodeComponent>();
+	}
+};
+DUMPER7_ASSERTS_URoadPrefabNodeComponent;
+
+// Class DynamicRoadKit.RoadPrefabNodeDataAsset
+// 0x0018 (0x0048 - 0x0030)
+class URoadPrefabNodeDataAsset final : public UDataAsset
+{
+public:
+	class UStaticMesh*                            IntersectionMesh;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<struct FRoadPrefabNodeSlot>            Slots;                                             // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("RoadPrefabNodeDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadPrefabNodeDataAsset")
+	}
+	static class URoadPrefabNodeDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URoadPrefabNodeDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_URoadPrefabNodeDataAsset;
+
 // Class DynamicRoadKit.RoadSegmentActor
-// 0x00F0 (0x03C8 - 0x02D8)
+// 0x0138 (0x0410 - 0x02D8)
 class ARoadSegmentActor final : public ARoadBaseActor
 {
 public:
 	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class URoadMeshGeneratorComponent*            RoadMeshGeneratorComponent;                        // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class URoadSegmentComponent*                  RoadSegmentComp;                                   // 0x02E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULandscapeSplinesComponent*             LandscapeSplinesComponent;                         // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTrunkRoadDataAsset*                    TrunkRoadDataAsset;                                // 0x02F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USideRoadMeshDataAsset*                 LeftRoadConfigAsset;                               // 0x0300(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USideRoadMeshDataAsset*                 RightRoadConfigAsset;                              // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRoadSectionReplace>            SectionMeshReplace;                                // 0x0310(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bOverrideRoadPathDecoration;                       // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRoadDecoration>                RoadPathDecorations;                               // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadMeshSweepVertices>         RoadSweepVertices;                                 // 0x0338(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRoadSplineMesh>                RoadSplineMeshes;                                  // 0x0348(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FRoadPathElement>               RoadPathElements;                                  // 0x0358(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class ALandscape>              LandscapeActor;                                    // 0x0368(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideAffectLandscapeConfig;                    // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_391[0x3];                                      // 0x0391(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRoadLandscapeConfig                   LandscapeConfig;                                   // 0x0394(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGuid                                  LandscapeGuid;                                     // 0x03B4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class URoadEditComponent*                     RoadEditComponent;                                 // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULandscapeSplinesComponent*             LandscapeSplinesComponent;                         // 0x02F8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTrunkRoadDataAsset*                    TrunkRoadDataAsset;                                // 0x0300(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USideRoadMeshDataAsset*                 LeftRoadConfigAsset;                               // 0x0308(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USideRoadMeshDataAsset*                 RightRoadConfigAsset;                              // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRoadSectionReplace>            SectionMeshReplace;                                // 0x0318(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bOverrideRoadPathDecoration;                       // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRoadDecoration>                RoadPathDecorations;                               // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadMeshSweepVertices>         RoadSweepVertices;                                 // 0x0340(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRoadSplineMesh>                RoadSplineMeshes;                                  // 0x0350(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FRoadPathElement>               RoadPathElements;                                  // 0x0360(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRoadEndLock                           StartEndLock;                                      // 0x0370(0x0020)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FRoadEndLock                           EndEndLock;                                        // 0x0390(0x0020)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class ALandscape>              LandscapeActor;                                    // 0x03B0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideAffectLandscapeConfig;                    // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D9[0x3];                                      // 0x03D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRoadLandscapeConfig                   LandscapeConfig;                                   // 0x03DC(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGuid                                  LandscapeGuid;                                     // 0x03FC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -577,8 +733,7 @@ public:
 	float                                         IntersectionWidth;                                 // 0x0608(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           DebugColor;                                        // 0x060C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFZoneShapeType                               SegmentType;                                       // 0x061C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReverseLaneProfile;                               // 0x061D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61E[0x2];                                      // 0x061E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61D[0x3];                                      // 0x061D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SampleInterval;                                    // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RightBoundaryWidth;                                // 0x0624(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LeftBoundaryWidth;                                 // 0x0628(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

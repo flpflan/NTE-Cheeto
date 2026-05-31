@@ -74,16 +74,6 @@ enum class EMassLookAtPriorities : uint8
 	EMassLookAtPriorities_MAX                = 17,
 };
 
-// ScriptStruct MassAIBehavior.MassNavMeshAnimateTaskInstanceData
-// 0x0008 (0x0008 - 0x0000)
-struct FMassNavMeshAnimateTaskInstanceData final
-{
-public:
-	float                                         duration;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassNavMeshAnimateTaskInstanceData;
-
 // ScriptStruct MassAIBehavior.MassClaimSmartObjectTaskInstanceData
 // 0x0038 (0x0038 - 0x0000)
 struct FMassClaimSmartObjectTaskInstanceData final
@@ -94,48 +84,12 @@ public:
 };
 DUMPER7_ASSERTS_FMassClaimSmartObjectTaskInstanceData;
 
-// ScriptStruct MassAIBehavior.MassZoneGraphPathFollowTaskInstanceData
-// 0x0030 (0x0030 - 0x0000)
-struct FMassZoneGraphPathFollowTaskInstanceData final
-{
-public:
-	struct FStateTreeStructRef                    TargetLocation;                                    // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMassMovementStyleRef                  MovementStyle;                                     // 0x0010(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         SpeedScale;                                        // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassZoneGraphPathFollowTaskInstanceData;
-
 // ScriptStruct MassAIBehavior.MassStateTreeTaskBase
 // 0x0000 (0x0028 - 0x0028)
 struct FMassStateTreeTaskBase : public FStateTreeTaskBase
 {
 };
 DUMPER7_ASSERTS_FMassStateTreeTaskBase;
-
-// ScriptStruct MassAIBehavior.MassLookAtPriority
-// 0x0001 (0x0001 - 0x0000)
-struct FMassLookAtPriority final
-{
-public:
-	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FMassLookAtPriority;
-
-// ScriptStruct MassAIBehavior.MassLookAtRequestFragment
-// 0x0018 (0x0018 - 0x0000)
-struct FMassLookAtRequestFragment final : public FMassFragment
-{
-public:
-	struct FMassEntityHandle                      ViewerEntity;                                      // 0x0000(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMassEntityHandle                      TargetEntity;                                      // 0x0008(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMassLookAtPriority                    Priority;                                          // 0x0010(0x0001)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	EMassLookAtMode                               LookAtMode;                                        // 0x0011(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMassLookAtInterpolationSpeed                 InterpolationSpeed;                                // 0x0012(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CustomInterpolationSpeed;                          // 0x0014(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassLookAtRequestFragment;
 
 // ScriptStruct MassAIBehavior.MassClaimSmartObjectTask
 // 0x0018 (0x0040 - 0x0028)
@@ -146,17 +100,6 @@ public:
 	float                                         InteractionCooldown;                               // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FMassClaimSmartObjectTask;
-
-// ScriptStruct MassAIBehavior.MassLookAtTaskInstanceData
-// 0x0010 (0x0010 - 0x0000)
-struct FMassLookAtTaskInstanceData final
-{
-public:
-	struct FMassEntityHandle                      TargetEntity;                                      // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassLookAtTaskInstanceData;
 
 // ScriptStruct MassAIBehavior.MassComponentHitEvaluatorInstanceData
 // 0x0018 (0x0018 - 0x0000)
@@ -170,17 +113,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassComponentHitEvaluatorInstanceData;
-
-// ScriptStruct MassAIBehavior.ZoneGraphTagFilterCondition
-// 0x0020 (0x0048 - 0x0028)
-struct FZoneGraphTagFilterCondition final : public FStateTreeConditionBase
-{
-public:
-	struct FZoneGraphTagFilter                    Filter;                                            // 0x0028(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FZoneGraphTagFilterCondition;
 
 // ScriptStruct MassAIBehavior.MassStateTreeEvaluatorBase
 // 0x0000 (0x0020 - 0x0020)
@@ -198,20 +130,6 @@ public:
 };
 DUMPER7_ASSERTS_FMassComponentHitEvaluator;
 
-// ScriptStruct MassAIBehavior.MassNavMeshPathFollowTaskInstanceData
-// 0x0050 (0x0050 - 0x0000)
-struct FMassNavMeshPathFollowTaskInstanceData final
-{
-public:
-	struct FMassTargetLocation                    TargetLocation;                                    // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
-	struct FMassMovementStyleRef                  MovementStyle;                                     // 0x0028(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         SpeedScale;                                        // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CorridorWidth;                                     // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OffsetFromBoundaries;                              // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndDistanceThreshold;                              // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassNavMeshPathFollowTaskInstanceData;
-
 // ScriptStruct MassAIBehavior.MassHitResult
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FMassHitResult final
@@ -220,16 +138,6 @@ public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassHitResult;
-
-// ScriptStruct MassAIBehavior.MassZoneGraphStandTaskInstanceData
-// 0x0008 (0x0008 - 0x0000)
-struct FMassZoneGraphStandTaskInstanceData final
-{
-public:
-	float                                         duration;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassZoneGraphStandTaskInstanceData;
 
 // ScriptStruct MassAIBehavior.MassFindSmartObjectTargetInstanceData
 // 0x0050 (0x0050 - 0x0000)
@@ -240,15 +148,6 @@ public:
 	struct FMassTargetLocation                    SmartObjectLocation;                               // 0x0028(0x0028)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMassFindSmartObjectTargetInstanceData;
-
-// ScriptStruct MassAIBehavior.MassStateTreeInstanceFragment
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FMassStateTreeInstanceFragment final : public FMassFragment
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassStateTreeInstanceFragment;
 
 // ScriptStruct MassAIBehavior.MassFindSmartObjectTargetTask
 // 0x0008 (0x0030 - 0x0028)
@@ -318,6 +217,30 @@ struct FMassLookAtTargetTag final : public FMassTag
 };
 DUMPER7_ASSERTS_FMassLookAtTargetTag;
 
+// ScriptStruct MassAIBehavior.MassLookAtPriority
+// 0x0001 (0x0001 - 0x0000)
+struct FMassLookAtPriority final
+{
+public:
+	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FMassLookAtPriority;
+
+// ScriptStruct MassAIBehavior.MassLookAtRequestFragment
+// 0x0018 (0x0018 - 0x0000)
+struct FMassLookAtRequestFragment final : public FMassFragment
+{
+public:
+	struct FMassEntityHandle                      ViewerEntity;                                      // 0x0000(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMassEntityHandle                      TargetEntity;                                      // 0x0008(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMassLookAtPriority                    Priority;                                          // 0x0010(0x0001)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	EMassLookAtMode                               LookAtMode;                                        // 0x0011(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMassLookAtInterpolationSpeed                 InterpolationSpeed;                                // 0x0012(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CustomInterpolationSpeed;                          // 0x0014(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassLookAtRequestFragment;
+
 // ScriptStruct MassAIBehavior.MassLookAtTargetFragment
 // 0x0028 (0x0028 - 0x0000)
 struct FMassLookAtTargetFragment final : public FMassFragment
@@ -364,6 +287,17 @@ public:
 };
 DUMPER7_ASSERTS_FMassLookAtRequestHandle;
 
+// ScriptStruct MassAIBehavior.MassLookAtTaskInstanceData
+// 0x0010 (0x0010 - 0x0000)
+struct FMassLookAtTaskInstanceData final
+{
+public:
+	struct FMassEntityHandle                      TargetEntity;                                      // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassLookAtTaskInstanceData;
+
 // ScriptStruct MassAIBehavior.MassLookAtTask
 // 0x0018 (0x0040 - 0x0028)
 struct FMassLookAtTask final : public FMassStateTreeTaskBase
@@ -393,6 +327,16 @@ public:
 };
 DUMPER7_ASSERTS_FMassLookAtPriorityInfo;
 
+// ScriptStruct MassAIBehavior.MassNavMeshAnimateTaskInstanceData
+// 0x0008 (0x0008 - 0x0000)
+struct FMassNavMeshAnimateTaskInstanceData final
+{
+public:
+	float                                         duration;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassNavMeshAnimateTaskInstanceData;
+
 // ScriptStruct MassAIBehavior.MassNavMeshAnimateTask
 // 0x0018 (0x0040 - 0x0028)
 struct FMassNavMeshAnimateTask final : public FMassStateTreeTaskBase
@@ -401,6 +345,20 @@ public:
 	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassNavMeshAnimateTask;
+
+// ScriptStruct MassAIBehavior.MassNavMeshPathFollowTaskInstanceData
+// 0x0050 (0x0050 - 0x0000)
+struct FMassNavMeshPathFollowTaskInstanceData final
+{
+public:
+	struct FMassTargetLocation                    TargetLocation;                                    // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FMassMovementStyleRef                  MovementStyle;                                     // 0x0028(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SpeedScale;                                        // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CorridorWidth;                                     // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OffsetFromBoundaries;                              // 0x0048(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndDistanceThreshold;                              // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassNavMeshPathFollowTaskInstanceData;
 
 // ScriptStruct MassAIBehavior.MassNavMeshPathFollowTask
 // 0x0030 (0x0058 - 0x0028)
@@ -449,6 +407,15 @@ public:
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassExecutionExtension;
+
+// ScriptStruct MassAIBehavior.MassStateTreeInstanceFragment
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FMassStateTreeInstanceFragment final : public FMassFragment
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassStateTreeInstanceFragment;
 
 // ScriptStruct MassAIBehavior.MassStateTreeSharedFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -579,6 +546,18 @@ public:
 };
 DUMPER7_ASSERTS_FMassZoneGraphFindSmartObjectTarget;
 
+// ScriptStruct MassAIBehavior.MassZoneGraphPathFollowTaskInstanceData
+// 0x0030 (0x0030 - 0x0000)
+struct FMassZoneGraphPathFollowTaskInstanceData final
+{
+public:
+	struct FStateTreeStructRef                    TargetLocation;                                    // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMassMovementStyleRef                  MovementStyle;                                     // 0x0010(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SpeedScale;                                        // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassZoneGraphPathFollowTaskInstanceData;
+
 // ScriptStruct MassAIBehavior.MassZoneGraphPathFollowTask
 // 0x0030 (0x0058 - 0x0028)
 struct FMassZoneGraphPathFollowTask final : public FMassStateTreeTaskBase
@@ -587,6 +566,16 @@ public:
 	uint8                                         Pad_28[0x30];                                      // 0x0028(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassZoneGraphPathFollowTask;
+
+// ScriptStruct MassAIBehavior.MassZoneGraphStandTaskInstanceData
+// 0x0008 (0x0008 - 0x0000)
+struct FMassZoneGraphStandTaskInstanceData final
+{
+public:
+	float                                         duration;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassZoneGraphStandTaskInstanceData;
 
 // ScriptStruct MassAIBehavior.MassZoneGraphStandTask
 // 0x0030 (0x0058 - 0x0028)
@@ -605,6 +594,17 @@ public:
 	struct FZoneGraphTagMask                      Tags;                                              // 0x0000(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FZoneGraphTagFilterConditionInstanceData;
+
+// ScriptStruct MassAIBehavior.ZoneGraphTagFilterCondition
+// 0x0020 (0x0048 - 0x0028)
+struct FZoneGraphTagFilterCondition final : public FStateTreeConditionBase
+{
+public:
+	struct FZoneGraphTagFilter                    Filter;                                            // 0x0028(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FZoneGraphTagFilterCondition;
 
 // ScriptStruct MassAIBehavior.ZoneGraphTagMaskConditionInstanceData
 // 0x0010 (0x0010 - 0x0000)

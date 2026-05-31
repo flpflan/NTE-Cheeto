@@ -106,6 +106,31 @@ public:
 };
 DUMPER7_ASSERTS_FVehicleForceFieldRange;
 
+// ScriptStruct FieldInteraction.ForceFieldCollision
+// 0x0040 (0x0040 - 0x0000)
+struct FForceFieldCollision final
+{
+public:
+	float                                         TopVehicleHeight;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BottomVehicleHeight;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LocalStartForceLocation;                           // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LocalEndForceLocation;                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radian;                                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FForceFieldCollision;
+
+// ScriptStruct FieldInteraction.FieldInteractionPredictedFrameCollision
+// 0x0060 (0x0060 - 0x0000)
+struct FFieldInteractionPredictedFrameCollision final
+{
+public:
+	struct FVector4                               StartXYBottomZAndRadius;                           // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               EndXYTopZAndRadius;                                // 0x0020(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               Velocity;                                          // 0x0040(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFieldInteractionPredictedFrameCollision;
+
 // ScriptStruct FieldInteraction.SocketForceField
 // 0x0048 (0x0048 - 0x0000)
 struct FSocketForceField final

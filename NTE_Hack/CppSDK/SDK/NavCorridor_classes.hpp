@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "NavCorridor_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "NavCorridor_structs.hpp"
 
 
 SDK_NAMESPACE_START

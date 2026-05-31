@@ -79,7 +79,7 @@ DUMPER7_ASSERTS_FStateTreeComponentExecutionExtension;
 struct FStateTreeRunEnvQueryInstanceData final
 {
 public:
-	struct FStateTreePropertyRef                  Result;                                            // 0x0000(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStateTreePropertyRef                  result;                                            // 0x0000(0x0002)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 QueryOwner;                                        // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class UEnvQuery*                              QueryTemplate;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)

@@ -24,7 +24,7 @@ struct MotionMatchingAnimNodeLibrary_ConvertToMotionMatchingNode final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMotionMatchingAnimNodeReference       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -37,7 +37,7 @@ struct MotionMatchingAnimNodeLibrary_ConvertToMotionMatchingNodePure final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMotionMatchingAnimNodeReference       MotionMatchingNode;                                // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_MotionMatchingAnimNodeLibrary_ConvertToMotionMatchingNodePure;
@@ -60,7 +60,7 @@ struct MotionMatchingAnimNodeLibrary_GetMotionMatchingSearchResult final
 {
 public:
 	struct FMotionMatchingAnimNodeReference       MotionMatchingNode;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPoseSearchBlueprintResult             Result;                                            // 0x0010(0x0078)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FPoseSearchBlueprintResult             result;                                            // 0x0010(0x0078)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bIsResultValid;                                    // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
@@ -130,7 +130,7 @@ struct MotionMatchingInteractionAnimNodeLibrary_ConvertToMotionMatchingInteracti
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMotionMatchingInteractionAnimNodeReference ReturnValue;                                  // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -143,7 +143,7 @@ struct MotionMatchingInteractionAnimNodeLibrary_ConvertToMotionMatchingInteracti
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMotionMatchingInteractionAnimNodeReference MotionMatchingInteractionNode;                // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_MotionMatchingInteractionAnimNodeLibrary_ConvertToMotionMatchingInteractionNodePure;
@@ -329,7 +329,7 @@ struct PoseSearchHistoryCollectorAnimNodeLibrary_ConvertToPoseHistoryNode final
 {
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPoseSearchHistoryCollectorAnimNodeReference ReturnValue;                                 // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -342,7 +342,7 @@ struct PoseSearchHistoryCollectorAnimNodeLibrary_ConvertToPoseHistoryNodePure fi
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPoseSearchHistoryCollectorAnimNodeReference PoseSearchHistoryCollectorNode;              // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_PoseSearchHistoryCollectorAnimNodeLibrary_ConvertToPoseHistoryNodePure;
@@ -661,7 +661,7 @@ public:
 	class FName                                   PoseHistoryName;                                   // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPoseSearchContinuingProperties        ContinuingProperties;                              // 0x0020(0x0030)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPoseSearchFutureProperties            Future;                                            // 0x0050(0x0010)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPoseSearchBlueprintResult             Result;                                            // 0x0060(0x0078)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FPoseSearchBlueprintResult             result;                                            // 0x0060(0x0078)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PoseSearchLibrary_MotionMatch;
 

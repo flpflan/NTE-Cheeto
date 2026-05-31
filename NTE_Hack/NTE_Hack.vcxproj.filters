@@ -41,10 +41,13 @@
     <ClCompile Include="CppSDK\SDK\Engine_functions.cpp">
       <Filter>源文件\SDK</Filter>
     </ClCompile>
-    <ClCompile Include="CppSDK\SDK\EngineCameras_functions.cpp">
+    <ClCompile Include="CppSDK\SDK\GameplayAbilities_functions.cpp">
       <Filter>源文件\SDK</Filter>
     </ClCompile>
-    <ClCompile Include="CppSDK\SDK\EngineSettings_functions.cpp">
+    <ClCompile Include="CppSDK\SDK\HTGame_functions.cpp">
+      <Filter>源文件\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="CppSDK\SDK\ChaosVehicles_functions.cpp">
       <Filter>源文件\SDK</Filter>
     </ClCompile>
   </ItemGroup>

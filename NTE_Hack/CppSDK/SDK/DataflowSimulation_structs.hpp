@@ -38,23 +38,19 @@ struct FDataflowConstraintObjectProxy final : public FDataflowSimulationProxy
 };
 DUMPER7_ASSERTS_FDataflowConstraintObjectProxy;
 
-// ScriptStruct DataflowSimulation.DataflowSimulationTime
-// 0x000C (0x000C - 0x0000)
-struct FDataflowSimulationTime final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentTime;                                       // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeOffset;                                        // 0x0008(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDataflowSimulationTime;
-
 // ScriptStruct DataflowSimulation.DataflowPhysicsObjectProxy
 // 0x0000 (0x0078 - 0x0078)
 struct FDataflowPhysicsObjectProxy final : public FDataflowSimulationProxy
 {
 };
 DUMPER7_ASSERTS_FDataflowPhysicsObjectProxy;
+
+// ScriptStruct DataflowSimulation.DataflowPhysicsSolverProxy
+// 0x0000 (0x0078 - 0x0078)
+struct FDataflowPhysicsSolverProxy : public FDataflowSimulationProxy
+{
+};
+DUMPER7_ASSERTS_FDataflowPhysicsSolverProxy;
 
 // ScriptStruct DataflowSimulation.DataflowSimulationAsset
 // 0x0058 (0x0058 - 0x0000)
@@ -65,13 +61,6 @@ public:
 	TSet<class FString>                           SimulationGroups;                                  // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDataflowSimulationAsset;
-
-// ScriptStruct DataflowSimulation.DataflowPhysicsSolverProxy
-// 0x0000 (0x0078 - 0x0078)
-struct FDataflowPhysicsSolverProxy : public FDataflowSimulationProxy
-{
-};
-DUMPER7_ASSERTS_FDataflowPhysicsSolverProxy;
 
 // ScriptStruct DataflowSimulation.DataflowSimulationProperty
 // 0x0008 (0x0008 - 0x0000)
@@ -102,6 +91,17 @@ struct FDataflowExecutionNode : public FDataflowSimulationNode
 {
 };
 DUMPER7_ASSERTS_FDataflowExecutionNode;
+
+// ScriptStruct DataflowSimulation.DataflowSimulationTime
+// 0x000C (0x000C - 0x0000)
+struct FDataflowSimulationTime final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentTime;                                       // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeOffset;                                        // 0x0008(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataflowSimulationTime;
 
 // ScriptStruct DataflowSimulation.GetSimulationTimeDataflowNode
 // 0x0010 (0x0290 - 0x0280)

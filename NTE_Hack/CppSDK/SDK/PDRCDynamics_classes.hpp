@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "PDRCDynamics_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "PDRCDynamics_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,7 +22,7 @@ SDK_NAMESPACE_START
 class UPDRCDynamicsComponent final : public UActorComponent
 {
 public:
-	bool                                          isReset;                                           // 0x00C0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsReset;                                           // 0x00C0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

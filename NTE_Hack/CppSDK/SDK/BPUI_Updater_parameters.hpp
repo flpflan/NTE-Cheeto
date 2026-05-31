@@ -46,6 +46,15 @@ public:
 };
 DUMPER7_ASSERTS_BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Cancel_1_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature;
 
+// Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Cancel_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature;
+
 // Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
 struct BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature final
@@ -54,6 +63,15 @@ public:
 	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_1_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature;
+
+// Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature final
+{
+public:
+	class UCommonButtonBase*                      Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPUI_Updater_C_BndEvt__BPUI_Updater_Button_Ok_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature;
 
 // Function BPUI_Updater.BPUI_Updater_C.BndEvt__BPUI_Updater_Button_restart_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -110,7 +128,7 @@ public:
 DUMPER7_ASSERTS_BPUI_Updater_C_BndEvt__UI_PatcherMainForm_UpdateButton_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature;
 
 // Function BPUI_Updater.BPUI_Updater_C.ExecuteUbergraph_BPUI_Updater
-// 0x0358 (0x0358 - 0x0000)
+// 0x0368 (0x0368 - 0x0000)
 struct BPUI_Updater_C_ExecuteUbergraph_BPUI_Updater final
 {
 public:
@@ -167,10 +185,10 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                K2Node_CustomEvent_BtnWidget;                      // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_7;               // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_6;               // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_5;               // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_4;               // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_9;               // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_8;               // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_7;               // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_6;               // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FUpdateData                            K2Node_CustomEvent_AppUpdateData_1;                // 0x01D0(0x0080)(ConstParm)
 	class FText                                   K2Node_CustomEvent_AppUpdateTips_1;                // 0x0250(0x0010)(ConstParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -188,7 +206,7 @@ public:
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_5;         // 0x0321(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_322[0x6];                                      // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_3;               // 0x0328(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_5;               // 0x0328(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EHTPlatformType                               CallFunc_SwitchPlatform_OutPlatformType;           // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -196,9 +214,11 @@ public:
 	int32                                         Temp_int_Variable_3;                               // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OpenSource_ReturnValue;                   // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_2;               // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0350(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_4;               // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_3;               // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_2;               // 0x0350(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0358(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0360(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPUI_Updater_C_ExecuteUbergraph_BPUI_Updater;
 

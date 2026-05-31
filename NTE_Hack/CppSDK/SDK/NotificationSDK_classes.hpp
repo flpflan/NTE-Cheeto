@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "NotificationSDK_structs.hpp"
 #include "Engine_classes.hpp"
+#include "NotificationSDK_structs.hpp"
 
 
 SDK_NAMESPACE_START

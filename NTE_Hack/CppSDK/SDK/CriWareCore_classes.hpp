@@ -3839,12 +3839,12 @@ public:
 public:
 	void AddLevelMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<struct FAtomLevelMeterMeasure>& Measures)>& OnAtomRackLevelMeterMeasureBP);
 	void AddLoudnessMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomLoudnessMeterMeasure& Measure)>& OnAtomRackLoudnessMeterMeasureBP);
-	void AddPerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>& OnAtomRackPerformanceMonitorResultBP);
+	void AddPerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>& OnAtomRackPerformanceMonitorResultBP);
 	void AddRenderedSamplesDelegate(const class UObject* WorldContextObject, const TDelegate<void(int32 RackID, int64 NumSamples, int32 SampleRate)>& OnAtomRackRenderedSamplesBP);
 	void AddTruePeakMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<struct FAtomTruePeakMeterMeasure>& Measures)>& OnAtomRackTruePeakMeterMeasureBP);
 	void RemoveLevelMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<struct FAtomLevelMeterMeasure>& Measures)>& OnAtomRackLevelMeterMeasureBP);
 	void RemoveLoudnessMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomLoudnessMeterMeasure& Measure)>& OnAtomRackLoudnessMeterMeasureBP);
-	void RemovePerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& Result)>& OnAtomRackPerformanceMonitorResultBP);
+	void RemovePerformanceMonitorDelegate(const class UObject* WorldContextObject, const TDelegate<void(const struct FAtomPerformanceMonitorResult& result)>& OnAtomRackPerformanceMonitorResultBP);
 	void RemoveRenderedSamplesDelegate(const class UObject* WorldContextObject, const TDelegate<void(int32 RackID, int64 NumSamples, int32 SampleRate)>& OnAtomRackRenderedSamplesBP);
 	void RemoveTruePeakMeterDelegate(const class UObject* WorldContextObject, const TDelegate<void(const TArray<struct FAtomTruePeakMeterMeasure>& Measures)>& OnAtomRackTruePeakMeterMeasureBP);
 	void ResetLoudnessMeterMeasuring(const class UObject* WorldContextObject);
@@ -3917,11 +3917,11 @@ public:
 	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void BP_SetSnapshot(const class FString& InSnapshot, float FadeTime);
+	void BP_SetSnapshot(const class FString& InSnapShot, float FadeTime);
 	void SetAtomConfig(const class UAtomConfig* InAtomConfig);
 	void SetDspBusSetting(const class UAtomDspBusSetting* InDspBusSetting);
 	void SetDspBusSettingName(const class FString& InDspBusSettingName);
-	void SetSnapshot(const class FString& InSnapshot);
+	void SetSnapshot(const class FString& InSnapShot);
 
 	class FString GetDspBusSettingName() const;
 	class FString GetSnapshot() const;

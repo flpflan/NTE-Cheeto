@@ -240,6 +240,13 @@ struct FMotionMatchingInteractionAnimNodeReference final : public FAnimNodeRefer
 };
 DUMPER7_ASSERTS_FMotionMatchingInteractionAnimNodeReference;
 
+// ScriptStruct PoseSearch.PoseSearchHistoryCollectorAnimNodeReference
+// 0x0000 (0x0010 - 0x0010)
+struct FPoseSearchHistoryCollectorAnimNodeReference final : public FAnimNodeReference
+{
+};
+DUMPER7_ASSERTS_FPoseSearchHistoryCollectorAnimNodeReference;
+
 // ScriptStruct PoseSearch.PoseSearchAssetSamplerInput
 // 0x00A0 (0x00A0 - 0x0000)
 struct FPoseSearchAssetSamplerInput final
@@ -285,6 +292,20 @@ public:
 };
 DUMPER7_ASSERTS_FChooserPoseSearchRowData;
 
+// ScriptStruct PoseSearch.PoseSearchRoledSkeleton
+// 0x0048 (0x0048 - 0x0000)
+struct FPoseSearchRoledSkeleton final
+{
+public:
+	class USkeleton*                              Skeleton;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class FName                                   Role;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 BoneReferences;                                    // 0x0018(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<uint16>                                BoneIndicesWithParents;                            // 0x0028(0x0010)(ZeroConstructor, Transient, Deprecated, NativeAccessSpecifierPublic)
+	TArray<class FName>                           RequiredCurves;                                    // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPoseSearchRoledSkeleton;
+
 // ScriptStruct PoseSearch.PoseSearchColumn
 // 0x0050 (0x0058 - 0x0008)
 struct FPoseSearchColumn final : public FChooserColumnBase
@@ -325,6 +346,27 @@ public:
 };
 DUMPER7_ASSERTS_FPoseSearchDatabaseSequence;
 
+// ScriptStruct PoseSearch.PoseSearchQueryTrajectorySample
+// 0x0040 (0x0040 - 0x0000)
+struct FPoseSearchQueryTrajectorySample final
+{
+public:
+	struct FQuat                                  Facing;                                            // 0x0000(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                position;                                          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumulatedSeconds;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPoseSearchQueryTrajectorySample;
+
+// ScriptStruct PoseSearch.PoseSearchQueryTrajectory
+// 0x0010 (0x0010 - 0x0000)
+struct FPoseSearchQueryTrajectory final
+{
+public:
+	TArray<struct FPoseSearchQueryTrajectorySample> Samples;                                         // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPoseSearchQueryTrajectory;
+
 // ScriptStruct PoseSearch.PoseSearchDatabaseBlendSpace
 // 0x0008 (0x0010 - 0x0008)
 struct FPoseSearchDatabaseBlendSpace final : public FPoseSearchDatabaseAnimationAssetBase
@@ -352,6 +394,23 @@ public:
 };
 DUMPER7_ASSERTS_FPoseSearchDatabaseAnimMontage;
 
+// ScriptStruct PoseSearch.PoseSearchTrajectoryData
+// 0x0128 (0x0128 - 0x0000)
+struct FPoseSearchTrajectoryData final
+{
+public:
+	float                                         RotateTowardsMovementSpeed;                        // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxControllerYawRate;                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BendVelocityTowardsAcceleration;                   // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSpeedRemappingCurve;                           // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     SpeedRemappingCurve;                               // 0x0010(0x0088)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bUseAccelerationRemappingCurve;                    // 0x0098(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     AccelerationRemappingCurve;                        // 0x00A0(0x0088)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPoseSearchTrajectoryData;
+
 // ScriptStruct PoseSearch.PoseSearchDatabaseMultiAnimAsset
 // 0x0008 (0x0010 - 0x0008)
 struct FPoseSearchDatabaseMultiAnimAsset final : public FPoseSearchDatabaseAnimationAssetBase
@@ -360,6 +419,44 @@ public:
 	class UMultiAnimAsset*                        MultiAnimAsset;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FPoseSearchDatabaseMultiAnimAsset;
+
+// ScriptStruct PoseSearch.AnimNode_PoseSearchHistoryCollector_Base
+// 0x0278 (0x0288 - 0x0010)
+struct FAnimNode_PoseSearchHistoryCollector_Base : public FAnimNode_Base
+{
+public:
+	int32                                         PoseCount;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SamplingInterval;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 CollectedBones;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CollectedCurves;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bInitializeWithRefPose;                            // 0x0038(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResetOnBecomingRelevant;                          // 0x0039(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStoreScales;                                      // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B[0x1];                                       // 0x003B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RootBoneRecoveryTime;                              // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RootBoneTranslationRecoveryRatio;                  // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RootBoneRotationRecoveryRatio;                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bGenerateTrajectory;                               // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformTrajectory                   TransformTrajectory;                               // 0x0060(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
+	float                                         TrajectorySpeedMultiplier;                         // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TrajectoryHistoryCount;                            // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TrajectoryPredictionCount;                         // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PredictionSamplingInterval;                        // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPoseSearchTrajectoryData              TrajectoryData;                                    // 0x0080(0x0128)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A8[0xE0];                                     // 0x01A8(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_PoseSearchHistoryCollector_Base;
+
+// ScriptStruct PoseSearch.AnimNode_PoseSearchHistoryCollector
+// 0x0010 (0x0298 - 0x0288)
+struct FAnimNode_PoseSearchHistoryCollector final : public FAnimNode_PoseSearchHistoryCollector_Base
+{
+public:
+	struct FPoseLink                              Source;                                            // 0x0288(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAnimNode_PoseSearchHistoryCollector;
 
 // ScriptStruct PoseSearch.PoseSearchEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -413,13 +510,6 @@ public:
 };
 DUMPER7_ASSERTS_FPoseHistoryAnimationAttribute;
 
-// ScriptStruct PoseSearch.PoseSearchHistoryCollectorAnimNodeReference
-// 0x0000 (0x0010 - 0x0010)
-struct FPoseSearchHistoryCollectorAnimNodeReference final : public FAnimNodeReference
-{
-};
-DUMPER7_ASSERTS_FPoseSearchHistoryCollectorAnimNodeReference;
-
 // ScriptStruct PoseSearch.PoseSearchInteractionAssetItem
 // 0x0080 (0x0080 - 0x0000)
 struct FPoseSearchInteractionAssetItem final
@@ -453,37 +543,6 @@ public:
 };
 DUMPER7_ASSERTS_FPoseSearchInteractionAnimContextAvailabilities;
 
-// ScriptStruct PoseSearch.PoseSearchRoledSkeleton
-// 0x0048 (0x0048 - 0x0000)
-struct FPoseSearchRoledSkeleton final
-{
-public:
-	class USkeleton*                              Skeleton;                                          // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class FName                                   Role;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FBoneReference>                 BoneReferences;                                    // 0x0018(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<uint16>                                BoneIndicesWithParents;                            // 0x0028(0x0010)(ZeroConstructor, Transient, Deprecated, NativeAccessSpecifierPublic)
-	TArray<class FName>                           RequiredCurves;                                    // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPoseSearchRoledSkeleton;
-
-// ScriptStruct PoseSearch.PoseSearchTrajectoryData
-// 0x0128 (0x0128 - 0x0000)
-struct FPoseSearchTrajectoryData final
-{
-public:
-	float                                         RotateTowardsMovementSpeed;                        // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxControllerYawRate;                              // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BendVelocityTowardsAcceleration;                   // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSpeedRemappingCurve;                           // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     SpeedRemappingCurve;                               // 0x0010(0x0088)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bUseAccelerationRemappingCurve;                    // 0x0098(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     AccelerationRemappingCurve;                        // 0x00A0(0x0088)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPoseSearchTrajectoryData;
-
 // ScriptStruct PoseSearch.PoseSearchTrajectory_WorldCollisionResults
 // 0x0008 (0x0008 - 0x0000)
 struct FPoseSearchTrajectory_WorldCollisionResults final
@@ -493,27 +552,6 @@ public:
 	float                                         LandSpeed;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPoseSearchTrajectory_WorldCollisionResults;
-
-// ScriptStruct PoseSearch.PoseSearchQueryTrajectorySample
-// 0x0040 (0x0040 - 0x0000)
-struct FPoseSearchQueryTrajectorySample final
-{
-public:
-	struct FQuat                                  Facing;                                            // 0x0000(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                position;                                          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AccumulatedSeconds;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPoseSearchQueryTrajectorySample;
-
-// ScriptStruct PoseSearch.PoseSearchQueryTrajectory
-// 0x0010 (0x0010 - 0x0000)
-struct FPoseSearchQueryTrajectory final
-{
-public:
-	TArray<struct FPoseSearchQueryTrajectorySample> Samples;                                         // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPoseSearchQueryTrajectory;
 
 // ScriptStruct PoseSearch.MotionMatchingState
 // 0x00F8 (0x00F8 - 0x0000)
@@ -554,44 +592,6 @@ public:
 	uint8                                         Pad_230[0x8];                                      // 0x0230(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_MotionMatching;
-
-// ScriptStruct PoseSearch.AnimNode_PoseSearchHistoryCollector_Base
-// 0x0278 (0x0288 - 0x0010)
-struct FAnimNode_PoseSearchHistoryCollector_Base : public FAnimNode_Base
-{
-public:
-	int32                                         PoseCount;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SamplingInterval;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FBoneReference>                 CollectedBones;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           CollectedCurves;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bInitializeWithRefPose;                            // 0x0038(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResetOnBecomingRelevant;                          // 0x0039(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStoreScales;                                      // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B[0x1];                                       // 0x003B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RootBoneRecoveryTime;                              // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RootBoneTranslationRecoveryRatio;                  // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RootBoneRotationRecoveryRatio;                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bGenerateTrajectory;                               // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransformTrajectory                   TransformTrajectory;                               // 0x0060(0x0010)(Edit, Transient, NativeAccessSpecifierPublic)
-	float                                         TrajectorySpeedMultiplier;                         // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TrajectoryHistoryCount;                            // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TrajectoryPredictionCount;                         // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PredictionSamplingInterval;                        // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPoseSearchTrajectoryData              TrajectoryData;                                    // 0x0080(0x0128)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A8[0xE0];                                     // 0x01A8(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_PoseSearchHistoryCollector_Base;
-
-// ScriptStruct PoseSearch.AnimNode_PoseSearchHistoryCollector
-// 0x0010 (0x0298 - 0x0288)
-struct FAnimNode_PoseSearchHistoryCollector final : public FAnimNode_PoseSearchHistoryCollector_Base
-{
-public:
-	struct FPoseLink                              Source;                                            // 0x0288(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAnimNode_PoseSearchHistoryCollector;
 
 // ScriptStruct PoseSearch.AnimNode_PoseSearchComponentSpaceHistoryCollector
 // 0x0010 (0x0298 - 0x0288)

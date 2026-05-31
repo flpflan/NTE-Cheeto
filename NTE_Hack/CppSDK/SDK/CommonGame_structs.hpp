@@ -71,7 +71,7 @@ DUMPER7_ASSERTS_FRootViewportLayoutInfo;
 struct FConfirmationDialogAction final
 {
 public:
-	ECommonMessagingResult                        Result;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonMessagingResult                        result;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   OptionalDisplayText;                               // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };

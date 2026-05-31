@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UDS_DLWE_Mode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "HTGame_classes.hpp"
+#include "UDS_DLWE_Mode_structs.hpp"
 
 
 SDK_NAMESPACE_START

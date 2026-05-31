@@ -34,6 +34,24 @@ enum class EUIExtensionPointMatch : uint8
 	EUIExtensionPointMatch_MAX               = 2,
 };
 
+// ScriptStruct UIExtension.UIExtensionExtraBase
+// 0x0000 (0x0000 - 0x0000)
+#pragma pack(push, 0x1)
+struct SDK_ALIGN(0x01) FUIExtensionExtraBase
+{
+};
+#pragma pack(pop)
+DUMPER7_ASSERTS_FUIExtensionExtraBase;
+
+// ScriptStruct UIExtension.UIExtensionExtraCommon
+// 0x0008 (0x0008 - 0x0000)
+struct FUIExtensionExtraCommon final : public FUIExtensionExtraBase
+{
+public:
+	class FName                                   ID;                                                // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUIExtensionExtraCommon;
+
 // ScriptStruct UIExtension.UIExtensionHandle
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FUIExtensionHandle final
@@ -69,23 +87,5 @@ public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FUIExtensionPointHandle;
-
-// ScriptStruct UIExtension.UIExtensionExtraBase
-// 0x0000 (0x0000 - 0x0000)
-#pragma pack(push, 0x1)
-struct SDK_ALIGN(0x01) FUIExtensionExtraBase
-{
-};
-#pragma pack(pop)
-DUMPER7_ASSERTS_FUIExtensionExtraBase;
-
-// ScriptStruct UIExtension.UIExtensionExtraCommon
-// 0x0008 (0x0008 - 0x0000)
-struct FUIExtensionExtraCommon final : public FUIExtensionExtraBase
-{
-public:
-	class FName                                   ID;                                                // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUIExtensionExtraCommon;
 
 SDK_NAMESPACE_END

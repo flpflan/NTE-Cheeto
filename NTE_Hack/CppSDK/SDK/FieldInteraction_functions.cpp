@@ -458,6 +458,31 @@ void AFieldInteractionManager::UpdateTargetLocation()
 }
 
 
+// Function FieldInteraction.FieldInteractionManager.UpdateVehicleCollisionData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AFieldInteractionManager::UpdateVehicleCollisionData(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FieldInteractionManager", "UpdateVehicleCollisionData");
+
+	Params::FieldInteractionManager_UpdateVehicleCollisionData Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function FieldInteraction.FieldInteractionManager.UpdateWindGridPosition
 // (Final, Native, Public, BlueprintCallable)
 
@@ -592,6 +617,34 @@ void UFoliageInteractionBubble::UnregisterField()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function FieldInteraction.VehicleForceFieldComponent.GetPredictedFrameCollision
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FFieldInteractionPredictedFrameCollisionReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FFieldInteractionPredictedFrameCollision UVehicleForceFieldComponent::GetPredictedFrameCollision(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VehicleForceFieldComponent", "GetPredictedFrameCollision");
+
+	Params::VehicleForceFieldComponent_GetPredictedFrameCollision Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

@@ -79,6 +79,35 @@ public:
 };
 DUMPER7_ASSERTS_RoadNodeComponent_GetAttachedSegmentInfos;
 
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetNumSlots
+// 0x0004 (0x0004 - 0x0000)
+struct RoadPrefabNodeActor_GetNumSlots final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RoadPrefabNodeActor_GetNumSlots;
+
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetRoadPrefabNodeDefinition
+// 0x0008 (0x0008 - 0x0000)
+struct RoadPrefabNodeActor_GetRoadPrefabNodeDefinition final
+{
+public:
+	const class URoadPrefabNodeDataAsset*         ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RoadPrefabNodeActor_GetRoadPrefabNodeDefinition;
+
+// Function DynamicRoadKit.RoadPrefabNodeActor.GetSlotWorldTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RoadPrefabNodeActor_GetSlotWorldTransform final
+{
+public:
+	int32                                         SlotIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RoadPrefabNodeActor_GetSlotWorldTransform;
+
 // Function DynamicRoadKit.RoadSegmentComponent.SetEndNode
 // 0x0010 (0x0010 - 0x0000)
 struct RoadSegmentComponent_SetEndNode final

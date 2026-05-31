@@ -637,6 +637,15 @@ public:
 };
 DUMPER7_ASSERTS_DlgContext_GetSequenceConfig;
 
+// Function DlgSystem.DlgContext.GetSkipDesc
+// 0x0010 (0x0010 - 0x0000)
+struct DlgContext_GetSkipDesc final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DlgContext_GetSkipDesc;
+
 // Function DlgSystem.DlgContext.GetVisitedNodeGUIDs
 // 0x0050 (0x0050 - 0x0000)
 struct DlgContext_GetVisitedNodeGUIDs final
@@ -764,6 +773,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DlgContext_IsNeedFaceToTarget;
+
+// Function DlgSystem.DlgContext.IsNeedShowFashion
+// 0x0001 (0x0001 - 0x0000)
+struct DlgContext_IsNeedShowFashion final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_DlgContext_IsNeedShowFashion;
 
 // Function DlgSystem.DlgContext.IsNextNodeEnd
 // 0x0001 (0x0001 - 0x0000)

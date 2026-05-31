@@ -23,8 +23,8 @@ class UBlendStackAnimNodeLibrary final : public UBlueprintFunctionLibrary
 public:
 	static void BlendTo(const struct FAnimUpdateContext& Context, const struct FBlendStackAnimNodeReference& BlendStackNode, class UAnimationAsset* AnimationAsset, float AnimationTime, bool bLoop, bool bMirrored, float BlendTime, const struct FVector& BlendParameters, float WantedPlayRate, float ActivationDelay);
 	static void BlendToWithSettings(const struct FAnimUpdateContext& Context, const struct FBlendStackAnimNodeReference& BlendStackNode, class UAnimationAsset* AnimationAsset, float AnimationTime, bool bLoop, bool bMirrored, float BlendTime, class UBlendProfile* BlendProfile, EAlphaBlendOption BlendOption, bool bInertialBlend, const struct FVector& BlendParameters, float WantedPlayRate, float ActivationDelay);
-	static struct FBlendStackAnimNodeReference ConvertToBlendStackNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendStackNodePure(const struct FAnimNodeReference& Node, struct FBlendStackAnimNodeReference* BlendStackNode, bool* Result);
+	static struct FBlendStackAnimNodeReference ConvertToBlendStackNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToBlendStackNodePure(const struct FAnimNodeReference& Node, struct FBlendStackAnimNodeReference* BlendStackNode, bool* result);
 	static void ForceBlendNextUpdate(const struct FBlendStackAnimNodeReference& BlendStackNode);
 	static class UAnimationAsset* GetCurrentAsset(const struct FBlendStackAnimNodeReference& BlendStackNode);
 	static float GetCurrentAssetTime(const struct FBlendStackAnimNodeReference& BlendStackNode);
@@ -57,8 +57,8 @@ DUMPER7_ASSERTS_UBlendStackAnimNodeLibrary;
 class UBlendStackInputAnimNodeLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FBlendStackInputAnimNodeReference ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* Result);
+	static struct FBlendStackInputAnimNodeReference ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* result);
+	static void ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* result);
 	static void GetProperties(const struct FBlendStackInputAnimNodeReference& BlendStackInputNode, class UAnimationAsset** AnimationAsset, float* AccumulatedTime);
 
 public:

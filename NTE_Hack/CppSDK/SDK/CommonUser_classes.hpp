@@ -147,9 +147,9 @@ public:
 	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(const struct FPlatformUserId& LocalPlatformUserId, class UCommonSession_SearchResult* RequestedSession, const struct FOnlineResultInformation& RequestedSessionResult)> K2_OnUserRequestedSessionEvent; // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x18];                                      // 0x0058(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FOnlineResultInformation& Result)> K2_OnJoinSessionCompleteEvent; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FOnlineResultInformation& result)> K2_OnJoinSessionCompleteEvent; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FOnlineResultInformation& Result)> K2_OnCreateSessionCompleteEvent; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FOnlineResultInformation& result)> K2_OnCreateSessionCompleteEvent; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A8[0x78];                                      // 0x00A8(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

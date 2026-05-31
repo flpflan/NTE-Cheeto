@@ -307,7 +307,7 @@ DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshBasicEditFunctions;
 class UGeometryScriptLibrary_MeshBoneWeightFunctions final : public UBlueprintFunctionLibrary
 {
 public:
-	static void BlendBoneWeights(const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsA, const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsB, float Alpha, TArray<struct FGeometryScriptBoneWeight>* Result, class UGeometryScriptDebug* Debug);
+	static void BlendBoneWeights(const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsA, const TArray<struct FGeometryScriptBoneWeight>& BoneWeightsB, float Alpha, TArray<struct FGeometryScriptBoneWeight>* result, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputeSmoothBoneWeights(class UDynamicMesh* TargetMesh, class USkeleton* Skeleton, const struct FGeometryScriptSmoothBoneWeightsOptions& Options, const struct FGeometryScriptBoneWeightProfile& Profile, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyBonesFromMesh(class UDynamicMesh* SourceMesh, class UDynamicMesh* TargetMesh, const struct FGeometryScriptCopyBonesFromMeshOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyBonesFromSkeleton(class USkeleton* SourceSkeleton, class UDynamicMesh* TargetMesh, const struct FGeometryScriptCopyBonesFromMeshOptions& Options, class UGeometryScriptDebug* Debug);

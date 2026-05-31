@@ -495,18 +495,6 @@ public:
 };
 DUMPER7_ASSERTS_FBoneSettings;
 
-// ScriptStruct SimplygonUObjects.OutputMaterialSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FOutputMaterialSettings final
-{
-public:
-	int32                                         TextureWidth;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TextureHeight;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MultisamplingLevel;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GutterSpace;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOutputMaterialSettings;
-
 // ScriptStruct SimplygonUObjects.ChartAggregatorSettings
 // 0x0038 (0x0038 - 0x0000)
 struct FChartAggregatorSettings final
@@ -524,6 +512,18 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FChartAggregatorSettings;
+
+// ScriptStruct SimplygonUObjects.OutputMaterialSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FOutputMaterialSettings final
+{
+public:
+	int32                                         TextureWidth;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TextureHeight;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MultisamplingLevel;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GutterSpace;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOutputMaterialSettings;
 
 // ScriptStruct SimplygonUObjects.ParameterizerSettings
 // 0x0008 (0x0008 - 0x0000)

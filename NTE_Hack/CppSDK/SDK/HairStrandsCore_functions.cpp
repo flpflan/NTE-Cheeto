@@ -619,9 +619,9 @@ class USkeletalMesh* UGroomAsset::GetRiggedSkeletalMesh() const
 // Function HairStrandsCore.GroomBindingAsset.Build
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)>CompletionDelegate                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult result)>CompletionDelegate                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGroomBindingAsset::Build(TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult Result)> CompletionDelegate)
+void UGroomBindingAsset::Build(TDelegate<void(class UGroomBindingAsset* GroomBinding, EGroomBindingAssetBuildResult result)> CompletionDelegate)
 {
 	static class UFunction* Func = nullptr;
 

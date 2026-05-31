@@ -904,7 +904,7 @@ public:
 	class UBlackboardComponent*                   Blackboard;                                        // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	class UGameplayTasksComponent*                CachedGameplayTasksComponent;                      // 0x03C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 	TSubclassOf<class UNavigationQueryFilter>     DefaultNavigationFilterClass;                      // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(const struct FAIRequestID& RequestID, EPathFollowingResult Result)> ReceiveMoveCompleted; // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FAIRequestID& RequestID, EPathFollowingResult result)> ReceiveMoveCompleted; // 0x03D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3E0[0x8];                                      // 0x03E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2672,7 +2672,7 @@ DUMPER7_ASSERTS_UBTTask_BlueprintBase;
 class UBTTask_FinishWithResult final : public UBTTaskNode
 {
 public:
-	struct FValueOrBBKey_Enum                     Result;                                            // 0x0070(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FValueOrBBKey_Enum                     result;                                            // 0x0070(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -4841,7 +4841,7 @@ class UAITask_MoveTo : public UAITask
 public:
 	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              OnRequestFailed;                                   // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TMulticastInlineDelegate<void(EPathFollowingResult Result, class AAIController* AIController)> OnMoveFinished; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TMulticastInlineDelegate<void(EPathFollowingResult result, class AAIController* AIController)> OnMoveFinished; // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
 	struct FAIMoveRequest                         MoveRequest;                                       // 0x00A8(0x0050)(Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_F8[0x40];                                      // 0x00F8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

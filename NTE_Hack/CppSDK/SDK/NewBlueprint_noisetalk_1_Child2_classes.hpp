@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass NewBlueprint_noisetalk_1_Child2.NewBlueprint_noisetalk_1_Child2_C
-// 0x0000 (0x0360 - 0x0360)
+// 0x0000 (0x0370 - 0x0370)
 class UNewBlueprint_noisetalk_1_Child2_C final : public UNewBlueprint_noisetalk_1_C
 {
 public:

@@ -76,7 +76,7 @@ DUMPER7_ASSERTS_FSmartObjectRegistrationFragment;
 struct FSmartObjectCandidateSlot final
 {
 public:
-	struct FSmartObjectRequestResult              Result;                                            // 0x0000(0x0024)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSmartObjectRequestResult              result;                                            // 0x0000(0x0024)(Transient, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Cost;                                              // 0x0024(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSmartObjectCandidateSlot;

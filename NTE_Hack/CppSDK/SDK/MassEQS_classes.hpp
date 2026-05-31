@@ -41,35 +41,6 @@ public:
 };
 DUMPER7_ASSERTS_UEnvQueryItemType_MassEntityHandle;
 
-// Class MassEQS.MassEQSBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMassEQSBlueprintLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool ContainsEntity(const TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper>& EntityList, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
-	static bool EntityComparison(const struct FMassEnvQueryEntityInfoBlueprintWrapper& A, const struct FMassEnvQueryEntityInfoBlueprintWrapper& B);
-	static class FString EntityToString(const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
-	static struct FVector GetCachedEntityPosition(const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
-	static struct FVector GetCurrentEntityPosition(const class AActor* Owner, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
-	static TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper> GetEnviromentQueryResultAsEntityInfo(const class UEnvQueryInstanceBlueprintWrapper* QueryInstance);
-	static void SendSignalToEntity(const class AActor* Owner, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo, const class FName Signal);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassEQSBlueprintLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassEQSBlueprintLibrary")
-	}
-	static class UMassEQSBlueprintLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassEQSBlueprintLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UMassEQSBlueprintLibrary;
-
 // Class MassEQS.MassEnvQueryGenerator
 // 0x0028 (0x0078 - 0x0050)
 class UMassEnvQueryGenerator : public UEnvQueryGenerator
@@ -233,6 +204,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMassEnvQueryTest_MassEntityTags;
+
+// Class MassEQS.MassEQSBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMassEQSBlueprintLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool ContainsEntity(const TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper>& EntityList, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
+	static bool EntityComparison(const struct FMassEnvQueryEntityInfoBlueprintWrapper& A, const struct FMassEnvQueryEntityInfoBlueprintWrapper& B);
+	static class FString EntityToString(const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
+	static struct FVector GetCachedEntityPosition(const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
+	static struct FVector GetCurrentEntityPosition(const class AActor* Owner, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo);
+	static TArray<struct FMassEnvQueryEntityInfoBlueprintWrapper> GetEnviromentQueryResultAsEntityInfo(const class UEnvQueryInstanceBlueprintWrapper* QueryInstance);
+	static void SendSignalToEntity(const class AActor* Owner, const struct FMassEnvQueryEntityInfoBlueprintWrapper& EntityInfo, const class FName Signal);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassEQSBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassEQSBlueprintLibrary")
+	}
+	static class UMassEQSBlueprintLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassEQSBlueprintLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UMassEQSBlueprintLibrary;
 
 // Class MassEQS.MassEQSSubsystem
 // 0x00E8 (0x0120 - 0x0038)

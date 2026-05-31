@@ -545,6 +545,18 @@ public:
 };
 DUMPER7_ASSERTS_FChaosSolverConfiguration;
 
+// ScriptStruct Chaos.SolverRemovalFilterSettings
+// 0x000C (0x000C - 0x0000)
+struct FSolverRemovalFilterSettings final
+{
+public:
+	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinVolume;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSolverRemovalFilterSettings;
+
 // ScriptStruct Chaos.SerializedSolverScene
 // 0x0050 (0x0050 - 0x0000)
 struct FSerializedSolverScene final
@@ -634,17 +646,5 @@ public:
 	TArray<struct FRecordedFrame>                 Records;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRecordedTransformTrack;
-
-// ScriptStruct Chaos.SolverRemovalFilterSettings
-// 0x000C (0x000C - 0x0000)
-struct FSolverRemovalFilterSettings final
-{
-public:
-	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinVolume;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSolverRemovalFilterSettings;
 
 SDK_NAMESPACE_END

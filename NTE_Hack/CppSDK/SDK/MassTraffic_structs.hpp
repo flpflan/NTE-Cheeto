@@ -158,6 +158,28 @@ enum class EMassTrafficLaneChangeMode : uint8
 	EMassTrafficLaneChangeMode_MAX           = 3,
 };
 
+// Enum MassTraffic.EPriorityPassLanePriority
+// NumValues: 0x0005
+enum class EPriorityPassLanePriority : uint8
+{
+	InValid                                  = 0,
+	Default                                  = 1,
+	Autopilot                                = 2,
+	Train                                    = 3,
+	EPriorityPassLanePriority_MAX            = 4,
+};
+
+// ScriptStruct MassTraffic.MassTrafficLaneSpeedLimit
+// 0x0020 (0x0020 - 0x0000)
+struct FMassTrafficLaneSpeedLimit final
+{
+public:
+	struct FZoneGraphTagFilter                    LaneFilter;                                        // 0x0000(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SpeedLimitMPH;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTrafficLaneSpeedLimit;
+
 // ScriptStruct MassTraffic.ReplicatedTrafficAgent
 // 0x0020 (0x0048 - 0x0028)
 struct FReplicatedTrafficAgent final : public FReplicatedAgentBase
@@ -185,6 +207,22 @@ public:
 	TArray<struct FTrafficFastArrayItem>          Traffic;                                           // 0x0240(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
 };
 DUMPER7_ASSERTS_FTrafficClientBubbleSerializer;
+
+// ScriptStruct MassTraffic.MassTrafficVehicleSpacing
+// 0x0050 (0x0050 - 0x0000)
+struct FMassTrafficVehicleSpacing final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Space;                                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class UMassEntityConfigAsset>> EntityTypes;                                // 0x0010(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UMassEntityConfigAsset>> MobileEntityTypes;                          // 0x0020(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	struct FZoneGraphTagFilter                    LaneFilter;                                        // 0x0030(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Proportion;                                        // 0x0048(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTrafficVehicleSpacing;
 
 // ScriptStruct MassTraffic.MassTrafficDriverMesh
 // 0x0020 (0x0020 - 0x0000)
@@ -237,6 +275,16 @@ struct FMassTrafficParkedVehicleTag final : public FMassTag
 {
 };
 DUMPER7_ASSERTS_FMassTrafficParkedVehicleTag;
+
+// ScriptStruct MassTraffic.MassTrafficVehicleDimensionsParameters
+// 0x0008 (0x0008 - 0x0000)
+struct FMassTrafficVehicleDimensionsParameters final
+{
+public:
+	float                                         HalfLength;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfWidth;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassTrafficVehicleDimensionsParameters;
 
 // ScriptStruct MassTraffic.MassTrafficParkedVehicleMarkDisturbedTag
 // 0x0000 (0x0001 - 0x0001)
@@ -482,12 +530,42 @@ public:
 };
 DUMPER7_ASSERTS_FMassTrafficPIDControlInterpolationFragment;
 
-// ScriptStruct MassTraffic.MassTrafficPIDVehicleControlFragment
-// 0x0024 (0x0024 - 0x0000)
-struct alignas(0x04) FMassTrafficPIDVehicleControlFragment final : public FMassFragment
+// ScriptStruct MassTraffic.MassTrafficVehiclePIDCustomParams
+// 0x0018 (0x0018 - 0x0000)
+struct FMassTrafficVehiclePIDCustomParams final
 {
 public:
-	uint8                                         Pad_0[0x24];                                       // 0x0000(0x0024)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bMoreLaneLookAhead;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SpeedControlLaneLookAheadTime;                     // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpeedControlMinLookAheadDistance;                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TurnSpeedScale;                                    // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteeringControlLaneLookAheadTime;                  // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteeringControlMinLookAheadDistance;               // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassTrafficVehiclePIDCustomParams;
+
+// ScriptStruct MassTraffic.MassTrafficPIDControllerParams
+// 0x0010 (0x0010 - 0x0000)
+struct FMassTrafficPIDControllerParams final
+{
+public:
+	float                                         ProportionalFactor;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IntegralFactor;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IntegralWindow;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DerivativeFactor;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassTrafficPIDControllerParams;
+
+// ScriptStruct MassTraffic.MassTrafficPIDVehicleControlFragment
+// 0x0054 (0x0054 - 0x0000)
+struct FMassTrafficPIDVehicleControlFragment final : public FMassFragment
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TOptional<struct FMassTrafficPIDControllerParams> SteeringPIDControllerParams;                   // 0x0010(0x0014)(Edit, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	TOptional<struct FMassTrafficVehiclePIDCustomParams> PIDCustomParams;                            // 0x0024(0x001C)(Edit, ZeroConstructor, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x14];                                      // 0x0040(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassTrafficPIDVehicleControlFragment;
 
@@ -606,6 +684,26 @@ public:
 };
 DUMPER7_ASSERTS_FMassTrafficDriverDataFragment;
 
+// ScriptStruct MassTraffic.MassTrafficSimpleVehiclePhysicsConfig
+// 0x0E80 (0x0E80 - 0x0000)
+struct FMassTrafficSimpleVehiclePhysicsConfig final
+{
+public:
+	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PeripheralMass;                                    // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinearEtherDrag;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSteeringAngle;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NumDrivenWheels;                                   // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InverseMomentOfInertia;                            // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CenterOfMass;                                      // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PeripheralCenterOfMass;                            // 0x0048(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  RotationOfMass;                                    // 0x0060(0x0020)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             BodyToActor;                                       // 0x0080(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0xDA0];                                     // 0x00E0(0x0DA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTrafficSimpleVehiclePhysicsConfig;
+
 // ScriptStruct MassTraffic.MassTrafficPlayerDisObstacleTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassTrafficPlayerDisObstacleTag final : public FMassTag
@@ -636,6 +734,15 @@ public:
 };
 DUMPER7_ASSERTS_FMassTrafficObstacleActorWrapperFragment;
 
+// ScriptStruct MassTraffic.MassTrafficSimpleTrailerConstraintSolver
+// 0x03C0 (0x03C0 - 0x0000)
+struct alignas(0x10) FMassTrafficSimpleTrailerConstraintSolver final
+{
+public:
+	uint8                                         Pad_0[0x3C0];                                      // 0x0000(0x03C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTrafficSimpleTrailerConstraintSolver;
+
 // ScriptStruct MassTraffic.MassTrafficNewRentedVehicleTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassTrafficNewRentedVehicleTag final : public FMassTag
@@ -649,6 +756,15 @@ struct FMassTrafficSummonVehicleTag final : public FMassTag
 {
 };
 DUMPER7_ASSERTS_FMassTrafficSummonVehicleTag;
+
+// ScriptStruct MassTraffic.MassTrafficLightInstanceCustomData
+// 0x0004 (0x0004 - 0x0000)
+struct FMassTrafficLightInstanceCustomData final
+{
+public:
+	float                                         PackedParam1;                                      // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMassTrafficLightInstanceCustomData;
 
 // ScriptStruct MassTraffic.MassTrafficSummonVehicleArrivedTag
 // 0x0000 (0x0001 - 0x0001)
@@ -921,6 +1037,24 @@ struct FMassTrafficServerFakeVehicleTag final : public FMassTag
 };
 DUMPER7_ASSERTS_FMassTrafficServerFakeVehicleTag;
 
+// ScriptStruct MassTraffic.MassTrafficVehicleAutoDrivingTag
+// 0x0000 (0x0001 - 0x0001)
+struct FMassTrafficVehicleAutoDrivingTag final : public FMassTag
+{
+};
+DUMPER7_ASSERTS_FMassTrafficVehicleAutoDrivingTag;
+
+// ScriptStruct MassTraffic.MassTrafficVehicleAutoDrivingFragment
+// 0x00B0 (0x00B0 - 0x0000)
+struct alignas(0x08) FMassTrafficVehicleAutoDrivingFragment final : public FMassFragment
+{
+public:
+	float                                         SpeedLimitKMH;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BrakeDistance;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0xA8];                                       // 0x0008(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMassTrafficVehicleAutoDrivingFragment;
+
 // ScriptStruct MassTraffic.MassTrafficIntersectionsSpawnData
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FMassTrafficIntersectionsSpawnData final
@@ -1077,15 +1211,6 @@ public:
 };
 DUMPER7_ASSERTS_FMassTrafficLightsParameters;
 
-// ScriptStruct MassTraffic.MassTrafficLightInstanceCustomData
-// 0x0004 (0x0004 - 0x0000)
-struct FMassTrafficLightInstanceCustomData final
-{
-public:
-	float                                         PackedParam1;                                      // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassTrafficLightInstanceCustomData;
-
 // ScriptStruct MassTraffic.MassTrafficTypedParkingSpaces
 // 0x0030 (0x0030 - 0x0000)
 struct FMassTrafficTypedParkingSpaces final
@@ -1098,26 +1223,6 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMassTrafficTypedParkingSpaces;
-
-// ScriptStruct MassTraffic.MassTrafficSimpleVehiclePhysicsConfig
-// 0x0E80 (0x0E80 - 0x0000)
-struct FMassTrafficSimpleVehiclePhysicsConfig final
-{
-public:
-	float                                         Mass;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PeripheralMass;                                    // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LinearEtherDrag;                                   // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSteeringAngle;                                  // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NumDrivenWheels;                                   // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InverseMomentOfInertia;                            // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CenterOfMass;                                      // 0x0030(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PeripheralCenterOfMass;                            // 0x0048(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  RotationOfMass;                                    // 0x0060(0x0020)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             BodyToActor;                                       // 0x0080(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E0[0xDA0];                                     // 0x00E0(0x0DA0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassTrafficSimpleVehiclePhysicsConfig;
 
 // ScriptStruct MassTraffic.MassTrafficSimpleVehiclePhysicsSim
 // 0x07D8 (0x07D8 - 0x0000)
@@ -1150,27 +1255,6 @@ public:
 };
 DUMPER7_ASSERTS_FMassTrafficSimpleVehiclePhysicsTemplate;
 
-// ScriptStruct MassTraffic.MassTrafficSimpleTrailerConstraintSolver
-// 0x03C0 (0x03C0 - 0x0000)
-struct alignas(0x10) FMassTrafficSimpleTrailerConstraintSolver final
-{
-public:
-	uint8                                         Pad_0[0x3C0];                                      // 0x0000(0x03C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassTrafficSimpleTrailerConstraintSolver;
-
-// ScriptStruct MassTraffic.MassTrafficPIDControllerParams
-// 0x0010 (0x0010 - 0x0000)
-struct FMassTrafficPIDControllerParams final
-{
-public:
-	float                                         ProportionalFactor;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IntegralFactor;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IntegralWindow;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DerivativeFactor;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassTrafficPIDControllerParams;
-
 // ScriptStruct MassTraffic.MassTrafficPIDController
 // 0x0008 (0x0008 - 0x0000)
 struct FMassTrafficPIDController final
@@ -1180,17 +1264,6 @@ public:
 	float                                         LastError;                                         // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 DUMPER7_ASSERTS_FMassTrafficPIDController;
-
-// ScriptStruct MassTraffic.MassTrafficLaneSpeedLimit
-// 0x0020 (0x0020 - 0x0000)
-struct FMassTrafficLaneSpeedLimit final
-{
-public:
-	struct FZoneGraphTagFilter                    LaneFilter;                                        // 0x0000(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         SpeedLimitMPH;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassTrafficLaneSpeedLimit;
 
 // ScriptStruct MassTraffic.MassTrafficLaneDensity
 // 0x0020 (0x0020 - 0x0000)
@@ -1231,6 +1304,24 @@ public:
 };
 DUMPER7_ASSERTS_FPriorityPassLane;
 
+// ScriptStruct MassTraffic.IntersectionPeriodCache
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FIntersectionPeriodCache final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FIntersectionPeriodCache;
+
+// ScriptStruct MassTraffic.IntersectionPeriodsCache
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FIntersectionPeriodsCache final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FIntersectionPeriodsCache;
+
 // ScriptStruct MassTraffic.ForceClosestIntervalLane
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FForceClosestIntervalLane final
@@ -1239,16 +1330,6 @@ public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FForceClosestIntervalLane;
-
-// ScriptStruct MassTraffic.MassTrafficVehicleDimensionsParameters
-// 0x0008 (0x0008 - 0x0000)
-struct FMassTrafficVehicleDimensionsParameters final
-{
-public:
-	float                                         HalfLength;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HalfWidth;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMassTrafficVehicleDimensionsParameters;
 
 // ScriptStruct MassTraffic.MassTrafficVehicleSimulationParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -1267,22 +1348,6 @@ public:
 	TSubclassOf<class AWheeledVehiclePawn>        PhysicsVehicleTemplateActor;                       // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMassTrafficVehicleSimulationParameters;
-
-// ScriptStruct MassTraffic.MassTrafficVehicleSpacing
-// 0x0050 (0x0050 - 0x0000)
-struct FMassTrafficVehicleSpacing final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Space;                                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftObjectPtr<class UMassEntityConfigAsset>> EntityTypes;                                // 0x0010(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSoftObjectPtr<class UMassEntityConfigAsset>> MobileEntityTypes;                          // 0x0020(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	struct FZoneGraphTagFilter                    LaneFilter;                                        // 0x0030(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Proportion;                                        // 0x0048(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMassTrafficVehicleSpacing;
 
 // ScriptStruct MassTraffic.MassTrafficVehicleInstanceCustomData
 // 0x0014 (0x0014 - 0x0000)
