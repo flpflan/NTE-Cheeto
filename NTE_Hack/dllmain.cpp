@@ -2,6 +2,7 @@
 
 #include <thread>
 #include <chrono>
+#include <cstdint>
 
 //#include "MinHook.h"
 //
@@ -130,7 +131,7 @@ static void UpdateTeleportHack() {
     }
 }
 
-static void UpdateMovementHack(){
+static void UpdateMovementHack(float dt){
     SDK::FVector toMove(0, 0, 0);
 
     if (GetAsyncKeyState(VK_NUMPAD9) & 0x8000) toMove.Z += 200;
@@ -203,13 +204,6 @@ static void UpdateGhostHack() {
         player->SetActorEnableCollision(true);
 }
 
-//static SDK::EGetOnVehicleResult (*oo)(void*);
-
-//void (*test_hook_og)(void* Context, void* TheStack, void* Result);
-//void test_hook(void* Context, void* TheStack, void* Result){
-//    test_hook_og(Context, TheStack, Result);
-//    std::cerr << "[CALLED] result: " << *((bool*)Result) << std::endl;
-//}
 static void UpdatePrinter(){
     if (!(GetAsyncKeyState('P') & 1)) return;
 
@@ -422,51 +416,107 @@ static void UpdateConsoleHack() {
 //    ProcessEventOG(Object, Function, Params);
 //}
 
-//#include <fstream>
-//void DumpModuleByAddress(void* addr)
-//{
-//    MEMORY_BASIC_INFORMATION mbi;
-//
-//    if (!VirtualQuery(addr, &mbi, sizeof(mbi)))
-//        return;
-//
-//    char path[MAX_PATH] = "";
-//
-//    if (!GetModuleFileNameA(
-//        (HMODULE)mbi.AllocationBase,
-//        path,
-//        MAX_PATH))
-//    {
-//        // path = "";
-//    }
-//
-//    std::cerr << "Module: " << path << "Size: " << mbi.RegionSize << std::endl;
-//
-//    if (mbi.State != MEM_COMMIT) {
-//        std::cerr << "Memory not committed\n";
-//        return;
-//    }
-//
-//    if (mbi.Protect & PAGE_NOACCESS || mbi.Protect & PAGE_GUARD) {
-//        std::cerr << "Memory not readable\n";
-//        return;
-//    }
-//
-//    char filename[64];
-//    sprintf_s(filename, "dump_%p.out", mbi.AllocationBase);
-//    std::ofstream file(filename, std::ios::binary);
-//    file.write(reinterpret_cast<const char*>(mbi.BaseAddress), mbi.RegionSize);
-//    file.close();
-//
-//    std::cerr << "Dump Success\n";
-//}
+enum class ETickableTickType : uint8_t
+{
+    /** Use IsTickable to determine whether to tick */
+    Conditional,
+
+    /** Always tick the object */
+    Always,
+
+    /** Never tick the object, do not add to tickables array */
+    Never,
+
+    /** Unknown state, true for newly registered objects that have not yet called GetTickableTickType */
+    NewObject
+};
+
+struct FTickableObjectBase {
+    void* vtbl;
+};
+
+struct FTickableObjectBase_vtbl
+{
+    void(__fastcall* Tick)(FTickableObjectBase* self, float);
+    ETickableTickType(__fastcall* GetTickableTickType)(FTickableObjectBase* self);
+    bool(__fastcall* IsTickable)(FTickableObjectBase* self);
+    bool(__fastcall* IsAllowedToTick)(FTickableObjectBase* self);
+    int(__fastcall* GetStatId)(FTickableObjectBase* self);
+    int(__fastcall* a)(FTickableObjectBase* self);
+    int(__fastcall* b)(FTickableObjectBase* self);
+    bool(__fastcall* CanTickThisFrame)(FTickableObjectBase* self);
+    int(__fastcall* c)(FTickableObjectBase* self);
+    void*(__fastcall* GetTickableGameObjectWorld)(FTickableObjectBase* self);
+};
+
+struct __declspec(align(8)) FTickableObjectEntry {
+    FTickableObjectBase* TickableObject;
+    ETickableTickType TickType;
+};
+
+static FTickableObjectBase_vtbl INJECTED_VTBL = {
+    .Tick = +[](FTickableObjectBase* self, float dt) {
+        UpdateSpeedHack();
+        UpdateScaleHack();
+        UpdateFlyHack();
+        UpdateMovementHack(dt);
+        UpdateTeleportHack();
+        UpdateInvincibleHack();
+        UpdatePrinter();
+        //UpdateConsoleHack();
+        UpdateGhostHack();
+        UpdateTestHack();
+    },
+    .GetTickableTickType = +[](FTickableObjectBase*) { return ETickableTickType::Always; },
+    .IsTickable = +[](FTickableObjectBase*) { return true; },
+    .IsAllowedToTick = +[](FTickableObjectBase*) { return true; },
+    .GetStatId = +[](FTickableObjectBase*) { return 0; },
+    .a = +[](FTickableObjectBase*) { return 0; },
+    .b = +[](FTickableObjectBase*) { return 0; },
+    .CanTickThisFrame = +[](FTickableObjectBase*) { return true; },
+    .c = +[](FTickableObjectBase*) { return 0; },
+    .GetTickableGameObjectWorld = +[](FTickableObjectBase*) { return (void*)nullptr; }
+};
+
+static FTickableObjectBase INJECTED_OBJ = { &INJECTED_VTBL };
+
+static void InjectIntoTick() {
+    const uintptr_t offset = 0x0EBBA310;
+	const uintptr_t tickable_mutex = SDK::InSDKUtils::GetImageBase() + offset;
+	const uintptr_t tickable_data = tickable_mutex + sizeof(_RTL_CRITICAL_SECTION); // TArray<FTickableObjectBase::FTickableObjectEntry>
+
+    const auto entrys = reinterpret_cast<SDK::TArray<FTickableObjectEntry>*>(tickable_data);
+    do {
+        if (!((void**)entrys) || entrys->Num() <= 0 || entrys->Num() >= entrys->Max()) {
+            std::this_thread::sleep_for(100ms);
+            continue;
+        }
+
+        EnterCriticalSection((_RTL_CRITICAL_SECTION*)tickable_mutex);
+
+        if (entrys->Num() >= entrys->Max()) continue;
+        std::cerr << "Entrys: " << entrys->Num() << " Max: " << entrys->Max() << std::endl;
+        if (!entrys->Add(FTickableObjectEntry{ &INJECTED_OBJ, ETickableTickType::Always })) {
+            LeaveCriticalSection((_RTL_CRITICAL_SECTION*)tickable_mutex);
+            continue;
+        }
+
+        LeaveCriticalSection((_RTL_CRITICAL_SECTION*)tickable_mutex);
+
+        break;
+    } while (1);
+
+    std::cerr << "Add Entry Success\n";
+    std::this_thread::sleep_for(1s);
+}
+
+FILE* Dummy;
 
 static void Bootstrap(HMODULE Module) {
     while (!(GetAsyncKeyState(VK_INSERT) & 1))
         std::this_thread::sleep_for(100ms);
 
     AllocConsole();
-    FILE* Dummy;
     freopen_s(&Dummy, "CONOUT$", "w", stderr);
     freopen_s(&Dummy, "CONIN$", "r", stdin);
 
@@ -475,6 +525,8 @@ static void Bootstrap(HMODULE Module) {
     //std::cerr << "Press Insert to Start.\n";
     //while(!(GetAsyncKeyState(VK_INSERT) & 1))
     //    std::this_thread::sleep_for(100ms);
+
+    InjectIntoTick();
 
     std::cerr << "Start Hacking...\n";
     std::this_thread::sleep_for(1s);
@@ -485,34 +537,30 @@ static void Bootstrap(HMODULE Module) {
     //MH_CreateHook((LPVOID)(SDK::InSDKUtils::GetImageBase() + SDK::Offsets::ProcessEvent), &ProcessEvent, (LPVOID*)&ProcessEventOG);
     //MH_EnableHook((LPVOID)(SDK::InSDKUtils::GetImageBase() + SDK::Offsets::ProcessEvent));
 
-    for (;;) {
-        std::this_thread::sleep_for(16.7ms);
+    //for (;;) {
+    //    std::this_thread::sleep_for(100s);
 
-        //static bool enabled = true;
-        //if (GetAsyncKeyState(VK_INSERT) & 1) {
-        //    enabled = !enabled;
-        //    if (enabled) std::cerr << "Enabled [NTE_Hack]\n";
-        //    else std::cerr << "Disabled [NTE_Hack]\n";
-        //}
-        //if (!enabled) continue;
+    //    //static bool enabled = true;
+    //    //if (GetAsyncKeyState(VK_INSERT) & 1) {
+    //    //    enabled = !enabled;
+    //    //    if (enabled) std::cerr << "Enabled [NTE_Hack]\n";
+    //    //    else std::cerr << "Disabled [NTE_Hack]\n";
+    //    //}
+    //    //if (!enabled) continue;
 
-        UpdateSpeedHack();
-        UpdateScaleHack();
-        UpdateFlyHack();
-        UpdateMovementHack();
-        UpdateTeleportHack();
-        UpdateInvincibleHack();
-        UpdatePrinter();
-        //UpdateConsoleHack();
-        UpdateGhostHack();
-        UpdateTestHack();
-    }
+    //    //UpdateSpeedHack();
+    //    //UpdateScaleHack();
+    //    //UpdateFlyHack();
+    //    //UpdateMovementHack();
+    //    //UpdateTeleportHack();
+    //    //UpdateInvincibleHack();
+    //    //UpdatePrinter();
+    //    ////UpdateConsoleHack();
+    //    //UpdateGhostHack();
+    //    //UpdateTestHack();
+    //}
 
-    fclose(stderr);
-    if (Dummy) fclose(Dummy);
-    FreeConsole();
-
-    FreeLibraryAndExitThread(Module, 0);
+    //FreeLibraryAndExitThread(Module, 0);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
@@ -522,6 +570,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
         std::thread(Bootstrap, hModule).detach();
+        break;
+    case DLL_PROCESS_DETACH:
+        fclose(stderr);
+        if (Dummy) fclose(Dummy);
+        FreeConsole();
         break;
     }
     return TRUE;
