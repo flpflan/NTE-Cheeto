@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SimplygonSettings_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "SimplygonSettings_structs.hpp"
 
 
 SDK_NAMESPACE_START

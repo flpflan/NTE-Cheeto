@@ -696,77 +696,6 @@ enum class EAtomModulationLFOShape : uint8
 	EAtomModulationLFOShape_MAX              = 8,
 };
 
-// ScriptStruct CriWareCore.AtomCategoryInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FAtomCategoryInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GroupNumber;                                       // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Volume;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPaused;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomCategoryInfo;
-
-// ScriptStruct CriWareCore.AtomAisacControlInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FAtomAisacControlInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomAisacControlInfo;
-
-// ScriptStruct CriWareCore.AtomSelectorInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FAtomSelectorInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         Labels;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomSelectorInfo;
-
-// ScriptStruct CriWareCore.AtomGameVariableInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FAtomGameVariableInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomGameVariableInfo;
-
-// ScriptStruct CriWareCore.AtomOutputPortInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FAtomOutputPortInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomOutputPortInfo;
-
-// ScriptStruct CriWareCore.AtomAcfInfo
-// 0x0068 (0x0068 - 0x0000)
-struct FAtomAcfInfo final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAtomCategoryInfo>              Categories;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomAisacControlInfo>          AisacControls;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomSelectorInfo>              Selectors;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomGameVariableInfo>          GameVariables;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomOutputPortInfo>            OutputPorts;                                       // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	uint32                                        ACFVersion;                                        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomAcfInfo;
-
 // ScriptStruct CriWareCore.AtomAisacControl
 // 0x000C (0x000C - 0x0000)
 struct FAtomAisacControl final
@@ -787,6 +716,73 @@ public:
 };
 DUMPER7_ASSERTS_FAtomAisacParameter;
 
+// ScriptStruct CriWareCore.AtomAttenuationPluginSettings
+// 0x0020 (0x0020 - 0x0000)
+struct FAtomAttenuationPluginSettings final
+{
+public:
+	TArray<class UAtomSourceDataOverridePluginSourceSettingsBase*> SourceDataOverridePluginSettingsArray; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UAtomRuntimePluginSettingsBase*> RuntimePluginSettingsArray;                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FAtomAttenuationPluginSettings;
+
+// ScriptStruct CriWareCore.AtomVoicesSettings
+// 0x000C (0x000C - 0x0000)
+struct FAtomVoicesSettings final
+{
+public:
+	int32                                         NumVoices;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumChannels;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SamplingRate;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomVoicesSettings;
+
+// ScriptStruct CriWareCore.AtomBusEffectBiquadFilterSettings
+// 0x0014 (0x0014 - 0x0000)
+struct FAtomBusEffectBiquadFilterSettings final
+{
+public:
+	EAtomBiquadFilterType                         FilterType;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Cutoff;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Q;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Gain;                                              // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBypass;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusEffectBiquadFilterSettings;
+
+// ScriptStruct CriWareCore.AtomLevelMeterMeasure
+// 0x000C (0x000C - 0x0000)
+struct FAtomLevelMeterMeasure final
+{
+public:
+	float                                         Level;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PeakLevel;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PeakHoldLevel;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomLevelMeterMeasure;
+
+// ScriptStruct CriWareCore.AtomVolumeAisacControlSetting
+// 0x0010 (0x0010 - 0x0000)
+struct FAtomVolumeAisacControlSetting final
+{
+public:
+	struct FAtomAisacControl                      Control;                                           // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomVolumeAisacControlSetting;
+
+// ScriptStruct CriWareCore.AtomTruePeakMeterMeasure
+// 0x0008 (0x0008 - 0x0000)
+struct FAtomTruePeakMeterMeasure final
+{
+public:
+	float                                         Level;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HoldLevel;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomTruePeakMeterMeasure;
+
 // ScriptStruct CriWareCore.AtomBandEQFilter
 // 0x0010 (0x0010 - 0x0000)
 struct FAtomBandEQFilter final
@@ -800,101 +796,6 @@ public:
 };
 DUMPER7_ASSERTS_FAtomBandEQFilter;
 
-// ScriptStruct CriWareCore.AtomBusEffectSurrounderWithEQSettings
-// 0x0028 (0x0028 - 0x0000)
-struct FAtomBusEffectSurrounderWithEQSettings final
-{
-public:
-	EAtomSurrounderMode                           Mode;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DelayTime;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Gain;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAtomBandEQFilter>              BandFilters;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	float                                         MaximumDelayTime;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBypass;                                           // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomBusEffectSurrounderWithEQSettings;
-
-// ScriptStruct CriWareCore.AtomLevelMeterMeasure
-// 0x000C (0x000C - 0x0000)
-struct FAtomLevelMeterMeasure final
-{
-public:
-	float                                         Level;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PeakLevel;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PeakHoldLevel;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomLevelMeterMeasure;
-
-// ScriptStruct CriWareCore.AtomComponentModifier
-// 0x0010 (0x0010 - 0x0000)
-struct FAtomComponentModifier final
-{
-public:
-	float                                         Volume;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Pitch;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowPassFrequency;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HighPassFrequency;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomComponentModifier;
-
-// ScriptStruct CriWareCore.AtomTruePeakMeterMeasure
-// 0x0008 (0x0008 - 0x0000)
-struct FAtomTruePeakMeterMeasure final
-{
-public:
-	float                                         Level;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HoldLevel;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomTruePeakMeterMeasure;
-
-// ScriptStruct CriWareCore.AtomSoundModulationSettings
-// 0x0058 (0x0058 - 0x0000)
-struct FAtomSoundModulationSettings
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UAtomModulatorBase*>               Modulators;                                        // 0x0008(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FAtomSoundModulationSettings;
-
-// ScriptStruct CriWareCore.AtomAisacControlSettings
-// 0x0010 (0x0068 - 0x0058)
-struct FAtomAisacControlSettings final : public FAtomSoundModulationSettings
-{
-public:
-	struct FAtomAisacControl                      Control;                                           // 0x0058(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomAisacControlSettings;
-
-// ScriptStruct CriWareCore.AtomAisacModulationDefaultSettings
-// 0x0030 (0x0030 - 0x0000)
-struct FAtomAisacModulationDefaultSettings final
-{
-public:
-	TArray<class UAtomAisacPatch*>                AisacPatches;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<class UAtomAisacPatch*>                AdditionalAisacPatches;                            // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<struct FAtomAisacControlSettings>      AisacControlModulations;                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomAisacModulationDefaultSettings;
-
-// ScriptStruct CriWareCore.AtomSoundModulationDefaultSettings
-// 0x0190 (0x0190 - 0x0000)
-struct FAtomSoundModulationDefaultSettings
-{
-public:
-	struct FAtomAisacModulationDefaultSettings    AisacModulations;                                  // 0x0000(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAtomSoundModulationSettings           VolumeModulation;                                  // 0x0030(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAtomSoundModulationSettings           PitchModulation;                                   // 0x0088(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAtomSoundModulationSettings           HighpassModulation;                                // 0x00E0(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FAtomSoundModulationSettings           LowpassModulation;                                 // 0x0138(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomSoundModulationDefaultSettings;
-
 // ScriptStruct CriWareCore.AtomLoudnessMeterMeasure
 // 0x000C (0x000C - 0x0000)
 struct FAtomLoudnessMeterMeasure final
@@ -906,21 +807,16 @@ public:
 };
 DUMPER7_ASSERTS_FAtomLoudnessMeterMeasure;
 
-// ScriptStruct CriWareCore.AtomBusEffectPitchShifterSettings
-// 0x0014 (0x0014 - 0x0000)
-struct FAtomBusEffectPitchShifterSettings final
+// ScriptStruct CriWareCore.AtomGameVariableInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FAtomGameVariableInfo final
 {
 public:
-	float                                         PitchShift;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FormantShift;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAtomPitchShifterMode                         ShiftMode;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DataPitchFrequency;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseDataPitchFrequency;                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBypass;                                           // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAtomBusEffectPitchShifterSettings;
+DUMPER7_ASSERTS_FAtomGameVariableInfo;
 
 // ScriptStruct CriWareCore.AtomBeatSyncInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -935,6 +831,18 @@ public:
 	int32                                         NumBeatsPerBar;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAtomBeatSyncInfo;
+
+// ScriptStruct CriWareCore.AtomBusSendInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FAtomBusSendInfo final
+{
+public:
+	class FString                                 SendToBusName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Level;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAtomBusSendType                              SendType;                                          // 0x0014(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusSendInfo;
 
 // ScriptStruct CriWareCore.AtomPerformanceMonitorResult
 // 0x0028 (0x0028 - 0x0000)
@@ -954,16 +862,73 @@ public:
 };
 DUMPER7_ASSERTS_FAtomPerformanceMonitorResult;
 
-// ScriptStruct CriWareCore.AtomBusEffectMultiBandEQSettings
-// 0x0018 (0x0018 - 0x0000)
-struct FAtomBusEffectMultiBandEQSettings final
+// ScriptStruct CriWareCore.AtomPanning
+// 0x0014 (0x0014 - 0x0000)
+struct FAtomPanning final
 {
 public:
-	TArray<struct FAtomBandEQFilter>              BandFilters;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bBypass;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Volume;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Angle;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Distance;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Wideness;                                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Spread;                                            // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAtomBusEffectMultiBandEQSettings;
+DUMPER7_ASSERTS_FAtomPanning;
+
+// ScriptStruct CriWareCore.AtomBusEffectInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FAtomBusEffectInfo final
+{
+public:
+	class FString                                 BusEffectName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 Parameters;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	bool                                          bBypass;                                           // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusEffectInfo;
+
+// ScriptStruct CriWareCore.AtomBusInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FAtomBusInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Volume;                                            // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAtomPanning                           Panning;                                           // 0x0014(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusSendInfo>               Sends;                                             // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusEffectInfo>             Effects;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	EAtomSpeakerChannelMap                        SpeakerChannelMap;                                 // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAtomSoundRendererType                        SoundRendererType;                                 // 0x0049(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAtomSoundfieldRendererType                   SoundfieldRendererType;                            // 0x004A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         OutputOptions;                                     // 0x004B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusInfo;
+
+// ScriptStruct CriWareCore.AtomDspBusSettingSnapshotInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FAtomDspBusSettingSnapshotInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusInfo>                   Buses;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusInfo>                   ExtendBuses;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomDspBusSettingSnapshotInfo;
+
+// ScriptStruct CriWareCore.AtomDSPSettingInfo
+// 0x0048 (0x0048 - 0x0000)
+struct FAtomDSPSettingInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusInfo>                   Buses;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomBusInfo>                   ExtendBuses;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomDspBusSettingSnapshotInfo> Snapshots;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	int32                                         NumMixerAisacs;                                    // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomDSPSettingInfo;
 
 // ScriptStruct CriWareCore.AtomSequencerEventInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -1008,15 +973,37 @@ public:
 };
 DUMPER7_ASSERTS_FAtomSoundPlayback;
 
-// ScriptStruct CriWareCore.AtomVolumeAisacControlSetting
-// 0x0010 (0x0010 - 0x0000)
-struct FAtomVolumeAisacControlSetting final
+// ScriptStruct CriWareCore.AtomSoundModulationSettings
+// 0x0058 (0x0058 - 0x0000)
+struct FAtomSoundModulationSettings
 {
 public:
-	struct FAtomAisacControl                      Control;                                           // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UAtomModulatorBase*>               Modulators;                                        // 0x0008(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FAtomVolumeAisacControlSetting;
+DUMPER7_ASSERTS_FAtomSoundModulationSettings;
+
+// ScriptStruct CriWareCore.AtomAisacControlSettings
+// 0x0010 (0x0068 - 0x0058)
+struct FAtomAisacControlSettings final : public FAtomSoundModulationSettings
+{
+public:
+	struct FAtomAisacControl                      Control;                                           // 0x0058(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomAisacControlSettings;
+
+// ScriptStruct CriWareCore.AtomAisacModulationDefaultSettings
+// 0x0030 (0x0030 - 0x0000)
+struct FAtomAisacModulationDefaultSettings final
+{
+public:
+	TArray<class UAtomAisacPatch*>                AisacPatches;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<class UAtomAisacPatch*>                AdditionalAisacPatches;                            // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<struct FAtomAisacControlSettings>      AisacControlModulations;                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomAisacModulationDefaultSettings;
 
 // ScriptStruct CriWareCore.AtomVolumeAisacControlSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -1030,16 +1017,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAtomVolumeAisacControlSettings;
-
-// ScriptStruct CriWareCore.AtomAttenuationPluginSettings
-// 0x0020 (0x0020 - 0x0000)
-struct FAtomAttenuationPluginSettings final
-{
-public:
-	TArray<class UAtomSourceDataOverridePluginSourceSettingsBase*> SourceDataOverridePluginSettingsArray; // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-	TArray<class UAtomRuntimePluginSettingsBase*> RuntimePluginSettingsArray;                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FAtomAttenuationPluginSettings;
 
 // ScriptStruct CriWareCore.AtomAttenuationBusSendSettings
 // 0x00A8 (0x00A8 - 0x0000)
@@ -1148,19 +1125,6 @@ public:
 };
 DUMPER7_ASSERTS_FAtomChannelLevelMatrix;
 
-// ScriptStruct CriWareCore.AtomPanning
-// 0x0014 (0x0014 - 0x0000)
-struct FAtomPanning final
-{
-public:
-	float                                         Volume;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Angle;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Distance;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Wideness;                                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Spread;                                            // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomPanning;
-
 // ScriptStruct CriWareCore.AtomBusSend
 // 0x0010 (0x0010 - 0x0000)
 struct FAtomBusSend final
@@ -1195,21 +1159,6 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAtomBusEffectBinauralSettings;
-
-// ScriptStruct CriWareCore.AtomBusEffectBiquadFilterSettings
-// 0x0014 (0x0014 - 0x0000)
-struct FAtomBusEffectBiquadFilterSettings final
-{
-public:
-	EAtomBiquadFilterType                         FilterType;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Cutoff;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Q;                                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Gain;                                              // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBypass;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomBusEffectBiquadFilterSettings;
 
 // ScriptStruct CriWareCore.AtomBusEffectBitCrusherSettings
 // 0x001C (0x001C - 0x0000)
@@ -1407,6 +1356,17 @@ public:
 };
 DUMPER7_ASSERTS_FAtomBusEffectMatrixSettings;
 
+// ScriptStruct CriWareCore.AtomBusEffectMultiBandEQSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FAtomBusEffectMultiBandEQSettings final
+{
+public:
+	TArray<struct FAtomBandEQFilter>              BandFilters;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bBypass;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusEffectMultiBandEQSettings;
+
 // ScriptStruct CriWareCore.AtomTapDelay
 // 0x0010 (0x0010 - 0x0000)
 struct FAtomTapDelay final
@@ -1447,6 +1407,22 @@ public:
 };
 DUMPER7_ASSERTS_FAtomBusEffectPhaserSettings;
 
+// ScriptStruct CriWareCore.AtomBusEffectPitchShifterSettings
+// 0x0014 (0x0014 - 0x0000)
+struct FAtomBusEffectPitchShifterSettings final
+{
+public:
+	float                                         PitchShift;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FormantShift;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAtomPitchShifterMode                         ShiftMode;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DataPitchFrequency;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseDataPitchFrequency;                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBypass;                                           // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomBusEffectPitchShifterSettings;
+
 // ScriptStruct CriWareCore.AtomBusEffectReverbSettings
 // 0x0020 (0x0020 - 0x0000)
 struct FAtomBusEffectReverbSettings final
@@ -1464,72 +1440,94 @@ public:
 };
 DUMPER7_ASSERTS_FAtomBusEffectReverbSettings;
 
-// ScriptStruct CriWareCore.AtomBusSendInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FAtomBusSendInfo final
-{
-public:
-	class FString                                 SendToBusName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Level;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAtomBusSendType                              SendType;                                          // 0x0014(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAtomBusSendInfo;
-
-// ScriptStruct CriWareCore.AtomBusEffectInfo
+// ScriptStruct CriWareCore.AtomBusEffectSurrounderWithEQSettings
 // 0x0028 (0x0028 - 0x0000)
-struct FAtomBusEffectInfo final
+struct FAtomBusEffectSurrounderWithEQSettings final
 {
 public:
-	class FString                                 BusEffectName;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 Parameters;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	bool                                          bBypass;                                           // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EAtomSurrounderMode                           Mode;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DelayTime;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Gain;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAtomBandEQFilter>              BandFilters;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, EditFixedSize, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	float                                         MaximumDelayTime;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBypass;                                           // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAtomBusEffectInfo;
+DUMPER7_ASSERTS_FAtomBusEffectSurrounderWithEQSettings;
 
-// ScriptStruct CriWareCore.AtomBusInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FAtomBusInfo final
+// ScriptStruct CriWareCore.AtomComponentModifier
+// 0x0010 (0x0010 - 0x0000)
+struct FAtomComponentModifier final
+{
+public:
+	float                                         Volume;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Pitch;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowPassFrequency;                                  // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HighPassFrequency;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomComponentModifier;
+
+// ScriptStruct CriWareCore.AtomAisacControlInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FAtomAisacControlInfo final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Volume;                                            // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAtomPanning                           Panning;                                           // 0x0014(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusSendInfo>               Sends;                                             // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusEffectInfo>             Effects;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	EAtomSpeakerChannelMap                        SpeakerChannelMap;                                 // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAtomSoundRendererType                        SoundRendererType;                                 // 0x0049(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAtomSoundfieldRendererType                   SoundfieldRendererType;                            // 0x004A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         OutputOptions;                                     // 0x004B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAtomBusInfo;
+DUMPER7_ASSERTS_FAtomAisacControlInfo;
 
-// ScriptStruct CriWareCore.AtomDspBusSettingSnapshotInfo
-// 0x0030 (0x0030 - 0x0000)
-struct FAtomDspBusSettingSnapshotInfo final
+// ScriptStruct CriWareCore.AtomCategoryInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FAtomCategoryInfo final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusInfo>                   Buses;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusInfo>                   ExtendBuses;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	int32                                         ID;                                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GroupNumber;                                       // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Volume;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPaused;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAtomDspBusSettingSnapshotInfo;
+DUMPER7_ASSERTS_FAtomCategoryInfo;
 
-// ScriptStruct CriWareCore.AtomDSPSettingInfo
-// 0x0048 (0x0048 - 0x0000)
-struct FAtomDSPSettingInfo final
+// ScriptStruct CriWareCore.AtomSelectorInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FAtomSelectorInfo final
 {
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusInfo>                   Buses;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomBusInfo>                   ExtendBuses;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FAtomDspBusSettingSnapshotInfo> Snapshots;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	int32                                         NumMixerAisacs;                                    // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Labels;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAtomDSPSettingInfo;
+DUMPER7_ASSERTS_FAtomSelectorInfo;
+
+// ScriptStruct CriWareCore.AtomOutputPortInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FAtomOutputPortInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomOutputPortInfo;
+
+// ScriptStruct CriWareCore.AtomAcfInfo
+// 0x0068 (0x0068 - 0x0000)
+struct FAtomAcfInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAtomCategoryInfo>              Categories;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomAisacControlInfo>          AisacControls;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomSelectorInfo>              Selectors;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomGameVariableInfo>          GameVariables;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAtomOutputPortInfo>            OutputPorts;                                       // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	uint32                                        ACFVersion;                                        // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAtomAcfInfo;
 
 // ScriptStruct CriWareCore.AtomGameVariable
 // 0x0010 (0x0010 - 0x0000)
@@ -1668,6 +1666,19 @@ public:
 	int32                                         ID;                                                // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAtomCategory;
+
+// ScriptStruct CriWareCore.AtomSoundModulationDefaultSettings
+// 0x0190 (0x0190 - 0x0000)
+struct FAtomSoundModulationDefaultSettings
+{
+public:
+	struct FAtomAisacModulationDefaultSettings    AisacModulations;                                  // 0x0000(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAtomSoundModulationSettings           VolumeModulation;                                  // 0x0030(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAtomSoundModulationSettings           PitchModulation;                                   // 0x0088(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAtomSoundModulationSettings           HighpassModulation;                                // 0x00E0(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FAtomSoundModulationSettings           LowpassModulation;                                 // 0x0138(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAtomSoundModulationDefaultSettings;
 
 // ScriptStruct CriWareCore.AtomSoundClassProperties
 // 0x01B0 (0x01B0 - 0x0000)
@@ -1835,17 +1846,6 @@ public:
 	float                                         InteriorLPFTime;                                   // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAtomInteriorSettings;
-
-// ScriptStruct CriWareCore.AtomVoicesSettings
-// 0x000C (0x000C - 0x0000)
-struct FAtomVoicesSettings final
-{
-public:
-	int32                                         NumVoices;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumChannels;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SamplingRate;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAtomVoicesSettings;
 
 // ScriptStruct CriWareCore.AtomHcaMxSettings
 // 0x000C (0x000C - 0x0000)

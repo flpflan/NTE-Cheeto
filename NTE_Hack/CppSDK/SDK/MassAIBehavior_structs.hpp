@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SmartObjectsModule_structs.hpp"
 #include "StateTreeModule_structs.hpp"
+#include "SmartObjectsModule_structs.hpp"
 #include "MassSmartObjects_structs.hpp"
 #include "MassNavigation_structs.hpp"
 #include "MassEntity_structs.hpp"

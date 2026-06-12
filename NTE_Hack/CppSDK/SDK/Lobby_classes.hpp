@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_classes.hpp"
 #include "Lobby_structs.hpp"
+#include "OnlineSubsystemUtils_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 

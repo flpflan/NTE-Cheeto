@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "DynamicRoadKit_structs.hpp"
 #include "Landscape_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
-#include "DynamicRoadKit_structs.hpp"
 #include "ZoneGraph_structs.hpp"
 #include "ZoneGraph_classes.hpp"
 

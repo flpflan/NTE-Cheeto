@@ -14,9 +14,9 @@
 #include "AIModule_classes.hpp"
 #include "Engine_classes.hpp"
 #include "MassEntity_classes.hpp"
+#include "MassEQS_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MassEQS_structs.hpp"
 
 
 SDK_NAMESPACE_START

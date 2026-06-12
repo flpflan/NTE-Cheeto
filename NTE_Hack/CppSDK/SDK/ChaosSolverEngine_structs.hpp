@@ -51,18 +51,17 @@ enum class EClusterConnectionTypeEnum : uint8
 	Chaos_MAX                                = 7,
 };
 
-// ScriptStruct ChaosSolverEngine.ChaosVDSessionPong
-// 0x0038 (0x0038 - 0x0000)
-struct FChaosVDSessionPong final
+// ScriptStruct ChaosSolverEngine.ChaosVDDataChannelState
+// 0x0018 (0x0018 - 0x0000)
+struct FChaosVDDataChannelState final
 {
 public:
-	struct FGuid                                  InstanceId;                                        // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  SessionId;                                         // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SessionName;                                       // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         BuildTargetType;                                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ChannelName;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnabled;                                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanChangeChannelState;                            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosVDSessionPong;
+DUMPER7_ASSERTS_FChaosVDDataChannelState;
 
 // ScriptStruct ChaosSolverEngine.ChaosPhysicsCollisionInfo
 // 0x00C0 (0x00C0 - 0x0000)
@@ -91,6 +90,19 @@ public:
 	struct FGuid                                  ControllerInstanceId;                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChaosVDSessionPing;
+
+// ScriptStruct ChaosSolverEngine.ChaosVDSessionPong
+// 0x0038 (0x0038 - 0x0000)
+struct FChaosVDSessionPong final
+{
+public:
+	struct FGuid                                  InstanceId;                                        // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  SessionId;                                         // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SessionName;                                       // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         BuildTargetType;                                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FChaosVDSessionPong;
 
 // ScriptStruct ChaosSolverEngine.ChaosVDStartRecordingCommandMessage
 // 0x0018 (0x0018 - 0x0000)
@@ -124,18 +136,6 @@ public:
 	struct FChaosVDTraceDetails                   TraceDetails;                                      // 0x0018(0x0038)(NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FChaosVDRecordingStatusMessage;
-
-// ScriptStruct ChaosSolverEngine.ChaosVDDataChannelState
-// 0x0018 (0x0018 - 0x0000)
-struct FChaosVDDataChannelState final
-{
-public:
-	class FString                                 ChannelName;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnabled;                                        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanChangeChannelState;                            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FChaosVDDataChannelState;
 
 // ScriptStruct ChaosSolverEngine.ChaosVDChannelStateChangeCommandMessage
 // 0x0018 (0x0018 - 0x0000)

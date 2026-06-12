@@ -95,6 +95,49 @@ public:
 };
 DUMPER7_ASSERTS_FParameterWrapper;
 
+// ScriptStruct HottaFramework.HottaReplicatedObjectPropertyIdentifier
+// 0x0010 (0x0010 - 0x0000)
+struct FHottaReplicatedObjectPropertyIdentifier final
+{
+public:
+	class UObject*                                Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FHottaReplicatedObjectPropertyIdentifier;
+
+// ScriptStruct HottaFramework.HottaPropertyReplicator
+// 0x0020 (0x0020 - 0x0000)
+struct FHottaPropertyReplicator
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FHottaReplicatedObjectPropertyIdentifier> Properties;                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FHottaPropertyReplicator;
+
+// ScriptStruct HottaFramework.HottaReplicatedObjectProperty
+// 0x0020 (0x0020 - 0x0000)
+struct FHottaReplicatedObjectProperty final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Datas;                                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bCompressed;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FHottaReplicatedObjectProperty;
+
+// ScriptStruct HottaFramework.HottaReplicatedObjectPropertyContainer
+// 0x0020 (0x0020 - 0x0000)
+struct FHottaReplicatedObjectPropertyContainer
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FHottaReplicatedObjectProperty> Properties;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UObject*                                Owner;                                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+};
+DUMPER7_ASSERTS_FHottaReplicatedObjectPropertyContainer;
+
 // ScriptStruct HottaFramework.ParameterWrapperArray
 // 0x0018 (0x0018 - 0x0000)
 struct FParameterWrapperArray
@@ -124,49 +167,6 @@ public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGameplayMessageSimpleMessage;
-
-// ScriptStruct HottaFramework.HottaReplicatedObjectProperty
-// 0x0020 (0x0020 - 0x0000)
-struct FHottaReplicatedObjectProperty final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 Datas;                                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bCompressed;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FHottaReplicatedObjectProperty;
-
-// ScriptStruct HottaFramework.HottaReplicatedObjectPropertyContainer
-// 0x0020 (0x0020 - 0x0000)
-struct FHottaReplicatedObjectPropertyContainer
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FHottaReplicatedObjectProperty> Properties;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UObject*                                Owner;                                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FHottaReplicatedObjectPropertyContainer;
-
-// ScriptStruct HottaFramework.HottaReplicatedObjectPropertyIdentifier
-// 0x0010 (0x0010 - 0x0000)
-struct FHottaReplicatedObjectPropertyIdentifier final
-{
-public:
-	class UObject*                                Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Name;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHottaReplicatedObjectPropertyIdentifier;
-
-// ScriptStruct HottaFramework.HottaPropertyReplicator
-// 0x0020 (0x0020 - 0x0000)
-struct FHottaPropertyReplicator
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FHottaReplicatedObjectPropertyIdentifier> Properties;                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-};
-DUMPER7_ASSERTS_FHottaPropertyReplicator;
 
 // ScriptStruct HottaFramework.GameplayMessageListenerData
 // 0x0040 (0x0040 - 0x0000)

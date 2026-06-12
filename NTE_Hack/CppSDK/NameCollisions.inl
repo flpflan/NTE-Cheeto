@@ -9,9 +9,9 @@
 // FORWARD DECLARATIONS
 
 
-namespace LoginPlayerAnimBlueprint_Male { struct FAnimBlueprintGeneratedConstantData; }
+namespace LoginPlayerAnimBlueprint { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
-namespace LoginPlayerAnimBlueprint { struct FAnimBlueprintGeneratedConstantData; }
+namespace LoginPlayerAnimBlueprint_Male { struct FAnimBlueprintGeneratedConstantData; }
 

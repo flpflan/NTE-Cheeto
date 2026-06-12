@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "MassReplication_structs.hpp"
-#include "MassAIReplication_structs.hpp"
 #include "ZoneGraph_structs.hpp"
 #include "MassAIBehavior_structs.hpp"
+#include "MassAIReplication_structs.hpp"
 #include "MassEntity_structs.hpp"
 #include "ZoneGraphAnnotations_structs.hpp"
 #include "CoreUObject_structs.hpp"

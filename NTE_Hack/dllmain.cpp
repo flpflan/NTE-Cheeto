@@ -4,6 +4,8 @@
 #include <chrono>
 #include <cstdint>
 
+#include "patternscan.h"
+
 //#include "MinHook.h"
 //
 //#pragma comment(lib, "libMinHook.x64.lib")
@@ -75,7 +77,7 @@ static void UpdateFlyHack() {
 
     if (!flying) {
         cachedGravity = player->CharacterMovement->GravityScale;
-        player->CharacterMovement->GravityScale = 0.f;
+        player->CharacterMovement->GravityScale = 0.01f;
         std::cerr << "Enable Flying" << std::endl;
     }
     else {
@@ -132,31 +134,54 @@ static void UpdateTeleportHack() {
 }
 
 static void UpdateMovementHack(float dt){
+    static bool enabled = false;
+    if (GetAsyncKeyState(VK_NUMPAD9) & 1) {
+        enabled = !enabled;
+        std::cerr << "Set Free Movement: " << enabled << std::endl;
+        const auto player = static_cast<SDK::AHTPlayerCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
+        if (enabled)
+            player->GetHTPlayerMovementComponent()->DisableMovement();
+        else
+            player->GetHTPlayerMovementComponent()->MovementMode = SDK::EMovementMode::MOVE_Walking;
+    }
+    if (!enabled) return;
+
+    const auto player = static_cast<SDK::AHTPlayerCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
+    if (!player) return;
+
+    if (enabled)
+        static_cast<SDK::UHTPlayerCharacterMovementComponent*>(player->CharacterMovement)->DisableMovement();
+
     SDK::FVector toMove(0, 0, 0);
 
-    if (GetAsyncKeyState(VK_NUMPAD9) & 0x8000) toMove.Z += 200;
-    if (GetAsyncKeyState(VK_NUMPAD7) & 0x8000) toMove.Z -= 200;
-    if (GetAsyncKeyState(VK_NUMPAD8) & 0x8000) toMove.X += 200;
-    if (GetAsyncKeyState(VK_NUMPAD5) & 0x8000) toMove.X -= 200;
-    if (GetAsyncKeyState(VK_NUMPAD6) & 0x8000) toMove.Y += 200;
-    if (GetAsyncKeyState(VK_NUMPAD4) & 0x8000) toMove.Y -= 200;
+    if (GetAsyncKeyState(VK_SPACE) & 0x8000) toMove.Z += 200;
+    if (GetAsyncKeyState(VK_LCONTROL) & 0x8000) toMove.Z -= 200;
+    if (GetAsyncKeyState('W') & 0x8000) toMove.X += 200;
+    if (GetAsyncKeyState('S') & 0x8000) toMove.X -= 200;
+    if (GetAsyncKeyState('D') & 0x8000) toMove.Y += 200;
+    if (GetAsyncKeyState('A') & 0x8000) toMove.Y -= 200;
 
     if (toMove.IsZero()) return;
-    auto target = static_cast<SDK::AActor*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
-    if (const auto parent = target->GetAttachParentActor()) target = parent;
+
+    auto target = static_cast<SDK::AActor*>(player);
+    if (const auto parent = player->GetAttachParentActor()) target = parent;
     if (!target) return;
 
-    const auto forward = target->GetActorForwardVector();
-    const auto right = target->GetActorRightVector();
-    const auto up = target->GetActorUpVector();
+    //const auto forward = target->GetActorForwardVector();
+    //const auto right = target->GetActorRightVector();
+    //const auto up = target->GetActorUpVector();
+    const auto forward = player->FollowCamera->GetForwardVector();
+    const auto right = player->FollowCamera->GetRightVector();
+    const auto up = player->FollowCamera->GetUpVector();
 
     toMove = forward * toMove.X + right * toMove.Y + up * toMove.Z;
 
-    const auto multipier = SDK::UGameplayStatics::GetGlobalTimeDilation(SDK::UWorld::GetWorld());
-    if (GetAsyncKeyState(VK_CONTROL) & 0x8000)
+    auto multipier = SDK::UGameplayStatics::GetGlobalTimeDilation(SDK::UWorld::GetWorld());
+    if (GetAsyncKeyState(VK_LSHIFT) & 0x8000) multipier *= 2;
+    //if (GetAsyncKeyState(VK_CONTROL) & 0x8000)
         target->K2_TeleportTo(target->K2_GetActorLocation() + toMove * multipier, target->K2_GetActorRotation());
-    else
-        target->K2_AddActorWorldOffset(toMove * multipier, true, nullptr, false);
+    //else
+        //target->K2_AddActorWorldOffset(toMove * multipier, true, nullptr, false);
 }
 
 static void UpdateInvincibleHack() {
@@ -173,35 +198,36 @@ static void UpdateInvincibleHack() {
     const auto player = static_cast<SDK::AHTAbilityCharacter*>(world->OwningGameInstance->LocalPlayers[0]->PlayerController->Character);
     if (!player) return;
 
-    //if (const auto parent = (SDK::AHTWheeledVehicleDrivable*)player->GetAttachParentActor()) {
-    //    parent->bCanBeDamaged = ~parent->bCanBeDamaged;
-    //    return;
-    //}
+    if (const auto parent = (SDK::AHTWheeledVehicleDrivable*)player->GetAttachParentActor()) {
+        parent->bCanBeDamaged = ~enabled;
+        parent->DeformableComponent->bIgnoreAllDamage = enabled;
+    }
 
     player->bCanBeDamaged = !enabled;
     player->bHaveFallDamage = !enabled;
     //player->HTAbilitySystemComponent->HTAttribute->CooldownReduction.CurrentValue = 0.f;
     //player->HTAbilitySystemComponent->HTAttribute->FinalDamageUp.CurrentValue = 999999.f;
-    //player->HTAbilitySystemComponent->ClientIgnoreCooldownsAndCosts(true, true);
-    //player->HTAbilitySystemComponent->ClientIgnoreTenacity(true);
+    player->HTAbilitySystemComponent->ClientIgnoreCooldownsAndCosts(enabled, enabled);
+    //player->HTAbilitySystemComponent->ClientIgnoreTenacity(enabled);
 }
 
 static void UpdateGhostHack() {
     static bool enabled = false;
     if (GetAsyncKeyState(VK_NUMPAD1) & 1) {
+        const auto player = static_cast<SDK::AHTAbilityCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
+        if (!player) return;
+        auto target = static_cast<SDK::AActor*>(player);
+        if (const auto parent = player->GetAttachParentActor()) target = parent;
+
         enabled = !enabled;
         std::cerr << "Set Ghost Mode: " << enabled << std::endl;
+
+        // player->CapsuleComponent->SetCollisionEnabled(SDK::ECollisionEnabled::QueryOnly);
+        if (enabled)
+            target->SetActorEnableCollision(false);
+        else
+            target->SetActorEnableCollision(true);
     }
-    if (!enabled) return;
-
-    const auto player = static_cast<SDK::AHTAbilityCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
-    if (!player) return;
-
-    player->CapsuleComponent->SetCollisionEnabled(SDK::ECollisionEnabled::QueryOnly);
-    if(const auto mp = player->GetMovementComponent(); !mp->IsMovingOnGround() || mp->IsFalling())
-        player->SetActorEnableCollision(false);
-    else
-        player->SetActorEnableCollision(true);
 }
 
 static void UpdatePrinter(){
@@ -231,14 +257,21 @@ static void UpdatePrinter(){
     //player->HTAbilitySystemComponent->HPCurrent = 8888;
     //player->bCanBeDamaged = false;
     //const auto objs = player->ActiveCustomLogicObjList;
-    //for (auto& eff : player->HTAbilitySystemComponent->ActiveGameplayEffects.GameplayEffects_Internal) {
-    //    std::cerr << "Active Effect: " << eff.Spec.Def->GetName() << std::endl;
-    //    if (eff.Spec.Def->GetName().find("Default__GE_Nanally_WalkOnWall_C") != std::string::npos) {
-    //        eff.Spec.Def->DurationPolicy = SDK::EGameplayEffectDurationType::Infinite;
-    //        std::cerr << "Nanally Infinite Buff Enabled" << std::endl;
-    //    }
-    //    eff.Spec.duration += 99999.f;
-    //}
+    auto effs = player->HTAbilitySystemComponent->ActiveGameplayEffects.GameplayEffects_Internal;
+    for (auto& eff : effs) {
+        std::cerr << "Active Effect: " << eff.Spec.Def->GetName() << std::endl;
+        if (eff.Spec.Def->GetName().find("Default__GE_Nanally_WalkOnWall_C") != std::string::npos) {
+            eff.Spec.Def->DurationPolicy = SDK::EGameplayEffectDurationType::Infinite;
+            std::cerr << "Nanally Infinite Buff Enabled" << std::endl;
+        }
+        eff.Spec.duration += 99999.f;
+    }
+    for (int i = effs.Num() - 1; i >= 0; --i) {
+        if (effs[i].Spec.Def->GetName().find("Default__GE_Nanally_WalkOnWall_C") != std::string::npos) {
+            effs.Clear(); break;
+        }
+    }
+    
     //std::cerr << "N Logic Objs: " << objs.Num() <<std::endl;
     //for(const auto& obj: objs) {
     //    std::cerr << "Obj Name: " << obj->GetName() << std::endl;
@@ -274,6 +307,7 @@ static void UpdatePrinter(){
         //    parent->K2_TeleportTo(p->K2_GetActorLocation(), parent->K2_GetActorRotation());
         //}
     }
+    //player->SavedPlayerState->ClientGetMonthCardDailyReward(29);
     //player->SavedPlayerState->RoleLevel = 99;
     //player->SavedPlayerState->FishingLevel = 99;
     //static bool f = false;
@@ -333,19 +367,26 @@ static void UpdatePrinter(){
 }
 
 static void UpdateTestHack() {
+    const auto world = SDK::UWorld::GetWorld();
+    if (!world) return;
+    const auto player = static_cast<SDK::AHTPlayerCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(world, 0));
+    if (!player) return;
+
     if (GetAsyncKeyState(VK_NUMPAD2) & 1) {
-        const auto world = SDK::UWorld::GetWorld();
-        const auto player = static_cast<SDK::AHTPlayerCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
-        UC::TArray<SDK::AActor*> actors{};
-        SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTMonsterCharacter::StaticClass(), &actors);
-        std::cerr << "N Monster: " << actors.Num() << std::endl;
-        for (const auto& act : actors) {
-            const auto m = static_cast<SDK::AHTMonsterCharacter*>(act);
-            //if (!m->bCanBeDamaged) continue;
-            //SDK::UGameplayStatics::ApplyDamage(m, 999999.f, player->Controller, player, SDK::UHTDamageType::StaticClass());
-            m->SetIsDead(true);
-            //SDK::UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(m, SDK::FGameplayTag{}, SDK::FGameplayEventData{});
-        }
+        //const auto world = SDK::UWorld::GetWorld();
+        //UC::TArray<SDK::AActor*> actors{};
+        //SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTMonsterCharacter::StaticClass(), &actors);
+        //std::cerr << "N Monster: " << actors.Num() << std::endl;
+        //for (const auto& act : actors) {
+        //    const auto m = static_cast<SDK::AHTMonsterCharacter*>(act);
+        //    //if (!m->bCanBeDamaged) continue;
+        //    //SDK::UGameplayStatics::ApplyDamage(m, 999999.f, player->Controller, player, SDK::UHTDamageType::StaticClass());
+        //    //m->SetIsDead(true);
+        //    //SDK::UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(m, SDK::FGameplayTag{}, SDK::FGameplayEventData{});
+        //    player->SavedPlayerState->ClientDamageBoss(m, 99999.f);
+        //}
+        const auto PC = player->GetHTPlayerController();
+        PC->SetGlobalCustomTimeDilation(PC->CustomTimeDilation + 1);
     }
     else if (GetAsyncKeyState(VK_NUMPAD3) & 1) {
         const auto world = SDK::UWorld::GetWorld();
@@ -359,13 +400,72 @@ static void UpdateTestHack() {
         //    player->K2_TeleportTo(i->K2_GetActorLocation(), player->K2_GetActorRotation());
         //    break;
         //}
+        //UC::TArray<SDK::AActor*> actors{};
+        //SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTQuestTriggerBox::StaticClass(), &actors);
+        //std::cerr << "N Quest Trigger: " << actors.Num() << std::endl;
+        //for (const auto& act : actors) {
+        //    const auto q = static_cast<SDK::AHTQuestTriggerBox*>(act);
+        //    player->K2_TeleportTo(q->K2_GetActorLocation(), player->K2_GetActorRotation());
+        //    break;
+        //}
         UC::TArray<SDK::AActor*> actors{};
-        SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTQuestTriggerBox::StaticClass(), &actors);
-        std::cerr << "N Quest Trigger: " << actors.Num() << std::endl;
+        SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTWheeledVehicleDrivable::StaticClass(), &actors);
+        std::cerr << "N Vehicle Drivable: " << actors.Num() << std::endl;
         for (const auto& act : actors) {
-            const auto q = static_cast<SDK::AHTQuestTriggerBox*>(act);
-            player->K2_TeleportTo(q->K2_GetActorLocation(), player->K2_GetActorRotation());
-            break;
+            const auto v = static_cast<SDK::AHTWheeledVehicleDrivable*>(act);
+            //v->DeformableComponent->BurstAllTires();
+            //v->DeformableComponent->ExeVehicleExplode();
+            //for (const auto w : v->HTVehicleMovementComponent->Wheels)
+            //    w->WheelRadius *= 20;
+            //for (int i = 0; i < v->GetWheelsNum(); i++)
+            //    v->DeformableComponent->Server_VehicleTireBurst(i);
+        }
+    }
+    else if (GetAsyncKeyState(VK_NUMPAD4) & 1) {
+        const auto world = SDK::UWorld::GetWorld();
+        const auto player = static_cast<SDK::AHTPlayerCharacter*>(SDK::UGameplayStatics::GetPlayerCharacter(SDK::UWorld::GetWorld(), 0));
+        //const auto& item = player->SavedPlayerState->InventoryComponent->CharacterItems[0];
+        //std::cerr << "Item: " << item.ItemID.ToString() << std::endl;
+        //UC::TArray<SDK::AActor*> actors{};
+        //SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTAICharacter::StaticClass(), &actors);
+        //std::cerr << "N AI Character: " << actors.Num() << std::endl;
+        //for (const auto& act : actors) {
+        //    const auto c = static_cast<SDK::AHTAICharacter*>(act);
+        //    auto awards = SDK::TArray<SDK::FAwardInfo>{};
+        //    awards.Add({
+        //        .UniqueID = item.UniqueID,
+        //        .ItemID = item.ItemID,
+        //        .Amount = 99,
+        //        .bHiddenAmount = false,
+        //        .bIsReplaceItem = false,
+        //        .ExtraItemNetInfo = {{},{}},
+        //        .AwardItemType = SDK::EItemType::ITEM_TYPE_CONSUMABLE
+        //        });
+        //    player->SavedPlayerState->ClientNpcDropItem(c->Name, c->GetTransform(), awards);
+        //    player->K2_TeleportTo(c->K2_GetActorLocation(), player->K2_GetActorRotation());
+        //    break;
+        //}
+        player->GetHTPlayerController()->StartGetOffVehicle(true, true, false);
+    }
+    else if (GetAsyncKeyState(VK_NUMPAD5) & 1) {
+        //UC::TArray<SDK::AActor*> actors{};
+        //SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::ACosmosNatureProjectileManager::StaticClass(), &actors);
+        //std::cerr << "N CosmosNatureProjectileManager: " << actors.Num() << std::endl;
+        //for (const auto& act : actors) {
+        //    const auto c = static_cast<SDK::ACosmosNatureProjectileManager*>(act);
+        //    c->ReadyToFireDelay = 0;
+        //    c->FireProjectileCoolDown = 100;
+        //}
+        UC::TArray<SDK::AActor*> actors{};
+        SDK::UGameplayStatics::GetAllActorsOfClass(world, SDK::AHTRobBankItemActorBase::StaticClass(), &actors);
+        std::cerr << "N RobBankItem: " << actors.Num() << std::endl;
+        for (const auto& act : actors) {
+            const auto i = static_cast<SDK::AHTRobBankItemActorBase*>(act);
+            player->K2_TeleportTo(i->K2_GetActorLocation(), player->K2_GetActorRotation());
+            if (i->BP_CanShowInteract()) {
+                //player->GetHTPlayerController()->ServerInteract(i, 0);
+                break;
+            }
         }
     }
 }
@@ -431,31 +531,31 @@ enum class ETickableTickType : uint8_t
     NewObject
 };
 
-struct FTickableObjectBase {
+struct FTickableGameObject {
     void* vtbl;
 };
 
-struct FTickableObjectBase_vtbl
+struct FTickableGameObject_vtbl
 {
-    void(__fastcall* Tick)(FTickableObjectBase* self, float);
-    ETickableTickType(__fastcall* GetTickableTickType)(FTickableObjectBase* self);
-    bool(__fastcall* IsTickable)(FTickableObjectBase* self);
-    bool(__fastcall* IsAllowedToTick)(FTickableObjectBase* self);
-    int(__fastcall* GetStatId)(FTickableObjectBase* self);
-    int(__fastcall* a)(FTickableObjectBase* self);
-    int(__fastcall* b)(FTickableObjectBase* self);
-    bool(__fastcall* CanTickThisFrame)(FTickableObjectBase* self);
-    int(__fastcall* c)(FTickableObjectBase* self);
-    void*(__fastcall* GetTickableGameObjectWorld)(FTickableObjectBase* self);
+    void (*Tick)(FTickableGameObject* self, float);
+    ETickableTickType(*GetTickableTickType)(FTickableGameObject* self);
+    bool (*IsTickable)(FTickableGameObject* self);
+    bool (*IsAllowedToTick)(FTickableGameObject* self);
+    void (*GetStatId)(FTickableGameObject* self);
+    void (*dctor1)(FTickableGameObject* self); // Complete Object Destructor
+    void (*dctor2)(FTickableGameObject* self); // Deleting Object Destructor
+    bool (*IsTickableWhenPaused)(FTickableGameObject* self);
+    int (*IsTickableInEditor)(FTickableGameObject* self);
+    void* (*GetTickableGameObjectWorld)(FTickableGameObject* self);
 };
 
-struct __declspec(align(8)) FTickableObjectEntry {
-    FTickableObjectBase* TickableObject;
+struct FTickableObjectEntry {
+    FTickableGameObject* TickableObject;
     ETickableTickType TickType;
 };
 
-static FTickableObjectBase_vtbl INJECTED_VTBL = {
-    .Tick = +[](FTickableObjectBase* self, float dt) {
+static FTickableGameObject_vtbl INJECTED_VTBL = {
+    .Tick = +[](FTickableGameObject* self, float dt) {
         UpdateSpeedHack();
         UpdateScaleHack();
         UpdateFlyHack();
@@ -467,23 +567,30 @@ static FTickableObjectBase_vtbl INJECTED_VTBL = {
         UpdateGhostHack();
         UpdateTestHack();
     },
-    .GetTickableTickType = +[](FTickableObjectBase*) { return ETickableTickType::Always; },
-    .IsTickable = +[](FTickableObjectBase*) { return true; },
-    .IsAllowedToTick = +[](FTickableObjectBase*) { return true; },
-    .GetStatId = +[](FTickableObjectBase*) { return 0; },
-    .a = +[](FTickableObjectBase*) { return 0; },
-    .b = +[](FTickableObjectBase*) { return 0; },
-    .CanTickThisFrame = +[](FTickableObjectBase*) { return true; },
-    .c = +[](FTickableObjectBase*) { return 0; },
-    .GetTickableGameObjectWorld = +[](FTickableObjectBase*) { return (void*)nullptr; }
+    .GetTickableTickType = +[](FTickableGameObject*) { return ETickableTickType::Always; },
+    .IsTickable = +[](FTickableGameObject*) { return true; },
+    .IsAllowedToTick = +[](FTickableGameObject*) { return true; },
+    .GetStatId = +[](FTickableGameObject*) { },
+    .dctor1 = +[](FTickableGameObject*) { },
+    .dctor2 = +[](FTickableGameObject*) { },
+    .IsTickableWhenPaused = +[](FTickableGameObject*) { return true; },
+    .IsTickableInEditor = +[](FTickableGameObject*) { return 0; },
+    .GetTickableGameObjectWorld = +[](FTickableGameObject*) { return (void*)nullptr; }
 };
 
-static FTickableObjectBase INJECTED_OBJ = { &INJECTED_VTBL };
+static FTickableGameObject INJECTED_OBJ = { &INJECTED_VTBL };
+
+static uintptr_t GetStaticsAddress() {
+    const auto match = PatternScan(NULL, "E8 ? ? ? ? 83 3D ? ? ? ? FF 75 ?? 48 8D 1D ? ? ? ? ? ? ? ? ? 48 8B CB FF 15 ? ? ? ? BA A0 0F 00 00 48 8B CB FF 15 ? ? ? ? 33 FF 48 8D 0D ? ? ? ? 48 89 3D ? ? ? ? 48 89 3D ? ? ? ? FF 15 ? ? ? ? BA A0 0F 00 00 48 8D 0D ? ? ? ? FF 15 ? ? ? ?");
+    const auto lea = match + 0xE;
+    const auto disp = *reinterpret_cast<int32_t*>(lea + 3);
+    return lea + 7 + disp;
+}
 
 static void InjectIntoTick() {
-    const uintptr_t offset = 0x0EBBA310;
-	const uintptr_t tickable_mutex = SDK::InSDKUtils::GetImageBase() + offset;
-	const uintptr_t tickable_data = tickable_mutex + sizeof(_RTL_CRITICAL_SECTION); // TArray<FTickableObjectBase::FTickableObjectEntry>
+    //const uintptr_t offset = 0x0EBC2410;
+	const uintptr_t tickable_mutex = GetStaticsAddress();
+	const uintptr_t tickable_data = tickable_mutex + sizeof(_RTL_CRITICAL_SECTION); // TArray<FTickableGameObject::FTickableObjectEntry>
 
     const auto entrys = reinterpret_cast<SDK::TArray<FTickableObjectEntry>*>(tickable_data);
     do {

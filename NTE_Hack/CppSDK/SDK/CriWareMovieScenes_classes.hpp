@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CriWareMovieScenes_structs.hpp"
+#include "MovieSceneTracks_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "MovieSceneTracks_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "CriWareCore_structs.hpp"
+#include "CriWareMovieScenes_structs.hpp"
 
 
 SDK_NAMESPACE_START

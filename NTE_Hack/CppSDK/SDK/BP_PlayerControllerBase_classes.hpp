@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerControllerBase.BP_PlayerControllerBase_C
-// 0x0000 (0x1B00 - 0x1B00)
+// 0x0000 (0x1B60 - 0x1B60)
 class ABP_PlayerControllerBase_C final : public AHTPlayerController
 {
 public:

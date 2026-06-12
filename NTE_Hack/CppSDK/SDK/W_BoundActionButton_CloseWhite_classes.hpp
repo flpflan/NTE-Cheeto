@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "HTGame_classes.hpp"
-#include "CommonInput_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CommonInput_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -100,6 +100,15 @@ enum class EUINavigationInputType : uint8
 	EUINavigationInputType_MAX               = 5,
 };
 
+// ScriptStruct UINavigation.WidgetTags
+// 0x0050 (0x0050 - 0x0000)
+struct FWidgetTags final
+{
+public:
+	TSet<class FName>                             Tags;                                              // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FWidgetTags;
+
 // ScriptStruct UINavigation.UINavigationSupportKeys
 // 0x0008 (0x0010 - 0x0008)
 struct FUINavigationSupportKeys final : public FTableRowBase
@@ -111,25 +120,6 @@ public:
 	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FUINavigationSupportKeys;
-
-// ScriptStruct UINavigation.WidgetTags
-// 0x0050 (0x0050 - 0x0000)
-struct FWidgetTags final
-{
-public:
-	TSet<class FName>                             Tags;                                              // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FWidgetTags;
-
-// ScriptStruct UINavigation.UINavigationViewportToExclude
-// 0x0008 (0x0010 - 0x0008)
-struct FUINavigationViewportToExclude final : public FTableRowBase
-{
-public:
-	bool                                          bExclude;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUINavigationViewportToExclude;
 
 // ScriptStruct UINavigation.UINavigatedScrollParams
 // 0x000C (0x000C - 0x0000)
@@ -152,6 +142,16 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FUINavigationProcessor;
+
+// ScriptStruct UINavigation.UINavigationViewportToExclude
+// 0x0008 (0x0010 - 0x0008)
+struct FUINavigationViewportToExclude final : public FTableRowBase
+{
+public:
+	bool                                          bExclude;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUINavigationViewportToExclude;
 
 // ScriptStruct UINavigation.UINavigationDragTooltipsParams
 // 0x0078 (0x0078 - 0x0000)

@@ -15,29 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// Class InterchangeMessages.InterchangeResultMeshWarning
-// 0x0010 (0x0080 - 0x0070)
-class UInterchangeResultMeshWarning : public UInterchangeResultWarning
-{
-public:
-	class FString                                 MeshName;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeResultMeshWarning")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeResultMeshWarning")
-	}
-	static class UInterchangeResultMeshWarning* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeResultMeshWarning>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeResultMeshWarning;
-
 // Class InterchangeMessages.InterchangeResultTextureDisplay
 // 0x0010 (0x0090 - 0x0080)
 class UInterchangeResultTextureDisplay : public UInterchangeResultDisplay_Generic
@@ -60,6 +37,52 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeResultTextureDisplay;
+
+// Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
+// 0x0010 (0x00A0 - 0x0090)
+class UInterchangeResultTextureDisplay_TextureFileDoNotExist final : public UInterchangeResultTextureDisplay
+{
+public:
+	class FString                                 MaterialName;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay_TextureFileDoNotExist")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay_TextureFileDoNotExist")
+	}
+	static class UInterchangeResultTextureDisplay_TextureFileDoNotExist* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
+
+// Class InterchangeMessages.InterchangeResultMeshWarning
+// 0x0010 (0x0080 - 0x0070)
+class UInterchangeResultMeshWarning : public UInterchangeResultWarning
+{
+public:
+	class FString                                 MeshName;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeResultMeshWarning")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshWarning")
+	}
+	static class UInterchangeResultMeshWarning* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeResultMeshWarning>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeResultMeshWarning;
 
 // Class InterchangeMessages.InterchangeResultTextureWarning
 // 0x0010 (0x0080 - 0x0070)
@@ -130,52 +153,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeResultMeshWarning_Generic;
 
-// Class InterchangeMessages.InterchangeResultMeshError_Generic
-// 0x0010 (0x0090 - 0x0080)
-class UInterchangeResultMeshError_Generic final : public UInterchangeResultMeshError
-{
-public:
-	class FText                                   Text;                                              // 0x0080(0x0010)(NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeResultMeshError_Generic")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeResultMeshError_Generic")
-	}
-	static class UInterchangeResultMeshError_Generic* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeResultMeshError_Generic>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeResultMeshError_Generic;
-
-// Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
-// 0x0010 (0x00A0 - 0x0090)
-class UInterchangeResultTextureDisplay_TextureFileDoNotExist final : public UInterchangeResultTextureDisplay
-{
-public:
-	class FString                                 MaterialName;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeResultTextureDisplay_TextureFileDoNotExist")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeResultTextureDisplay_TextureFileDoNotExist")
-	}
-	static class UInterchangeResultTextureDisplay_TextureFileDoNotExist* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
-
 // Class InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
 // 0x0008 (0x0088 - 0x0080)
 class UInterchangeResultMeshWarning_TooManyUVs final : public UInterchangeResultMeshWarning
@@ -199,5 +176,28 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeResultMeshWarning_TooManyUVs;
+
+// Class InterchangeMessages.InterchangeResultMeshError_Generic
+// 0x0010 (0x0090 - 0x0080)
+class UInterchangeResultMeshError_Generic final : public UInterchangeResultMeshError
+{
+public:
+	class FText                                   Text;                                              // 0x0080(0x0010)(NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeResultMeshError_Generic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeResultMeshError_Generic")
+	}
+	static class UInterchangeResultMeshError_Generic* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeResultMeshError_Generic>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeResultMeshError_Generic;
 
 SDK_NAMESPACE_END

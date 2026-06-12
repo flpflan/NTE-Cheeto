@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "RenderCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
@@ -18,6 +17,7 @@
 #include "AudioExtensions_structs.hpp"
 #include "AudioExtensions_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "RenderCore_structs.hpp"
 #include "PacketHandler_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "PhysicsCore_classes.hpp"

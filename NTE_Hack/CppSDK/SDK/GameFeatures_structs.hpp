@@ -25,6 +25,15 @@ enum class EGameFeatureTargetState : uint8
 	EGameFeatureTargetState_MAX              = 5,
 };
 
+// ScriptStruct GameFeatures.GameFeaturePluginIdentifier
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FGameFeaturePluginIdentifier final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameFeaturePluginIdentifier;
+
 // ScriptStruct GameFeatures.GameFeatureComponentEntry
 // 0x0058 (0x0058 - 0x0000)
 struct FGameFeatureComponentEntry final
@@ -64,15 +73,6 @@ public:
 	uint8                                         Pad_A8[0x38];                                      // 0x00A8(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGameFeaturePluginStateMachineProperties;
-
-// ScriptStruct GameFeatures.GameFeaturePluginIdentifier
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FGameFeaturePluginIdentifier final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGameFeaturePluginIdentifier;
 
 // ScriptStruct GameFeatures.InstallBundlePluginProtocolOptions
 // 0x000C (0x000C - 0x0000)

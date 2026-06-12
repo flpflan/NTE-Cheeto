@@ -1479,31 +1479,6 @@ class UWaterWavesBase* UWaterBodyComponent::GetWaterWaves() const
 }
 
 
-// Function Water.WaterBodyIsland.GetWaterSpline
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UWaterSplineComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWaterSplineComponent* AWaterBodyIsland::GetWaterSpline() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WaterBodyIsland", "GetWaterSpline");
-
-	Params::WaterBodyIsland_GetWaterSpline Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function Water.WaterBodyRiverComponent.SetLakeAndOceanTransitionMaterials
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1679,6 +1654,31 @@ float UWaterBodyRiverComponent::GetRiverWidthAtSplineInputKey(float InKey) const
 	Params::WaterBodyRiverComponent_GetRiverWidthAtSplineInputKey Parms{};
 
 	Parms.InKey = InKey;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.WaterBodyIsland.GetWaterSpline
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UWaterSplineComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWaterSplineComponent* AWaterBodyIsland::GetWaterSpline() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyIsland", "GetWaterSpline");
+
+	Params::WaterBodyIsland_GetWaterSpline Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

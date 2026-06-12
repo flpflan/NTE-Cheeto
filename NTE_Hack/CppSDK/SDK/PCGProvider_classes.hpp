@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "PCGProvider_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ProceduralGeneration_structs.hpp"
+#include "PCGProvider_structs.hpp"
 
 
 SDK_NAMESPACE_START

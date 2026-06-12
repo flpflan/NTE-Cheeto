@@ -122,17 +122,6 @@ enum class EContextualAnimWarpPointDefinitionMode : uint8
 	EContextualAnimWarpPointDefinitionMode_MAX = 3,
 };
 
-// ScriptStruct ContextualAnimation.ContextualAnimWarpPoint
-// 0x0070 (0x0070 - 0x0000)
-struct FContextualAnimWarpPoint final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextualAnimWarpPoint;
-
 // ScriptStruct ContextualAnimation.ContextualAnimWarpTarget
 // 0x0050 (0x0050 - 0x0000)
 struct FContextualAnimWarpTarget final
@@ -145,29 +134,6 @@ public:
 	struct FQuat                                  TargetRotation;                                    // 0x0030(0x0020)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FContextualAnimWarpTarget;
-
-// ScriptStruct ContextualAnimation.ContextualAnimRepData
-// 0x0001 (0x0001 - 0x0000)
-struct FContextualAnimRepData
-{
-public:
-	uint8                                         RepCounter;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextualAnimRepData;
-
-// ScriptStruct ContextualAnimation.ContextualAnimRepLateJoinData
-// 0x0037 (0x0038 - 0x0001)
-struct FContextualAnimRepLateJoinData final : public FContextualAnimRepData
-{
-public:
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class AActor>                  Actor;                                             // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Role;                                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FContextualAnimWarpPoint>       WarpPoints;                                        // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FContextualAnimWarpTarget>      ExternalWarpTargets;                               // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextualAnimRepLateJoinData;
 
 // ScriptStruct ContextualAnimation.ContextualAnimSceneBindingContext
 // 0x00E0 (0x00E0 - 0x0000)
@@ -184,6 +150,27 @@ public:
 };
 DUMPER7_ASSERTS_FContextualAnimSceneBindingContext;
 
+// ScriptStruct ContextualAnimation.ContextualAnimStartSceneParams
+// 0x0068 (0x0068 - 0x0000)
+struct FContextualAnimStartSceneParams final
+{
+public:
+	TMap<class FName, struct FContextualAnimSceneBindingContext> RoleToActorMap;                     // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	int32                                         SectionIdx;                                        // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AnimSetIdx;                                        // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x10];                                      // 0x0058(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FContextualAnimStartSceneParams;
+
+// ScriptStruct ContextualAnimation.ContextualAnimRepData
+// 0x0001 (0x0001 - 0x0000)
+struct FContextualAnimRepData
+{
+public:
+	uint8                                         RepCounter;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextualAnimRepData;
+
 // ScriptStruct ContextualAnimation.ContextualAnimSceneBinding
 // 0x00F0 (0x00F0 - 0x0000)
 struct FContextualAnimSceneBinding final
@@ -194,30 +181,6 @@ public:
 	uint8                                         Pad_E4[0xC];                                       // 0x00E4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FContextualAnimSceneBinding;
-
-// ScriptStruct ContextualAnimation.ContextualAnimIKTargetDefinition
-// 0x0024 (0x0024 - 0x0000)
-struct FContextualAnimIKTargetDefinition final
-{
-public:
-	class FName                                   GoalName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EContextualAnimIKTargetProvider               Provider;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TargetRoleName;                                    // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TargetBoneName;                                    // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextualAnimIKTargetDefinition;
-
-// ScriptStruct ContextualAnimation.ContextualAnimIKTargetDefContainer
-// 0x0018 (0x0018 - 0x0000)
-struct FContextualAnimIKTargetDefContainer final
-{
-public:
-	class FName                                   Role;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FContextualAnimIKTargetDefinition> IKTargetDefs;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FContextualAnimIKTargetDefContainer;
 
 // ScriptStruct ContextualAnimation.ContextualAnimSceneBindings
 // 0x0028 (0x0028 - 0x0000)
@@ -233,6 +196,17 @@ public:
 };
 DUMPER7_ASSERTS_FContextualAnimSceneBindings;
 
+// ScriptStruct ContextualAnimation.ContextualAnimWarpPoint
+// 0x0070 (0x0070 - 0x0000)
+struct FContextualAnimWarpPoint final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextualAnimWarpPoint;
+
 // ScriptStruct ContextualAnimation.ContextualAnimRepBindingsData
 // 0x004F (0x0050 - 0x0001)
 struct FContextualAnimRepBindingsData final : public FContextualAnimRepData
@@ -244,6 +218,20 @@ public:
 	TArray<struct FContextualAnimWarpTarget>      ExternalWarpTargets;                               // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FContextualAnimRepBindingsData;
+
+// ScriptStruct ContextualAnimation.ContextualAnimRepLateJoinData
+// 0x0037 (0x0038 - 0x0001)
+struct FContextualAnimRepLateJoinData final : public FContextualAnimRepData
+{
+public:
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class AActor>                  Actor;                                             // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Role;                                              // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FContextualAnimWarpPoint>       WarpPoints;                                        // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FContextualAnimWarpTarget>      ExternalWarpTargets;                               // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextualAnimRepLateJoinData;
 
 // ScriptStruct ContextualAnimation.ContextualAnimRepTransitionData
 // 0x0027 (0x0028 - 0x0001)
@@ -400,6 +388,20 @@ public:
 };
 DUMPER7_ASSERTS_FContextualAnimActorPreviewData;
 
+// ScriptStruct ContextualAnimation.ContextualAnimIKTargetDefinition
+// 0x0024 (0x0024 - 0x0000)
+struct FContextualAnimIKTargetDefinition final
+{
+public:
+	class FName                                   GoalName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EContextualAnimIKTargetProvider               Provider;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TargetRoleName;                                    // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetBoneName;                                    // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextualAnimIKTargetDefinition;
+
 // ScriptStruct ContextualAnimation.ContextualAnimIKTarget
 // 0x0080 (0x0080 - 0x0000)
 struct FContextualAnimIKTarget final
@@ -412,6 +414,16 @@ public:
 	struct FTransform                             Transform;                                         // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FContextualAnimIKTarget;
+
+// ScriptStruct ContextualAnimation.ContextualAnimIKTargetDefContainer
+// 0x0018 (0x0018 - 0x0000)
+struct FContextualAnimIKTargetDefContainer final
+{
+public:
+	class FName                                   Role;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FContextualAnimIKTargetDefinition> IKTargetDefs;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FContextualAnimIKTargetDefContainer;
 
 // ScriptStruct ContextualAnimation.ContextualAnimIKTargetParams
 // 0x0018 (0x0018 - 0x0000)
@@ -438,18 +450,6 @@ public:
 	struct FTransform                             MeshToComponent;                                   // 0x0020(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FContextualAnimRoleDefinition;
-
-// ScriptStruct ContextualAnimation.ContextualAnimStartSceneParams
-// 0x0068 (0x0068 - 0x0000)
-struct FContextualAnimStartSceneParams final
-{
-public:
-	TMap<class FName, struct FContextualAnimSceneBindingContext> RoleToActorMap;                     // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	int32                                         SectionIdx;                                        // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AnimSetIdx;                                        // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x10];                                      // 0x0058(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FContextualAnimStartSceneParams;
 
 // ScriptStruct ContextualAnimation.ContextualAnimQueryResult
 // 0x00E0 (0x00E0 - 0x0000)

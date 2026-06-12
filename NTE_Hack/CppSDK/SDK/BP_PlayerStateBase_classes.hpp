@@ -16,11 +16,11 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerStateBase.BP_PlayerStateBase_C
-// 0x0010 (0x96E0 - 0x96D0)
+// 0x0010 (0x9750 - 0x9740)
 class ABP_PlayerStateBase_C final : public AHTPlayerState
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x96D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x9740(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

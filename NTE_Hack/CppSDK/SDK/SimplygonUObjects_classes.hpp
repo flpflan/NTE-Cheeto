@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SimplygonUObjects_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "SimplygonUObjects_structs.hpp"
 #include "Engine_classes.hpp"
 
 

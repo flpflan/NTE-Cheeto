@@ -546,15 +546,6 @@ public:
 };
 DUMPER7_ASSERTS_WaterBodyComponent_GetWaterWaves;
 
-// Function Water.WaterBodyIsland.GetWaterSpline
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyIsland_GetWaterSpline final
-{
-public:
-	class UWaterSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_WaterBodyIsland_GetWaterSpline;
-
 // Function Water.WaterBodyRiverComponent.SetLakeAndOceanTransitionMaterials
 // 0x0010 (0x0010 - 0x0000)
 struct WaterBodyRiverComponent_SetLakeAndOceanTransitionMaterials final
@@ -622,6 +613,15 @@ public:
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_WaterBodyRiverComponent_GetRiverWidthAtSplineInputKey;
+
+// Function Water.WaterBodyIsland.GetWaterSpline
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyIsland_GetWaterSpline final
+{
+public:
+	class UWaterSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WaterBodyIsland_GetWaterSpline;
 
 // Function Water.WaterMeshComponent.IsEnabled
 // 0x0001 (0x0001 - 0x0000)

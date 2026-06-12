@@ -2372,6 +2372,15 @@ public:
 };
 DUMPER7_ASSERTS_FPCGGraphTasks;
 
+// ScriptStruct PCG.PCGSkinnedMeshInstance
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x10) FPCGSkinnedMeshInstance final
+{
+public:
+	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGSkinnedMeshInstance;
+
 // ScriptStruct PCG.PCGComputeGraphs
 // 0x0010 (0x0010 - 0x0000)
 struct FPCGComputeGraphs final
@@ -2405,6 +2414,17 @@ public:
 };
 DUMPER7_ASSERTS_FPCGGridCellDescriptor;
 
+// ScriptStruct PCG.PCGHLODSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGHLODSettings final
+{
+public:
+	EPCGHLODSource                                HLODSourceType;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHLODLayer*                             HLODLayer;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FPCGHLODSettings;
+
 // ScriptStruct PCG.PCGTaggedData
 // 0x0070 (0x0070 - 0x0000)
 struct FPCGTaggedData final
@@ -2419,16 +2439,16 @@ public:
 };
 DUMPER7_ASSERTS_FPCGTaggedData;
 
-// ScriptStruct PCG.PCGHLODSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGHLODSettings final
+// ScriptStruct PCG.PCGDataCollection
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGDataCollection final
 {
 public:
-	EPCGHLODSource                                HLODSourceType;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHLODLayer*                             HLODLayer;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	TArray<struct FPCGTaggedData>                 TaggedData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bCancelExecutionOnEmpty;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x1F];                                      // 0x0011(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPCGHLODSettings;
+DUMPER7_ASSERTS_FPCGDataCollection;
 
 // ScriptStruct PCG.PCGObjectPropertyOverrideDescription
 // 0x0050 (0x0050 - 0x0000)
@@ -2450,6 +2470,18 @@ public:
 };
 DUMPER7_ASSERTS_FPCGActorPropertyOverride;
 
+// ScriptStruct PCG.PCGAnimBankDataRow
+// 0x0018 (0x0020 - 0x0008)
+struct FPCGAnimBankDataRow final : public FTableRowBase
+{
+public:
+	class USkeletalMesh*                          Mesh;                                              // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	class UAnimBank*                              Bank;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	uint32                                        SequenceIndex;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPCGAnimBankDataRow;
+
 // ScriptStruct PCG.PCGPointArray
 // 0x01A0 (0x01A0 - 0x0000)
 struct alignas(0x10) FPCGPointArray final
@@ -2458,24 +2490,6 @@ public:
 	uint8                                         Pad_0[0x1A0];                                      // 0x0000(0x01A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FPCGPointArray;
-
-// ScriptStruct PCG.PCGPoint
-// 0x00D0 (0x00D0 - 0x0000)
-struct FPCGPoint final
-{
-public:
-	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Density;                                           // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BoundsMin;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsMax;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               Color;                                             // 0x00A0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Steepness;                                         // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Seed;                                              // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         MetadataEntry;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGPoint;
 
 // ScriptStruct PCG.PCGPreconfiguredInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -2494,37 +2508,6 @@ struct FPCGPreConfiguredSettingsInfo final : public FPCGPreconfiguredInfo
 {
 };
 DUMPER7_ASSERTS_FPCGPreConfiguredSettingsInfo;
-
-// ScriptStruct PCG.PCGSoftSkinnedMeshComponentDescriptor
-// 0x0010 (0x00C0 - 0x00B0)
-struct FPCGSoftSkinnedMeshComponentDescriptor final : public FSoftSkinnedMeshComponentDescriptor
-{
-public:
-	TArray<class FName>                           ComponentTags;                                     // 0x00B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGSoftSkinnedMeshComponentDescriptor;
-
-// ScriptStruct PCG.PCGSkinnedMeshInstance
-// 0x0070 (0x0070 - 0x0000)
-struct alignas(0x10) FPCGSkinnedMeshInstance final
-{
-public:
-	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGSkinnedMeshInstance;
-
-// ScriptStruct PCG.PCGSkinnedMeshInstanceList
-// 0x00F0 (0x00F0 - 0x0000)
-struct FPCGSkinnedMeshInstanceList final
-{
-public:
-	struct FPCGSoftSkinnedMeshComponentDescriptor Descriptor;                                        // 0x0000(0x00C0)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPCGSkinnedMeshInstance>        Instances;                                         // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class UPCGPointData>           PointData;                                         // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 InstancePointIndices;                              // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPCGSkinnedMeshInstanceList;
 
 // ScriptStruct PCG.PCGProceduralISMComponentDescriptor
 // 0x0120 (0x0120 - 0x0000)
@@ -3263,17 +3246,27 @@ public:
 };
 DUMPER7_ASSERTS_FPCGWeightedByCategoryEntryList;
 
-// ScriptStruct PCG.PCGAnimBankDataRow
-// 0x0018 (0x0020 - 0x0008)
-struct FPCGAnimBankDataRow final : public FTableRowBase
+// ScriptStruct PCG.PCGSoftSkinnedMeshComponentDescriptor
+// 0x0010 (0x00C0 - 0x00B0)
+struct FPCGSoftSkinnedMeshComponentDescriptor final : public FSoftSkinnedMeshComponentDescriptor
 {
 public:
-	class USkeletalMesh*                          Mesh;                                              // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	class UAnimBank*                              Bank;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	uint32                                        SequenceIndex;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ComponentTags;                                     // 0x00B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPCGAnimBankDataRow;
+DUMPER7_ASSERTS_FPCGSoftSkinnedMeshComponentDescriptor;
+
+// ScriptStruct PCG.PCGSkinnedMeshInstanceList
+// 0x00F0 (0x00F0 - 0x0000)
+struct FPCGSkinnedMeshInstanceList final
+{
+public:
+	struct FPCGSoftSkinnedMeshComponentDescriptor Descriptor;                                        // 0x0000(0x00C0)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPCGSkinnedMeshInstance>        Instances;                                         // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UPCGPointData>           PointData;                                         // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InstancePointIndices;                              // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGSkinnedMeshInstanceList;
 
 // ScriptStruct PCG.PCGComponentInstanceData
 // 0x0008 (0x0070 - 0x0068)
@@ -3283,17 +3276,6 @@ public:
 	class UPCGComponent*                          SourceComponent;                                   // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, TObjectPtr)
 };
 DUMPER7_ASSERTS_FPCGComponentInstanceData;
-
-// ScriptStruct PCG.PCGDataCollection
-// 0x0030 (0x0030 - 0x0000)
-struct FPCGDataCollection final
-{
-public:
-	TArray<struct FPCGTaggedData>                 TaggedData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bCancelExecutionOnEmpty;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x1F];                                      // 0x0011(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPCGDataCollection;
 
 // ScriptStruct PCG.PCGDebugVisualizationSettings
 // 0x0058 (0x0058 - 0x0000)
@@ -3317,6 +3299,24 @@ public:
 	TSet<struct FGuid>                            PropertiesIDsOverridden;                           // 0x0010(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPCGOverrideInstancedPropertyBag;
+
+// ScriptStruct PCG.PCGPoint
+// 0x00D0 (0x00D0 - 0x0000)
+struct FPCGPoint final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Density;                                           // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BoundsMin;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsMax;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               Color;                                             // 0x00A0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Steepness;                                         // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seed;                                              // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         MetadataEntry;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPCGPoint;
 
 // ScriptStruct PCG.PCGPropertyAliases
 // 0x0010 (0x0010 - 0x0000)

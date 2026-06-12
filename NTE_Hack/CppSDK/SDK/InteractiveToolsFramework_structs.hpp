@@ -311,16 +311,6 @@ enum class ESceneSnapQueryTargetResult : uint8
 	ESceneSnapQueryTargetResult_MAX          = 4,
 };
 
-// ScriptStruct InteractiveToolsFramework.BehaviorInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FBehaviorInfo final
-{
-public:
-	class UInputBehavior*                         Behavior;                                          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBehaviorInfo;
-
 // ScriptStruct InteractiveToolsFramework.GizmoVec2ParameterChange
 // 0x0020 (0x0020 - 0x0000)
 struct FGizmoVec2ParameterChange final
@@ -397,6 +387,16 @@ public:
 	uint8                                         Pad_0[0x148];                                      // 0x0000(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBrushStampData;
+
+// ScriptStruct InteractiveToolsFramework.BehaviorInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FBehaviorInfo final
+{
+public:
+	class UInputBehavior*                         Behavior;                                          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBehaviorInfo;
 
 // ScriptStruct InteractiveToolsFramework.InputRayHit
 // 0x0040 (0x0040 - 0x0000)
